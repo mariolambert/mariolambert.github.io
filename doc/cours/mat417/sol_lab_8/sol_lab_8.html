@@ -1,0 +1,1149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_8</TITLE>
+<META NAME="description" CONTENT="sol_lab_8">
+<META NAME="keywords" CONTENT="sol_lab_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_8.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 8 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD><!-- MATH
+ $\begin{array}[t]{rcl}
+\| A \|_2 & = & \sup\limits_{x \neq 0} \frac{\| Ax \|_2}{\| x \|_2} \\\\
+                        & = & \sup\limits_{x \neq 0} \frac{ \sqrt{(Ax)^t(Ax) }}{\sqrt{x^tx}} \\\\
+                        & = & \sup\limits_{x \neq 0} \frac{ \sqrt{x^tA^tAx }}{\sqrt{x^tx}} \\\\
+                        & = & \sup\limits_{x \neq 0} \sqrt{\frac{x^tA^tAx}{x^tx}}.
+              \end{array}$
+ -->
+<IMG
+ WIDTH="196" HEIGHT="258" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+\Vert A \Vert _2 &amp; = &amp; \sup\limits_{x...
+...p\limits_{x \neq 0} \sqrt{\frac{x^tA^tAx}{x^tx}}.
+\end{array}\end{displaymath}">
+
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Puisque <!-- MATH
+ $(A^tA)^t = A^t(A^t)^t = A^tA$
+ -->
+<IMG
+ WIDTH="202" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ (A^tA)^t = A^t(A^t)^t = A^tA$">
+, on en d&#233;duit que la matrice <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+ est
+    sym&#233;trique et il suit d'un th&#233;or&#232;me d'alg&#232;bre lin&#233;aire que <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+ n'admet que des valeurs propres r&#233;elles.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Soient <!-- MATH
+ $\{ x_1, x_2, \ldots , x_n \}$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ \{ x_1, x_2, \ldots , x_n \}$">
+ une base orthonormale
+    de vecteurs propres de <!-- MATH
+ $\mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \mathbb{R}^n$">
+.
+
+<P>
+Si <!-- MATH
+ $x  \in \mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ x \in \mathbb{R}^n$">
+, on sait qu'il existe des constantes <!-- MATH
+ $\alpha_1,
+\alpha_2, \ldots , \alpha_n$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \alpha_1,
+\alpha_2, \ldots , \alpha_n$">
+ telles que <!-- MATH
+ $x = \alpha_1 x_1 +
+\alpha_2x_2 + \ldots + \alpha_n x_n$
+ -->
+<IMG
+ WIDTH="247" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$ x = \alpha_1 x_1 +
+\alpha_2x_2 + \ldots + \alpha_n x_n$">
+.
+
+<P>
+Mais alors,
+    <!-- MATH
+ $\begin{array}[t]{rcl}
+Ax & = & \alpha_1 A x_1 + \alpha_2 A x_2 + \ldots + \alpha_n A x_n \\
+       & = & \alpha_1 \lambda_1 x_1 + \alpha_2 \lambda_2 x_2 + \ldots + \alpha_n \lambda_n x_n.
+    \end{array}$
+ -->
+<IMG
+ WIDTH="337" HEIGHT="69" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+Ax &amp; = &amp; \alpha_1 A x_1 + \alpha_2 A ...
+... \lambda_2 x_2 + \ldots + \alpha_n \lambda_n x_n.
+\end{array}\end{displaymath}">
+
+
+<P>
+On en d&#233;duit que <!-- MATH
+ $x^tAx = \alpha_1^2 \lambda_1 x_1^t x_1 +
+\alpha_2^2 \lambda_2 x_2^t x_2 + \ldots + \alpha_n^2 \lambda_n x_n^t x_n$
+ -->
+<IMG
+ WIDTH="391" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ x^tAx = \alpha_1^2 \lambda_1 x_1^t x_1 +
+\alpha_2^2 \lambda_2 x_2^t x_2 + \ldots + \alpha_n^2 \lambda_n x_n^t x_n$">
+
+    puisque les vecteurs <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ x_i$">
+ sont deux &#224; deux orthogonaux.
+
+<P>
+Comme  <!-- MATH
+ $\lambda_1 \geqslant \lambda_2 \geqslant \ldots \geqslant
+\lambda_n$
+ -->
+<IMG
+ WIDTH="160" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ \lambda_1 \geqslant \lambda_2 \geqslant \ldots \geqslant
+\lambda_n$">
+, on a que
+
+<P>
+<!-- MATH
+ $\begin{array}[t]{rcl}
+x^tAx  & \geqslant & \alpha_1^2 \lambda_n x_1^t x_1 + \alpha_2^2 \lambda_n x_2^t x_2 + \ldots + \alpha_n^2 \lambda_n x_n^t x_n \\
+           &  =        & \lambda_n \left( \alpha_1^2 x_1^t x_1 + \alpha_2^2 x_2^t x_2 + \ldots + \alpha_n^2 x_n^t x_n \right).
+    \end{array}$
+ -->
+<IMG
+ WIDTH="409" HEIGHT="69" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+x^tAx &amp; \geqslant &amp; \alpha_1^2 \lambd...
+..._2^t x_2 + \ldots + \alpha_n^2 x_n^t x_n \right).
+\end{array}\end{displaymath}">
+
+
+<P>
+De plus
+    <!-- MATH
+ $\begin{array}[t]{rcl}
+x^t x & = & (\alpha_1 x_1 + \alpha_2x_2 + \ldots + \alpha_n x_n)^t (\alpha_1 x_1 + \alpha_2x_2 + \ldots + \alpha_n x_n) \\
+          & = & \alpha_1^2 x_1^t x_1 + \alpha_2^2 x_2^t x_2 + \ldots + \alpha_n^2 x_n^t x_n.
+    \end{array}$
+ -->
+<IMG
+ WIDTH="520" HEIGHT="58" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+x^t x &amp; = &amp; (\alpha_1 x_1 + \alpha_2x...
+...ha_2^2 x_2^t x_2 + \ldots + \alpha_n^2 x_n^t x_n.
+\end{array}\end{displaymath}">
+
+
+<P>
+Ainsi, <!-- MATH
+ $\begin{array}[t]{rcl}
+x^tAx & \geqslant & \lambda_n \left( \alpha_1^2 x_1^t x_1 + \alpha_2^2 x_2^t x_2 + \ldots + \alpha_n^2 x_n^t x_n \right) \\
+          & =         & \lambda_n x^tx.
+    \end{array}$
+ -->
+<IMG
+ WIDTH="386" HEIGHT="69" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+x^tAx &amp; \geqslant &amp; \lambda_n \left( ...
+...n^2 x_n^t x_n \right) \\
+&amp; = &amp; \lambda_n x^tx.
+\end{array}\end{displaymath}">
+
+
+<P>
+L'autre in&#233;galit&#233; s'obtient de la m&#234;me fa&#231;on.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>Soit <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ x$">
+ un vecteur propre associ&#233; &#224; la valeur
+    propre <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \lambda_1$">
+. On a que <!-- MATH
+ $Ax = \lambda_1 x_1$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ Ax = \lambda_1 x_1$">
+ et <!-- MATH
+ $x^tAx =
+\lambda_1 x_1^t x_1$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$ x^tAx =
+\lambda_1 x_1^t x_1$">
+ d'o&#249; <!-- MATH
+ $\frac{x^tAx}{x^tx} =
+\lambda_1$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$ \frac{x^tAx}{x^tx} =
+\lambda_1$">
+.
+
+<P>
+</DD>
+<DT><STRONG>e)</STRONG></DT>
+<DD>De la partie a), on a que <!-- MATH
+ $\| A \|_2 = \sup\limits_{x \neq 0}
+\sqrt{\frac{x^tA^tAx}{x^tx}}$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \Vert A \Vert _2 = \sup\limits_{x \neq 0}
+\sqrt{\frac{x^tA^tAx}{x^tx}}$">
+.
+
+<P>
+En vertu de la partie c), <!-- MATH
+ $\frac{x^tA^tAx}{x^tx} \leqslant
+\lambda_1$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ \frac{x^tA^tAx}{x^tx} \leqslant
+\lambda_1$">
+ o&#249; <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \lambda_1$">
+ est la valeur propre de <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+. La partie d),
+    elle, nous dit que cette in&#233;galit&#233; est en fait
+    une &#233;galit&#233; pour au moins un vecteur de <!-- MATH
+ $\mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \mathbb{R}^n$">
+.
+
+<P>
+Ainsi, <!-- MATH
+ $\| A \|_2 = \sup\limits_{x \neq 0}
+\sqrt{\frac{x^tA^tAx}{x^tx}} = \sqrt{\lambda_{A^tA}}$
+ -->
+<IMG
+ WIDTH="249" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$ \Vert A \Vert _2 = \sup\limits_{x \neq 0}
+\sqrt{\frac{x^tA^tAx}{x^tx}} = \sqrt{\lambda_{A^tA}}$">
+
+    o&#249; <!-- MATH
+ $\lambda_{A^tA}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$ \lambda_{A^tA}$">
+ est la valeur propre dominante de la
+    matrice <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+.
+
+<P>
+</DD>
+<DT><STRONG>f)</STRONG></DT>
+<DD>Il suffit de montrer que <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+ et <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ AA^t$">
+ ont les
+    m&#234;mes valeurs propres. On montre d'abord que si <IMG
+ WIDTH="16" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \lambda$">
+ est
+    une valeur propre de <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+, alors <IMG
+ WIDTH="16" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \lambda$">
+ est une valeur
+    propre de <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ AA^t$">
+, la r&#233;ciproque se faisant de la m&#234;me fa&#231;on.
+
+<P>
+Supposons en premier lieu que <!-- MATH
+ $\lambda = 0$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \lambda = 0$">
+. Alors,
+    <!-- MATH
+ $\det(A^tA) = 0 \Rightarrow \det(A^t)\det(A) = 0 \Rightarrow
+\det(A)\det(A^t)=0 \Rightarrow \det(AA^t)=0$
+ -->
+<IMG
+ WIDTH="614" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$ \det(A^tA) = 0 \Rightarrow \det(A^t)\det(A) = 0 \Rightarrow
+\det(A)\det(A^t)=0 \Rightarrow \det(AA^t)=0$">
+, ce qui montre
+    que <IMG
+ WIDTH="50" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \lambda = 0$">
+ est une valeur propre de <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ AA^t$">
+.
+
+<P>
+Dans un deuxi&#232;me temps, supposons que <!-- MATH
+ $\lambda \neq 0$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \lambda \neq 0$">
+. Alors,
+    il existe un vecteur <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ x$">
+ (qu'on peut supposer &#234;tre un vecteur propre)
+    tel que <!-- MATH
+ $A^tAx = \lambda x$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$ A^tAx = \lambda x$">
+. Ainsi,
+    <!-- MATH
+ $AA^tAx = \lambda Ax$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$ AA^tAx = \lambda Ax$">
+ d'o&#249; <!-- MATH
+ $AA^t (Ax) = \lambda (Ax)$
+ -->
+<IMG
+ WIDTH="153" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$ AA^t (Ax) = \lambda (Ax)$">
+ et on
+    voit que <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ Ax$">
+ est un vecteur propre associ&#233; &#224; la valeur propre
+    <IMG
+ WIDTH="16" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \lambda$">
+ pour la matrice <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ AA^t$">
+, si le vecteur <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ Ax$">
+ est non
+    nul. Or, si <IMG
+ WIDTH="64" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$ Ax=0$">
+, on a que <IMG
+ WIDTH="83" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$ A^tAx=0$">
+ d'o&#249; <!-- MATH
+ $\lambda x = 0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$ \lambda x = 0$">
+
+    puis <!-- MATH
+ $\lambda = 0$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \lambda = 0$">
+ puisque <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ x$">
+ ne peut &#234;tre nul &#233;tant lui-m&#234;me
+    un vecteur propre, ce qui serait bien s&#251;r une contradiction.
+
+<P>
+Donc, <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ AA^t$">
+ et <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ A^tA$">
+ ont les m&#234;mes valeurs propres et en
+    particulier, ont la m&#234;me valeur propre dominante, ce qui
+    prouve l'&#233;nonc&#233;.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD>En arithm&#233;tique &#224; 10 chiffres, on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_1 = \left( \begin{array}{lll}
+-0,811107106 & -0,3244428422 & -0,4866642634 \\
+-0,3244428422 & 0,9418791094 & -0,08718133587 \\
+-0,4866642634 & -0,08718133587 & 0,8692279962
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="527" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$\displaystyle P_1 = \left( \begin{array}{lll}
+-0,811107106 &amp; -0,3244428422 &amp; -...
+...133587 \\
+-0,4866642634 &amp; -0,08718133587 &amp; 0,8692279962
+\end{array}
+\right)$">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; le syst&#232;me <!-- MATH
+ $P_1Ax = P_1b$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ P_1Ax = P_1b$">
+
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{lll}
+-6,164414004 & -4,704421213  & -6,164414004 \\
+0            & 6,798965855   & -0,6417187683 \\
+0            & -0,8015512178 & 4,537421847
+\end{array} \right)
+\left( \begin{array}{r}
+x_1 \\x_2 \\x_3
+\end{array} \right) =
+\left( \begin{array}{l}
+4,704421212 \\-6,157247087 \\-3,735870630
+\end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="722" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$\displaystyle \left( \begin{array}{lll}
+-6,164414004 &amp; -4,704421213 &amp; -6,16441...
+...{array}{l}
+4,704421212 \ -6,157247087 \ -3,735870630
+\end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+On obtient ensuite la matrice
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_2 = \left( \begin{array}{lll}
+1 & 0            & 0 \\
+0 & -0,993122220 & 0,1170822654 \\
+0 & 0,1170822654 & 0,9931222196
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="368" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$\displaystyle P_2 = \left( \begin{array}{lll}
+1 &amp; 0 &amp; 0 \\
+0 &amp; -0,993122220 &amp; 0,1170822654 \\
+0 &amp; 0,1170822654 &amp; 0,9931222196
+\end{array}
+\right)$">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; le syst&#232;me <!-- MATH
+ $P_2P_1Ax = P_2P_1b$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ P_2P_1Ax = P_2P_1b$">
+
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{lll}
+-6,164414004 & -4,704421213 & -6,164414004 \\
+0            & -6,846051496 & 1,168556797  \\
+0            & 0            & 4,431080569
+\end{array} \right)
+\left( \begin{array}{r}
+x_1 \\x_2 \\x_3
+\end{array} \right) =
+\left( \begin{array}{l}
+4,704421212  \\5,677494699 \\-4,431080570
+\end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="703" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$\displaystyle \left( \begin{array}{lll}
+-6,164414004 &amp; -4,704421213 &amp; -6,16441...
+...n{array}{l}
+4,704421212 \ 5,677494699 \ -4,431080570
+\end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+Une phase ascendante de r&#233;solution donne la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{r}
+x_1 \\x_2 \\x_3
+\end{array} \right) =
+\left( \begin{array}{l}
+1,000000001 \\-1,000000000 \\-1,000000000
+\end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="272" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$\displaystyle \left( \begin{array}{r}
+x_1 \ x_2 \ x_3
+\end{array} \right) =...
+...{array}{l}
+1,000000001 \ -1,000000000 \ -1,000000000
+\end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD>En arithm&#233;tique &#224; 10 chiffres, on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+G_{2,1} =
+\left( \begin{array}{lll}
+0,9284766909  & 0,3713906764 & 0 \\
+-0,3713906764 & 0,9284766909 & 0 \\
+0             & 0            & 1
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="390" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$\displaystyle G_{2,1} =
+\left( \begin{array}{lll}
+0,9284766909 &amp; 0,3713906764 &amp; 0 \\
+-0,3713906764 &amp; 0,9284766909 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+G_{3,1} =
+\left( \begin{array}{lll}
+0,8735890880  & 0 & 0,4866642634 \\
+0             & 1 & 0 \\
+-0,4866642634 & 0 & 0,8735890880
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="390" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\displaystyle G_{3,1} =
+\left( \begin{array}{lll}
+0,8735890880 &amp; 0 &amp; 0,4866642634 \\
+0 &amp; 1 &amp; 0 \\
+-0,4866642634 &amp; 0 &amp; 0,8735890880
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+et
+<P><!-- MATH
+ \begin{displaymath}
+G_{3,2} =
+\left( \begin{array}{lll}
+1 & 0            & 0 \\
+0 & 0,9764799726 & -0,2156081243 \\
+0 & 0,2156081243 & 0,9764799726
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="390" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$\displaystyle G_{3,2} =
+\left( \begin{array}{lll}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0,9764799726 &amp; -0,2156081243 \\
+0 &amp; 0,2156081243 &amp; 0,9764799726
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{r}
+x_1 \\x_2 \\x_3
+\end{array} \right) =
+\left( \begin{array}{l}
+1,000000001 \\-1,000000000 \\-0,9999999998
+\end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="281" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$\displaystyle \left( \begin{array}{r}
+x_1 \ x_2 \ x_3
+\end{array} \right) =...
+...array}{l}
+1,000000001 \ -1,000000000 \ -0,9999999998
+\end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>&#192; l'&#233;tape <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$ i$">
+ (pour <!-- MATH
+ $i = 1, 2,\ldots, n-1)$
+ -->
+<IMG
+ WIDTH="156" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$ i = 1, 2,\ldots, n-1)$">
+, on a
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Pour calculer <IMG
+ WIDTH="41" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ \Vert z \Vert _2$">
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ n-i+1$">
+ multiplications</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$ n-i$">
+ additions</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>1 racine carr&#233;e</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Pour calculer <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.png"
+ ALT="$ u$">
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>1 multiplication</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>1 addition</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Pour calculer <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$ P$">
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>1 addition et 2 multiplications pour le d&#233;nominateur</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><IMG
+ WIDTH="100" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ (n-i+1)^2$">
+ multiplications pour <IMG
+ WIDTH="32" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ uu^t$">
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><IMG
+ WIDTH="100" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ (n-i+1)^2$">
+ multiplications pour la division par le d&#233;nominateur</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ (n-i+1)$">
+ additions pour soustraire de l'identit&#233;</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Pour calculer <IMG
+ WIDTH="33" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$ PA$">
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Cela revient &#224; une multiplications de matrices <IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ (n-i+1)$">
+ par <IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ (n-i+1)$">
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>d'o&#249; <!-- MATH
+ $(n-i+1)^2(n-i+1+n-i)$
+ -->
+<IMG
+ WIDTH="252" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ (n-i+1)^2(n-i+1+n-i)$">
+ op&#233;rations</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>Pour calculer <IMG
+ WIDTH="27" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ Pb$">
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><!-- MATH
+ $(n-i+1)(n-i+1+n-i)$
+ -->
+<IMG
+ WIDTH="244" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ (n-i+1)(n-i+1+n-i)$">
+ op&#233;rations.</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<P><P>
+<BR>
+Cela fait donc, &#224; l'&#233;tape <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$ i$">
+,
+    <P><!-- MATH
+ \begin{displaymath}
+12-14\,i+14\,n+2\,{n}^{3}-2\,{i}^{3}-18\,ni+9\,{i}^{2}-6\,{n}^{2}i+6\,
+n{i}^{2}+9\,{n}^{2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="523" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$\displaystyle 12-14 i+14 n+2 {n}^{3}-2 {i}^{3}-18 ni+9 {i}^{2}-6 {n}^{2}i+6 
+n{i}^{2}+9 {n}^{2}$">
+</DIV><P>
+</P>
+op&#233;rations.
+
+<P>
+ce qui donne en tout <!-- MATH
+ $1/2\,{n}^{4}+13/2\,n+2\,{n}^{3}+3\,{n}^{2}-12$
+ -->
+<IMG
+ WIDTH="280" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$ 1/2 {n}^{4}+13/2 n+2 {n}^{3}+3 {n}^{2}-12$">
+ op&#233;rations,
+    auxquelles il faut ajouter les <IMG
+ WIDTH="23" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img64.png"
+ ALT="$ n^2$">
+ op&#233;rations pour la phase ascendante.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Pour une colonne <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$ j$">
+ fix&#233;e, faire dispara&#238;tre les &#233;l&#233;ments
+    non nuls sous la diagonale de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$ A$">
+ revient &#224; effectuer <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$ n-j$">
+ rotations, &#224; savoir
+    <!-- MATH
+ $G_{j+1,j}, G_{j+2,j}, \ldots G_{n,j}$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$ G_{j+1,j}, G_{j+2,j}, \ldots G_{n,j}$">
+. Pour construire une matrice <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$ G_{i,j}$">
+, il y a
+    2 multiplications, 1 addition et une racine carr&#233;e pour le d&#233;nominateur et 2 quotients
+    pour trouver les termes non triviaux de <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$ G_{i,j}$">
+ (on ne recalcule pas les termes d&#233;j&#224;
+    connus).
+
+<P>
+Pour le produit <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$ G_{i,j}$">
+ avec la matrice <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$ A$">
+ modifi&#233;e, il faut <IMG
+ WIDTH="104" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ 6(n-j+1)$">
+ op&#233;rations.
+    Pour le produit <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$ G_{i,j}$">
+ avec le vecteur <IMG
+ WIDTH="13" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$ b$">
+ modifi&#233;, il faut <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$ 6$">
+ op&#233;rations.
+
+<P>
+On a donc jusqu'&#224; pr&#233;sent <!-- MATH
+ $6 + 6(n-j+1) + 6 = 6(n-j+3)$
+ -->
+<IMG
+ WIDTH="294" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ 6 + 6(n-j+1) + 6 = 6(n-j+3)$">
+ op&#233;rations &#224; r&#233;p&#233;ter pour les <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$ n-j$">
+ rotations
+    n&#233;cessaires &#224; une colonne.
+
+<P>
+En tout, cela repr&#233;sente <!-- MATH
+ $\sum\limits_{j=1}^{n-1} 6(n-j+3)(n-j) = 2n^3-2n$
+ -->
+<IMG
+ WIDTH="288" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ \sum\limits_{j=1}^{n-1} 6(n-j+3)(n-j) = 2n^3-2n$">
+ op&#233;rations,
+    auxquelles il faut ajouter les <IMG
+ WIDTH="23" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img64.png"
+ ALT="$ n^2$">
+ op&#233;rations pour la phase ascendante.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>&#192; ce moment, la valeur de <IMG
+ WIDTH="40" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$ \cos t$">
+ est nulle et la matrice <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$ G$">
+ devient une matrice de permutation
+    avec changement de signe pour une des lignes permut&#233;es.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Il suffit de d&#233;finir <!-- MATH
+ ${\rm signe}(0) = +1$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$ {\rm signe}(0) = +1$">
+ et le reste des calculs peut continuer.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-08-02
+</ADDRESS>
+</BODY>
+</HTML>

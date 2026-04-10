@@ -1,0 +1,1308 @@
+\batchmode
+\documentclass[12pt]{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{html}
+
+
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Alpha}{\textrm{A}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1984}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{(+0,254 \times 10^4) + (-0,321 \times 10 ^6)} \\
+          \quad & = & (+0,00254 \times 10^6) + (-0,321 \times 10^6) \\
+                & = & (-0,31846 \times 10^6) \\
+                & = & (-0,318 \times 10^6)
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1986}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{(+0,254 \times 10^4) \cdot (-0,231 \times 10 ^6)} \\
+                & = & ((+0,254 \cdot -0,231) \times 10 ^{4+6}) \\
+                & = & (-0,058674 \times 10 ^{10}) \\
+                & = & (-0,587 \times 10 ^{9})
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1988}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{7} + \frac{1}{8}} \\
+                & = & (+0,143 \times 10^{0}) + (+0,125 \times 10^{0}) \\
+                & = & (+0,268 \times 10^{0})
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1990}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{7} + \frac{1}{7} - \frac{2}{7}} \\
+                & = & (+0,143 \times 10^{0}) + (+0,143 \times 10^{0}) - (+0,286 \times 10^{0}) \\
+                & = & (+0,286 \times 10^{0}) - (+0,286 \times 10^{0}) \\
+                & = & 0
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1995}%
+$ m=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1997}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{2} + \frac{1}{4}} \\
+                & = & (+0,100 \times 2^{0}) + (+0,100 \times 2^{-1}) \\
+                & = & (+0,100 \times 2^{0}) + (+0,0100 \times 2^{0}) \\
+                & = & (+0,110 \times 2^{0}) \\
+                & = & \frac{3}{4}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1999}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{2} + \frac{1}{4}} \\
+                & = & (+0,111 \times 3^{0}) + (+0,202 \times 3^{-1}) \\
+                & = & (+0,111 \times 3^{0}) + (+0,0202 \times 3^{0}) \\
+                & = & (+0,2012 \times 3^{0}) \\
+                & = & (+0,202 \times 3^{0}) \\
+                & = & \frac{2}{3} + \frac{2}{27} \\
+                & = & \frac{20}{27}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2001}%
+$ \frac{3}{4}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2003}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{3} + \frac{1}{9}} \\
+                & = & (+0,100 \times 3^{0}) + (+0,100 \times 3^{-1}) \\
+                & = & (+0,100 \times 3^{0}) + (+0,0100 \times 3^{0}) \\
+                & = & (+0,110 \times 3^{0}) \\
+                & = & \frac{4}{9}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2005}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{3} + \frac{1}{9}} \\
+                & = & (+0,101 \times 2^{-1}) + (+0,111 \times 2^{-3}) \\
+                & = & (+0,101 \times 2^{-1}) + (+0,00111 \times 2^{-1}) \\
+                & = & (+0,11011 \times 2^{-1}) \\
+                & = & (+0,111 \times 2^{-1}) \\
+                & = & \frac{1}{4} + \frac{1}{8} + \frac{1}{16} \\
+                & = & \frac{7}{16}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2009}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{5} + \frac{1}{5}} \\
+                & = & (+0,200 \times 10^{0}) + (+0,200 \times 10^{0}) \\
+                & = & (+0,400 \times 10^{0}) \\
+                & = & \frac{2}{5}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2011}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{5} + \frac{1}{5}} \\
+                & = & (+0,110 \times 2^{-2}) + (+0,110 \times 2^{-2}) \\
+                & = & (+1,100 \times 2^{-2}) \\
+                & = & (+0,110 \times 2^{-1}) \\
+                & = & \frac{1}{4} + \frac{1}{8} \\
+                & = & \frac{3}{8}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2013}%
+$ \frac{2}{5}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2015}%
+$ m=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2017}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{8} + \frac{1}{8}} \\
+                & = & (+0,1 \times 2^{-2}) + (+0,1 \times 2^{-2}) \\
+                & = & (+1 \times 2^{-2}) \\
+                & = & (+0,1 \times 2^{-1}) \\
+                & = & \frac{1}{4}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2019}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{8} + \frac{1}{8}} \\
+                & = & (+0,1 \times 10^{0}) + (+0,1 \times 10^{0}) \\
+                & = & (+0,2 \times 10^{0}) \\
+                & = & \frac{1}{5}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2021}%
+$ \frac{1}{4}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2025}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{3} + \frac{1}{3}} \\
+                & = & (+0,100 \times 3^{0}) + (+0,100 \times 3^{0}) \\
+                & = & (+0,200 \times 3^{0}) \\
+                & = & \frac{2}{3}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2027}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{3} + \frac{1}{3}} \\
+                & = & (+0,333 \times 10^{0}) + (+0,333 \times 10^{0}) \\
+                & = & (+0,666 \times 10^{0}) \\
+                & = & \frac{6}{10} + \frac{6}{100} + \frac{6}{1000} \\
+                & = & \frac{666}{1000}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2029}%
+$ \frac{2}{3} = \frac{6}{999}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2033}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{5} + \frac{1}{5}} \\
+                & = & (+0,200 \times 10^{0}) + (+0,200 \times 10^{0}) \\
+                & = & (+0,400 \times 10^{0}) \\
+                & = & \frac{4}{10} \\
+                & = & \frac{2}{5}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2035}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \multicolumn{3}{l}{\frac{1}{5} + \frac{1}{5}} \\
+                & = & (+0,121 \times 3^{-1}) + (+0,121 \times 3^{-1}) \\
+                & = & (+1,012 \times 3^{-1}) \\
+                & = & (+0,102 \times 3^{0}) \\
+                & = & \frac{1}{3} + \frac{2}{27} \\
+                & = & \frac{11}{27}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2039}%
+$ x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2041}%
+\begin{displaymath}\begin{array}{rcl}
+x_1 = \frac{-b + \sqrt{b^2-4ac}}{2a}
+    & = & \frac{-100 + \sqrt{100^2-4(200)(1)}}{2(200)} \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{3})^2 + (-0,40 \times 10^{1}) \cdot (+0,20 \times 10^{3}) \cdot (+0,10 \times 10^{1})}}{(+0,20 \times 10^{1}) \cdot (0,20 \times 10^{3})} \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,01 \times 10^{6}) + (-0,08 \times 10^{4}) \cdot (+0,10 \times 10^{1})}}{(+0,04 \times 10^{4}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3}) \cdot (+0,10 \times 10^{1})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,08 \times 10^{4})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,0080 \times 10^{5})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,092 \times 10^{5})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + \sqrt{(+0,92 \times 10^{4})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + (+0,96 \times 10^{2})}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) + (+0,096 \times 10^{3})}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,004 \times 10^{3})}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,40 \times 10^{1})}{(+0,40 \times 10^{3}) } \\\\
+    & = & (-1,0 \times 10^{-2}) \\\\
+    & = & (-0,10 \times 10^{-1}) \\\\
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2043}%
+\begin{displaymath}\begin{array}{rcl}
+x_2 = \frac{-b - \sqrt{b^2-4ac}}{2a}
+    & = & \frac{-100 - \sqrt{100^2-4(200)(1)}}{2(200)} \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{3})^2 + (-0,40 \times 10^{1}) \cdot (+0,20 \times 10^{3}) \cdot (+0,10 \times 10^{1})}}{(+0,20 \times 10^{1}) \cdot (0,20 \times 10^{3})} \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,01 \times 10^{6}) + (-0,08 \times 10^{4}) \cdot (+0,10 \times 10^{1})}}{(+0,04 \times 10^{4}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3}) \cdot (+0,10 \times 10^{1})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,08 \times 10^{4})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,0080 \times 10^{5})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,092 \times 10^{5})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - \sqrt{(+0,92 \times 10^{4})}}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - (+0,96 \times 10^{2})}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,10 \times 10^{3}) - (+0,096 \times 10^{3})}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,196 \times 10^{3})}{(+0,40 \times 10^{3}) } \\\\
+    & = & \frac{(-0,20 \times 10^{3})}{(+0,40 \times 10^{3}) } \\\\
+    & = & (-0,50 \times 10^{0})
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2045}%
+$ x=\frac{2c}{-b \mp \sqrt{b^2-4ac}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2047}%
+\begin{displaymath}\begin{array}{rcl}
+x_3 = \frac{2c}{-b + \sqrt{b^2-4ac}}
+    & = & \frac{2(1)}{-100 + \sqrt{100^2-4(200)(1)}} \\\\
+    & = & \frac{(+0,20 \times 10^{1}) \cdot (0,10 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{3})^2 + (-0,40 \times 10^{1}) \cdot (+0,20 \times 10^{3}) \cdot (+0,10 \times 10^{1})}} \\\\
+    & = & \frac{(+0,02 \times 10^{2})}{(-0,10 \times 10^{3}) + \sqrt{(+0,01 \times 10^{6}) + (-0,08 \times 10^{4}) \cdot (+0,10 \times 10^{1})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3}) \cdot (+0,10 \times 10^{1})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,08 \times 10^{4})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,10 \times 10^{5}) + (-0,0080 \times 10^{5})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,092 \times 10^{5})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + \sqrt{(+0,92 \times 10^{4})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + (+0,96 \times 10^{2})} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) + (+0,096 \times 10^{3})} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,004 \times 10^{3})} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,40 \times 10^{1})} \\\\
+    & = & (-0,5 \times 10^{0}) \\\\
+    & = & (-0,50 \times 10^{0}) \\\\
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2049}%
+\begin{displaymath}\begin{array}{rcl}
+x_4 = \frac{2c}{-b - \sqrt{b^2-4ac}}
+    & = & \frac{2(1)}{-100 - \sqrt{100^2-4(200)(1)}} \\\\
+    & = & \frac{(+0,20 \times 10^{1}) \cdot (0,10 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{3})^2 + (-0,40 \times 10^{1}) \cdot (+0,20 \times 10^{3}) \cdot (+0,10 \times 10^{1})}} \\\\
+    & = & \frac{(+0,02 \times 10^{2})}{(-0,10 \times 10^{3}) - \sqrt{(+0,01 \times 10^{6}) + (-0,08 \times 10^{4}) \cdot (+0,10 \times 10^{1})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3}) \cdot (+0,10 \times 10^{1})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,08 \times 10^{4})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,80 \times 10^{3})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,10 \times 10^{5}) + (-0,0080 \times 10^{5})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,092 \times 10^{5})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - \sqrt{(+0,92 \times 10^{4})}} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - (+0,96 \times 10^{2})} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,10 \times 10^{3}) - (+0,096 \times 10^{3})} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,196 \times 10^{3})} \\\\
+    & = & \frac{(+0,20 \times 10^{1})}{(-0,20 \times 10^{3})} \\\\
+    & = & (-1,0 \times 10^{-2}) \\\\
+    & = & (-0,10 \times 10^{-1}) \\\\
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2054}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\sum\limits_{n=1}^{+\infty}\frac{1}{n}
+    & = & \frac{1}{1} + \frac{1}{2} + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,1 \times 10^{1}) + (+0,5 \times 10^{0}) + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,1 \times 10^{1}) + (+0,05 \times 10^{1}) + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + \frac{1}{3} + \sum\limits_{n=4}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + (+0,3 \times 10^{0}) + \sum\limits_{n=4}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + (+0,03 \times 10^{1}) + \sum\limits_{n=4}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + \frac{1}{4} + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + (+0,3 \times 10^{0}) + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + (+0,03 \times 10^{1}) + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,2 \times 10^{1}) + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & \ldots \\\\
+    & = & (+0,2 \times 10^{1})
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2056}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\sum\limits_{n=1}^{+\infty}\frac{1}{n}
+    & = & \frac{1}{1} + \frac{1}{2} + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,10 \times 10^{1}) + (+0,50 \times 10^{0}) + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,15 \times 10^{1}) + \sum\limits_{n=3}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,15 \times 10^{1}) + \frac{1}{3} + \sum\limits_{n=4}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,15 \times 10^{1}) + (+0,33 \times 10^{0}) + \sum\limits_{n=4}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,18 \times 10^{1}) + \sum\limits_{n=4}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,18 \times 10^{1}) + \frac{1}{4} + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,18 \times 10^{1}) + (+0,25 \times 10^{0}) + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,21 \times 10^{1}) + \sum\limits_{n=5}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,21 \times 10^{1}) + \frac{1}{5} + \sum\limits_{n=6}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,21 \times 10^{1}) + (+0,20 \times 10^{0} + \sum\limits_{n=6}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,23 \times 10^{1}) + \sum\limits_{n=6}^{+\infty}\frac{1}{n}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2058}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\quad
+    & = & (+0,23 \times 10^{1}) + \frac{1}{6} + \sum\limits_{n=7}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,23 \times 10^{1}) + (+0,17 \times 10^{0} + \sum\limits_{n=7}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,25 \times 10^{1}) + \sum\limits_{n=7}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,25 \times 10^{1}) + \frac{1}{7} + \sum\limits_{n=8}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,25 \times 10^{1}) + (+0,14 \times 10^{0} + \sum\limits_{n=8}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,26 \times 10^{1}) + \sum\limits_{n=8}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,26 \times 10^{1}) + \frac{1}{8} + \sum\limits_{n=9}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,26 \times 10^{1}) + (+0,13 \times 10^{0}) + \sum\limits_{n=9}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,27 \times 10^{1}) + \sum\limits_{n=9}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,27 \times 10^{1}) + \frac{1}{9} + \sum\limits_{n=10}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,27 \times 10^{1}) + (+0,11 \times 10^{0}) + \sum\limits_{n=10}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,28 \times 10^{1}) + \sum\limits_{n=10}^{+\infty}\frac{1}{n}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2060}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\quad
+    & = & (+0,28 \times 10^{1}) + \frac{1}{10} + \sum\limits_{n=11}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,28 \times 10^{1}) + (+0,10 \times 10^{0}) + \sum\limits_{n=11}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,29 \times 10^{1}) + \sum\limits_{n=11}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,29 \times 10^{1}) + \frac{1}{11} + \sum\limits_{n=12}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,29 \times 10^{1}) + (+0,91 \times 10^{-1}) + \sum\limits_{n=12}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,30 \times 10^{1}) + \sum\limits_{n=12}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,30 \times 10^{1}) + \frac{1}{12} + \sum\limits_{n=13}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,30 \times 10^{1}) + (+0,83 \times 10^{-1}) + \sum\limits_{n=13}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,31 \times 10^{1}) + \sum\limits_{n=13}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,31 \times 10^{1}) + \frac{1}{13} + \sum\limits_{n=14}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,31 \times 10^{1}) + (+0,77 \times 10^{-1}) + \sum\limits_{n=14}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,32 \times 10^{1}) + \sum\limits_{n=14}^{+\infty}\frac{1}{n}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2062}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\quad
+    & = & (+0,32 \times 10^{1}) + \frac{1}{14} + \sum\limits_{n=15}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,32 \times 10^{1}) + (+0,71 \times 10^{-1}) + \sum\limits_{n=15}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,33 \times 10^{1}) + \sum\limits_{n=15}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,33 \times 10^{1}) + \frac{1}{15} + \sum\limits_{n=16}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,33 \times 10^{1}) + (+0,67 \times 10^{-1}) + \sum\limits_{n=16}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,34 \times 10^{1}) + \sum\limits_{n=16}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,34 \times 10^{1}) + \frac{1}{16} + \sum\limits_{n=17}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,34 \times 10^{1}) + (+0,63 \times 10^{-1}) + \sum\limits_{n=17}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,35 \times 10^{1}) + \sum\limits_{n=17}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,35 \times 10^{1}) + \frac{1}{17} + \sum\limits_{n=18}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,35 \times 10^{1}) + (+0,59 \times 10^{-1}) + \sum\limits_{n=18}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,36 \times 10^{1}) + \sum\limits_{n=18}^{+\infty}\frac{1}{n}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2064}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\quad
+    & = & (+0,36 \times 10^{1}) + \frac{1}{18} + \sum\limits_{n=19}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,36 \times 10^{1}) + (+0,56 \times 10^{-1}) + \sum\limits_{n=19}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,37 \times 10^{1}) + \sum\limits_{n=19}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,37 \times 10^{1}) + \frac{1}{19} + \sum\limits_{n=20}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,37 \times 10^{1}) + (+0,53 \times 10^{-1}) + \sum\limits_{n=20}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,38 \times 10^{1}) + \sum\limits_{n=20}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,38 \times 10^{1}) + \frac{1}{20} + \sum\limits_{n=21}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,38 \times 10^{1}) + (+0,50 \times 10^{-1}) + \sum\limits_{n=21}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,39 \times 10^{1}) + \sum\limits_{n=21}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,39 \times 10^{1}) + \frac{1}{21} + \sum\limits_{n=22}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,39 \times 10^{1}) + (+0,48 \times 10^{-1}) + \sum\limits_{n=22}^{+\infty}\frac{1}{n} \\\\
+    & = & (+0,39 \times 10^{1}) + \sum\limits_{n=22}^{+\infty}\frac{1}{n} \\\\
+    & = & \ldots \\\\
+    & = & (+0,39 \times 10^{1})
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2066}%
+$ z = (+0,100 \times 10^{2})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2068}%
+$ x = (+0,100 \times 10^{-1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2070}%
+$ \frac{|x|}{|z|} = (+1,00 \times 10^{-3} = (+0,100 \times 10^{-2}) \leqslant 10^{-3} = b^{-m}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2072}%
+$ x+z = (+0,100 \times 10^{-1}) + (+0,100 \times 10^{2})
+= (+0,000100 \times 10^{2}) + (+0,100 \times 10^{2}) = (+0,1001 \times 10^{2}) = (+0,100 \times 10^{2}) = z$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2074}%
+$ z = (+0,500 \times 10^{2})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2076}%
+$ x = (+0,500 \times 10^{-1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2080}%
+$ x+z = (+0,500 \times 10^{-1}) + (+0,500 \times 10^{2})
+= (+0,000500 \times 10^{2}) + (+0,500 \times 10^{2}) = (+0,5005 \times 10^{2}) = (+0,501 \times 10^{2}) \neq z$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2085}%
+$ s_n = \sum\limits_{i=0}^{n-1}br^i = b + \sum\limits_{i=1}^{n-1}br^i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2087}%
+$ r \cdot s_n = \sum\limits_{i=0}^{n-1}br^{i+1} = \sum\limits_{i=1}^{n}br^i = \sum\limits_{i=1}^{n-1}br^i + br^n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2089}%
+$ s_n-rs_n = b + \sum\limits_{i=1}^{n-1}br^i - \sum\limits_{i=1}^{n-1}br^i - br^n = b - br^n = b(1-r^n)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2091}%
+$ s_n (1-r) = b (1-r^n)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2093}%
+$ s_n = \frac{b}{1-r} (1-r^n)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2095}%
+$ r \neq 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2097}%
+$ |r|<1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2099}%
+$ r^n \to 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2101}%
+$ n \to +\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2103}%
+$ s_n \to \frac{b}{1-r}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2105}%
+$ br^n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2107}%
+$ b=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2109}%
+$ r=\frac{1}{4}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2111}%
+$ m=4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2113}%
+\begin{displaymath}\begin{array}[t]{llll}
+    \textrm{terme}  & \textrm{dévelop. décimal} & \textrm{avec $m=4$}      & \textrm{somme partielle} \\
+    \frac{1}{1}     & 1                         & (+0,1000 \times 10^{1})  & (+0,1000 \times 10^{1}) \\
+    \frac{1}{4}     & 0,25                      & (+0,2500 \times 10^{0})  & (+0,1250 \times 10^{1}) \\
+    \frac{1}{16}    & 0,0625                    & (+0,6250 \times 10^{-1}) & (+0,1313 \times 10^{1}) \\
+    \frac{1}{64}    & 0,015625                  & (+0,1563 \times 10^{-1}) & (+0,1329 \times 10^{1}) \\
+    \frac{1}{256}   & 0,00390625                & (+0,3906 \times 10^{-2}) & (+0,1333 \times 10^{1}) \\
+    \frac{1}{1024}  & 0,0009765625              & (+0,9767 \times 10^{-3}) & (+0,1334 \times 10^{1}) \\
+    \frac{1}{4096}  & 0,000244140625            & (+0,2441 \times 10^{-3}) & (+0,1334 \times 10^{1})
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2115}%
+$ 1,334$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2117}%
+$ \frac{b}{1-r} = \frac{1}{1-0,25} = \frac{1}{0,75} = (+0,1333 \times 10^{1})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2119}%
+$ \frac{1}{7} = 0,142857143\ldots$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2123}%
+$ \left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+x & + & y & = & 1
+\end{array}
+\right.$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2125}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & (1-\frac{1}{7} \cdot 7)y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2127}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & (1-0,143 \cdot 7)y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2129}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & (1- 1,00)y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2131}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & 0y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2144}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & (1-0,142857 \cdot 7)y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2146}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & (1- 0.999999)y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2148}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & - & 0,000001y & = & 1
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2150}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+0x & + & 1y & = & 1000000
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2152}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+7x & + & 0y & = & -7000000 \\
+0x & + & 1y & = & 1000000
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2154}%
+\begin{displaymath}\left\lbrace
+\begin{array}{ccccc}
+1x & + & 0y & = & -1000000 \\
+0x & + & 1y & = & 1000000
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2169}%
+$ (x,y)=(-142.857, -142.857)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2171}%
+$ 3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2173}%
+$ (+0,11\;000\;000\;000\;000\;000 \times 2^{2}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2175}%
+$ 0,2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2177}%
+$ (+0,11\;001\;100\;110\;011\;010 \times 2^{-2})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2179}%
+$ 3 \cdot 0,2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2181}%
+\begin{displaymath}\begin{array}[t]{ccccccccccccccccccccc}
+  &   & 0 & , & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+  & \times & 0 & , & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+  &   &   & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+  & + & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+\hline
+0 & , & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 0
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2183}%
+$ (+0,10011001100110100 \times 2^{0})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2185}%
+$ 0,6$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2187}%
+$ (+0,10011001100110011 \times 2^{0})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2189}%
+$ 3 \cdot 0,2 \neq 0,6$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2194}%
+$ (x,y)=(5,2)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2196}%
+\begin{displaymath}\begin{array}{l}
+    %
+    \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    -0,504 & 2,00 &  1,48
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - \frac{0,504}{0,670} \cdot 2,67) &  (1,48 - \frac{0,504}{0,670} \cdot 1,99)
+    \end{array} \right)
+    %
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 0,752 \cdot 2,67) &  (1,48 - 0,752 \cdot 1,99)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 2,01) &  (1,48 - 1,50)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (- 0,01) &  (- 0,02)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & 1,00 & 2,00
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 2,67 * 2,00) \\
+    0,000 & 1,00 & 2,00
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 5,34) \\
+    0,000 & 1,00 & 2,00
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & 3,35 \\
+    0,000 & 1,00 & 2,00
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    1,00 & 0,000 & 5,00 \\
+    0,000 & 1,00 & 2,00
+    \end{array} \right)
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2198}%
+\begin{displaymath}\begin{array}{l}
+    %
+    \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    -0,504 & 2,00 &  1,48
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - \frac{0,504}{0,670} \cdot 2,67) &  (1,48 - \frac{0,504}{0,670} \cdot 1,99)
+    \end{array} \right)
+    %
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 0,7522 \cdot 2,67) &  (1,48 - 0,7522 \cdot 1,99)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 2,008) &  (1,48 - 1,497)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (- 0,008) &  (- 0,017)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & 1,000 & 2,125
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 2,67 * 2,125) \\
+    0,000 & 1,00 & 2,125
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 5,674) \\
+    0,000 & 1,00 & 2,125
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & 3,684 \\
+    0,000 & 1,00 & 2,125
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    1,00 & 0,000 & 5,499 \\
+    0,000 & 1,00 & 2,125
+    \end{array} \right)
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2200}%
+\begin{displaymath}\begin{array}{l}
+    %
+    \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    -0,504 & 2,00 &  1,48
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - \frac{0,504}{0,670} \cdot 2,67) &  (1,48 - \frac{0,504}{0,670} \cdot 1,99)
+    \end{array} \right)
+    %
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 0,75224 \cdot 2,67) &  (1,48 - 0,75224 \cdot 1,99)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 2,0085) &  (1,48 - 1,4970)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (- 0,0085) &  (- 0,017)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & 1,00 & 2,0000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 2,67 * 2,0000) \\
+    0,000 & 1,00 & 2,0000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 5,3400) \\
+    0,000 & 1,00 & 2,0000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & 3,3500 \\
+    0,000 & 1,00 & 2,0000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    1,00 & 0,000 & 5,0000 \\
+    0,000 & 1,00 & 2,0000
+    \end{array} \right)
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2202}%
+\begin{displaymath}\begin{array}{l}
+    %
+    \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    -0,504 & 2,00 &  1,48
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - \frac{0,504}{0,670} \cdot 2,67) &  (1,48 - \frac{0,504}{0,670} \cdot 1,99)
+    \end{array} \right)
+    %
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 0,752239 \cdot 2,67) &  (1,48 - 0,752239 \cdot 1,99)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 2,00848) &  (1,48 - 1,49696)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (- 0,00848) &  (- 0,01696)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & 1,00 & 2,00000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 2,67 * 2,00000) \\
+    0,000 & 1,00 & 2,00000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 5,34000) \\
+    0,000 & 1,00 & 2,00000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & 3,35000 \\
+    0,000 & 1,00 & 2,00000
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    1,00 & 0,000 & 5,00000 \\
+    0,000 & 1,00 & 2,00000
+    \end{array} \right)
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2204}%
+\begin{displaymath}\begin{array}{l}
+    %
+    \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    -0,504 & 2,00 &  1,48
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - \frac{0,504}{0,670} \cdot 2,67) &  (1,48 - \frac{0,504}{0,670} \cdot 1,99)
+    \end{array} \right)
+    %
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 0,7522388 \cdot 2,67) &  (1,48 - 0,7522388 \cdot 1,99)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (2,00 - 2,008478) &  (1,48 - 1,496955)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & (- 0,008478) &  (- 0,0016955)
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & -2,67 & -1,99 \\
+    0,000 & 1,00 & 1,999882
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 2,67 * 1,999882) \\
+    0,000 & 1,00 & 1,999882
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & (-1,99 + 5,339685) \\
+    0,000 & 1,00 & 1,999882
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    0,670 & 0,000 & 3,349685 \\
+    0,000 & 1,00 & 1,999882
+    \end{array} \right)
+    \\
+    \\
+   \sim \left( \begin{array}{rr|r}
+    1,00 & 0,000 & 4,999530 \\
+    0,000 & 1,00 & 1,999882
+    \end{array} \right)
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

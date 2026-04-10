@@ -1,0 +1,2107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_3</TITLE>
+<META NAME="description" CONTENT="sol_lab_3">
+<META NAME="keywords" CONTENT="sol_lab_3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_3.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 3 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left( \begin{array}{rr}
+0,670 & -2,67 \\
+-0,504 & 2,00
+\end{array} \right)
+\left( \begin{array}{c}
+x_1 \\
+x_2
+\end{array}\right)
+=
+\left( \begin{array}{r}
+-1,99 \\
+1,48
+\end{array}\right)$
+ -->
+<IMG
+ WIDTH="362" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ \left( \begin{array}{rr}
+0,670 &amp; -2,67 \\
+-0,504 &amp; 2,00
+\end{array} \right...
+...{array}\right)
+=
+\left( \begin{array}{r}
+-1,99 \\
+1,48
+\end{array}\right)$">
+
+</DIV>
+
+<P>
+qui a &#233;t&#233; r&#233;solu au num&#233;ro neuf du laboratoire un. Consid&#233;rons aussi les solutions approximatives
+<!-- MATH
+ $\widetilde{x}_1 = \left( \begin{array}{l} 5,6 \\2,15 \end{array} \right)$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \widetilde{x}_1 = \left( \begin{array}{l} 5,6 \ 2,15 \end{array} \right)$">
+ et
+<!-- MATH
+ $\widetilde{x}_2 = \left( \begin{array}{l} 4,99 \\1,48 \end{array} \right)$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \widetilde{x}_2 = \left( \begin{array}{l} 4,99 \ 1,48 \end{array} \right)$">
+.
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Pour <!-- MATH
+ $\widetilde{x}_1$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ \widetilde{x}_1$">
+, on obtient avec une mantisse &#224; 6 chiffres, mais stock&#233; en mantisse &#224; 3 chiffres
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    r(\widetilde{x}_1)  & = & b-A\widetilde{x}_1 \\
+            & = &
+    \left(
+    \begin{array}{c}
+    -1,99 \\1,48
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{rr}
+    0,670 & -2,67 \\
+    -0,504 & 2,00
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{c}
+    5,6 \\2,15
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    -1,99 \\1,48
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{c}
+    -1,9885 \\1,4776
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    -0,0015 \\0,0024
+    \end{array}
+    \right).
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="483" HEIGHT="180" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+r(\widetilde{x}_1) &amp; = &amp; b-A\widetilde{x}_1 \...
+...eft(
+\begin{array}{c}
+-0,0015 \ 0,0024
+\end{array}
+\right).
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+Pour <!-- MATH
+ $\widetilde{x}_2$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ \widetilde{x}_2$">
+, on obtient avec une mantisse &#224; 6 chiffres, mais stock&#233; en mantisse &#224; 3 chiffres
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    r(\widetilde{x}_2)  & = & b-A\widetilde{x}_2 \\
+            & = &
+    \left(
+    \begin{array}{c}
+    -1,99 \\1,48
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{rr}
+    0,670 & -2,67 \\
+    -0,504 & 2,00
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{c}
+    4,99 \\1,48
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    -1,99 \\1,48
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{c}
+    -0,60830 \\0,44504
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    -1,38 \\1,03
+    \end{array}
+    \right).
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="483" HEIGHT="180" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+r(\widetilde{x}_2) &amp; = &amp; b-A\widetilde{x}_2 \...
+...
+\left(
+\begin{array}{c}
+-1,38 \ 1,03
+\end{array}
+\right).
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Prenons <IMG
+ WIDTH="56" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$ m=4$">
+ chiffres significatifs. Pour r&#233;soudre
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rr|r}
+0,670 & -2,67 & -1,99 \\
+ -0,504 & 2,00 &  1,48
+  \end{array} \right)
+\left( \begin{array}{r}
+ x_1 \\
+ x_2
+\end{array} \right)
+=
+\left( \begin{array}{r}
+b_1  \\
+b_2
+\end{array} \right),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="402" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \left( \begin{array}{rr\vert r}
+0,670 &amp; -2,67 &amp; -1,99 \\
+-0,50...
+...rray} \right)
+=
+\left( \begin{array}{r}
+b_1 \\
+b_2
+\end{array} \right),
+$">
+</DIV><P>
+</P>
+
+<P>
+on effectuait l'op&#233;ration <!-- MATH
+ $L_2 + \frac{0,504}{0,670}L_1$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ L_2 + \frac{0,504}{0,670}L_1$">
+, ce qui revient,
+&#224; 4 chiffres significatifs, &#224; faire <!-- MATH
+ $L_2 + 0,7522L_1$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ L_2 + 0,7522L_1$">
+. On obtient alors :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rr}
+0,670 & -2,67   \\
+  0,000 & -0,008374
+  \end{array} \right)
+\left( \begin{array}{r}
+ x_1 \\
+ x_2
+\end{array} \right)
+=
+\left( \begin{array}{r}
+b_1  \\
+b_2'
+\end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="357" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\displaystyle \left( \begin{array}{rr}
+0,670 &amp; -2,67 \\
+0,000 &amp; -0,008374
+\...
+...ray} \right)
+=
+\left( \begin{array}{r}
+b_1 \\
+b_2'
+\end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+On trouve alors
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left\lbrace
+\begin{array}{l}
+x_2 = \frac{b_2'}{-0,008374} \\\\
+x_1 = \frac{b_1 + 2,67x_2}{0,670}
+\end{array}
+\right.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="129" HEIGHT="97" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}\left\lbrace
+\begin{array}{l}
+x_2 = \frac{b_2'}{-0,008374} \ \\
+x_1 = \frac{b_1 + 2,67x_2}{0,670}
+\end{array}
+\right.\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Posons <!-- MATH
+ $x_0=\widetilde{x}_1$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ x_0=\widetilde{x}_1$">
+, on doit calculer <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ \delta_i$">
+ tel que
+<!-- MATH
+ $A\delta_i = r(x_i)$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ A\delta_i = r(x_i)$">
+, puis <!-- MATH
+ $x_{i+1} = x_i + \delta_i$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ x_{i+1} = x_i + \delta_i$">
+ pour
+<!-- MATH
+ $i=0,1,2,\ldots$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ i=0,1,2,\ldots$">
+
+
+<P>
+On a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{|c|c|c|c|}
+\hline
+i   & x_i   & r(x_i)    & \delta_i  \\
+\hline \hline & & & \\
+0   & \left( \begin{array}{r} 5,6 \\2,15 \end{array} \right)
+& \left( \begin{array}{r} -0,0015 \\0,0024 \end{array} \right)
+    & \left( \begin{array}{r} -0,6078 \\-0,1519 \end{array} \right) \\& & & \\
+\hline & & & \\
+1   & \left( \begin{array}{r} 4,992 \\1,998 \end{array} \right)
+    & \left( \begin{array}{r} 0,00002 \\-0,000032 \end{array} \right)
+    & \left( \begin{array}{r} 0,008103 \\0,002025 \end{array} \right) \\& & & \\
+\hline & & & \\
+2   & \left( \begin{array}{r} 5,000 \\2,000 \end{array} \right)
+    & \left( \begin{array}{r} 0 \\0 \end{array} \right)
+    & \\& & & \\
+\hline
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="414" HEIGHT="323" BORDER="0"
+ SRC="img19.png"
+ ALT="\begin{displaymath}\begin{array}{\vert c\vert c\vert c\vert c\vert}
+\hline
+i &amp;...
+... \ 0 \end{array} \right)
+&amp; \ &amp; &amp; &amp; \\
+\hline
+\end{array}\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Posons maintenant <!-- MATH
+ $x_0=\widetilde{x}_2$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$ x_0=\widetilde{x}_2$">
+. On obtient :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{|c|c|c|c|}
+\hline
+i   & x_i   & r(x_i)    & \delta_i  \\
+\hline \hline & & & \\
+0   & \left( \begin{array}{r} 4,99 \\1,48 \end{array} \right)
+& \left( \begin{array}{r} -1,382 \\1,035 \end{array} \right)
+    & \left( \begin{array}{r} 0,3165 \\0,5970 \end{array} \right) \\& & & \\
+\hline & & & \\
+1   & \left( \begin{array}{r} 5,306 \\2,077 \end{array} \right)
+    & \left( \begin{array}{r} 0,000570 \\0,000224 \end{array} \right)
+    & \left( \begin{array}{r} -0,3098 \\-0,07794 \end{array} \right) \\& & & \\
+\hline & & & \\
+2   & \left( \begin{array}{r} 4,996 \\1,999 \end{array} \right)
+    & \left( \begin{array}{r} 0,000010 \\-0,000016 \end{array} \right)
+    & \left( \begin{array}{r} 0,004049 \\0,001012 \end{array} \right) \\& & & \\
+\hline & & & \\
+3   & \left( \begin{array}{r} 5,000 \\2,000 \end{array} \right)
+    & \left( \begin{array}{r} 0 \\0 \end{array} \right)
+    & \\& & & \\
+\hline
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="414" HEIGHT="323" BORDER="0"
+ SRC="img19.png"
+ ALT="\begin{displaymath}\begin{array}{\vert c\vert c\vert c\vert c\vert}
+\hline
+i &amp;...
+... \ 0 \end{array} \right)
+&amp; \ &amp; &amp; &amp; \\
+\hline
+\end{array}\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{cccc}
+0,0003 & 1,391 & 0 & 0 \\
+0,3961 & -0,521 & -1 & -1 \\
+0 & 1 & -0,252 & 1 \\
+0 & 1 & 1,34 & -5,34
+ \end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+9,746 \\
+1,236 \\
+7,74 \\
+3,02
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="504" HEIGHT="99" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{cccc}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 \\
+0,...
+...}
+9,746 \\
+1,236 \\
+7,74 \\
+3,02
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Apr&#232;s application de l'algorithme de Gauss &#224; la matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,746\\
+0,3961 & -0,521 & -1 & -1 & 1,236 \\
+0 & 1 & -0,252 & 1 & 7,74 \\
+0 & 1 & 1,34 & -5,34 & 3,02
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="375" HEIGHT="109" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+... 7,74 \\
+0 &amp; 1 &amp; 1,34 &amp; -5,34 &amp; 3,02
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+on obtient la matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,746 \\
+0 & -1837 & -1 & -1 & -12860 \\
+0 & 0 & -0,2525 & 0,9995 & 0,739 \\
+0 & 0 & 0 & -0,041 & -0,062
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="402" HEIGHT="109" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+...0,739 \\
+0 &amp; 0 &amp; 0 &amp; -0,041 &amp; -0,062
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Si on y applique une phase ascendante de r&#233;solution, on obtient :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+26,67 \\
+7,001 \\
+3,057 \\
+1,512
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+26,67 \\
+7,001 \\
+3,057 \\
+1,512
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Pour
+<!-- MATH
+ $b'=
+\left(
+\begin{array}{l}
+9,747 \\
+1,237 \\
+7,741 \\
+3,021
+\end{array}
+\right), $
+ -->
+<IMG
+ WIDTH="139" HEIGHT="109" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{displaymath}b'=
+\left(
+\begin{array}{l}
+9,747 \\
+1,237 \\
+7,741 \\
+3,021
+\end{array}
+\right), \end{displaymath}">
+&nbsp;&nbsp;&nbsp;&nbsp;on obtient la matrice augment&#233;e &#233;chelonn&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,747 \\
+0 & -1837 & -1 & -1 & -12870 \\
+0 & 0 & -0,2525 & 0,9995 & 0,735 \\
+0 & 0 & 0 & -0,041 & -0,087
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="402" HEIGHT="109" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+...0,735 \\
+0 &amp; 0 &amp; 0 &amp; -0,041 &amp; -0,087
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; la solution :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+30,00 \\
+7,001 \\
+5,489 \\
+2,122
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+30,00 \\
+7,001 \\
+5,489 \\
+2,122
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Pour
+<!-- MATH
+ $b''=
+\left(
+\begin{array}{l}
+9,745 \\
+1,235 \\
+7,739 \\
+3,019
+\end{array}
+\right),
+$
+ -->
+<IMG
+ WIDTH="143" HEIGHT="109" BORDER="0"
+ SRC="img28.png"
+ ALT="\begin{displaymath}b''=
+\left(
+\begin{array}{l}
+9,745 \\
+1,235 \\
+7,739 \\
+3,019
+\end{array}
+\right),
+\end{displaymath}">
+
+on obtient la matrice augment&#233;e &#233;chelonn&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,745 \\
+0 & -1837 & -1 & -1 & -12860 \\
+0 & 0 & -0,2525 & 0,9995 & 0,738 \\
+0 & 0 & 0 & -0,041 & -0,068
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="402" HEIGHT="109" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+...0,738 \\
+0 &amp; 0 &amp; 0 &amp; -0,041 &amp; -0,068
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; la solution :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+50,00 \\
+6,995 \\
+3,644 \\
+1,659
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img30.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+50,00 \\
+6,995 \\
+3,644 \\
+1,659
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Comme les solutions varient beaucoup pour de petites variations du
+vecteur des constantes, on en d&#233;duit que les solutions ne sont pas
+tr&#232;s fiables.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Apr&#232;s application de l'algorithme de Gauss avec pivot
+partiel &#224; la matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,746\\
+0,3961 & -0,521 & -1 & -1 & 1,236 \\
+0 & 1 & -0,252 & 1 & 7,74 \\
+0 & 1 & 1,34 & -5,34 & 3,02
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="375" HEIGHT="109" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+... 7,74 \\
+0 &amp; 1 &amp; 1,34 &amp; -5,34 &amp; 3,02
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+on obtient la matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & 1,236 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 9,745 \\
+0 & 0 & 1,339 & -5,341 & -3,986 \\
+0 & 0 & 0 & -0,0075 & -0,0178
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="450" HEIGHT="109" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,3961 &amp; -0.521 &amp; -1 &amp; ...
+...986 \\
+0 &amp; 0 &amp; 0 &amp; -0,0075 &amp; -0,0178
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Si on y applique une phase ascendante de r&#233;solution, on obtient :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+34,69 \\
+7,001 \\
+6,485 \\
+2,373
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+34,69 \\
+7,001 \\
+6,485 \\
+2,373
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Pour <!-- MATH
+ $b'= \left(
+\begin{array}{l}
+9,747 \\
+1,237 \\
+7,741 \\
+3,021
+\end{array}
+\right), $
+ -->
+<IMG
+ WIDTH="139" HEIGHT="109" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{displaymath}b'=
+\left(
+\begin{array}{l}
+9,747 \\
+1,237 \\
+7,741 \\
+3,021
+\end{array}
+\right), \end{displaymath}">
+&nbsp;&nbsp;&nbsp;&nbsp;on obtient la matrice augment&#233;e &#233;chelonn&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & 1,237 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 9,746 \\
+0 & 0 & 1,339 & -5,341 & -3,985 \\
+0 & 0 & 0 & -0,0075 & -0,0166
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="450" HEIGHT="109" BORDER="0"
+ SRC="img33.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,3961 &amp; -0.521 &amp; -1 &amp; ...
+...985 \\
+0 &amp; 0 &amp; 0 &amp; -0,0075 &amp; -0,0166
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; la solution :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+32,69 \\
+7,002 \\
+5,851 \\
+2,213
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img34.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+32,69 \\
+7,002 \\
+5,851 \\
+2,213
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Pour <!-- MATH
+ $b''= \left(
+\begin{array}{l}
+9,745 \\
+1,235 \\
+7,739 \\
+3,019
+\end{array}
+\right), $
+ -->
+<IMG
+ WIDTH="143" HEIGHT="109" BORDER="0"
+ SRC="img28.png"
+ ALT="\begin{displaymath}b''=
+\left(
+\begin{array}{l}
+9,745 \\
+1,235 \\
+7,739 \\
+3,019
+\end{array}
+\right),
+\end{displaymath}">
+ on obtient la matrice augment&#233;e &#233;chelonn&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & 1,235 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 9,744 \\
+0 & 0 & 1,339 & -5,341 & -3,986 \\
+0 & 0 & 0 & -0,0075 & -0,0178
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="450" HEIGHT="109" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,3961 &amp; -0.521 &amp; -1 &amp; ...
+...986 \\
+0 &amp; 0 &amp; 0 &amp; -0,0075 &amp; -0,0178
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+d'o&#249; la solution :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+34,69 \\
+7,000 \\
+6,485 \\
+2,373
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+34,69 \\
+7,000 \\
+6,485 \\
+2,373
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Comme les solutions varient beaucoup pour de petites variations du
+vecteur des constantes, on en d&#233;duit que les solutions ne sont pas
+tr&#232;s fiables.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>Soit <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$ b'''$">
+ le vecteur form&#233; de la somme des colonnes de
+la matrice et du vecteur des constantes. On a, &#224; 4 chiffres
+significatifs, que <!-- MATH
+ $b''' = \left(
+\begin{array}{c}
+11,14 \\
+-0,889 \\
+9,488 \\
+0,02
+\end{array}
+\right)$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="109" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{displaymath}b''' = \left(
+\begin{array}{c}
+11,14 \\
+-0,889 \\
+9,488 \\
+0,02
+\end{array}
+\right)\end{displaymath}">
+
+
+<P>
+Apr&#232;s application de l'algorithme de Gauss sans pivot &#224; la matrice
+augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 11,14 \\
+0,3961 & -0,521 & -1 & -1 & -0,889 \\
+0 & 1 & -0,252 & 1 & 9,488 \\
+0 & 1 & 1,34 & -5,34 & 0,02
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="390" HEIGHT="109" BORDER="0"
+ SRC="img39.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+...9,488 \\
+0 &amp; 1 &amp; 1,34 &amp; -5,34 &amp; 0,02
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+on obtient la matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 11,14 \\
+0 & -1837 & -1 & -1 & -14700 \\
+0 & 0 & -0,2525 & 0,9995 & 1,485 \\
+0 & 0 & 0 & -0,041 & -0,108
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="402" HEIGHT="109" BORDER="0"
+ SRC="img40.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+...1,485 \\
+0 &amp; 0 &amp; 0 &amp; -0,041 &amp; -0,108
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Si on y applique une phase ascendante de r&#233;solution, on obtient :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+66,67 \\
+7,997 \\
+4,547 \\
+2,634
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+66,67 \\
+7,997 \\
+4,547 \\
+2,634
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Apr&#232;s application de l'algorithme de Gauss avec pivot partiel &#224; la
+matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 11,14 \\
+0,3961 & -0,521 & -1 & -1 & -0,889 \\
+0 & 1 & -0,252 & 1 & 9,488 \\
+0 & 1 & 1,34 & -5,34 & 0,02
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="390" HEIGHT="109" BORDER="0"
+ SRC="img39.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,0003 &amp; 1,391 &amp; 0 &amp; 0 ...
+...9,488 \\
+0 &amp; 1 &amp; 1,34 &amp; -5,34 &amp; 0,02
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+on obtient la matrice augment&#233;e
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & -0,889 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 11,14 \\
+0 & 0 & 1,339 & -5,341 & -7,989 \\
+0 & 0 & 0 & -0,0075 & -0,028
+ \end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="442" HEIGHT="109" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{rrrr\vert r}
+0,3961 &amp; -0.521 &amp; -1 &amp; ...
+...,989 \\
+0 &amp; 0 &amp; 0 &amp; -0,0075 &amp; -0,028
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Si on y applique une phase ascendante de r&#233;solution, on obtient :
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+40,22 \\
+8,001 \\
+8,925 \\
+3,733
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="176" HEIGHT="109" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...
+40,22 \\
+8,001 \\
+8,925 \\
+3,733
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Comme les solutions varient beaucoup au changement de m&#233;thode, on
+en d&#233;duit que les solutions ne sont pas tr&#232;s fiables.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD>On obtient
+<!-- MATH
+ $L = \left(
+\begin{array}{rrr}
+1 & 0 & 0 \\
+\frac{2}{3} & 1 & 0 \\
+\frac{1}{3} & 2 & 1
+\end{array}
+\right) $
+ -->
+<IMG
+ WIDTH="142" HEIGHT="86" BORDER="0"
+ SRC="img44.png"
+ ALT="\begin{displaymath}
+L = \left(
+\begin{array}{rrr}
+1 &amp; 0 &amp; 0 \\
+\frac{2}{3} &amp; 1 &amp; 0 \\
+\frac{1}{3} &amp; 2 &amp; 1
+\end{array}
+\right) \end{displaymath}">
+
+et
+<!-- MATH
+ $U = \left(
+\begin{array}{rrr}
+3 & 1 & 6 \\
+0 & \frac{1}{3} & -1 \\
+0 & 0 & 1
+\end{array}
+\right). $
+ -->
+<IMG
+ WIDTH="171" HEIGHT="86" BORDER="0"
+ SRC="img45.png"
+ ALT="\begin{displaymath}U = \left(
+\begin{array}{rrr}
+3 &amp; 1 &amp; 6 \\
+0 &amp; \frac{1}{3} &amp; -1 \\
+0 &amp; 0 &amp; 1
+\end{array}
+\right). \end{displaymath}">
+
+
+<P>
+Apr&#232;s une phase descendante pour r&#233;soudre <IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ Ly = b$">
+, on a
+<!-- MATH
+ $y =
+\left(
+\begin{array}{r}
+2 \\
+\frac{17}{3} \\
+-8
+\end{array}
+\right)
+$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="86" BORDER="0"
+ SRC="img47.png"
+ ALT="\begin{displaymath}
+y =
+\left(
+\begin{array}{r}
+2 \\
+\frac{17}{3} \\
+-8
+\end{array}
+\right)
+\end{displaymath}">
+
+
+<P>
+et apr&#232;s une phase ascendante pour r&#233;soudre <IMG
+ WIDTH="65" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ Ux = y$">
+, on obtient la solution finale qui est
+<!-- MATH
+ $x =
+\left(
+\begin{array}{r}
+19 \\
+-7 \\
+-8
+\end{array}
+\right)
+$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="86" BORDER="0"
+ SRC="img49.png"
+ ALT="\begin{displaymath}
+x =
+\left(
+\begin{array}{r}
+19 \\
+-7 \\
+-8
+\end{array}
+\right)
+\end{displaymath}">
+
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD>On obtient comme d&#233;composition
+<!-- MATH
+ $U=
+\left(
+\begin{array}{rrr}
+\sqrt{2} & \frac{-1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\
+0 & \frac{\sqrt{14}}{2} & \frac{5}{\sqrt{14}} \\
+0 & 0 & \frac{\sqrt{14}}{7}
+\end{array}
+\right)
+$
+ -->
+<IMG
+ WIDTH="197" HEIGHT="99" BORDER="0"
+ SRC="img50.png"
+ ALT="\begin{displaymath}
+U=
+\left(
+\begin{array}{rrr}
+\sqrt{2} &amp; \frac{-1}{\sqrt{...
+...t{14}} \\
+0 &amp; 0 &amp; \frac{\sqrt{14}}{7}
+\end{array}
+\right)
+\end{displaymath}">
+
+et
+<!-- MATH
+ $D=
+\left(
+\begin{array}{rrr}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{array}
+\right).
+$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="86" BORDER="0"
+ SRC="img51.png"
+ ALT="\begin{displaymath}D=
+\left(
+\begin{array}{rrr}
+-1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; -1
+\end{array}
+\right).
+\end{displaymath}">
+
+
+<P>
+Apr&#232;s une phase descendante de r&#233;solution pour le syst&#232;me <IMG
+ WIDTH="68" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$ U^ty=b$">
+, on a
+<!-- MATH
+ $y =
+\left(
+\begin{array}{r}
+\sqrt{2} \\
+\frac{10\sqrt{14}}{7} \\
+-\frac{1}{\sqrt{14}}
+\end{array}
+\right)$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="93" BORDER="0"
+ SRC="img53.png"
+ ALT="\begin{displaymath}y =
+\left(
+\begin{array}{r}
+\sqrt{2} \\
+\frac{10\sqrt{14}}{7} \\
+-\frac{1}{\sqrt{14}}
+\end{array}
+\right)\end{displaymath}">
+
+
+<P>
+Apr&#232;s une phase ascendante de r&#233;solution pour le syst&#232;me <IMG
+ WIDTH="81" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ DUx=y$">
+, on a
+<!-- MATH
+ $\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right) = \left(
+\begin{array}{c}
+1/2 \\
+5/2 \\
+1/2
+\end{array}
+\right)
+$
+ -->
+<IMG
+ WIDTH="159" HEIGHT="86" BORDER="0"
+ SRC="img55.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array...
+...\begin{array}{c}
+1/2 \\
+5/2 \\
+1/2
+\end{array}
+\right)
+\end{displaymath}">
+
+
+<P>
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Ce sont les m&#234;mes formules de calcul.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>C'est le m&#234;me nombre d'op&#233;rations.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>L'avantage r&#233;side lorsqu'il doit y avoir une
+permutation, c'est-&#224;-dire lorsqu'on a non pas une d&#233;composition
+<IMG
+ WIDTH="71" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ A=LU$">
+, mais une d&#233;composition <IMG
+ WIDTH="86" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$ PA=LU$">
+. Lorsqu'on permute les
+lignes des matrices <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$ L$">
+ et <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ U$">
+ avec le nouveau partitionnement, il
+n'y a en fait aucun changement &#224; faire, puisque les lignes &#224;
+permuter ne sont pas encore calcul&#233;es.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>On obtient
+<!-- MATH
+ $P =
+\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0
+\end{array} \right),$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$ P =
+\left( \begin{array}{rrrr}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array} \right),$">
+
+<!-- MATH
+ $L =
+\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+2 & 1 & 0 & 0 \\
+2 & -1 & 1 & 0 \\
+-1 & 3 & 0 & 1
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="207" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ L =
+\left( \begin{array}{rrrr}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 &amp; 0 \\
+2 &amp; -1 &amp; 1 &amp; 0 \\
+-1 &amp; 3 &amp; 0 &amp; 1
+\end{array} \right)$">
+
+et
+<!-- MATH
+ $U =
+\left( \begin{array}{rrrr}
+1 & 1 & 1 & 1 \\
+0 & 2 & 1 & 2 \\
+0 & 0 & 2 & 4 \\
+0 & 0 & 0 & 3
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$ U =
+\left( \begin{array}{rrrr}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 2 &amp; 1 &amp; 2 \\
+0 &amp; 0 &amp; 2 &amp; 4 \\
+0 &amp; 0 &amp; 0 &amp; 3
+\end{array} \right)$">
+
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>6)</STRONG></DT>
+<DD>Soit <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$ A$">
+ une matrice inversible. D&#232;s qu'on a calcul&#233; une
+d&#233;composition <IMG
+ WIDTH="71" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ A=LU$">
+, on peut se servir de cette relation pour
+obtenir l'inverse de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$ A$">
+ par la formule <!-- MATH
+ $A^{-1} = U^{-1}L^{-1}$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img64.png"
+ ALT="$ A^{-1} = U^{-1}L^{-1}$">
+.
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Pour obtenir <IMG
+ WIDTH="37" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$ U^{-1}$">
+, il suffit d'appliquer une
+    phase ascendante sur le syst&#232;me augment&#233; <!-- MATH
+ $[U \mid 1\!{\rm l} ]$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$ [U \mid 1\!{\rm l} ]$">
+.
+    Si <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ U$">
+ est une matrice <!-- MATH
+ $n \times n$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$ n \times n$">
+, cela revient &#224; faire <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$ n$">
+
+    phases ascendantes : une pour chacun des vecteurs de la base
+    canonique de <!-- MATH
+ $\mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="27" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$ \mathbb{R}^n$">
+. Il en va &#233;videmment de m&#234;me pour
+    le calcul de <IMG
+ WIDTH="35" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.png"
+ ALT="$ L^{-1}$">
+.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Pour calculer <IMG
+ WIDTH="37" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$ U^{-1}$">
+, on doit faire <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$ n$">
+ phases
+    ascendantes. Comme chacune n&#233;cessite <IMG
+ WIDTH="23" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$ n^2$">
+ op&#233;rations, on a
+    <IMG
+ WIDTH="23" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$ n^3$">
+ op&#233;rations pour obtenir <IMG
+ WIDTH="37" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$ U^{-1}$">
+, une fois que la
+    d&#233;composition <IMG
+ WIDTH="71" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ A=LU$">
+ est obtenue. Il en va de m&#234;me pour
+    calculer <IMG
+ WIDTH="35" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.png"
+ ALT="$ L^{-1}$">
+, quoiqu'on puisse diminuer tr&#232;s l&#233;g&#232;rement le
+    nombre d'op&#233;rations en profitant du fait que la diagonale de
+    <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$ L$">
+ n'est form&#233;e que de uns.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Une fois la d&#233;composition effectu&#233;e, les calculs
+    sont simples et num&#233;riquement plut&#244;t stable pour <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$ L$">
+,
+    puisqu'il n'y a aucune division d'effectu&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>On obtient
+    <!-- MATH
+ $L^{-1} =
+\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+-2 & 1 & 0 & 0 \\
+-4 & 1 & 1 & 0 \\
+7 & -3 & 0 & 1
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="225" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ L^{-1} =
+\left( \begin{array}{rrrr}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 &amp; 0 \\
+-4 &amp; 1 &amp; 1 &amp; 0 \\
+7 &amp; -3 &amp; 0 &amp; 1
+\end{array} \right)$">
+
+
+<P>
+et <!-- MATH
+ $U = \left( \begin{array}{rrrr}
+1 & -1/2 & -1/4 & 1/3 \\
+0 & 1/2 & -1/4 & 0 \\
+0 & 0 & 1/2 & -2/3 \\
+0 & 0 & 0 & 1/3
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="280" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ U = \left( \begin{array}{rrrr}
+1 &amp; -1/2 &amp; -1/4 &amp; 1/3 \\
+0 &amp; 1/2 &amp; -1/4 &amp; 0 \\
+0 &amp; 0 &amp; 1/2 &amp; -2/3 \\
+0 &amp; 0 &amp; 0 &amp; 1/3
+\end{array} \right)$">
+
+
+<P>
+d'o&#249; <!-- MATH
+ $A^{-1} = U^{-1}L^{-1} =
+\left(
+\begin{array}{rrrr}
+16/3 & -7/4 & -1/4 & 1/3 \\
+0 & 1/4 & -1/4 & 0 \\
+-20/3 & 5/2 & 1/2 & -2/3 \\
+7/3 & -1 & 0 & 1/3
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="418" HEIGHT="109" BORDER="0"
+ SRC="img75.png"
+ ALT="\begin{displaymath}A^{-1} = U^{-1}L^{-1} =
+\left(
+\begin{array}{rrrr}
+16/3 &amp; ...
+...&amp; 5/2 &amp; 1/2 &amp; -2/3 \\
+7/3 &amp; -1 &amp; 0 &amp; 1/3
+\end{array} \right)\end{displaymath}">
+
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-06-07
+</ADDRESS>
+</BODY>
+</HTML>

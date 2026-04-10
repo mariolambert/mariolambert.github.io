@@ -1,0 +1,440 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage[french,lined,algonl,boxed,longend]{algorithm2e}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+
+\newcommand{\classe}[1]{\,\begin{tabular}{|l|}
+\!\! $ #1 $ \!\!\! \\
+\hline
+\end{tabular}\:}
+
+\newcommand{\prob}[1]{\mathbb{P}\left( #1 \right)}
+\newcommand{\esp}[1]{{\rm E}\left\lbrack #1 \right\rbrack}
+\newcommand{\var}[1]{{\rm Var}\left( #1 \right)}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+
+%\incmargin{1em} \restylealgo{boxed}\linesnumbered
+%\begin{algorithm}
+%    \SetKwData{Left}{left}
+%    \SetKwData{This}{this}
+%    \SetKwData{Up}{up}
+%    \SetKwFunction{Union}{Union}
+%    \SetKwFunction{FindCompress}{FindCompress}
+%    \SetKwInOut{Input}{input}
+%    \SetKwInOut{Output}{output}
+%
+%    \caption{disjoint decomposition}
+%
+%    \Input{A bitmap $Im$ of size $w\times l$}
+%    \Output{A partition of the bitmap}
+%    \BlankLine
+%
+%    \emph{special treatment of the first line}\;
+%
+%    \For{$i\leftarrow 2$ \KwTo $l$}
+%        {
+%        \emph{special treatment of the first element of line $i$}\;
+%
+%        \For{$j\leftarrow 2$ \KwTo $w$}
+%            {
+%            \nllabel{forins}
+%            \Left$\leftarrow$ \FindCompress{$Im[i,j-1]$}\;
+%            \Up$\leftarrow$   \FindCompress{$Im[i-1,]$}\;
+%            \This$\leftarrow$ \FindCompress{$Im[i,j]$}\;
+%            \If{\Left compatible with \This}
+%                {
+%                \lIf{\Left $<$ \This}{\Union{\Left,\This}}\;
+%                \lElse{\Union{\This,\Left}}
+%                }
+%            \If{\Up compatible with \This}
+%                {
+%                \lIf{\Up $<$ \This}{\Union{\Up,\This}}\;
+%                \lElse{\Union{\This,\Up}}
+%                }
+%            }
+%
+%        \lForEach{element $e$ of the line $i$}{\FindCompress{p}}
+%        }
+%
+%    \label{algo_disjdecomp}
+%
+%\end{algorithm}
+%\decmargin{1em}
+%
+%
+%
+%
+%
+%
+%
+%\incmargin{1em} \restylealgo{boxed}\linesnumbered
+%\begin{algorithm}
+%    \SetKwData{Left}{left}
+%    \SetKwData{This}{this}
+%    \SetKwData{Up}{up}
+%    \SetKwFunction{Union}{Union}
+%    \SetKwFunction{FindCompress}{FindCompress}
+%    \SetKwInOut{Input}{input}
+%    \SetKwInOut{Output}{output}
+%
+%    \caption{disjoint decomposition}
+%
+%    \Donnees{A bitmap $Im$ of size $w\times l$}
+%    \Res{A partition of the bitmap}
+%    \BlankLine
+%
+%    \emph{special treatment of the first line}\;
+%
+%    \Pour{$i\leftarrow 2$ \KwA $l$}
+%        {
+%        \emph{special treatment of the first element of line $i$}\;
+%
+%        \Pour{$j\leftarrow 2$ \KwA $w$}
+%            {
+%            \nllabel{forins}
+%            \Left$\leftarrow$ \FindCompress{$Im[i,j-1]$}\;
+%            \Up$\leftarrow$   \FindCompress{$Im[i-1,]$}\;
+%            \This$\leftarrow$ \FindCompress{$Im[i,j]$}\;
+%            \Si{\Left compatible with \This}
+%                {
+%                \lSi{\Left $<$ \This}{\Union{\Left,\This}}\;
+%                \lSinon{\Union{\This,\Left}}
+%                }
+%            \Si{\Up compatible with \This}
+%                {
+%                \lSi{\Up $<$ \This}{\Union{\Up,\This}}\;
+%                \lSinon{\Union{\This,\Up}}
+%                }
+%            }
+%
+%        \lPourCh{element $e$ of the line $i$}{\FindCompress{p}}
+%        }
+%
+%    \label{algo_disjdecomp}
+%
+%\end{algorithm}
+%\decmargin{1em}
+
+
+
+
+
+
+\incmargin{1em} \restylealgo{boxed}\linesnumbered
+\begin{algorithm}
+    \SetKw{cout}{Coût :}
+    \SetKw{avantage}{Avantages :}
+
+    \caption{Phase descendante d'élimination}
+
+    \Donnees{$\left\lbrace
+             \begin{array}{l}
+                A\textrm{, une matrice triangulaire inférieure} \\
+                \quad\quad \textrm{de taille $n \times n$ avec $\det A \neq 0$} \\
+                b\textrm{, un vecteur de taille $n \times 1$}
+             \end{array}
+             \right.$}
+    \Res{$x$, la solution du système $Ax=b$}
+    \BlankLine\BlankLine
+
+    \Pour{$i\leftarrow 1$ \KwA $n$}
+        {
+        $x_i^* = \frac{b_i - \sum\limits_{j=1}^{i-1}a_{ij}x_j^*}{a_{ii}}$\;
+        }
+
+    \BlankLine\BlankLine
+
+    \tcc{\cout{$n^2$}}
+    \tcc{\avantage{\begin{itemize}
+                    \item Facile à implanter \;
+                    \item Peu d'erreurs d'arrondi
+                    \end{itemize}}}
+
+\end{algorithm}
+\decmargin{1em}
+
+
+
+
+
+\incmargin{1em} \restylealgo{boxed}\linesnumbered
+\begin{algorithm}
+    \SetKw{cout}{Coût :}
+    \SetKw{avantage}{Avantages :}
+
+    \caption{Phase ascendante d'élimination}
+
+    \Donnees{$\left\lbrace
+             \begin{array}{l}
+                A\textrm{, une matrice triangulaire supérieure} \\
+                \quad\quad \textrm{de taille $n \times n$ avec $\det A \neq 0$} \\
+                b\textrm{, un vecteur de taille $n \times 1$}
+             \end{array}
+             \right.$}
+    \Res{$x$, la solution du système $Ax=b$}
+    \BlankLine\BlankLine
+
+    \Pour{$i\leftarrow n$ \KwA $1$}
+        {
+        $x_i^* = \frac{b_i - \sum\limits_{j=i+1}^{n}a_{ij}x_j^*}{a_{ii}}$\;
+        }
+
+    \BlankLine\BlankLine
+
+    \tcc{\cout{$n^2$}}
+    \tcc{\avantage{\begin{itemize}
+                    \item Facile à implanter \;
+                    \item Peu d'erreurs d'arrondi
+                    \end{itemize}}}
+
+\end{algorithm}
+\decmargin{1em}
+
+
+
+
+
+
+
+
+\incmargin{1em} \restylealgo{boxed}\linesnumbered
+\begin{algorithm}
+    \SetKw{cout}{Coût :}
+    \SetKw{avantage}{Avantages :}
+    \SetKw{init}{Initialisation :}
+
+    \caption{Méthode de Gauss}
+
+    \Donnees{$\left\lbrace
+             \begin{array}{l}
+                A\textrm{, une matrice de taille $n \times n$ avec $\det A \neq 0$} \\
+                b\textrm{, un vecteur de taille $n \times 1$}
+             \end{array}
+             \right.$}
+    \Res{$x$, la solution du système $Ax=b$}
+    \BlankLine\BlankLine
+
+
+    \init{$A^{(0)} \leftarrow A$ et $b^{(0)} \leftarrow b$}
+
+    \SetVline
+    \Pour{$k \leftarrow 1$ \KwA $n-1$}
+        {
+        \Si{$a_{kk}^{(k-1)}=0$}
+            {
+            trouver une ligne $i$ avec $i>k$ et $a_{ik}^{(k-1)} \neq 0$ \tcc*{existe, car $\det A \neq 0$}
+            permuter les lignes $k$ et $i$\;
+            $A^{(k-1)} \leftarrow$ la matrice permutée\;
+            $b^{(k-1)} \leftarrow$ le vecteur $b$ permuté de la même manière\;
+            }
+        \Pour{$i \leftarrow k+1$ \KwA $n$}
+            {
+            \Pour{$j \leftarrow k+1$ \KwA $n$}
+                {
+                $m_{ik} \leftarrow \frac{a_{ik}^{(k-1)}}{a_{kk}^{(k-1)}}$ \;
+                \BlankLine
+                $a_{ij}^{(k)} \leftarrow a_{ij}^{(k-1)} - m_{ik}a_{kj}^{(k-1)}$ \;
+                \BlankLine
+                $b_i^{(k)} \leftarrow b_i^{(k-1)}-m_{ik}b_k^{(k-1)}$ \;
+                }
+            }
+        }
+    Faire une phase ascendante d'élimination avec $A^{(n-1)}$ et $b^{(n-1)}$.
+
+    \BlankLine\BlankLine
+
+    \tcc{\cout{$\frac{2}{3}n^3$ si aucune permutation}}
+    \tcc{\avantage{\begin{itemize}
+                    \item Plus simple que la méthode du déterminant ou de Cramer \;
+                    \item Calculs de $A^{-1}$ et de $\det A$ possibles
+                    \end{itemize}}}
+
+\end{algorithm}
+\decmargin{1em}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\incmargin{1em} \restylealgo{boxed}\linesnumbered
+\begin{algorithm}
+    \SetKw{cout}{Coût :}
+    \SetKw{avantage}{Avantages :}
+    \SetKw{desavantage}{Désavantages :}
+    \SetKw{init}{Initialisation :}
+    \SetKw{remarque}{Remarque :}
+    
+    
+    \caption{Méthode du quotient de Rayleigh}
+
+    \Donnees{$A$, une matrice de taille $n \times n$}
+    \Res{La valeur propre la plus près de $\lambda_1^{(0)}$ et le vecteur propre qui lui est associé}
+    \BlankLine\BlankLine
+
+
+    \init{\textrm{Choisir }$z_0$\textrm{ tel que }$\| z_0 \|_2=1$}
+
+    \SetVline
+    \Pour{$k =0,1,\ldots$}
+        {
+        $\lambda_1^{(k)} \leftarrow z_k^tAz_k$ \;
+        \BlankLine
+        Résoudre $(A-\lambda_1^{(k)} 1\!{\rm l})y=z_k$ \;
+        \BlankLine
+        $z_{k+1} \leftarrow y/\|y\|_2$ \;        
+        }
+
+    \BlankLine\BlankLine
+
+    \tcc{\remarque{$\|z_k-x_1\|_2 \leqslant \alpha \|z_{k-1}-x_1\|_2^3$ pour une constante $\alpha \in \mathbb{R}$}}
+    \tcc{\desavantage{À chaque itération, il faut refaire une décomposition $LU$}}
+
+\end{algorithm}
+\decmargin{1em}
+
+
+
+
+
+\incmargin{1em} \restylealgo{boxed}\linesnumbered
+\begin{algorithm}
+    \SetKw{cout}{Coût :}
+    \SetKw{avantage}{Avantages :}
+    \SetKw{desavantage}{Désavantages :}
+    \SetKw{init}{Initialisation :}
+    \SetKw{remarque}{Remarque :}
+
+
+    \caption{Méthode d'élimination et de réduction}
+
+    \Donnees{$A$, une matrice de taille $n \times n$}
+    \Res{Toutes les valeurs propres de $A$ et les vecteurs propres qui lui sont associés}
+    \BlankLine\BlankLine
+
+
+    \init{$i=1$\textrm{ et }$A^{(i)}=A$}
+
+    Trouver $\lambda_1$ et $x_1$ à l'aide d'une méthode appropriée \;
+
+    \SetVline
+    \Pour{$i<n$}
+        {
+        $u_i \leftarrow x_i + \|x_i\|_2 \cdot \left(\textrm{signe}((x_i)_1),0,0,\ldots,0 \right)^t$ \;
+        \BlankLine
+        $P_i \leftarrow 1\!{\rm l} - \frac{u_iu_i^t}{\|x_i\|_2\cdot (\|x_i\|_2 + |(x_i)_1|)}$ \;
+        \BlankLine
+        Calculer $P_iA^{(i)}P_i^{-1}$ \;
+        \BlankLine
+        Extraire de $P_iA^{(i)}P_i^{-1}$ la sous-matrice $A^{(i+1)}$ en biffant la $1^{\rm re}$ ligne et la $1^{\rm re}$ colonne \;
+        \BlankLine
+        Trouver $\lambda_{i+1}$, un estimé de la valeur propre dominante de $A^{(i+1)}$ \;
+        \BlankLine
+        Appliquer la méthode des puissances inverses à la matrice $A-\lambda_{i+1}1\!{\rm l}$, mettre à jour la valeur de $\lambda_{i+1}$ et déterminer $x_{i+1}$ \;
+        \BlankLine
+        $i \leftarrow i+1$ \;
+        }
+
+    \BlankLine\BlankLine
+
+    \tcc{\avantage{Cette méthode permet de déterminer les multiplicités des valeurs propres de la matrice $A$.}}
+
+\end{algorithm}
+\decmargin{1em}
+
+
+
+%\incmargin{1em} \restylealgo{boxed}\linesnumbered
+%\begin{algorithm}
+%    \SetKw{cout}{Coût :}
+%    \SetKw{avantage}{Avantages :}
+%    \SetKw{init}{Initialisation :}
+%
+%    \caption{Décomposition LU}
+%
+%    \Donnees{$\left\lbrace
+%             \begin{array}{l}
+%                A\textrm{, une matrice de taille $n \times n$ avec $\det A \neq 0$} \\
+%                b\textrm{, un vecteur de taille $n \times 1$}
+%             \end{array}
+%             \right.$}
+%    \Res{$x$, la solution du système $Ax=b$}
+%    \BlankLine\BlankLine
+%
+%
+%    \SetVline
+%    \init{$L=\lbrack l_{ij} \rbrack = 0$ et $U=\lbrack u_{ij} \rbrack = 0$} \;
+%    \Pour{$k \leftarrow 1$ \KwA $n$}
+%        {
+%        $i \leftarrow k-1$ \;
+%        \Repeter{$u_{ik} \neq 0$}
+%            {
+%            $i \leftarrow i+1$ \;
+%            $u_{ik} = a_{ik}-\sum\limits_{s=1}^{i-1} l_{is}u_{sk}$ \;
+%            }
+%        \Si{$i\neq k$}
+%            {
+%            Permuter les lignes $i$ et $k$ de la matrice $A$ \;
+%            Permuter les lignes déjà calculées d$i$ et $k$ de la matrice $L\backslash U$ déjà calculée \;
+%            }
+%
+%
+%
+%
+%
+%
+%
+%        \Si{$a_{kk}^{(k-1)}=0$}
+%            {
+%            trouver une ligne $i$ avec $i>k$ et $a_{ik}^{(k-1)} \neq 0$ \tcc*{existe, car $\det A \neq 0$}
+%            permuter les lignes $k$ et $i$\;
+%            $A^{(k-1)} \leftarrow$ la matrice permutée\;
+%            $b^{(k-1)} \leftarrow$ le vecteur $b$ permuté de la même manière\;
+%            }
+%        \Pour{$i \leftarrow k+1$ \KwA $n$}
+%            {
+%            \Pour{$j \leftarrow k+1$ \KwA $n$}
+%                {
+%                $m_{ik} \leftarrow \frac{a_{ik}^{(k-1)}}{a_{kk}^{(k-1)}}$ \;
+%                \BlankLine
+%                $a_{ij}^{(k)} \leftarrow a_{ij}^{(k-1)} - m_{ik}a_{kj}^{(k-1)}$ \;
+%                \BlankLine
+%                $b_i^{(k)} \leftarrow b_i^{(k-1)}-m_{ik}b_k^{(k-1)}$ \;
+%                }
+%            }
+%        }
+%    Faire une phase ascendante d'élimination avec $A^{(n-1)}$ et $b^{(n-1)}$.
+%
+%    \BlankLine\BlankLine
+%
+%    \tcc{\cout{$\frac{2}{3}n^3$ si aucune permutation}}
+%    \tcc{\avantage{\begin{itemize}
+%                    \item Plus simple que la méthode du déterminant ou de Cramer \;
+%                    \item Calculs de $A^{-1}$ et de $\det A$ possibles
+%                    \end{itemize}}}
+%
+%\end{algorithm}
+%\decmargin{1em}
+
+\end{document}

@@ -1,0 +1,1127 @@
+\batchmode
+\documentclass[12pt]{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{html}
+
+
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Alpha}{\textrm{A}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline819}%
+$ \left( \begin{array}{rr}
+0,670 & -2,67 \\
+-0,504 & 2,00
+\end{array} \right)
+\left( \begin{array}{c}
+x_1 \\
+x_2
+\end{array}\right)
+=
+\left( \begin{array}{r}
+-1,99 \\
+1,48
+\end{array}\right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline821}%
+$ \widetilde{x}_1 = \left( \begin{array}{l} 5,6 \\2,15 \end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline823}%
+$ \widetilde{x}_2 = \left( \begin{array}{l} 4,99 \\1,48 \end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline827}%
+$ \widetilde{x}_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay829}%
+$\displaystyle \begin{array}{rcl}
+r(\widetilde{x}_1)  & = & b-A\widetilde{x}_1 \\
+& = &
+\left(
+\begin{array}{c}
+-1,99 \\1,48
+\end{array}
+\right)
+-
+\left(
+\begin{array}{rr}
+0,670 & -2,67 \\
+-0,504 & 2,00
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+5,6 \\2,15
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+-1,99 \\1,48
+\end{array}
+\right)
+-
+\left(
+\begin{array}{c}
+-1,9885 \\1,4776
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+-0,0015 \\0,0024
+\end{array}
+\right).
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline831}%
+$ \widetilde{x}_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay833}%
+$\displaystyle \begin{array}{rcl}
+r(\widetilde{x}_2)  & = & b-A\widetilde{x}_2 \\
+& = &
+\left(
+\begin{array}{c}
+-1,99 \\1,48
+\end{array}
+\right)
+-
+\left(
+\begin{array}{rr}
+0,670 & -2,67 \\
+-0,504 & 2,00
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+4,99 \\1,48
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+-1,99 \\1,48
+\end{array}
+\right)
+-
+\left(
+\begin{array}{c}
+-0,60830 \\0,44504
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+-1,38 \\1,03
+\end{array}
+\right).
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline835}%
+$ m=4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay837}%
+$\displaystyle \left( \begin{array}{rr|r}
+0,670 & -2,67 & -1,99 \\
+-0,504 & 2,00 &  1,48
+\end{array} \right)
+\left( \begin{array}{r}
+x_1 \\
+x_2
+\end{array} \right)
+=
+\left( \begin{array}{r}
+b_1  \\
+b_2
+\end{array} \right),
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline839}%
+$ L_2 + \frac{0,504}{0,670}L_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline841}%
+$ L_2 + 0,7522L_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay843}%
+$\displaystyle \left( \begin{array}{rr}
+0,670 & -2,67   \\
+0,000 & -0,008374
+\end{array} \right)
+\left( \begin{array}{r}
+x_1 \\
+x_2
+\end{array} \right)
+=
+\left( \begin{array}{r}
+b_1  \\
+b_2'
+\end{array} \right).
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath845}%
+\begin{displaymath}\left\lbrace
+\begin{array}{l}
+x_2 = \frac{b_2'}{-0,008374} \\\\
+x_1 = \frac{b_1 + 2,67x_2}{0,670}
+\end{array}
+\right.\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline847}%
+$ x_0=\widetilde{x}_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline849}%
+$ \delta_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline851}%
+$ A\delta_i = r(x_i)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline853}%
+$ x_{i+1} = x_i + \delta_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline855}%
+$ i=0,1,2,\ldots$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath857}%
+\begin{displaymath}\begin{array}{|c|c|c|c|}
+\hline
+i   & x_i   & r(x_i)    & \delta_i  \\
+\hline \hline & & & \\
+0   & \left( \begin{array}{r} 5,6 \\2,15 \end{array} \right)
+    & \left( \begin{array}{r} -0,0015 \\0,0024 \end{array} \right)
+    & \left( \begin{array}{r} -0,6078 \\-0,1519 \end{array} \right) \\& & & \\
+\hline & & & \\
+1   & \left( \begin{array}{r} 4,992 \\1,998 \end{array} \right)
+    & \left( \begin{array}{r} 0,00002 \\-0,000032 \end{array} \right)
+    & \left( \begin{array}{r} 0,008103 \\0,002025 \end{array} \right) \\& & & \\
+\hline & & & \\
+2   & \left( \begin{array}{r} 5,000 \\2,000 \end{array} \right)
+    & \left( \begin{array}{r} 0 \\0 \end{array} \right)
+    & \\& & & \\
+\hline
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline859}%
+$ x_0=\widetilde{x}_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath863}%
+\begin{displaymath}
+\left(
+\begin{array}{cccc}
+0,0003 & 1,391 & 0 & 0 \\
+0,3961 & -0,521 & -1 & -1 \\
+0 & 1 & -0,252 & 1 \\
+0 & 1 & 1,34 & -5,34
+ \end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+9,746 \\
+1,236 \\
+7,74 \\
+3,02
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath869}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,746\\
+0,3961 & -0,521 & -1 & -1 & 1,236 \\
+0 & 1 & -0,252 & 1 & 7,74 \\
+0 & 1 & 1,34 & -5,34 & 3,02
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath871}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,746 \\
+0 & -1837 & -1 & -1 & -12860 \\
+0 & 0 & -0,2525 & 0,9995 & 0,739 \\
+0 & 0 & 0 & -0,041 & -0,062
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath873}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+26,67 \\
+7,001 \\
+3,057 \\
+1,512
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath875}%
+\begin{displaymath}b'=
+\left(
+\begin{array}{l}
+9,747 \\
+1,237 \\
+7,741 \\
+3,021
+\end{array}
+\right), \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath877}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,747 \\
+0 & -1837 & -1 & -1 & -12870 \\
+0 & 0 & -0,2525 & 0,9995 & 0,735 \\
+0 & 0 & 0 & -0,041 & -0,087
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath879}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+30,00 \\
+7,001 \\
+5,489 \\
+2,122
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath881}%
+\begin{displaymath}b''=
+\left(
+\begin{array}{l}
+9,745 \\
+1,235 \\
+7,739 \\
+3,019
+\end{array}
+\right),
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath883}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 9,745 \\
+0 & -1837 & -1 & -1 & -12860 \\
+0 & 0 & -0,2525 & 0,9995 & 0,738 \\
+0 & 0 & 0 & -0,041 & -0,068
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath885}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+50,00 \\
+6,995 \\
+3,644 \\
+1,659
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath889}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & 1,236 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 9,745 \\
+0 & 0 & 1,339 & -5,341 & -3,986 \\
+0 & 0 & 0 & -0,0075 & -0,0178
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath891}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+34,69 \\
+7,001 \\
+6,485 \\
+2,373
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath895}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & 1,237 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 9,746 \\
+0 & 0 & 1,339 & -5,341 & -3,985 \\
+0 & 0 & 0 & -0,0075 & -0,0166
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath897}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+32,69 \\
+7,002 \\
+5,851 \\
+2,213
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath901}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & 1,235 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 9,744 \\
+0 & 0 & 1,339 & -5,341 & -3,986 \\
+0 & 0 & 0 & -0,0075 & -0,0178
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath903}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+34,69 \\
+7,000 \\
+6,485 \\
+2,373
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline905}%
+$ b'''$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath907}%
+\begin{displaymath}b''' = \left(
+\begin{array}{c}
+11,14 \\
+-0,889 \\
+9,488 \\
+0,02
+\end{array}
+\right)\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath909}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 11,14 \\
+0,3961 & -0,521 & -1 & -1 & -0,889 \\
+0 & 1 & -0,252 & 1 & 9,488 \\
+0 & 1 & 1,34 & -5,34 & 0,02
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath911}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,0003 & 1,391 & 0 & 0 & 11,14 \\
+0 & -1837 & -1 & -1 & -14700 \\
+0 & 0 & -0,2525 & 0,9995 & 1,485 \\
+0 & 0 & 0 & -0,041 & -0,108
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath913}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+66,67 \\
+7,997 \\
+4,547 \\
+2,634
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath917}%
+\begin{displaymath}
+\left(
+\begin{array}{rrrr|r}
+0,3961 & -0.521 & -1 & -1 & -0,889 \\
+0 & 1.391 & 0,0007574 & 0,0007574 & 11,14 \\
+0 & 0 & 1,339 & -5,341 & -7,989 \\
+0 & 0 & 0 & -0,0075 & -0,028
+ \end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath919}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right) = \left(
+\begin{array}{c}
+40,22 \\
+8,001 \\
+8,925 \\
+3,733
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath921}%
+\begin{displaymath}
+L = \left(
+\begin{array}{rrr}
+1 & 0 & 0 \\
+\frac{2}{3} & 1 & 0 \\
+\frac{1}{3} & 2 & 1
+\end{array}
+\right) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath923}%
+\begin{displaymath} U = \left(
+\begin{array}{rrr}
+3 & 1 & 6 \\
+0 & \frac{1}{3} & -1 \\
+0 & 0 & 1
+\end{array}
+\right). \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline925}%
+$ Ly = b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath927}%
+\begin{displaymath}
+y =
+\left(
+\begin{array}{r}
+2 \\
+\frac{17}{3} \\
+-8
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline929}%
+$ Ux = y$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath931}%
+\begin{displaymath}
+x =
+\left(
+\begin{array}{r}
+19 \\
+-7 \\
+-8
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath933}%
+\begin{displaymath}
+U=
+\left(
+\begin{array}{rrr}
+\sqrt{2} & \frac{-1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\
+0 & \frac{\sqrt{14}}{2} & \frac{5}{\sqrt{14}} \\
+0 & 0 & \frac{\sqrt{14}}{7}
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath935}%
+\begin{displaymath}D=
+\left(
+\begin{array}{rrr}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{array}
+\right).
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline937}%
+$ U^ty=b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath939}%
+\begin{displaymath}y =
+\left(
+\begin{array}{r}
+\sqrt{2} \\
+\frac{10\sqrt{14}}{7} \\
+-\frac{1}{\sqrt{14}}
+\end{array}
+\right)\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline941}%
+$ DUx=y$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath943}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right) = \left(
+\begin{array}{c}
+1/2 \\
+5/2 \\
+1/2
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline949}%
+$ A=LU$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline951}%
+$ PA=LU$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline953}%
+$ L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline955}%
+$ U$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline957}%
+$ P =
+\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0
+\end{array} \right),$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline959}%
+$ L =
+\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+2 & 1 & 0 & 0 \\
+2 & -1 & 1 & 0 \\
+-1 & 3 & 0 & 1
+\end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline961}%
+$ U =
+\left( \begin{array}{rrrr}
+1 & 1 & 1 & 1 \\
+0 & 2 & 1 & 2 \\
+0 & 0 & 2 & 4 \\
+0 & 0 & 0 & 3
+\end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline963}%
+$ A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline969}%
+$ A^{-1} = U^{-1}L^{-1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline975}%
+$ U^{-1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline977}%
+$ [U \mid 1\!{\rm l} ]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline981}%
+$ n \times n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline983}%
+$ n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline985}%
+$ \mathbb{R}^n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline987}%
+$ L^{-1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline993}%
+$ n^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline995}%
+$ n^3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1007}%
+$ L^{-1} =
+\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+-2 & 1 & 0 & 0 \\
+-4 & 1 & 1 & 0 \\
+7 & -3 & 0 & 1
+\end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1009}%
+$ U = \left( \begin{array}{rrrr}
+1 & -1/2 & -1/4 & 1/3 \\
+0 & 1/2 & -1/4 & 0 \\
+0 & 0 & 1/2 & -2/3 \\
+0 & 0 & 0 & 1/3
+\end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1011}%
+\begin{displaymath}A^{-1} = U^{-1}L^{-1} =
+\left(
+\begin{array}{rrrr}
+16/3 & -7/4 & -1/4 & 1/3 \\
+0 & 1/4 & -1/4 & 0 \\
+-20/3 & 5/2 & 1/2 & -2/3 \\
+7/3 & -1 & 0 & 1/3
+\end{array} \right)\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 5}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] Pour résoudre un système d'équations linéaires $Ax=b$,
+on utilise un système itératif $x^{(k+1)} = Fx^{(k)} + c$ où $F$
+est la matrice donnée par
+
+$$F = \left(
+\begin{array}{rrr}
+\frac{3}{8} & \frac{5}{16} & \frac{3}{8} \\\\
+\frac{1}{16} & 0 & \frac{1}{32} \\\\
+0 & \frac{1}{8} & \frac{1}{16}
+\end{array}
+\right)
+$$
+
+Le procédé itératif donne successivement
+
+\begin{center}
+$
+\begin{array}{c|c|c|c}
+k & x_1^{(k)} & x_2^{(k)} & x_3^{(k)} \\
+\hline
+\vdots & \vdots & \vdots & \vdots \\
+3 & 2,949196718 & 1,222752934 & 1,229700392 \\
+4 & 2,949196708 & 1,222752932 & 1,229700391 \\
+5 & 2,949196704 & 1,222752931 & 1,229700391 \\
+\vdots & \vdots & \vdots & \vdots
+\end{array}
+$
+\end{center}
+
+    \begin{description}
+
+    \item[a)] Donner une borne supérieure pour l'erreur d'approximation
+de $x^{(5)}$.
+
+    \item[b)] Sachant que $x^{(0)} = (2,3,4)^t$ et que $c=(1,1,1)^t$,
+    déterminer quel sera le nombre d'itérations nécessaire pour obtenir
+    une précision d'au moins $10^{-10}$ sur l'erreur d'approximation.
+
+    \end{description}
+
+
+
+\item[2)] Considérons le système d'équations linéaires
+
+$$\left( \begin{array}{rrr} 2 & -1 & 0 \\ -1 & 4 & -1 \\ 0 & -1 & 2 \end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array} \right)
+=
+\left( \begin{array}{r} 3 \\ 0 \\ 3 \end{array} \right)
+$$
+
+    \begin{description}
+
+    \item[a)] Construire les équations de Jacobi et la matrice d'itération $F$.
+
+    \item[b)] Expliquer pourquoi ce système converge sans avoir recours à la matrice $F$.
+
+    \item[c)] Déterminer le nombre d'opérations à effectuer pour assurer, par la méthode
+    de Jacobi, que $\| e(x^{(k)}) \| \leqslant 10^{-7}$ à partir de $x^{(0)} = (0,0,0)^t$.
+
+    \item[d)] Appliquer la méthode de Jacobi jusqu'à obtenir une précision de $10^{-7}$ sur $\| e(x^{(k)}) \|$.
+
+    \end{description}
+
+
+\item[3)] Refaire le même exercice, mais avec le système d'équations linéaires
+
+$$\left( \begin{array}{rrr}
+4  & 3  & 2 \\
+-1 & -5 & 0 \\
+2  & 1  & 3
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array} \right)
+=
+\left( \begin{array}{r} 1 \\ 2 \\ 3 \end{array} \right)
+$$
+
+
+\item[4)] Refaire le même exercice, mais avec le système d'équations linéaires
+
+$$\left( \begin{array}{rrr}
+4  & 3  & 1 \\
+-1 & -5 & 2 \\
+2  & 1  & 3
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array} \right)
+=
+\left( \begin{array}{r} 4 \\ 5 \\ 6 \end{array} \right)
+$$
+
+
+
+\item[5)] Résoudre le système d'équations linéaires
+
+$$\left( \begin{array}{rrrr}
+2  & 3  & 7 & 4 \\
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \\ x_4 \end{array} \right)
+=
+\left( \begin{array}{r} 35  \\ 41 \\ 27 \\ -31 \end{array} \right)
+$$
+
+à l'aide de la méthode itérative de Jacobi.
+
+
+
+\item[6)] Soit $A$ une matrice réelle telle que $A^t$ soit à dominance diagonale stricte.
+
+    \begin{description}
+
+    \item[a)] Que peut-on dire du rayon spectral $\rho(F)$ de la matrice d'itération de Jacobi associée à $A$?
+
+    \item[b)] A-t-on nécessairement $\| F \|_1 < 1$?
+
+    \end{description}
+
+
+\item[7)] Montrer que la matrice
+
+$$\left( \begin{array}{rrrr}
+2 & 0 & 1 & 0 \\
+2 & 3 & 4 & 2 \\
+1 & 0 & 3 & 0 \\
+1 & -1 & 0 & 1
+ \end{array} \right) $$
+
+est réductible.
+
+
+
+\item[8)] Soit $A_{n \times n}$ une matrice non singulière et $B_{n \times n}$ une matrice quelconque.
+
+    \begin{description}
+
+    \item[a)] Élaborer une méthode itérative permettant de trouver une matrice $X_{n \times n}$ telle que
+    $AX=B$.
+
+    \item[b)] En déduire une méthode pour calculer l'inverse de $A$.
+
+    \item[c)] Appliquer ce qui précède à la matrice
+
+$$\left( \begin{array}{rrrr}
+1 & -2 & 3 & 2 \\
+5 & -9 & 7 & 2 \\
+3 & 1 & -1 & 2 \\
+1 & -9 & 0 & 1
+ \end{array} \right) $$
+
+
+    \end{description}
+
+
+\end{description}
+
+\end{document}

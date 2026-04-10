@@ -1,0 +1,1257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_4</TITLE>
+<META NAME="description" CONTENT="sol_lab_4">
+<META NAME="keywords" CONTENT="sol_lab_4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_4.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 4 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD>Voir num&#233;ro 4 du lab 3... D&#233;sol&#233;!
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Soit <!-- MATH
+ $1 \leqslant M \leqslant n$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ 1 \leqslant M \leqslant n$">
+ un entier tel que <!-- MATH
+ $|x_i|^p \leqslant |x_M|^p$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \vert x_i\vert^p \leqslant \vert x_M\vert^p$">
+
+pour tout <!-- MATH
+ $i \in \{ 1,2,\ldots,n\}$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ i \in \{ 1,2,\ldots,n\}$">
+
+
+<P>
+<!-- MATH
+ $\begin{array}[t]{rcl}
+\| x \|_p   & =         & \left( \sum\limits_{i=1}^{n} |x_i|^p \right)^{\frac{1}{p}} \\
+& =         & \left( |x_1|^p + |x_2|^p + |x_3|^p + \ldots + |x_n|^p \right)^{\frac{1}{p}} \\
+            & \geqslant & \left( 0 + 0 + \ldots + |x_M|^p + \ldots + 0 \right)^{\frac{1}{p}} \\
+            & =         & |x_M| \\
+            & =         & \| x \|_{\infty}
+\end{array}$
+ -->
+<IMG
+ WIDTH="366" HEIGHT="171" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+\Vert x \Vert _p &amp; = &amp; \left( \sum\lim...
+...\vert x_M\vert \\
+&amp; = &amp; \Vert x \Vert _{\infty}
+\end{array}\end{displaymath}">
+
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Soit <!-- MATH
+ $x \in \mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ x \in \mathbb{R}^n$">
+. Posons <!-- MATH
+ $y = \frac{x}{\| x \|}$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ y = \frac{x}{\Vert x \Vert}$">
+. Alors, <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$ y$">
+ est un vecteur
+de norme un et de plus, <!-- MATH
+ $Ay = \frac{Ax}{\| x \|}$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$ Ay = \frac{Ax}{\Vert x \Vert}$">
+ entra&#238;ne que <!-- MATH
+ $\|
+Ay \| = \frac{\| Ax \|}{\| x \|}$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$ \Vert
+Ay \Vert = \frac{\Vert Ax \Vert}{\Vert x \Vert}$">
+. Ainsi, <!-- MATH
+ $\| A \| =
+\sup\limits_{x \neq 0} \frac{\| Ax \|}{\| x \|} = \sup\limits_{\|
+y \| = 1} \| Ay \|$
+ -->
+<IMG
+ WIDTH="239" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ \Vert A \Vert =
+\sup\limits_{x \neq 0} \frac{\Vert Ax \Vert}{\Vert x \Vert} = \sup\limits_{\Vert
+y \Vert = 1} \Vert Ay \Vert$">
+.
+
+<P>
+Alors, <!-- MATH
+ $\begin{array}[t]{rcl}
+\| A \|_{\infty}    & =         & \sup\limits_{\| y \| = 1} \| Ay \|_{\infty} \\
+& =         & \sup\limits_{\| y \| = 1} \max\limits_{i=1,2,\ldots,n} |\sum\limits_{i=1}^{n} a_{i,j}y_j| \\
+                    & \leqslant & \sup\limits_{\| y \| = 1} \max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}||y_j| \\
+                    & \leqslant & \max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|
+\end{array}$
+ -->
+<IMG
+ WIDTH="280" HEIGHT="198" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+\Vert A \Vert _{\infty} &amp; = &amp; \sup\lim...
+...\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert
+\end{array}\end{displaymath}">
+
+
+<P>
+Donc, <!-- MATH
+ $\sup\limits_{\| y \| = 1} \| Ay \| \leqslant
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ \sup\limits_{\Vert y \Vert = 1} \Vert Ay \Vert \leqslant
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+.
+
+<P>
+Soit <!-- MATH
+ $i_0 \in \{ 1,2,\ldots,n\}$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$ i_0 \in \{ 1,2,\ldots,n\}$">
+ tel que <!-- MATH
+ $\sum\limits_{i=1}^{n}
+|a_{i_0,j}| = \max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n}
+|a_{i,j}|$
+ -->
+<IMG
+ WIDTH="221" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \sum\limits_{i=1}^{n}
+\vert a_{i_0,j}\vert = \max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n}
+\vert a_{i,j}\vert$">
+.
+
+<P>
+Alors, <!-- MATH
+ $\sup\limits_{\| y \| = 1} \| Ay \| \leqslant
+\sum\limits_{i=1}^{n} |a_{i_0,j}|$
+ -->
+<IMG
+ WIDTH="182" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ \sup\limits_{\Vert y \Vert = 1} \Vert Ay \Vert \leqslant
+\sum\limits_{i=1}^{n} \vert a_{i_0,j}\vert$">
+.
+
+<P>
+Prenons <!-- MATH
+ $y \in \mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ y \in \mathbb{R}^n$">
+ d&#233;fini par
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y_j = \left\{ \begin{array}{ll} 1 & \textrm{si } a_{i_0,j} \geqslant 0 \\-1 & \textrm{sinon} \end{array} \right.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="204" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle y_j = \left\{ \begin{array}{ll} 1 &amp; \textrm{si } a_{i_0,j} \geqslant 0 \\ -1 &amp; \textrm{sinon} \end{array} \right. $">
+</DIV><P>
+</P>
+
+<P>
+Alors, <!-- MATH
+ $\| y \|_{\infty} = 1$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \Vert y \Vert _{\infty} = 1$">
+ et
+
+<P>
+<!-- MATH
+ $\begin{array}{rcl}
+\| Ay \|_{\infty}   & = & \max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}y_j| \\
+& = & \max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}| \\
+                    & = & \sum\limits_{i=1}^{n} |a_{i_0,j}|
+\end{array}$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="149" BORDER="0"
+ SRC="img19.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\Vert Ay \Vert _{\infty} &amp; = &amp; \max\limit...
+...
+&amp; = &amp; \sum\limits_{i=1}^{n} \vert a_{i_0,j}\vert
+\end{array}\end{displaymath}">
+
+
+<P>
+Comme <!-- MATH
+ $\sup\limits_{\| y \| = 1} \| Ay \| \leqslant
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ \sup\limits_{\Vert y \Vert = 1} \Vert Ay \Vert \leqslant
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+
+ et qu'il existe un vecteur <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$ y$">
+ de norme un r&#233;alisant l'&#233;galit&#233;, on en conclut que <!-- MATH
+ $\sup\limits_{\| y \| = 1} \| Ay \| =
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="237" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$ \sup\limits_{\Vert y \Vert = 1} \Vert Ay \Vert =
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+,
+c'est-&#224;-dire que <!-- MATH
+ $\| A \|_{\infty} =
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="201" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \Vert A \Vert _{\infty} =
+\max\limits_{i=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>On a que
+
+<P>
+<!-- MATH
+ $\begin{array}[t]{rcl}
+\| A \|_1   & =         & \sup\limits_{\| y \| = 1} \| Ay \|_{\infty} \\
+& =         & \sup\limits_{\| y \| = 1} \sum\limits_{i=1}^{n} | \sum\limits_{j=1}^{n} a_{i,j}y_j | \\
+            & \leqslant & \sum\limits_{i=1}^{n} \sum\limits_{j=1}^{n} |a_{i,j}y_j | \\
+            & \leqslant & \sum\limits_{i=1}^{n} \sum\limits_{j=1}^{n} |a_{i,j}| \\
+            & \leqslant & \sum\limits_{j=1}^{n} \sum\limits_{i=1}^{n} |a_{i,j}| \\
+            & \leqslant & \max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|
+\end{array}$
+ -->
+<IMG
+ WIDTH="230" HEIGHT="290" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+\Vert A \Vert _1 &amp; = &amp; \sup\limits_{\V...
+...\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert
+\end{array}\end{displaymath}">
+
+
+<P>
+Soit <!-- MATH
+ $j_0 \in \{ 1,2,\ldots,n \}$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$ j_0 \in \{ 1,2,\ldots,n \}$">
+ tel que <!-- MATH
+ $\sum\limits_{i=1}^{n} |a_{i,j_0}| =
+\max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="222" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$ \sum\limits_{i=1}^{n} \vert a_{i,j_0}\vert =
+\max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+.
+
+<P>
+Soit <!-- MATH
+ $y \in \mathbb{R}^n$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ y \in \mathbb{R}^n$">
+ le vecteur d&#233;fini par <!-- MATH
+ $y_j = \delta_{j,j_0}$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ y_j = \delta_{j,j_0}$">
+, c'est-&#224;-dire que <IMG
+ WIDTH="14" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \delta$">
+
+prend la valeur 1 seulement en position <IMG
+ WIDTH="20" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ j_0$">
+. Alors
+
+<P>
+Alors, <!-- MATH
+ $\| y \|_{\infty} = 1$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ \Vert y \Vert _{\infty} = 1$">
+ et
+
+<P>
+<!-- MATH
+ $\begin{array}{rcl}
+\| Ay \|_{1}    & = & \sum\limits_{i=1}^{n} | \sum\limits_{j=1}^{n} a_{i,j}y_j | \\
+& = & \sum\limits_{i=1}^{n} | \sum\limits_{j=1}^{n} a_{i,j}\delta_{j,j_0} | \\
+                & = & \sum\limits_{i=1}^{n} | a_{i,j_0} |
+\end{array}$
+ -->
+<IMG
+ WIDTH="214" HEIGHT="153" BORDER="0"
+ SRC="img28.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\Vert Ay \Vert _{1} &amp; = &amp; \sum\limits_{i=...
+... &amp; = &amp; \sum\limits_{i=1}^{n} \vert a_{i,j_0} \vert
+\end{array}\end{displaymath}">
+
+
+<P>
+Comme <!-- MATH
+ $\sup\limits_{\| y \| = 1} \| Ay \|_{\infty} \leqslant
+\max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="254" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \sup\limits_{\Vert y \Vert = 1} \Vert Ay \Vert _{\infty} \leqslant
+\max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+ et
+que cette valeur est atteinte pour un vecteur <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$ y$">
+, on en d&#233;duit
+que
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\sup\limits_{\| y \| = 1} \| Ay \|_{\infty} =
+\max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} |a_{i,j}|,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="264" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\displaystyle \sup\limits_{\Vert y \Vert = 1} \Vert Ay \Vert _{\infty} =
+\max\limits_{j=1,2,\ldots,n} \sum\limits_{i=1}^{n} \vert a_{i,j}\vert,$">
+</DIV><P>
+</P>
+
+<P>
+c'est-&#224;-dire que <!-- MATH
+ $\| A \|_{1} = \max\limits_{j=1,2,\ldots,n}
+\sum\limits_{i=1}^{n} |a_{i,j}|$
+ -->
+<IMG
+ WIDTH="196" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$ \Vert A \Vert _{1} = \max\limits_{j=1,2,\ldots,n}
+\sum\limits_{i=1}^{n} \vert a_{i,j}\vert$">
+.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD>Soit <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$ A$">
+ une matrice <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ n$">
+ par <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ n$">
+ pour un certain <IMG
+ WIDTH="50" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ n&gt;0$">
+
+et <!-- MATH
+ $x \in \mathbb{R}^{n}$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ x \in \mathbb{R}^{n}$">
+. Consid&#233;rons la norme de Frobenius
+d&#233;finie par
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\| A \|_{F} = \sqrt{\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n} a_{ij}^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="182" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$\displaystyle \Vert A \Vert _{F} = \sqrt{\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n} a_{ij}^2}.$">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Soit <!-- MATH
+ $x \in \mathbb{R}^{n^2}$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ x \in \mathbb{R}^{n^2}$">
+ le vecteur form&#233; des <IMG
+ WIDTH="23" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$ n^2$">
+ composantes de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$ A$">
+.
+    Alors, <!-- MATH
+ $\| A \|_F = \| x \|_2$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \Vert A \Vert _F = \Vert x \Vert _2$">
+. Les propri&#233;t&#233;s sont donc trivialement v&#233;rifi&#233;es.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>On a que
+
+<P>
+<!-- MATH
+ $\begin{array}{rcl}
+\| Ax \|_2^2    & =         & \sum\limits_{i=1}^n \left( \left( \sum\limits_{j=1}^n a_{i,j}x_j \right)^2 \right) \\
+\| Ax \|_2^2    & \leqslant & \sum\limits_{i=1}^n \left( \left( \sum\limits_{j=1}^n |a_{i,j}x_j| \right)^2 \right)
+\end{array}$
+ -->
+<IMG
+ WIDTH="266" HEIGHT="155" BORDER="0"
+ SRC="img40.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\Vert Ax \Vert _2^2 &amp; = &amp; \sum\limits_{i=...
+...ts_{j=1}^n \vert a_{i,j}x_j\vert \right)^2 \right)
+\end{array}\end{displaymath}">
+
+
+<P>
+Or, en vertu de l'in&#233;galit&#233; de H&#246;lder avec <IMG
+ WIDTH="49" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ p=2$">
+, on a que
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \sum\limits_{j=1}^n |a_{i,j}x_j| \right) \leqslant \|
+(a_{i,j})_{j=1}^{n} \|_2 \cdot \| x \|_2 =
+\sqrt{\sum\limits_{j=1}^{n} a_{i,j}^2} \cdot
+\sqrt{\sum\limits_{j=1}^{n}x_j^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="476" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$\displaystyle \left( \sum\limits_{j=1}^n \vert a_{i,j}x_j\vert \right) \leqslan...
+...sqrt{\sum\limits_{j=1}^{n} a_{i,j}^2} \cdot
+\sqrt{\sum\limits_{j=1}^{n}x_j^2}.$">
+</DIV><P>
+</P>
+
+<P>
+Ainsi,
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+\| Ax \|_2^2    & \leqslant & \sum\limits_{i=1}^n \left( \left( \sum\limits_{j=1}^n a_{i,j}^2 \right) \cdot \left( \sum\limits_{j=1}^n x_{j}^2 \right) \right) \\
+& =         &  \| A \|_F^2 \cdot \| x \|_2^2
+\end{array}$
+ -->
+<IMG
+ WIDTH="317" HEIGHT="97" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\Vert Ax \Vert _2^2 &amp; \leqslant &amp; \sum\li...
+... &amp; = &amp; \Vert A \Vert _F^2 \cdot \Vert x \Vert _2^2
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En appliquant une racine carr&#233;e de chaque c&#244;t&#233; de l'in&#233;galit&#233;, on obtient le r&#233;sultat.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Comme <!-- MATH
+ $\| Ax \|_2 \leqslant \| A \|_F \| x \|_2$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$ \Vert Ax \Vert _2 \leqslant \Vert A \Vert _F \Vert x \Vert _2$">
+, on a que <!-- MATH
+ $\frac{\| Ax \|_2}{\| x \|_2} \leqslant \| A \|_F$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ \frac{\Vert Ax \Vert _2}{\Vert x \Vert _2} \leqslant \Vert A \Vert _F$">
+
+si <IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ x \neq 0$">
+. Puisque <!-- MATH
+ $\| A \|_2 = \sup\limits_{x \neq 0} \frac{\| Ax \|_2}{\| x \|_2}$
+ -->
+<IMG
+ WIDTH="144" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$ \Vert A \Vert _2 = \sup\limits_{x \neq 0} \frac{\Vert Ax \Vert _2}{\Vert x \Vert _2}$">
+, on a le r&#233;sultat.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD><!-- MATH
+ $\| I \|_2 = \sup\limits_{x \neq 0} \frac{\| Ix \|_2}{\| x \|_2} =
+\sup\limits_{x \neq 0} \frac{\| x \|_2}{\| x \|_2} = 1$
+ -->
+<IMG
+ WIDTH="259" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ \Vert I \Vert _2 = \sup\limits_{x \neq 0} \frac{\Vert Ix \Vert _2}{\Vert x \Vert _2} =
+\sup\limits_{x \neq 0} \frac{\Vert x \Vert _2}{\Vert x \Vert _2} = 1$">
+ et <!-- MATH
+ $\| I \|_F = \sqrt{n}$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$ \Vert I \Vert _F = \sqrt{n}$">
+. Il suffit donc de prendre pour <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$ A$">
+
+une matrice identit&#233; de dimension au moins deux.
+
+<P>
+</DD>
+<DT><STRONG>e)</STRONG></DT>
+<DD>trivial.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD>Soit <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$ r$">
+ le r&#233;sidu et <IMG
+ WIDTH="13" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.png"
+ ALT="$ e$">
+ l'erreur d'approximation. Comme <IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ r=Ae$">
+, on a que
+<!-- MATH
+ $\| r \| = \| Ae \| \leqslant \| A \| \| e \|$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ \Vert r \Vert = \Vert Ae \Vert \leqslant \Vert A \Vert \Vert e \Vert$">
+. De m&#234;me, <IMG
+ WIDTH="80" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$ e=A^{-1}r$">
+ entra&#238;ne que
+<!-- MATH
+ $\| e \| = \| A^{-1}r \| \leqslant \| A^{-1} \| \| r \|$
+ -->
+<IMG
+ WIDTH="222" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ \Vert e \Vert = \Vert A^{-1}r \Vert \leqslant \Vert A^{-1} \Vert \Vert r \Vert$">
+. Mais alors,
+<!-- MATH
+ $\| r \| \leqslant \| A \| \| e \| \leqslant \| A \| \| A^{-1} \| \| r \| = {\rm cond}(A) \| r \|$
+ -->
+<IMG
+ WIDTH="377" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$ \Vert r \Vert \leqslant \Vert A \Vert \Vert e \Vert \leqslant \Vert A \Vert \Vert A^{-1} \Vert \Vert r \Vert = {\rm cond}(A) \Vert r \Vert$">
+.
+Ainsi, <!-- MATH
+ ${\rm cond}(A) \geqslant 1$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ {\rm cond}(A) \geqslant 1$">
+.
+
+<P>
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>On a que
+<!-- MATH
+ $\left\|
+\begin{array}{rrr}
+3 & 1 & 6 \\
+2 & 1 & 3 \\
+1 & 1 & 1
+\end{array}
+\right\|_{\infty} = 10,$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="87" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}\left\Vert
+\begin{array}{rrr}
+3 &amp; 1 &amp; 6 \\
+2 &amp; 1 &amp; 3 \\
+1 &amp; 1 &amp; 1
+\end{array}
+\right\Vert _{\infty} = 10,\end{displaymath}">
+ que <!-- MATH
+ $A^{-1} =
+\left( \begin{array}{rrr}
+-2 & 5 & -3 \\
+1 & -3 & 3 \\
+1 & -2 & 1
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ A^{-1} =
+\left( \begin{array}{rrr}
+-2 &amp; 5 &amp; -3 \\
+1 &amp; -3 &amp; 3 \\
+1 &amp; -2 &amp; 1
+\end{array}\right),$">
+
+que <!-- MATH
+ $\| A^{-1} \|_{\infty} = 10$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$ \Vert A^{-1} \Vert _{\infty} = 10$">
+ et ainsi que <!-- MATH
+ ${\rm cond}(A) = 100$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ {\rm cond}(A) = 100$">
+.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Posons <!-- MATH
+ $D =
+\left(\begin{array}{rrr}
+\frac{1}{10} & 0 & 0 \\
+0 & \frac{1}{6} & 0 \\
+0 & 0 & \frac{1}{3}
+\end{array}\right).$
+ -->
+<IMG
+ WIDTH="174" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$ D =
+\left(\begin{array}{rrr}
+\frac{1}{10} &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{6} &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{3}
+\end{array}\right).$">
+
+Alors, <!-- MATH
+ $\| DA \|_{\infty}=1$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$ \Vert DA \Vert _{\infty}=1$">
+,
+
+<P>
+<!-- MATH
+ $(DA)^{-1} = \left( \begin{array}{rrr}
+-20 & 30 & -9 \\
+10 & -18 & 9 \\
+10 & -12 & 3
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="273" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$ (DA)^{-1} = \left( \begin{array}{rrr}
+-20 &amp; 30 &amp; -9 \\
+10 &amp; -18 &amp; 9 \\
+10 &amp; -12 &amp; 3
+\end{array}\right),$">
+
+<!-- MATH
+ $\| (DA)^{-1} \|_{\infty} = 59$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$ \Vert (DA)^{-1} \Vert _{\infty} = 59$">
+
+
+<P>
+et <!-- MATH
+ ${\rm cond}(DA) = 59$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$ {\rm cond}(DA) = 59$">
+.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Posons <!-- MATH
+ $C =
+\left(\begin{array}{rrr}
+\frac{30}{29} & 0 & 0 \\
+0 & \frac{30}{18} & 0 \\
+0 & 0 & \frac{30}{43}
+\end{array}\right)$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$ C =
+\left(\begin{array}{rrr}
+\frac{30}{29} &amp; 0 &amp; 0 \\
+0 &amp; \frac{30}{18} &amp; 0 \\
+0 &amp; 0 &amp; \frac{30}{43}
+\end{array}\right)$">
+
+
+<P>
+Alors, <!-- MATH
+ $(DAC) = \left( \begin{array}{rrr}
+\frac{9}{29} & \frac{1}{6} & \frac{18}{43} \\
+\frac{10}{29} & \frac{5}{18} & \frac{15}{43} \\
+\frac{10}{29} & \frac{5}{9} & \frac{10}{43}
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="231" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$ (DAC) = \left( \begin{array}{rrr}
+\frac{9}{29} &amp; \frac{1}{6} &amp; \frac{18}{43} ...
+...c{15}{43} \\
+\frac{10}{29} &amp; \frac{5}{9} &amp; \frac{10}{43}
+\end{array}\right),$">
+
+<!-- MATH
+ $\| (DAC) \|_{\infty} = \frac{12715}{11223},$
+ -->
+<IMG
+ WIDTH="165" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$ \Vert (DAC) \Vert _{\infty} = \frac{12715}{11223},$">
+
+
+<P>
+<!-- MATH
+ $(DAC)^{-1} = \left( \begin{array}{rrr}
+\frac{-58}{3} & 29 & \frac{-87}{10} \\
+6 & \frac{-54}{5} & \frac{27}{5} \\
+\frac{43}{3} & \frac{-86}{5} & \frac{43}{10}
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="280" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ (DAC)^{-1} = \left( \begin{array}{rrr}
+\frac{-58}{3} &amp; 29 &amp; \frac{-87}{10} \\...
+...c{27}{5} \\
+\frac{43}{3} &amp; \frac{-86}{5} &amp; \frac{43}{10}
+\end{array}\right),$">
+
+<!-- MATH
+ $\| (DAC)^{-1} \| = \frac{1711}{30}$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ \Vert (DAC)^{-1} \Vert = \frac{1711}{30}$">
+
+
+<P>
+et <!-- MATH
+ ${\rm cond}(DAC) = \frac{150\;037}{2322} \approx 64,62$
+ -->
+<IMG
+ WIDTH="247" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ {\rm cond}(DAC) = \frac{150\;037}{2322} \approx 64,62$">
+.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD><P>
+Posons <!-- MATH
+ $D =
+\left(\begin{array}{rrr}
+\frac{1}{6} & 0 & 0 \\
+0 & \frac{1}{3} & 0 \\
+0 & 0 & 1
+\end{array}\right)$
+ -->
+<IMG
+ WIDTH="158" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ D =
+\left(\begin{array}{rrr}
+\frac{1}{6} &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{3} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right)$">
+
+
+<P>
+Alors, <!-- MATH
+ $\| DA \|_{\infty}=3$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ \Vert DA \Vert _{\infty}=3$">
+, <!-- MATH
+ $(DA)^{-1} = \left( \begin{array}{rrr}
+-12 & 15 & -3 \\
+6 & -9 & 3 \\
+6 & -6 & 1
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="264" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$ (DA)^{-1} = \left( \begin{array}{rrr}
+-12 &amp; 15 &amp; -3 \\
+6 &amp; -9 &amp; 3 \\
+6 &amp; -6 &amp; 1
+\end{array}\right),$">
+
+
+<P>
+<!-- MATH
+ $\| (DA)^{-1} \|_{\infty} = 30$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$ \Vert (DA)^{-1} \Vert _{\infty} = 30$">
+ et <!-- MATH
+ ${\rm cond}(DA) = 90$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$ {\rm cond}(DA) = 90$">
+.
+
+<P>
+Posons <!-- MATH
+ $C =
+\left(\begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array}\right)$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$ C =
+\left(\begin{array}{rrr}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right)$">
+
+
+<P>
+Alors, <!-- MATH
+ $(DAC) = \left( \begin{array}{rrr}
+\frac{1}{2} & \frac{1}{6} & 1 \\
+\frac{2}{3} & \frac{1}{3} & 1 \\
+1 & 1 & 1
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$ (DAC) = \left( \begin{array}{rrr}
+\frac{1}{2} &amp; \frac{1}{6} &amp; 1 \\
+\frac{2}{3} &amp; \frac{1}{3} &amp; 1 \\
+1 &amp; 1 &amp; 1
+\end{array}\right),$">
+
+<!-- MATH
+ $\| (DAC) \|_{\infty} = 3$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$ \Vert (DAC) \Vert _{\infty} = 3$">
+
+
+<P>
+<!-- MATH
+ $(DAC)^{-1} = \left( \begin{array}{rrr}
+-12 & 15 & -3 \\
+6 & -9 & 3 \\
+6 & -6 & 1
+\end{array}\right),$
+ -->
+<IMG
+ WIDTH="279" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="$ (DAC)^{-1} = \left( \begin{array}{rrr}
+-12 &amp; 15 &amp; -3 \\
+6 &amp; -9 &amp; 3 \\
+6 &amp; -6 &amp; 1
+\end{array}\right),$">
+
+<!-- MATH
+ $\| (DAC)^{-1} \| = 30$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$ \Vert (DAC)^{-1} \Vert = 30$">
+
+
+<P>
+et <!-- MATH
+ ${\rm cond}(DAC) = 90$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$ {\rm cond}(DAC) = 90$">
+.
+
+<P>
+</DD>
+<DT><STRONG>e)</STRONG></DT>
+<DD>Le r&#233;sidu associ&#233; &#224; la solution est
+<!-- MATH
+ $r =
+\left(\begin{array}{r}
+0,44 \\
+0,21 \\
+-0,01
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.png"
+ ALT="$ r =
+\left(\begin{array}{r}
+0,44 \\
+0,21 \\
+-0,01
+\end{array} \right)$">
+
+qui est de norme infinie 0,44.
+
+<P>
+Comme <!-- MATH
+ $\| b \|_{\infty} = 7$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.png"
+ ALT="$ \Vert b \Vert _{\infty} = 7$">
+, on a que le r&#233;sidu relatif est <!-- MATH
+ $\rho(x_0) = \frac{0,44}{7} \approx 0,0629$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$ \rho(x_0) = \frac{0,44}{7} \approx 0,0629$">
+.
+
+<P>
+Comme <!-- MATH
+ ${\rm cond}(A) = 100$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ {\rm cond}(A) = 100$">
+, on a que <!-- MATH
+ $0,000629 = \frac{0,0629}{100} = \frac{\rho(x_0)}{{\rm cond}(A)} \leqslant
+\varepsilon(x_0) \leqslant \rho(x_0)\cdot {\rm cond}(A) = 0,0629 \cdot 100 = 6,29$
+ -->
+<IMG
+ WIDTH="620" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$ 0,000629 = \frac{0,0629}{100} = \frac{\rho(x_0)}{{\rm cond}(A)} \leqslant
+\varepsilon(x_0) \leqslant \rho(x_0)\cdot {\rm cond}(A) = 0,0629 \cdot 100 = 6,29$">
+.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>6)</STRONG></DT>
+<DD>Les valeurs propres de
+<!-- MATH
+ $F = \left( \begin{array}{rrr} 0 & 0 & 2 \\1 & 1/2 & -4 \\
+6 & 3 & 1/4
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="191" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$ F = \left( \begin{array}{rrr} 0 &amp; 0 &amp; 2 \\ 1 &amp; 1/2 &amp; -4 \\
+6 &amp; 3 &amp; 1/4
+\end{array} \right)$">
+
+sont <!-- MATH
+ $\lambda_1 = 0$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$ \lambda_1 = 0$">
+, <!-- MATH
+ $\lambda_2 = \frac{1}{4}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$ \lambda_2 = \frac{1}{4}$">
+ et <!-- MATH
+ $\lambda_2 = \frac{1}{2}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.png"
+ ALT="$ \lambda_2 = \frac{1}{2}$">
+, de sorte que le
+rayon spectral de la matrice <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img92.png"
+ ALT="$ F$">
+ est de <!-- MATH
+ $\frac{1}{2}$
+ -->
+<IMG
+ WIDTH="15" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.png"
+ ALT="$ \frac{1}{2}$">
+. Comme celui-ci est strictement plus petit que 1,
+le proc&#233;d&#233; it&#233;ratif converge pour toute valeur de <IMG
+ WIDTH="33" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img94.png"
+ ALT="$ x^{(0)}$">
+.
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-06-07
+</ADDRESS>
+</BODY>
+</HTML>

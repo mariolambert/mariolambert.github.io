@@ -1,0 +1,285 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 3}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] Considérons le système d'équations linéaires
+
+\begin{center}
+$\left( \begin{array}{rr}
+0,670 & -2,67 \\
+-0,504 & 2,00
+\end{array} \right)
+\left( \begin{array}{c}
+x_1 \\
+x_2
+\end{array}\right)
+=
+\left( \begin{array}{r}
+-1,99 \\
+1,48
+\end{array}\right)$
+\end{center}
+
+qui a été résolu au numéro neuf du laboratoire un. Considérons aussi les solutions approximatives
+$\widetilde{x}_1 = \left( \begin{array}{l} 5,6 \\ 2,15 \end{array} \right)$ et $\widetilde{x}_2 = \left( \begin{array}{l} 4,99 \\ 1,48 \end{array} \right)$.
+
+\begin{description}
+
+\item[a)] Calculer les résidus associés à ces solutions.
+
+\item[b)] Appliquer la méthode itérative d'amélioration de la solution en utilisant $m=4$ chiffres significatifs.
+
+\end{description}
+
+\item[2)] Considérons le système d'équations linéaires
+
+$$
+\left(
+\begin{array}{cccc}
+0,0003 & 1,391 & 0 & 0 \\
+0,3961 & -0,521 & -1 & -1 \\
+0 & 1 & -0,252 & 1 \\
+0 & 1 & 1,34 & -5,34
+ \end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+9,746 \\
+1,236 \\
+7,74 \\
+3,02
+\end{array}
+\right)
+$$
+
+\begin{description}
+
+\item[a)] Résoudre ce système par la méthode de Gauss en arithmétique à quatre chiffres avec arrondi au plus près.
+
+\item[b)] Pour évaluer la sensibilité du système aux variations,
+on perturbe un tout petit peu le vecteur des constantes en le
+remplaçant par les vecteurs
+
+\begin{center}
+$
+b'=
+\left(
+\begin{array}{l}
+9,747 \\
+1,237 \\
+7,741 \\
+3,021
+\end{array}
+\right)
+$
+et
+$
+b''=
+\left(
+\begin{array}{l}
+9,745 \\
+1,235 \\
+7,739 \\
+3,019
+\end{array}
+\right).
+$
+\end{center}
+
+Résoudre le système avec ces nouveaux vecteurs de constantes. Discuter de la fiabilité des solutions.
+
+\item[c)] Refaire les calculs des parties a) et b), mais en utilisant la méthode de Gauss avec choix de pivot partiel. Discuter de la fiabilité des solutions.
+
+\item[d)] Pour les deux méthodes, on peut aussi utiliser comme
+vecteur témoin le vecteur formé de la somme des colonnes de la
+matrice et du vecteur des constantes. Résoudre le système avec
+cette nouvelle colonne des constantes et discuter de la fiabilité
+des solutions.
+
+\end{description}
+
+
+
+
+\item[3)] Résoudre exactement le système
+
+$$
+\left(
+\begin{array}{rrr}
+3 & 1 & 6 \\
+2 & 1 & 3 \\
+1 & 1 & 1
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2 \\
+7 \\
+4
+\end{array}
+\right)
+$$
+
+en effectuant une décomposition $LU$.
+
+
+
+
+\item[4)] Résoudre exactement le système
+
+$$
+\left(
+\begin{array}{rrr}
+-2 & 1 & 1 \\
+1 & 3 & 2 \\
+1 & 2 & 1
+\end{array}
+\right) \left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right) = \left(
+\begin{array}{c}
+2 \\
+9 \\
+6
+\end{array}
+\right)
+$$
+
+en effectuant une décomposition de Choleski.
+
+
+\item[5)] Lors d'une décomposition $LU$, on calcule d'abord la
+première ligne de $U$, puis la première colonne de $L$, puis la
+deuxième ligne de $U$, puis la deuxième colonne de $L$, et ainsi
+de suite, comme dans le schéma
+
+\begin{center}
+$\entrymodifiers={-=}
+\xymatrix@R-1pc@C-1pc{
+\ar@{-}[rrrrrrrrrrr] \ar@{-}[ddddddddddd] & & & & & & & & & & & \ar@{-}[ddddddddddd] \\
+ & & & & & 1 & & & & & & \\
+\ar@{-}[rrrrrrrrrrr] & & \ar@{-}[ddddddddd] & & & & & & & & & \\
+ & & & & & & 3 & & & & & \\
+ & & \ar@{-}[rrrrrrrrr] & & \ar@{-}[ddddddd] & & & & & & & \\
+ & 2 & & & & & & 5 & & & & \\
+ & & & & \ar@{-}[rrrrrrr] & & \ar@{-}[ddddd] & & & & & \\
+ & & & 4 & & & & & & & & \\
+ & & & & & & & & & & & \\
+ & & & & & 6 & & & \cdots & & & \\
+ & & & & & & & & & & & \\
+\ar@{-}[rrrrrrrrrrr] & & & & & & & & & & &
+}$
+\end{center}
+
+On vous propose ici de modifier l'ordre des calculs en faisant
+d'abord la première ligne de $U$, puis la première ligne de $L$,
+puis la deuxième ligne de $U$, puis la deuxième ligne de $L$, et
+ainsi de suite, comme dans le schéma
+
+\begin{center}
+$\entrymodifiers={-=}
+\xymatrix@R-1pc@C-1pc{
+\ar@{-}[rrrrrrrrrrr] \ar@{-}[dddddddddd] & & & & & & & & & & & \ar@{-}[dddddddddd] \\
+ & & & & & 1 & & & & & & \\
+\ar@{-}[rrrrrrrrrrr] &  & \ar@{-}[dd] & & & & & & & & & \\
+ & 2 & & & & & 3 & & & & & \\
+\ar@{-}[rrrrrrrrrrr] & & & & \ar@{-}[dd] & & & & & & & \\
+ & & 4 & & & & & 5 & & & & \\
+\ar@{-}[rrrrrrrrrrr] & & & & & & \ar@{-}[dd] & & & & & \\
+ & & & 6 & & & & & 7 & & & \\
+\ar@{-}[rrrrrrrrrrr] & & & & & & & & & & & \\
+ & & & & & \cdots & & & & & & \\
+\ar@{-}[rrrrrrrrrrr] & & & & & & & & & & &
+}$
+\end{center}
+
+\begin{description}
+
+\item[a)] Modifier, si nécessaire, les formules de calcul construites pour la décomposition $LU$.
+
+\item[b)] Déterminer le nombre d'opérations nécessaires pour effectuer cette décomposition.
+
+\item[c)] Déterminer si cette méthode présente un avantage par rapport à la décomposition originale.
+
+\item[d)] Obtenir, en utilisant cet ordonnancement, une décomposition $LU$ de la matrice
+$\left( \begin{array}{cccc}
+1 & 1 & 1 & 1 \\
+2 & 4 & 3 & 4 \\
+-1 & 5 & 2 & 8 \\
+2 & 0 & 3 & 4
+\end{array} \right)$
+
+\end{description}
+
+\item[6)] Soit $A$ une matrice inversible. Dès qu'on a calculé une
+décomposition $A=LU$, on peut se servir de cette relation pour
+obtenir l'inverse de $A$ par la formule $A^{-1} = U^{-1}L^{-1}$.
+
+    \begin{description}
+
+    \item[a)] Montrer comment obtenir $U^{-1}$ et $L^{-1}$.
+
+    \item[b)] Déterminer le nombre d'opérations que cela
+    nécessite.
+
+    \item[c)] Évaluer les avantages d'utiliser la décomposition $LU$ comme méthode
+    d'inversion de matrices.
+
+    \item[d)] Appliquer cette méthode à la matrice du numéro
+    précédent.
+    \end{description}
+
+
+
+\end{description}
+
+\end{document}

@@ -1,0 +1,1555 @@
+\batchmode
+\documentclass[12pt]{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Alpha}{\textrm{A}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+
+%
+\providecommand{\card}[1]{\overline{\overline{#1}}}%
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2468}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+      f & : & \left[0,1\right] & \to     & \left]0,1\right] \\\\
+        &   & x                & \mapsto & \left\lbrace
+                                           \begin{array}{ll}
+                                           1/2              & \textrm{si $x=0$ ;} \\
+                                           \frac{1}{n+1}    & \textrm{si $x=\frac{1}{n}$ pour un $n > 1$ ;} \\
+                                           x                & \textrm{sinon}
+                                           \end{array}
+                                           \right.
+      \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2470}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+      f & : & \left[0,1\right] & \to     & \left]0,1\right[ \\\\
+        &   & x                & \mapsto & \left\lbrace
+                                           \begin{array}{ll}
+                                           1/2              & \textrm{si $x=0$ ;} \\
+                                           1/3              & \textrm{si $x=1$ ;} \\
+                                           \frac{1}{n+2}    & \textrm{si $x=\frac{1}{n}$ pour un $n > 1$ ;} \\
+                                           x                & \textrm{sinon}
+                                           \end{array}
+                                           \right.
+      \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2472}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+      f & : & \mathbb{Q} & \to     & \mathbb{Q}^*_+ \\\\
+        &   & x          & \mapsto & \left\lbrace
+                                     \begin{array}{ll}
+                                     \frac{1}{1-x}          & \textrm{si $x \leqslant 0$ ;} \\
+                                     x+1                    & \textrm{si $x>0$}
+                                     \end{array}
+                                     \right.
+      \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2474}%
+$ I_o = \{ \left]a,b \right[ \subseteq \mathbb{R} \mid a,b \in \mathbb{Q} \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2476}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+      f & : & \mathbb{Q} & \to     & I_o \\
+        &   & x          & \mapsto & \left]x,x+1\right[
+      \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2478}%
+$ f$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2480}%
+$ \aleph_0 = \overline{\overline{\mathbb{Q}}} \leqslant \overline{\overline{I_o}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2482}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+       g & : & I_o               & \to     & \mathbb{Q} \times \mathbb{Q} \\
+         &   & \left]a,b\right[  & \mapsto & (a,b)
+        \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2484}%
+$ g$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2486}%
+$ \overline{\overline{I_o}} \leqslant \overline{\overline{\mathbb{Q} \times \mathbb{Q}}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2488}%
+$ \overline{\overline{I_0}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2498}%
+$ \mathbb{N}^n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2500}%
+$ n \in \mathbb{N}^*$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2502}%
+$ n=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2506}%
+$ \mathbb{N}^{n+1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2508}%
+$ \mathbb{N}^{n+1} = \mathbb{N}^n \times \mathbb{N}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2512}%
+$ \mathbb{N}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2520}%
+$ \mathbb{Z}[x]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2522}%
+$ \mathbb{Z}_n[x] = \{ p \in \mathbb{Z}[x] \mid \textrm{degr\'e}(p) \leqslant n
+\}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2526}%
+\begin{displaymath}\begin{array}[t]{rcl}
+      \mathbb{Z}_n[x]                  & \to     & \mathbb{Z}^{n+1} \\
+      a_0+a_1x+a_2x^2+\ldots+a_nx^n    & \mapsto & (a_0,a_1,a_2,\ldots,a_n)
+      \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2530}%
+$ \overline{\overline{\mathbb{Z}_n[x]}} =
+\overline{\overline{\mathbb{Z}^{n+1}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2532}%
+$ \mathbb{Z}^{n+1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2534}%
+$ \mathbb{Z}_n[x]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2536}%
+$ \mathbb{Z}[x] = \bigcup\limits_{n \in \mathbb{N}}
+\mathbb{Z}_n[x]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2540}%
+$ {\cal A}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2542}%
+$ \mathcal{R}_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2548}%
+$ n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2552}%
+$ \mathcal{A} = \bigcup\limits_{n \in \mathbb{N}}
+\mathcal{R}_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2554}%
+$ \mathcal{A}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2556}%
+$ {\cal I}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2558}%
+$ j$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2562}%
+$ \overline{\overline{\mathcal{I}}}\leqslant \overline{\overline{\mathbb{R}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2564}%
+$ \mathcal{I}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2566}%
+$ \mathbb{R} = \mathcal{I} \cup \mathbb{Q}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2570}%
+$ {\cal T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2576}%
+$ \overline{\overline{\mathcal{T}}}\leqslant \overline{\overline{\mathbb{R}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2578}%
+$ \mathcal{T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2580}%
+$ \mathbb{R} = \mathcal{T} \cup \mathbb{A}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2584}%
+$ \mathbb{N}^{[n]}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2586}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+          f & : & \mathbb{N} & \to     & \mathbb{N}^{[n]} \\
+            &   & n          & \mapsto & \begin{array}[t]{rcrcl}
+                                         f_n & : & [n] & \to     & \mathbb{N} \\
+                                             &   &  m  & \mapsto & n.
+                                         \end{array}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2590}%
+$ \overline{\overline{\mathbb{N}}} \leqslant \overline{\overline{\mathbb{N}^{[n]}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2592}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                 g & : & \mathbb{N}^{[n]} & \to     & \mathbb{N} \\
+                   &   &  h               & \mapsto & 2^{h(1)}\cdot 3^{h(2)}\cdot 5^{h(3)}\cdot 7^{h(4)}\cdot 11^{h(5)}\cdot \ldots\cdot  p_n^{h(n)}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2594}%
+$ p_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2600}%
+$ \overline{\overline{\mathbb{N}^{[n]}}} \leqslant \overline{\overline{\mathbb{N}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2604}%
+$ {\cal P}_f(\mathbb{N})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2606}%
+$ \mathcal{P}_n(\mathbb{N})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2612}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+           g & : & \mathbb{N}^{n}         & \to     & \mathcal{P}_n(\mathbb{N}) \\
+             &   & (x_1,x_2,\ldots ,x_n)  & \mapsto & \{ x_1, x_2, \ldots, x_n \}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2616}%
+$ \overline{\overline{\mathbb{N}^{n}}} \geqslant \overline{\overline{\mathcal{P}_n(\mathbb{N})}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2622}%
+$ {\cal P}_f(\mathbb{N}) = \bigcup\limits_{n \in \mathbb{N}} \mathcal{P}_n(\mathbb{N})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2626}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                  h & : & \mathbb{N} & \to     & \mathcal{P}_f(\mathbb{N}) \\
+                  &   & n            & \mapsto & \{ n \}
+                  \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2628}%
+$ h$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2630}%
+$ \overline{\overline{\mathbb{N}}} \leqslant \overline{\overline{\mathcal{P}_f(\mathbb{N})}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2632}%
+$ \mathcal{P}_f(\mathbb{N})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2634}%
+$ \mathbb{N}^{\mathbb{N}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2636}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+          h & : & \mathbb{N}^{\mathbb{N}} & \to     & \mathcal{P}(\mathbb{N}) \setminus \varnothing \\
+            &   & f                       & \mapsto & {\rm Im}(f)
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2640}%
+$ \overline{\overline{\mathbb{N}^{\mathbb{N}}}} \geqslant \overline{\overline{\mathcal{P}(\mathbb{N}) \setminus \varnothing}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2642}%
+$ \overline{\overline{\mathcal{P}(\mathbb{N}) \setminus \varnothing}} = \overline{\overline{\mathcal{P}(\mathbb{N})}}
+> \overline{\overline{\mathbb{N}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2646}%
+$ x \in \mathbb{R}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2648}%
+\begin{displaymath}\begin{array}{rcl}
+\widetilde{x}   & = & \{ y \in \mathbb{R} \mid y-x \in \mathbb{Z} \} \\
+                & = & \{ y \in \mathbb{R} \mid y-x = k \textrm{ pour un } k \in \mathbb{Z} \} \\
+                & = & \{ y \in \mathbb{R} \mid y = x + k \textrm{ pour un } k \in \mathbb{Z} \} \\
+                & = & \{ x+k \mid k \in \mathbb{Z} \}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2650}%
+$ \overline{\overline{\widetilde{x}}} = \overline{\overline{\mathbb{Z}}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2652}%
+$ \left[0,1\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2654}%
+$ a \in \mathbb{R}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2656}%
+$ \lfloor a \rfloor$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2658}%
+$ a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2660}%
+$ a - \lfloor a \rfloor \in
+\left[0,1\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2662}%
+$ (a - \lfloor a \rfloor) - a = \lfloor
+a \rfloor \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2664}%
+$ a - \lfloor a \rfloor \in
+\widetilde{a} \cap \left[0,1\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2666}%
+$ \widetilde{a} \cap \left[0,1\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2668}%
+$ u,v \in
+\widetilde{a} \cap \left[0,1\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2670}%
+$ u \in \widetilde{a}
+\Rightarrow u-a \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2672}%
+$ v \in \widetilde{a}
+\Rightarrow a-v \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2674}%
+$ (u-a)+(a-v) = u-v
+\in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2676}%
+$ u,v \in \left[0,1\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2678}%
+$ u-v \in
+\mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2680}%
+$ u=v$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2682}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+          h & : & \mathbb{R}/S  & \to     & \left[0,1\right[ \\
+            &   & \widetilde{a} & \mapsto & a - \lfloor a \rfloor
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2686}%
+$ \overline{\overline{\mathbb{R}/S}} =
+\overline{\overline{\left[0,1\right[}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2690}%
+$ i \in I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2692}%
+$ A_i = \left]a_i,b_i\right[$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2694}%
+$ a_i,b_i \in \mathbb{R}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2696}%
+$ q_i \in \mathbb{Q}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2698}%
+$ a_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2700}%
+$ b_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2702}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                         f & : & I  & \to     & \mathbb{Q} \\
+                     &   & i  & \mapsto & q_i
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2706}%
+$ \overline{\overline{I}} \leqslant \overline{\overline{\mathbb{Q}}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2708}%
+$ I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2712}%
+$ D_i = \{ (x,y) \in \mathbb{R}^2 \mid (x-a_i)^2 + (y-b_i)^2 < r_i^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2714}%
+$ a_i,b_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2716}%
+$ r_i \in \mathbb{R}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2718}%
+$ (p_i,q_i) \in \mathbb{Q}^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2720}%
+$ D_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2722}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                         g & : & I  & \to     & \mathbb{Q}^2 \\
+                     &   & i    & \mapsto & (p_i,q_i)
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2726}%
+$ \overline{\overline{I}} \leqslant \overline{\overline{\mathbb{Q}^2}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2730}%
+$ \mathcal{S}_f$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2732}%
+$ \mathcal{S}_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2736}%
+$ \overline{\overline{\mathcal{S}_n}} = \overline{\overline{\prod\limits_{i=1}^{n} \mathbb{N}}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2738}%
+$ \mathcal{S}_f = \bigcup\limits_{n \in \mathbb{N}} \mathcal{S}_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2750}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+             f & : & \mathbb{R}^+_*  & \to     & \mathcal{I} \\
+               &   & x                     & \mapsto & \begin{array}[t]{ll}
+                                                                                 x          & \textrm{si $x$\  est irrationnel} \\
+                                                                                 -x\sqrt{2} & \textrm{si $x$\  est rationnel}
+                                                                                 \end{array}
+             \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2754}%
+$ \overline{\overline{\mathbb{R}^+_*}} \leqslant \overline{\overline{\mathcal{I}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2756}%
+$ c \leqslant \overline{\overline{\mathcal{I}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2758}%
+$ \overline{\overline{\mathcal{I}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2760}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                         f & : & \mathcal{B}  & \to     & \mathbb{R} \times \mathbb{R} \times \mathbb{R}^+ \\
+                     &   & D                    & \mapsto & (x_D, y_D, r_D)
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2762}%
+$ (x_D, y_D)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2764}%
+$ D$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2766}%
+$ r_D$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2770}%
+$ \overline{\overline{\mathcal{B}}} = \overline{\overline{\mathbb{R} \times \mathbb{R} \times \mathbb{R}^+}} = \overline{\overline{\mathbb{R}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2772}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                    f & : & \mathbb{R}^2  & \to     & \mathcal{T} \\
+                      &   & (x,y)         & \mapsto & T_{(x,y)}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2774}%
+$ T_{(x,y)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2776}%
+$ (x,y)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2778}%
+$ (x,y+1)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2780}%
+$ (x+1,y)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2784}%
+$ c = \overline{\overline{\mathbb{R}^2}} \leqslant
+\overline{\overline{\mathcal{T}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2786}%
+$ \mathbb{R}^2 \times \mathbb{R}^2 \times
+\mathbb{R}^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2788}%
+$ \sim$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay2790}%
+$\displaystyle (A,B,C) \sim (A',B',C') \iff \{A,B,C\} = \{A',B',C' \}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2792}%
+$ A,B,C \in \mathbb{R}^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2794}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                 f & : & \mathcal{T}  & \to     & (\mathbb{R}^2 \times \mathbb{R}^2 \times \mathbb{R}^2)/_{\sim} \\
+                   &   & T            & \mapsto & \widetilde{T}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2796}%
+$ \widetilde{T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2798}%
+$ T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2802}%
+$ \overline{\overline{\mathcal{T}}} \leqslant
+\overline{\overline{(\mathbb{R}^2 \times \mathbb{R}^2 \times \mathbb{R}^2)/_{\sim}}}
+\leqslant \overline{\overline{\mathbb{R}^2 \times \mathbb{R}^2 \times \mathbb{R}^2}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2804}%
+$ \overline{\overline{\mathcal{T}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2806}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                         f & : & \mathcal{D}  & \to     & \mathbb{R} \times \mathbb{R} \times \mathbb{R} \\
+                     &   & d                    & \mapsto & \left\lbrace \begin{array}[]{ll}
+                                                                                    (m,b,0) & \textrm{si $d$ s'écrit sous la forme $y=mx+b$} \\
+                                                                                    (0,0,r) & \textrm{si $d$ s'écrit sous la forme $x=r$}
+                                                                                    \end{array}
+                                                                                    \right.
+                   \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2810}%
+$ \overline{\overline{\mathcal{D}}} \leqslant \overline{\overline{\mathbb{R} \times \mathbb{R} \times \mathbb{R}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2812}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                    g & : & \mathbb{R}  & \to     & \mathcal{D} \\
+                  &   & b                 & \mapsto & d_b = \{ (x,y) \in \mathbb{R}^2 \mid y = x + b \}
+               \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2816}%
+$ \overline{\overline{\mathbb{R}}} \leqslant \overline{\overline{\mathcal{D}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2818}%
+$ c \leqslant \overline{\overline{\mathcal{D}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2820}%
+$ \overline{\overline{\mathcal{D}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2824}%
+$ \mathbb{R}^2 = \bigcup\limits_{i \in I} d_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2826}%
+$ d_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2830}%
+$ A = \left\{ (x,e^x) \in \mathbb{R}^2 \mid x \textrm{ est un nombre irrationnel} \right\}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2832}%
+$ \overline{\overline{A}} = \overline{\overline{\mathcal{I}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2836}%
+$ A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2846}%
+$ \frac{\overline{\overline{A}}}{2}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2850}%
+$ \overline{\overline{I}} \geqslant
+\frac{\overline{\overline{A}}}{2} = c/2 = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2854}%
+$ \mathbb{R}^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2856}%
+$ D_{k,k'} = \{ (x,y) \in \mathbb{R}^2 \mid (x-k)^2 + (y-k')^2 \leqslant 4 \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2858}%
+$ \mathbb{R}^2 = \bigcup\limits_{k,k' \in \mathbb{Z}} D_{k,k'}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2860}%
+$ f^{-1}(n) \subseteq \mathbb{R}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2862}%
+$ \alpha = \overline{\overline{f^{-1}(n)}} \leqslant \overline{\overline{\mathbb{R}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2864}%
+$ \alpha > \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2866}%
+$ \alpha \leqslant \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2868}%
+$ \mathbb{R} = \bigcup\limits_{n \in \mathbb{N}} f^{-1}(n)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2872}%
+$ V= \{ n \in \mathbb{N} \mid n \notin f(n) \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2886}%
+$ \mathcal{D}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2888}%
+$ c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2890}%
+$ \overline{\overline{D \times D}} = c\cdot c = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2892}%
+$ {\rm Im}(\sin) = \left[-1,1\right]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2894}%
+$ \mathbb{R}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2898}%
+$ \overline{\overline{{\rm Im}(\sin)}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2900}%
+$ \overline{\overline{{\cal F}}} = \overline{\overline{\mathbb{R}^{\mathbb{R}}}}
+= \overline{\overline{\mathbb{R}}}^{\overline{\overline{\mathbb{R}}}} = c^c = (2^{\aleph_0})^c =
+2^{\aleph_0 \cdot c} = 2^c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2902}%
+$ \mathbb{N}_*$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2906}%
+$ \mathcal{S}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2908}%
+$ \overline{\overline{\mathcal{S}}} = \overline{\overline{\mathbb{R}^{\mathbb{N}_*}}} = \overline{\overline{\mathbb{R}}}^{\overline{\overline{\mathbb{N}_*}}}
+= c^{\aleph_0} = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2910}%
+$ \mathcal{S}_c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2912}%
+$ \mathcal{S}_c \subseteq \mathcal{S}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2914}%
+$ \overline{\overline{\mathcal{S}_c}} \leqslant \overline{\overline{\mathcal{S}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2916}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+         f & : & \mathbb{R}  & \to     & \mathcal{S}_c \\
+           &   & x                 & \mapsto & (x,x,x,x,x,\ldots )
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2920}%
+$ c = \overline{\overline{\mathbb{R}}} \leqslant \overline{\overline{\mathcal{S}_c}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2922}%
+$ \overline{\overline{\mathcal{S}_c}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2924}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+          h & : & \mathcal{C}   & \to     & \mathbb{R}^{\mathbb{Q}} \\
+            &   & f                       & \mapsto & \begin{array}[t]{rcrcl}
+                                                s & : & \mathbb{Q} & \to     & \mathbb{R} \\
+                                                &   &  x             & \mapsto & f(x).
+                                            \end{array}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2928}%
+$ f,g \in \mathcal{C}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2930}%
+$ h(f) = h(g)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2932}%
+$ h(f)(x) = h(g)(x)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2934}%
+$ x \in \mathbb{Q}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2936}%
+$ f(x) = g(x)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2940}%
+$ f=g$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2944}%
+$ \overline{\overline{\mathcal{C}}} \leqslant \overline{\overline{\mathbb{R}^{\mathbb{Q}}}} =
+\overline{\overline{\mathbb{R}}}^{\overline{\overline{\mathbb{Q}}}} = c^{\aleph_0} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2946}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+          f & : & \mathbb{R}    & \to     & \mathcal{C} \\
+            &   & x_0                   & \mapsto & \begin{array}[t]{rcrcl}
+                                            f_{x_0} & : & \mathbb{R} & \to     & \mathbb{R} \\
+                                                    &   &  x             & \mapsto & x_0
+                                            \end{array}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2948}%
+$ c = \overline{\overline{\mathbb{R}}} \leqslant \overline{\overline{\mathcal{C}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2950}%
+$ \overline{\overline{\mathcal{C}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2952}%
+$ \mathcal{M}_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2954}%
+$ \{a,b \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2958}%
+$ \overline{\overline{\mathcal{M}_n}} = 2^n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2960}%
+$ \mathcal{M} = \bigcup\limits_{n \in \mathbb{N}}
+\mathcal{M}_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2962}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                                                        g & : & \mathbb{N}_*  & \to     & \mathcal{M} \\
+                                                    &   & n                     & \mapsto & \underbrace{aaa\ldots a}_{\textrm{$n$\  fois}}
+                                                    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2964}%
+$ \overline{\overline{\mathbb{N}}} \leqslant \overline{\overline{\mathcal{M}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2966}%
+$ \overline{\overline{\mathcal{M}}} = \aleph_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2968}%
+$ {\cal D}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2970}%
+$ \left]0,1\right]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2974}%
+$ \overline{\overline{\mathcal{D}}} \leqslant c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2976}%
+$ x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2980}%
+$ x=0,x_1x_2\ldots x_n\ldots$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath2982}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+          f & : & \mathcal{D}                           & \to     & \{0,1,2,4,5,6,7,8,9\}^{\mathbb{N}} \\
+            &   & 0,x_1x_2\ldots x_n\ldots  & \mapsto & \begin{array}[t]{rcrcl}
+                                                                        h & : & \mathbb{N} & \to     & \{0,1,2,4,5,6,7,8,9\} \\
+                                                                        &   &  m             & \mapsto & x_m.
+                                         \end{array}
+          \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2986}%
+$ \overline{\overline{\mathcal{D}}} \leqslant \overline{\overline{\{0,1,2,4,5,6,7,8,9\}^{\mathbb{N}}}}
+= 9^{\aleph_0} \leqslant 16^{\aleph_0} = (2^4)^{\aleph_0} = 2^{4 \cdot \aleph_0} = 2^{\aleph_0} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2992}%
+$ \mathbb{N} \times \mathbb{N}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2994}%
+$ {\cal E} \subseteq \mathcal{P}(\mathbb{N} \times \mathbb{N})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2996}%
+$ \overline{\overline{\mathcal{E}}} \leqslant \overline{\overline{\mathcal{P}(\mathbb{N} \times \mathbb{N})}} = 2^{\overline{\overline{\mathbb{N} \times \mathbb{N}}}}
+= 2^{\aleph_0} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2998}%
+$ A \in \mathcal{P}(\mathbb{N})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3002}%
+$ R_A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3004}%
+$ m R_A n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3006}%
+$ m=n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3008}%
+$ m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath3016}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+                 g & : & \mathcal{P}(\mathbb{N}) & \to     & \mathcal{E} \\
+                     &   & A                               & \mapsto & R_A
+                    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3020}%
+$ \overline{\overline{\mathcal{P}(\mathbb{N})}} \leqslant \overline{\overline{\mathcal{E}}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3022}%
+$ \overline{\overline{\mathcal{E}}} \geqslant \overline{\overline{\mathcal{P}(\mathbb{N})}} = 2^{\overline{\overline{\mathbb{N}}}} = 2^{\aleph_0} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3024}%
+$ \overline{\overline{\mathcal{E}}} = c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath3026}%
+\begin{displaymath}\begin{array}[t]{rcrcl}
+      h & : & \{0,1,2\}^{\mathbb{R}}  & \to     & \Pi_3 \\
+        &   & f                       & \mapsto & \left\{ A,B,C \right\}
+      \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath3028}%
+\begin{displaymath}\begin{array}[t]{l}
+    A = \{x \in \mathbb{R} \mid f(x)=0\} \\
+    B = \{x \in \mathbb{R} \mid f(x)=1\} \\
+    C = \{x \in \mathbb{R} \mid f(x)=2\}
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3032}%
+$ \overline{\overline{\Pi_3}} \leqslant \overline{\overline{\{0,1,2\}^{\mathbb{R}}}} =
+3^c \leqslant 4^c = (2^2)^c = 2^{2c} = 2^c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3034}%
+$ A \in \mathcal{P}(\mathbb{R}^+_*)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3036}%
+$ \left\{ A, \{0\}, \mathbb{R}\setminus (A \cup \{0\}) \right\}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3040}%
+$ \left\{ \left\{ A, \{0\}, \mathbb{R}\setminus (A \cup \{0\}) \right\} \mid A \in \mathcal{P}(\mathbb{R}^+_*) \right\}
+\subseteq \Pi_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3042}%
+$ \overline{\overline{\left\{ \left\{ A, \{0\}, \mathbb{R}\setminus (A \cup \{0\}) \right\} \mid A \in \mathcal{P}(\mathbb{R}^+_*) \right\}}}
+\leqslant \overline{\overline{\Pi_3}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3044}%
+$ \overline{\overline{\mathcal{P}(\mathbb{R}^+_*)}} \leqslant \overline{\overline{\Pi_3}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3046}%
+$ 2^c \leqslant \overline{\overline{\Pi_3}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3048}%
+$ \overline{\overline{\Pi_3}} = 2^c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

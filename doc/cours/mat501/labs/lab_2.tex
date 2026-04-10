@@ -1,0 +1,224 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+%\centerline{\textsc{ \normalsize Automne 2005}}
+
+\bigskip
+
+\centerline{\large\bf MAT501 -- Fondements et histoire des
+mathématiques}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 2}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] Construire des bijections entre
+
+    \begin{description}
+
+    \item[a)] les intervalles $\left]0,1\right]$ et $\left[0,1\right]$ de
+    $\mathbb{R}$ ;
+
+    \item[b)] les intervalles $\left[0,1\right]$ et $\left]0,1\right[$ de
+    $\mathbb{R}$ ;
+
+    \item[c)] $\mathbb{Q}$ et $\mathbb{Q}^*_+$.
+
+    \end{description}
+
+
+\item[2)] Quel est le cardinal de l'ensemble $\{ \left]a,b \right[
+\mid a,b \in \mathbb{Q} \}$ des intervalles ouverts de
+$\mathbb{R}$ à extrémités dans $\mathbb{Q}$.
+
+
+
+\item[3)] Déterminer si les ensembles suivants sont dénombrables
+ou non.
+
+    \begin{description}
+
+    \item[a)] $\mathbb{N}^n$ où $n \in \mathbb{N}^*$ ;
+
+    \item[b)] l'ensemble $\mathbb{Z}[x]$ des polynômes en $x$ à
+    coefficients entiers ;
+
+    \item[c)] l'ensemble des nombres réels algébriques,
+    c'est-à-dire l'ensemble ${\cal A}$ de tous les réels qui sont
+    racines de polynômes non nuls à coefficients entiers ;
+
+    \item[d)] l'ensemble ${\cal I}$ des nombres irrationnels ;
+
+    \item[e)] l'ensemble ${\cal T}$ des nombres transcendants,
+    c'est-à-dire des nombres réels qui ne sont pas algébriques ;
+
+    \item[f)] l'ensemble $\mathbb{N}^{[n]}$ des applications de
+    $[n]$ dans $\mathbb{N}$ ;
+
+    \item[g)] l'ensemble ${\cal P}_f(\mathbb{N})$ des parties
+    finies de $\mathbb{N}$ ;
+
+    \item[h)] l'ensemble $\mathbb{N}^{\mathbb{N}}$ des applications de
+    $\mathbb{N}$ dans $\mathbb{N}$.
+
+    \end{description}
+
+
+\item[4)] On définit pour $x$ et $y \in \mathbb{R}$ la relation
+d'équivalence $x\; S \; y \iff x-y \in \mathbb{Z}$. Déterminer le
+cardinal de chaque classe d'équivalence et le cardinal du quotient
+$\mathbb{R}/S$.
+
+
+\item[5)]
+
+    \begin{description}
+
+    \item[a)] Soit $\{ A_i \mid i \in I\}$ une famille
+    d'intervalles ouverts non vides et deux à deux disjoints de
+    $\mathbb{R}$. Montrer que $I$ est au plus dénombrable.
+
+    \item[b)] Refaire la même question, mais en supposant cette
+    fois que les $A_i$ sont des disques ouverts du plan.
+
+    \end{description}
+
+
+\item[6)] Déterminer si l'ensemble des suites finies d'entiers
+naturels est au plus dénombrable.
+
+
+
+\item[7)] Déterminer le cardinal de
+
+    \begin{description}
+
+    \item[a)] l'ensemble $I$ des nombres irrationnels ;
+
+    \item[b)] l'ensemble ${\cal B}$ des cercles du plan ;
+
+    \item[c)] l'ensemble ${\cal T}$ des triangles non dégénérés du
+    plan ;
+
+    \item[d)] l'ensemble ${\cal D}$ des droites du plan.
+
+    \end{description}
+
+
+\item[8)] Est-ce que le plan peut s'écrire comme une réunion
+dénombrable
+
+    \begin{description}
+
+    \item[a)] de droites ?
+
+    \item[b)] de disques fermés ?
+
+    \end{description}
+
+
+\item[9)] Soit $f : \mathbb{R} \to \mathbb{N}$ une surjection
+telle que, quels que soient $n,m \in \mathbb{N}$,
+$\overline{\overline{f^{-1}(n)}} = \overline{\overline{f^{-1}(m)}}
+= \alpha$. Montrer que $\aleph_0 < \alpha \leqslant c$.
+
+
+\item[10)] Dites pourquoi le raisonnement suivant n'est pas
+correct.
+
+\begin{verse}
+On veut montrer que l'ensemble ${\cal P}_f(\mathbb{N})$ des
+parties finies de $\mathbb{N}$ n'est pas dénombrable.
+
+Supposons au contraire que ${\cal P}_f(\mathbb{N})$ est
+dénombrable. Alors, il existe une bijection $f : \mathbb{N} \to
+{\cal P}_f(\mathbb{N})$. Si $n \in \mathbb{N}$, alors $f(n) \in
+{\cal P}_f(\mathbb{N})$. On peut se demander si $n \in f(n)$ ou si
+$n \notin f(n)$.
+
+Soit $V= \{ n \in \mathbb{N} \mid n \notin f(n) \}$. Puisque $f$
+est surjective, il existe $n_0 \in \mathbb{N}$ tel que $f(n_0) =
+V$. Il y a deux cas à considérer :
+
+    \begin{description}
+
+    \item[i)] Si $n_0 \in f(n_0)$, comme $f(n_0) = V$, on a que
+    $n_0 \in V$. Mais alors, par définition de $V$, on a que $n_0
+    \notin f(n_0)$.
+
+    \item[ii)] Si $n_0 \notin f(n_0)$, comme $f(n_0) = V$, on a que
+    $n_0 \notin V$. Mais alors, par définition de $V$, on a que $n_0
+    \in f(n_0)$.
+
+    \end{description}
+
+Dans les deux cas, on a une absurdité. L'hypothèse selon laquelle
+${\cal P}_f(\mathbb{N})$ est dénombrable est donc fausse. Comme il
+est clair que ${\cal P}_f(\mathbb{N})$ est infini, on en déduit
+que ${\cal P}_f(\mathbb{N})$ n'est pas dénombrable.
+
+\end{verse}
+
+
+\item[11)] Trouver le cardinal des ensembles suivants :
+
+    \begin{description}
+
+    \item[a)] l'ensemble des couples de droites du plan ;
+
+    \item[b)] l'ensemble des valeurs de la fonction $\sin :
+    \mathbb{R} \to \mathbb{R}$ ;
+
+    \item[c)] l'ensemble ${\cal F}$ des applications de
+    $\mathbb{R}$ dans $\mathbb{R}$ ;
+
+    \item[d)] l'ensemble des suites réelles ;
+
+    \item[e)] l'ensemble des suites réelles convergentes ;
+
+    \item[f)] l'ensemble ${\cal C}$ des applications continues de
+    $\mathbb{R}$ dans $\mathbb{R}$ ; [\emph{Indication :} Si $f$
+    et $g$ sont deux fonctions continues de $\mathbb{R}$ dans
+    $\mathbb{R}$ et si $f$ et $g$ sont égales sur $\mathbb{Q}$, alors $f=g$.]
+
+    \item[g)] l'ensemble ${\cal M}$ des mots sur l'alphabet $\{
+    a,b \}$ ;
+
+    \item[h)] l'ensemble ${\cal D}$ des réels de l'intervalle
+    $\left]0,1\right]$ ne contenant pas le chiffre 3 dans leur
+    développement décimal ;
+
+    \item[i)] l'ensemble ${\cal E}$ des relations d'équivalences
+    sur $\mathbb{N}$ ;
+
+    \item[j)] l'ensemble $\Pi_3$ des partitions de $\mathbb{R}$ en
+    trois classes.
+
+    \end{description}
+
+
+
+
+
+\end{description}
+
+\end{document}

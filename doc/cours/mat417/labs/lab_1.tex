@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 1}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] En utilisant comme base $b=10$ et avec une mantisse à
+$m=3$ chiffres, évaluer en virgule flottante
+
+    \begin{description}
+
+    \item[a)] $(+0,254 \times 10^4) + (-0,321 \times 10 ^6)$
+
+    \item[b)] $(+0,254 \times 10^4) \cdot (-0,231 \times 10 ^6)$
+
+    \item[c)] $\frac{1}{7} + \frac{1}{8}$
+
+    \item[d)] $\frac{1}{7} + \frac{1}{7} - \frac{2}{7}$
+
+    \end{description}
+
+\item[2)]
+
+    \begin{description}
+
+    \item[a)] Donner un exemple de calcul en virgule flottante
+    exact en base 2, mais erroné en base 3, et réciproquement.
+
+    \item[b)] Donner un exemple de calcul en virgule flottante
+    exact en base 2, mais erroné en base 10, et réciproquement.
+
+    \item[c)] Donner un exemple de calcul en virgule flottante
+    exact en base 3, mais erroné en base 10, et réciproquement.
+
+    \end{description}
+
+\item[3)] En utilisant une mantisse à deux chiffres, déterminer
+les racines du polynôme $200x^2+100x+1$.
+
+\item[4)]
+
+    \begin{description}
+
+    \item[a)] Montrer que la série harmonique $\sum\limits_{n=1}^{+\infty}
+\frac{1}{n}$ converge lorsqu'évaluée en base 10 avec une mantisse
+à un chiffre.
+
+    \item[b)] Montrer que la série harmonique $\sum\limits_{n=1}^{+\infty}
+\frac{1}{n}$ converge lorsqu'évaluée en base 10 avec une mantisse
+à deux chiffres.
+
+    \item[c)] Montrer que la série harmonique $\sum\limits_{n=1}^{+\infty}
+\frac{1}{n}$ converge lorsqu'évaluée en base 10 avec une mantisse
+à trois chiffres.
+
+    \end{description}
+
+\item[5)] Soient $x$ et $z$ deux nombres en virgule flottante de
+base $b$ avec mantisse à $m$ chiffres. Montrer que si
+$\frac{|x|}{|z|} \leqslant b^{-m}$, alors $x+z$ peut être ou ne
+pas être égal à $z$.
+
+\item[6)] Considérons la série géométrique de base $b$ et de
+raison $r$ donnée par $\sum\limits_{n=0}^{+\infty}br^n$. Soit $s_k
+= \sum\limits_{i=0}^{k-1}br^i$ une somme partielle de cette série.
+
+    \begin{description}
+
+    \item[a)] Montrer que si $r \neq 1$, alors $s_n =
+    \frac{b}{1-r}(1-r^n)$. [Indication : Calculer $s_n-rs_n$ puis
+    isolez $s_n$.]
+
+    \item[b)] En déduire que si $|r|<1$, alors la série
+    géométrique converge. Dire vers quelle valeur.
+
+    \item[c)] Montrer qu'en virgule flottante, si $|r| < 1$, alors cette série
+    converge toujours, mais pas nécessairement vers cette valeur.
+
+    \end{description}
+
+\item[7)] Résoudre le système
+$\left\lbrace
+\begin{array}{ccccc}
+7x & + & 7y & = & 0 \\
+x  & + & y  & = & 1
+\end{array} \right.$
+en base 10 avec mantisse à
+
+    \begin{description}
+
+    \item[a)] trois chiffres ;
+
+    \item[b)] six chiffres.
+
+    \end{description}
+
+\item[8)] Montrer, en base 2 avec mantisse à 17 chiffres, que $3
+\cdot 0,2 \neq 0,6$.
+
+\item[9)] Considérons le système d'équations linéaires
+
+\begin{center}
+$\left(
+\begin{array}{rr}
+0,670 & -2,67 \\
+-0,504 & 2,00
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+-1,99 \\
+1,48
+\end{array}
+\right)$
+\end{center}
+
+    \begin{description}
+
+    \item[a)] Résoudre de façon exacte ce système.
+
+    \item[b)] Résoudre ce système en arithmétique à trois, quatre,
+    cinq, six et sept chiffres avec arrondi au plus près.
+
+    \item[c)] Est-ce que l'augmentation du nombre de chiffres
+    retenus améliore la précision?
+
+    \end{description}
+
+
+\end{description}
+
+\end{document}

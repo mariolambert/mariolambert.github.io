@@ -1,0 +1,244 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 2}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] À l'aide de la formule
+
+$$\det A = \sum\limits_{\sigma \in \mathcal{S}_3} \left( {\rm sgn}(\sigma) \prod\limits_{i=1}^{3} a_{i, \sigma(i)} \right)$$
+
+calculer le déterminant de la matrice
+$\left(
+\begin{array}{ccc}
+1 & 3 & 2 \\
+3 & 1 & 2 \\
+2 & 3 & 2
+\end{array}
+\right)$
+
+puis déterminer l'inverse de cette matrice à l'aide de la méthode du déterminant.
+
+
+\item[2)] À l'aide de la méthode de Cramer, résoudre le système d'équations
+
+$$
+\left(
+\begin{array}{ccc}
+1 & 3 & 2 \\
+3 & 1 & 2 \\
+2 & 3 & 2
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+3 \\
+4 \\
+4
+\end{array}
+\right)
+$$
+
+
+\item[3)] Résoudre le système
+
+$$
+\left(
+\begin{array}{rrr}
+1 & 3 & -2 \\
+2 & 4 & 0 \\
+3 & 6 & 5
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+3 \\
+8 \\
+17
+\end{array}
+\right)
+$$
+
+    \begin{description}
+
+    \item[a)] de façon exacte par la méthode de Gauss ;
+
+    \item[b)] par la méthode de Gauss avec choix de pivot partiel en arithmétique avec mantisse à $m=4$ chiffres ;
+
+    \item[c)] par la méthode de Gauss avec choix de pivot total en arithmétique avec mantisse à $m=4$ chiffres.
+
+    \item[d)] Pour un système d'équations linéaires de la forme $Ax=b$ et une solution $x_0$, on définit le \emph{résidu}
+                 de $x_0$, noté $r(x_0)$, par $r(x_0) = b-Ax_0$. Calculer les résidus des solutions obtenues en a), b) et c).
+
+    \item[e)] Déterminer la norme (euclidienne) de chacun des résidus de la partie d). Qu'en concluez-vous?
+
+    \end{description}
+
+
+
+\item[4)] Déterminer l'ordre de l'algorithme de Gauss avec choix de pivot total.
+
+
+\item[5)] La solution générale du système différentiel
+
+$$
+\left(
+\begin{array}{ccc}
+2 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 2
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x'(t) \\
+y'(t) \\
+z'(t)
+\end{array}
+\right)
++
+\left(
+\begin{array}{rrr}
+11 & 3 & -2 \\
+-2 & 1 & 0 \\
+1 & -3 & -4
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x(t) \\
+y(t) \\
+z(t)
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+14e^t \\
+-2e^t \\
+4e^t
+\end{array}
+\right)
+$$
+
+est donnée par
+
+$$
+\begin{array}{rcrcrcrcr}
+x(t) & = & 4Ae^{-t} & + & 14Be^{-2t} & + & Ce^{-3t} & + & e^{t} \\
+y(t) & = & -9Ae^{-t} & - & 30Be^{-2t} & - & 2Ce^{-3t} &  &  \\
+z(t) & = & 6Ae^{-t} & + & 17Be^{-2t} & + & Ce^{-3t} & - & e^{t}
+\end{array}
+$$
+
+En utilisant la méthode de Gauss avec choix de pivot total, déterminer la solution particulière
+de ce système qui soit telle que $x(0)=y(0) = z(0) = 0$.
+
+\item[6)] Considérons la matrice tridiagonale
+
+$$
+T =
+\left(
+\begin{array}{ccccccccccc}
+d_1     & u_1       & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+l_2     & d_2       & u_2       & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & l_3       & d_3       & u_3       & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & l_4       & d_4       & u_4       & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & l_5       & d_5       & \ddots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & 0         & l_6       & \ddots & \ddots   & 0         & 0         & 0       & 0         \\
+\vdots  & \vdots    & \vdots    & \vdots    & \vdots    & \ddots & \ddots   & \ddots    & \vdots    & \vdots  & \vdots    \\
+0       & 0         & 0         & 0         & 0         & \cdots & l_{n-3}  & d_{n-3}   & u_{n-3}   & 0       & 0         \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & l_{n-2}   & d_{n-2}   & u_{n-2} & 0         \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & l_{n-1}   & d_{n-1} & u_{n-1}   \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & l_{n}   & d_{n}
+\end{array}
+\right)
+$$
+
+    \begin{description}
+
+    \item[a)] Considérons le système d'équations linéaires $Tx=b$. Modifier l'algorithme de Gauss pour en créer une version
+    spécifique aux matrices tridiagonales.
+
+    \item[b)] Déterminer le nombre d'opérations que nécessite cet algorithme.
+
+    \item[c)] Appliquer votre algorithme au système
+
+$$
+\left(
+\begin{array}{rrrr}
+5 & -4 & 0 & 0 \\
+-4 & 6 & -4 & 0 \\
+0 & -4 & 6 & -4 \\
+0 & 0 & -4 & 5
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+0 \\
+0 \\
+1 \\
+0
+\end{array}
+\right)
+$$
+
+    \end{description}
+
+
+
+\end{description}
+
+\end{document}

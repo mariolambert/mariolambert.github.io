@@ -1,0 +1,74 @@
+Comment utiliser turnin pour la soumission electronique de travaux
+
+
+1- Votre fichier .tex doit avoir comme nom tpX.tex ou le X devra etre changer par le numero du devoir en question. Le premier a remettre devra donc s'appeler tp1.tex. Il ne doit y avoir aucune majuscule et aucun espace dans le nom de votre fichier. Un fichier ne repondant pas a ces criteres NE sera PAS corrige.
+
+2- Sur les deux (ou trois) premieres lignes de votre document, en appui a droite, vous devez indiquer le nom, prenom et numero matricule des personnes de l'equipe (\flushright{LAMBERT, Mario (xx xxx xxx)}).
+
+3- Il faut d'abord vous assurer que votre fichier TeX compile sans aucune erreur et qu'il compilera sur les serveurs du Departement. Pour ce faire, rendez vous au laboratoire D4-1017 (ou faites-le a partir de la maison). 
+
+4- Si vous le faites a partir de la maison, assurez-vous d'avoir une version de clients Telnet et FTP sécurises d'installee. Si ce n'est pas le cas, suivez les instructions suivantes :
+
+  a) Rendez-vous au http://www.putty.org/
+
+  b) Cliquez sur << download Tunnelier here >>
+
+  c) Dans la section << Download Tunnelier >>, cliquez sur << Tunnelier installer >>
+
+  d) Enregistrez le fichier Tunnelier-Inst.exe.
+
+  e) Une fois telecharge, double-cliquez sur le fichier telecharge et suivez
+les instructions.
+
+
+5- Ouvrez << Tunnelier >> a partir du Menu Demarrer en suivant l'arborescence
+Menu Demarrer -> Tous les programmes -> BitVise Tunnelier -> Tunnelier
+
+6- Connectez-vous a votre repertoire personnel :
+
+  a) Assurez-vous que dans l'onglet << Options >>, les cases << Open Terminal >> et << Open SFTP >> sont cochees.  
+
+  b) Dans l'onglet << Login >>, entrez
+    i) Host : rigel.dmi.usherb.ca
+    ii) Username : votre code d'usager DU DEPARTEMENT (pas votre CIP)
+
+  c) Cliquez sur << Login >> en bas à gauche de la fenêtre
+
+  d) A la premiere fenêtre << User Authentification >>, faites << OK >>
+
+  e) Entrez votre mot de passe, puis faites << OK >>.
+
+  f) Vous etes maintenant connecte.
+
+  f) Dans la partie de droite de la fenetre << BitVise SFTP >>, vous verrez quelque chose du
+type /home/bacc/aut08/votre_nom_d'usager.
+
+7- Assurez-vous que votre fichier LaTeX, supposons qu'il se nomme << tp1.tex >>, est dans la racine de votre repertoire. Il devrait donc etre visible dans la demi-fenetre de droite de l'application. S'il n'y est pas, vous pouvez utiliser le glisser-deplacer pour l'y deposer (la demi-fenetre de gauche de l'application pointe sur les documents sur le bureau de l'ordinateur). 
+
+8- Allez maintenant dans la fenêtre << Bitvise xterm >>. A la ligne de commande << rigel{votre_nom_d'usager}101: >>, tapez la commande << ls -l>> suivie d'un retour de chariot. Cette commande vous donne la liste des fichiers dans la racine de votre repertoire. Vous devriez y voir le fichier << tp1.tex >>. Si ce n'est pas le cas, referez-vous a l'etape 7.
+
+9- Tapez la commande << pdflatex tp1.tex >> ou vous aurez bien sur remplace tp1.tex par le nom du fichier que vous voulez soumettre.
+
+10- Si tout va bien, vous devriez voir aux dernieres lignes generees quelque chose du genre
+<< Output written on tp1.pdf (2 pages, 50147 bytes).
+Transcript written on tp1.log. >>
+
+11- Sinon, vous verrez s'ecrire un message d'erreur et vous aurez comme invite de commande le caractere << ? >>. Tapez << q >> suivi d'un retour de chariot, allez corriger vos erreurs, puis recommencez depuis le debut :(
+
+12- Entrez la commande << turnin -c mat324 -p tp1 tp1.tex >> puis un retour de chariot. On changera le numero du cours ou le numero du tp selon le cas.
+
+13- Si tout va bien, vous aurez comme message :
+<< Compressing submitted files... please wait
+Your files have been submitted to mat324, tp1 for grading. >>
+
+14- Un peu insecure? Vous pouvez verifier que tout a bien ete en entrant la commande << turnin -c mat324 -p tp1 -v >>. Si tout a ete fait correctement, vous aurez un message du genre 
+<< tar: blocksize = 14
+-rw------- 1017/116   5470 Nov  3 11:34 2006 tp1.tex >>
+
+15- Mettons que vous vous etes trompe et que vous avez soumis le mauvais fichier... Pour corriger cela, il suffit de recommencer les etapes 12 a 14, avec le bon fichier cette fois. Vous pouvez soumettre autant de fois que vous le desirez un fichier reponse. Seulement le DERNIER sera conserve pour la correction.
+
+16- Vous pouvez maintenant quitter en cliquant sur le bouton << Exit >> dans << Bitvise Tunnelier >> . Et voila! Un jeu d'enfant!
+
+17- Toute la syntaxe de turnin est disponible a l'adresse http://www.usherbrooke.ca/mathematiques/laboratoires/documentation/depot/turnin
+
+18- Si les fichiers deposes par turnin ne satisfont pas aux critères mentionnés précédemment et en particulier s'il y a des erreurs qui empêchent la compilation par la commande << pdflatex tp1.tex >>, votre devoir NE sera PAS corrigé et vous obtiendrez la note zéro pour ce travail. 

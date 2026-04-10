@@ -1,0 +1,764 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.7.1)  3 JUN 2009 10:09
+entering extended mode
+**./images.tex
+(./images.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+
+(/opt/csw/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2004/02/16 v1.4f Standard LaTeX document class
+(/opt/csw/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/opt/csw/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/opt/csw/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+(/opt/csw/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/opt/csw/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+)) (/opt/csw/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+) (/opt/csw/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (/opt/csw/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+(/opt/csw/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+)) (/opt/csw/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2004/11/20 v3.8d The Babel package
+(/opt/csw/share/texmf-dist/tex/generic/babel/frenchb.ldf
+Language: french 2004/04/02 v1.6f French support from the babel system
+(/opt/csw/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2004/11/20 v3.8d Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen112
+)
+Package babel Info: Making : an active character on input line 219.
+Package babel Info: Making ; an active character on input line 220.
+Package babel Info: Making ! an active character on input line 221.
+Package babel Info: Making ? an active character on input line 222.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 299.
+\parindentFFN=\dimen113
+\std@mcc=\count100
+\dec@mcc=\count101
+*************************************
+* Local config file frenchb.cfg used
+*
+(/opt/csw/share/texmf-dist/tex/generic/babel/frenchb.cfg))) (/opt/csw/share/tex
+mf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2004/02/05 v1.0d Input encoding file
+(/opt/csw/share/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2004/02/05 v1.0d Input encoding file
+)) (/opt/csw/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2004/02/22 v1.99f Standard LaTeX package
+(/opt/csw/share/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2004/02/22 v1.99f Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)) (/opt/csw/share/texmf-dist/tex/generic/xypic/xy.sty (/opt/csw/share/texmf-di
+st/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode, (/opt/csw/share/t
+exmf-dist/tex/generic/xypic/xyrecat.tex) (/opt/csw/share/texmf-dist/tex/generic
+/xypic/xyidioms.tex)
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen114
+\Y@c=\dimen115
+\U@c=\dimen116
+\D@c=\dimen117
+\L@c=\dimen118
+\R@c=\dimen119
+\Edge@c=\toks19
+\X@p=\dimen120
+\Y@p=\dimen121
+\U@p=\dimen122
+\D@p=\dimen123
+\L@p=\dimen124
+\R@p=\dimen125
+\Edge@p=\toks20
+\X@origin=\dimen126
+\Y@origin=\dimen127
+\X@xbase=\dimen128
+\Y@xbase=\dimen129
+\X@ybase=\dimen130
+\Y@ybase=\dimen131
+\X@min=\dimen132
+\Y@min=\dimen133
+\X@max=\dimen134
+\Y@max=\dimen135
+\lastobjectbox@=\box28
+\zerodotbox@=\box29
+\almostz@=\dimen136
+direction,
+\d@X=\dimen137
+\d@Y=\dimen138
+\K@=\count102
+\KK@=\count103
+\Direction=\count104
+\K@dXdY=\dimen139
+\K@dYdX=\dimen140
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count105
+\quotPTK@=\dimen141
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks21
+\connectobjectbox@@=\box30
+objects,
+\styletoks@=\toks22
+decorations; kernel objects: directionals, circles, text; options; algorithms: 
+directions, edges, connections;  Xy-pic loaded)
+Package: xy 1999/02/16 Xy-pic version 3.7
+(/opt/csw/share/texmf-dist/tex/generic/xypic/xyall.tex  Xy-pic option: All feat
+ures v.3.3 (/opt/csw/share/texmf-dist/tex/generic/xypic/xycurve.tex  Xy-pic opt
+ion: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count106
+\crvpts@=\toks23
+\splinebox@=\box31
+\splineval@=\dimen142
+\splinedepth@=\dimen143
+\splinetol@=\dimen144
+\splinelength@=\dimen145
+circles,
+\L@=\dimen146
+loaded) (/opt/csw/share/texmf-dist/tex/generic/xypic/xyframe.tex  Xy-pic option
+: Frame and Bracket extension v.3.7 loaded) (/opt/csw/share/texmf-dist/tex/gene
+ric/xypic/xycmtip.tex  Xy-pic option: Computer Modern tip extension v.3.3 (/opt
+/csw/share/texmf-dist/tex/generic/xypic/xytips.tex  Xy-pic option: More Tips ex
+tension v.3.3 loaded) loaded) (/opt/csw/share/texmf-dist/tex/generic/xypic/xyli
+ne.tex  Xy-pic option: Line styles extension v.3.6
+\xylinethick@=\dimen147
+loaded) (/opt/csw/share/texmf-dist/tex/generic/xypic/xyrotate.tex  Xy-pic optio
+n: Rotate and Scale extension v.3.3 loaded) (/opt/csw/share/texmf-dist/tex/gene
+ric/xypic/xycolor.tex  Xy-pic option: Colour extension v.3.3 loaded) (/opt/csw/
+share/texmf-dist/tex/generic/xypic/xymatrix.tex  Xy-pic option: Matrix feature 
+v.3.4
+\Row=\count107
+\Col=\count108
+\queue@=\toks24
+\queue@@=\toks25
+\qcount@=\count109
+\qcount@@=\count110
+\matrixsize@=\count111
+loaded) (/opt/csw/share/texmf-dist/tex/generic/xypic/xyarrow.tex  Xy-pic option
+: Arrow and Path feature v.3.5 path, \ar, loaded) (/opt/csw/share/texmf-dist/te
+x/generic/xypic/xygraph.tex  Xy-pic option: Graph feature v.3.7 loaded) loaded)
+) (/opt/csw/share/texmf-local/tex/latex/html/html.sty
+Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
+
+\c@lpart=\count112
+\c@lchapter=\count113
+\c@chapter=\count114
+\c@lsection=\count115
+\c@lsubsection=\count116
+\c@lsubsubsection=\count117
+\c@lparagraph=\count118
+\c@lsubparagraph=\count119
+\c@lsubsubparagraph=\count120
+\ptrfile=\write4
+) (/opt/csw/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/opt/csw/share/texmf-dist/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+(/opt/csw/share/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+) (/opt/csw/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box32
+\lthtmlwrite=\write5
+No file images.aux.
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/lmr/m/n on input line 136.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 136.
+(/opt/csw/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2003/07/22 v1.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Info: Redefining \dots on input line 136.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=632.5pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=39.0pt
+
+latex2htmlLength evensidemargin=39.0pt
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 160.
+(/opt/csw/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 160.
+(/opt/csw/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+l2hSize :displaymath1984:68.84999pt::0.0pt::349.0pt.
+[1
+
+
+
+]
+l2hSize :displaymath1986:68.84999pt::0.0pt::349.0pt.
+[2
+
+
+]
+l2hSize :displaymath1988:54.35pt::0.0pt::349.0pt.
+[3
+
+
+]
+l2hSize :displaymath1990:62.34999pt::0.0pt::349.0pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline1995:7.74811pt::0.0pt::32.54535pt.
+[5
+
+
+]
+l2hSize :displaymath1997:83.34998pt::0.0pt::349.0pt.
+[6
+
+
+]
+l2hSize :displaymath1999:112.34995pt::0.0pt::349.0pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline2001:10.38034pt::10.38034pt::7.23744pt.
+[8
+
+
+]
+l2hSize :displaymath2003:83.34998pt::0.0pt::349.0pt.
+[9
+
+
+]
+l2hSize :displaymath2005:112.34995pt::0.0pt::349.0pt.
+[10
+
+
+]
+l2hSize :displaymath2009:68.84999pt::0.0pt::349.0pt.
+[11
+
+
+]
+l2hSize :displaymath2011:97.84996pt::0.0pt::349.0pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline2013:10.38034pt::10.38034pt::7.23744pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline2015:7.74811pt::0.0pt::32.54535pt.
+[14
+
+
+]
+l2hSize :displaymath2017:83.34998pt::0.0pt::349.0pt.
+[15
+
+
+]
+l2hSize :displaymath2019:68.84999pt::0.0pt::349.0pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline2021:10.38034pt::10.38034pt::7.23744pt.
+[17
+
+
+]
+l2hSize :displaymath2025:68.84999pt::0.0pt::349.0pt.
+[18
+
+
+]
+l2hSize :displaymath2027:83.34998pt::0.0pt::349.0pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline2029:10.38034pt::10.38034pt::38.19298pt.
+[20
+
+
+]
+l2hSize :displaymath2033:83.34998pt::0.0pt::349.0pt.
+[21
+
+
+]
+l2hSize :displaymath2035:97.84996pt::0.0pt::349.0pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_inline2039:12.64531pt::12.64531pt::76.27225pt.
+[23
+
+
+]
+Overfull \hbox (43.14345pt too wide) detected at line 409
+[]
+ []
+
+l2hSize :displaymath2041:522.73419pt::0.0pt::349.0pt.
+[24
+
+
+]
+Overfull \hbox (43.14345pt too wide) detected at line 431
+[]
+ []
+
+l2hSize :displaymath2043:479.23424pt::0.0pt::349.0pt.
+[25
+
+
+]
+l2hSize :tex2html_wrap_inline2045:10.38034pt::10.38034pt::76.27225pt.
+[26
+
+
+]
+Overfull \hbox (43.14345pt too wide) detected at line 460
+[]
+ []
+
+l2hSize :displaymath2047:524.491pt::0.0pt::349.0pt.
+[27
+
+
+]
+Overfull \hbox (43.14345pt too wide) detected at line 483
+[]
+ []
+
+l2hSize :displaymath2049:524.491pt::0.0pt::349.0pt.
+[28
+
+
+]
+l2hSize :displaymath2054:527.66841pt::0.0pt::349.0pt.
+[29
+
+
+]
+l2hSize :displaymath2056:513.00197pt::0.0pt::349.0pt.
+[30
+
+
+]
+l2hSize :displaymath2058:513.00197pt::0.0pt::349.0pt.
+[31
+
+
+]
+l2hSize :displaymath2060:513.00197pt::0.0pt::349.0pt.
+[32
+
+
+]
+l2hSize :displaymath2062:513.00197pt::0.0pt::349.0pt.
+[33
+
+
+]
+l2hSize :displaymath2064:571.0019pt::0.0pt::349.0pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline2066:10.01027pt::10.01027pt::100.59346pt.
+[35
+
+
+]
+l2hSize :tex2html_wrap_inline2068:10.01027pt::10.01027pt::103.3193pt.
+[36
+
+
+]
+l2hSize :tex2html_wrap_inline2070:12.21997pt::12.21997pt::277.84068pt.
+[37
+
+
+]
+l2hSize :tex2html_wrap_inline2072:10.01027pt::10.01027pt::641.05061pt.
+
+Overfull \hbox (295.43498pt too wide) in paragraph at lines 632--633
+[]|[] 
+ []
+
+[38
+
+
+]
+l2hSize :tex2html_wrap_inline2074:10.01027pt::10.01027pt::100.59346pt.
+[39
+
+
+]
+l2hSize :tex2html_wrap_inline2076:10.01027pt::10.01027pt::103.3193pt.
+[40
+
+
+]
+l2hSize :tex2html_wrap_inline2080:10.01027pt::10.01027pt::641.05061pt.
+
+Overfull \hbox (295.43498pt too wide) in paragraph at lines 651--652
+[]|[] 
+ []
+
+[41
+
+
+]
+l2hSize :tex2html_wrap_inline2085:18.25563pt::18.25563pt::126.91785pt.
+[42
+
+
+]
+l2hSize :tex2html_wrap_inline2087:18.25563pt::18.25563pt::208.91786pt.
+[43
+
+
+]
+l2hSize :tex2html_wrap_inline2089:18.25563pt::18.25563pt::301.70349pt.
+[44
+
+
+]
+l2hSize :tex2html_wrap_inline2091:9.5pt::9.5pt::108.84177pt.
+[45
+
+
+]
+l2hSize :tex2html_wrap_inline2093:10.78033pt::10.78033pt::85.87726pt.
+[46
+
+
+]
+l2hSize :tex2html_wrap_inline2095:8.83333pt::8.83333pt::27.88916pt.
+[47
+
+
+]
+l2hSize :tex2html_wrap_inline2097:9.5pt::9.5pt::34.55585pt.
+[48
+
+
+]
+l2hSize :tex2html_wrap_inline2099:7.79915pt::0.0pt::36.40787pt.
+[49
+
+
+]
+l2hSize :tex2html_wrap_inline2101:8.24811pt::8.24811pt::47.40662pt.
+[50
+
+
+]
+l2hSize :tex2html_wrap_inline2103:10.78033pt::10.78033pt::47.7792pt.
+[51
+
+
+]
+l2hSize :tex2html_wrap_inline2105:8.33331pt::0.0pt::16.86209pt.
+[52
+
+
+]
+l2hSize :tex2html_wrap_inline2107:8.33331pt::0.0pt::27.26344pt.
+[53
+
+
+]
+l2hSize :tex2html_wrap_inline2109:10.38034pt::10.38034pt::28.66428pt.
+[54
+
+
+]
+l2hSize :tex2html_wrap_inline2111:7.74811pt::0.0pt::32.54535pt.
+[55
+
+
+]
+l2hSize :displaymath2113:120.34993pt::0.0pt::349.0pt.
+[56
+
+
+]
+l2hSize :tex2html_wrap_inline2115:8.24811pt::8.24811pt::29.35097pt.
+[57
+
+
+]
+l2hSize :tex2html_wrap_inline2117:10.78033pt::10.78033pt::195.3031pt.
+[58
+
+
+]
+l2hSize :tex2html_wrap_inline2119:10.38034pt::10.38034pt::102.84749pt.
+[59
+
+
+]
+l2hSize :tex2html_wrap_inline2123:17.99998pt::17.99998pt::109.52649pt.
+[60
+
+
+]
+l2hSize :displaymath2125:36.49997pt::0.0pt::349.0pt.
+[61
+
+
+]
+l2hSize :displaymath2127:36.49997pt::0.0pt::349.0pt.
+[62
+
+
+]
+l2hSize :displaymath2129:36.49997pt::0.0pt::349.0pt.
+[63
+
+
+]
+l2hSize :displaymath2131:36.49997pt::0.0pt::349.0pt.
+[64
+
+
+]
+l2hSize :displaymath2144:36.49997pt::0.0pt::349.0pt.
+[65
+
+
+]
+l2hSize :displaymath2146:36.49997pt::0.0pt::349.0pt.
+[66
+
+
+]
+l2hSize :displaymath2148:36.49997pt::0.0pt::349.0pt.
+[67
+
+
+]
+l2hSize :displaymath2150:36.49997pt::0.0pt::349.0pt.
+[68
+
+
+]
+l2hSize :displaymath2152:36.49997pt::0.0pt::349.0pt.
+[69
+
+
+]
+l2hSize :displaymath2154:36.49997pt::0.0pt::349.0pt.
+[70
+
+
+]
+l2hSize :tex2html_wrap_inline2169:9.5pt::9.5pt::153.72836pt.
+[71
+
+
+]
+l2hSize :tex2html_wrap_inline2171:7.74811pt::0.0pt::6.46233pt.
+[72
+
+
+]
+l2hSize :tex2html_wrap_inline2173:10.01027pt::10.01027pt::167.26633pt.
+[73
+
+
+]
+l2hSize :tex2html_wrap_inline2175:8.24811pt::8.24811pt::17.60109pt.
+[74
+
+
+]
+l2hSize :tex2html_wrap_inline2177:10.01027pt::10.01027pt::178.44693pt.
+[75
+
+
+]
+l2hSize :tex2html_wrap_inline2179:8.24811pt::8.24811pt::32.14262pt.
+[76
+
+
+]
+l2hSize :displaymath2181:77.64996pt::0.0pt::349.0pt.
+[77
+
+
+]
+l2hSize :tex2html_wrap_inline2183:10.01027pt::10.01027pt::155.16931pt.
+[78
+
+
+]
+l2hSize :tex2html_wrap_inline2185:8.24811pt::8.24811pt::17.60109pt.
+[79
+
+
+]
+l2hSize :tex2html_wrap_inline2187:10.01027pt::10.01027pt::155.16931pt.
+[80
+
+
+]
+l2hSize :tex2html_wrap_inline2189:8.83333pt::8.83333pt::64.96169pt.
+[81
+
+
+]
+l2hSize :tex2html_wrap_inline2194:9.5pt::9.5pt::69.78455pt.
+[82
+
+
+]
+l2hSize :displaymath2196:423.12431pt::0.0pt::349.0pt.
+[83
+
+
+]
+l2hSize :displaymath2198:423.12431pt::0.0pt::349.0pt.
+[84
+
+
+]
+l2hSize :displaymath2200:423.12431pt::0.0pt::349.0pt.
+[85
+
+
+]
+l2hSize :displaymath2202:423.12431pt::0.0pt::349.0pt.
+[86
+
+
+]
+Overfull \hbox (11.12221pt too wide) detected at line 1303
+[]
+ []
+
+l2hSize :displaymath2204:423.12431pt::0.0pt::349.0pt.
+[87
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 4765 strings out of 94501
+ 56761 string characters out of 1161794
+ 149741 words of memory out of 1000000
+ 7873 multiletter control sequences out of 10000+50000
+ 12376 words of font info for 45 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 27i,13n,24p,224b,242s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on images.dvi (87 pages, 64456 bytes).

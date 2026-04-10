@@ -1,0 +1,2087 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_chap2</TITLE>
+<META NAME="description" CONTENT="sol_chap2">
+<META NAME="keywords" CONTENT="sol_chap2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_chap2.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ H<SMALL>IVER 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT504 - Alg&#232;bre appliqu&#233;e</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Solutions des exercices - Chapitre 2</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>2.2.1</STRONG></DT>
+<DD>Il y a deux choses &#224; montrer
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Montrons que le code est capable de corriger une
+    erreur. Il suffit de montrer que tout mot qui est n'a qu'un seul bit de
+    diff&#233;rence avec un mot du code a au moins deux bits de
+    diff&#233;rent avec tout autre mot du code.
+
+<P>
+Les mots avec un seul bit qui diff&#232;re du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ 00000$">
+ sont
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ 10000$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ 01000$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$ 00100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ 00010$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ 00001$">
+.
+
+<P>
+Les mots avec un seul bit qui diff&#232;re du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ 01101$">
+ sont <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$ 11101$">
+,
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ 00101$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$ 01001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ 01111$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ 01100$">
+.
+
+<P>
+Les mots avec un seul bit qui diff&#232;re du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ 10110$">
+ sont <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$ 00110$">
+,
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$ 11110$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ 10010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$ 10100$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$ 10111$">
+.
+
+<P>
+Les mots avec un seul bit qui diff&#232;re du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$ 11011$">
+ sont <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$ 01011$">
+,
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ 10011$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$ 11111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$ 11001$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$ 11010$">
+.
+
+<P>
+On constate alors que ces ensembles &#233;tant disjoints, <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ C_2$">
+ est
+    capable de corriger une erreur.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Montrons maintenant que le code est capable de
+    d&#233;celer deux erreurs. Il suffit de montrer que si on prend un
+    mot du code et qu'on en change exactement deux bits, alors le
+    r&#233;sultat n'est pas un mot du code.
+
+<P>
+Les mots avec exactement deux bits qui diff&#232;rent du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ 00000$">
+ sont
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ 11000$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$ 10100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ 10010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ 10001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ 01100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ 01010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$ 01001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$ 00110$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ 00101$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.png"
+ ALT="$ 00011$">
+. Aucun d'eux n'est un
+    mot du code.
+
+<P>
+Les mots avec exactement deux bits qui diff&#232;rent du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ 01101$">
+ sont
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$ 10101$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$ 11001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$ 11111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$ 11100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ 00001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$ 00111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$ 00100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$ 01011$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ 01000$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ 01110$">
+. Aucun d'eux n'est un
+    mot du code.
+
+<P>
+Les mots avec exactement deux bits qui diff&#232;rent du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ 10110$">
+ sont
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ 01110$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ 00010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$ 00100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$ 00111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$ 11010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$ 11100$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$ 11111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ 10000$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$ 10011$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$ 10101$">
+. Aucun d'eux n'est un
+    mot du code.
+
+<P>
+Les mots avec exactement deux bits qui diff&#232;rent du mot <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$ 11011$">
+ sont
+    <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.png"
+ ALT="$ 00011$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ 01111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$ 01001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ 01010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$ 10111$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ 10001$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$ 10010$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$ 11101$">
+, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$ 11110$">
+ et <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ 11000$">
+. Aucun d'eux n'est un
+    mot du code.
+
+<P>
+Ainsi, <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ C_2$">
+ est capable de d&#233;celer deux erreurs.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2.2.2</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>1.</STRONG></DT>
+<DD>Supposons qu'un octet <!-- MATH
+ $b_1b_2b_3b_4b_5b_6b_7b_8$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ b_1b_2b_3b_4b_5b_6b_7b_8$">
+ est
+    valide. Si <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i$">
+ est paire, alors <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$ b_8=0$">
+
+    et <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i$">
+ est
+    paire. Si <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i$">
+ est impaire, alors <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ b_8=1$">
+
+    et <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i + 1$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i + 1$">
+ est
+    paire. Donc, si un octet est valide, alors la somme <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+ est
+    paire.
+
+<P>
+Montrons maintenant que si la somme <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+ est
+    paire, alors l'octet est valide. On le d&#233;montre par
+    contraposition. Supposons donc que l'octet n'est pas valide. Si
+    <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i$">
+ est paire, alors on (&#224; cause de la non
+    validit&#233; de l'octet) que <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ b_8=1$">
+. Mais alors,
+    <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i + 1$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i + 1$">
+ est
+    impaire. Enfin, si <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i$">
+ est impaire, alors on (&#224; cause de la non
+    validit&#233; de l'octet) que <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$ b_8=0$">
+. Mais alors,
+    <!-- MATH
+ $\sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ \sum\limits_{i=1}^{7}b_i + b_8 = \sum\limits_{i=1}^{7}b_i$">
+ est
+    impaire. Dans les deux cas, <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+ est
+    impaire.
+
+<P>
+</DD>
+<DT><STRONG>2.</STRONG></DT>
+<DD>On a montr&#233; en 1. qu'un octet est valide si et
+    seulement si la somme <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+ est
+    paire. Or, il est clair que la somme <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+ est
+    paire si et seulement si la somme <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+ est
+    congrus &#224; z&#233;ro, modulo 2.
+
+<P>
+</DD>
+<DT><STRONG>3.</STRONG></DT>
+<DD>Supposons qu'un octet <!-- MATH
+ $b_1b_2b_3b_4b_5b_6b_7b_8$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ b_1b_2b_3b_4b_5b_6b_7b_8$">
+ est
+    valide. En vertu de 2., on sait que <!-- MATH
+ $\sum\limits_{i=1}^{8}b_i$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ \sum\limits_{i=1}^{8}b_i$">
+
+    est nulle dans <!-- MATH
+ $\mathbb{Z}_2$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \mathbb{Z}_2$">
+. Si on ne change qu'un seul bit,
+    alors cette somme devient non nulle et, toujours de la partie 2., on d&#233;tecte
+    que le mot est erron&#233;.
+
+<P>
+Cependant, on ne peut corriger cette erreur. En effet,
+    supposons qu'on ait voulu envoyer l'octet <IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ 00000000$">
+. Si on
+    recoit le mot <IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$ 10000000$">
+, alors c'aurait tout aussi bien pu
+    &#234;tre le mot <IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$ 11000000$">
+ qui a  &#233;t&#233; envoy&#233; (puisque ce mot n'a
+    lui aussi qu'un seul bit de diff&#233;rent avec le mot re&#231;u).
+
+<P>
+Enfin, supposons qu'on ait voulu envoyer l'octet <IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$ 00000000$">
+. Si on
+    recoit le mot <IMG
+ WIDTH="79" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$ 11000000$">
+, alors ce mot &#233;tant valide, on ne
+    peut savoir que ce n'est aps celui qui devait &#234;tre re&#231;u.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2.3.6</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD><IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ d(x,y)=6$">
+
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD><!-- MATH
+ $B(x,1) = \left\{ 011011101, 111011101, 001011101, 010011101,
+011111101,\right.$
+ -->
+<IMG
+ WIDTH="554" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ B(x,1) = \left\{ 011011101, 111011101, 001011101, 010011101,
+011111101,\right.$">
+ <!-- MATH
+ $\left. 011001101, 011010101, 011011001, 011011111, 011011100 \right\}$
+ -->
+<IMG
+ WIDTH="470" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$ \left. 011001101, 011010101, 011011001, 011011111, 011011100 \right\}$">
+
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Un mot est dans <IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ B(x,2)$">
+ s'il est &#224; distance au plus
+    deux de <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+. Un seul mot est &#224; distance z&#233;ro de <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+, &#224; savoir
+    <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ lui-m&#234;me. Un mot &#233;tant &#224; distance exactement <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$ 1$">
+ de <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ si et
+    seulement si un seul bit est diff&#233;rent, il y a neuf mots &#224;
+    distance exactement un de <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+. Enfin, un mot est &#224; distance exactement deux
+    de <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ si et seulement si il a deux bits de diff&#233;rents avec
+    <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+. Or, il y a <!-- MATH
+ ${9 \choose 2} = 36$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ {9 \choose 2} = 36$">
+ telles fa&#231;ons de choisirs
+    deux bits dans un ensemble en contenant neuf. Ainsi, <!-- MATH
+ $|B(x,2)| = 1 + 9 + 36 =
+46$
+ -->
+<IMG
+ WIDTH="226" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$ \vert B(x,2)\vert = 1 + 9 + 36 =
+46$">
+.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>Un mot est dans <IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ B(x_0,p)$">
+ s'il est &#224; distance au plus
+    <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ p$">
+ de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+. Un seul mot est &#224; distance z&#233;ro de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+, &#224; savoir
+    <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+ lui-m&#234;me. Un mot &#233;tant &#224; distance exactement <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$ 1$">
+ de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+ si et
+    seulement si un seul bit est diff&#233;rent, il y a <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ n$">
+ mots &#224;
+    distance exactement un de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+. Enfin, un mot est &#224; distance exactement
+    <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ p$">
+ de <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+ si et seulement si il a <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ p$">
+ bits de diff&#233;rents avec
+    <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ x_0$">
+. Or, il y a <!-- MATH
+ ${n \choose p}$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ {n \choose p}$">
+ telles fa&#231;ons de choisirs
+    <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ p$">
+ bits dans un ensemble en contenant <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ n$">
+. Ainsi, <!-- MATH
+ $|B(x_0,p)| = 1 +
+{n \choose 1} + {n \choose 2} + {n \choose 3} + \ldots + {n \choose p} =
+    \sum\limits_{i=0}^{p} {n \choose i}$
+ -->
+<IMG
+ WIDTH="431" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$ \vert B(x_0,p)\vert = 1 +
+{n \choose 1} + {n \choose 2} + {n \choose 3} + \ldots + {n \choose p} =
+\sum\limits_{i=0}^{p} {n \choose i}$">
+.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2.3.9</STRONG></DT>
+<DD>Supposons que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ est capable de corriger <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ t$">
+
+erreurs. On veut montrer que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ est capable de corriger <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ t-1$">
+
+erreurs. Il suffit de montrer que les boules de rayon <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ t-1$">
+
+centr&#233;es en les mots du code sont deux &#224; deux disjointes.
+Supposons au contraire que deux boules de rayon <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ t-1$">
+ ont une
+intersection commune. Disons que <!-- MATH
+ $z \in B(x,t-1) \cap B(y,t-1)$
+ -->
+<IMG
+ WIDTH="234" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$ z \in B(x,t-1) \cap B(y,t-1)$">
+
+avec <IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$ x \neq y$">
+. Comme <!-- MATH
+ $z \in B(x,t-1)$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$ z \in B(x,t-1)$">
+, on a que <!-- MATH
+ $d(x,z)
+\leqslant t-1$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$ d(x,z)
+\leqslant t-1$">
+. Ainsi, <!-- MATH
+ $d(x,z) \leqslant t$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$ d(x,z) \leqslant t$">
+. De m&#234;me, <!-- MATH
+ $d(y,z)
+\leqslant t$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$ d(y,z)
+\leqslant t$">
+. Ainsi, <!-- MATH
+ $z \in B(x,t) \cap B(y,t)$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$ z \in B(x,t) \cap B(y,t)$">
+, ce qui contredit
+le fait que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ est capable de corriger <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ t$">
+ erreurs. Ainsi, les
+boules de rayon <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ t-1$">
+ centr&#233;es en les mots du code sont deux &#224;
+deux disjointes et ainsi le code peut corriger <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ t-1$">
+ erreurs.
+
+<P>
+</DD>
+<DT><STRONG>2.3.13</STRONG></DT>
+<DD>Si <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$ t^*$">
+ augmente, alors <IMG
+ WIDTH="63" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ n-2t^*$">
+ diminue et
+<!-- MATH
+ $2^{n-2t^*}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$ 2^{n-2t^*}$">
+ diminue aussi. Comme <!-- MATH
+ $M \leqslant 2^{n-2t^*}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ M \leqslant 2^{n-2t^*}$">
+, on en
+d&#233;duit que <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$ M$">
+ diminue. D'autre part, si <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$ M$">
+ augmente, comme <!-- MATH
+ $M
+\leqslant 2^{n-2t^*}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ M \leqslant 2^{n-2t^*}$">
+, on en d&#233;duit que <!-- MATH
+ $2^{n-2t^*}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$ 2^{n-2t^*}$">
+ augmente
+aussi. Alors <IMG
+ WIDTH="63" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ n-2t^*$">
+ doit aussi augmenter, mais ce faisant, il
+faut que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$ t^*$">
+ diminue.
+
+<P>
+</DD>
+<DT><STRONG>2.4.2</STRONG></DT>
+<DD>Comme <!-- MATH
+ $00000 \in C_2$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ 00000 \in C_2$">
+, il suffit de montrer que <!-- MATH
+ $x,y
+\in C_2, x \neq y \textrm{ et } x,y \neq 00000 \Rightarrow x+y \in
+C_2$
+ -->
+<IMG
+ WIDTH="378" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$ x,y
+\in C_2, x \neq y \textrm{ et } x,y \neq 00000 \Rightarrow x+y \in
+C_2$">
+. On a :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+01101 + 10110 & = & 11011 \in C_2 \\
+01101 + 11011 & = & 10110 \in C_2 \\
+10110 + 11011 & = & 01101 \in C_2
+\end{array}$
+ -->
+<IMG
+ WIDTH="252" HEIGHT="86" BORDER="0"
+ SRC="img76.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+01101 + 10110 &amp; = &amp; 11011 \in C_2 \\
+01...
+...110 \in C_2 \\
+10110 + 11011 &amp; = &amp; 01101 \in C_2
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Donc, <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ C_2$">
+ est lin&#233;aire.
+
+<P>
+</DD>
+<DT><STRONG>2.4.3</STRONG></DT>
+<DD>Dans <!-- MATH
+ $\mathbb{Z}_2$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \mathbb{Z}_2$">
+, <!-- MATH
+ $\,\begin{tabular}{|l|}
+\!\!  1  \!\!\! \\
+\hline
+\end{tabular}\: = \{\ldots, -7,-5,-3,-1,1,3,5,7,\ldots \}$
+ -->
+<IMG
+ WIDTH="338" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$ \,\begin{tabular}{\vert l\vert}
+1 \!\!\! \\
+\hline
+\end{tabular}\: = \{\ldots, -7,-5,-3,-1,1,3,5,7,\ldots \}$">
+. Donc, <!-- MATH
+ $\,\begin{tabular}{|l|}
+\!\!  1  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+\!\!  -1  \!\!\! \\
+\hline
+\end{tabular}\:$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$ \,\begin{tabular}{\vert l\vert}
+1 \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{\vert l\vert}
+-1 \!\!\! \\
+\hline
+\end{tabular}\:$">
+.
+
+<P>
+</DD>
+<DT><STRONG>2.4.4</STRONG></DT>
+<DD><P>
+</DD>
+<DT><STRONG>2.4.5</STRONG></DT>
+<DD><P>
+</DD>
+<DT><STRONG>2.4.6</STRONG></DT>
+<DD><!-- MATH
+ $(\Rightarrow)$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$ (\Rightarrow)$">
+ Posons <!-- MATH
+ $x = (b_1,b_2,\ldots ,b_k,c_1,c_2,\ldots ,c_{n-k})$
+ -->
+<IMG
+ WIDTH="277" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$ x = (b_1,b_2,\ldots ,b_k,c_1,c_2,\ldots ,c_{n-k})$">
+. Alors,
+
+<P>
+<!-- MATH
+ $\begin{array}{rcl}
+x \in C & \iff &
+\left\lbrack
+                \begin{array}{c}
+                c_1 \\
+                c_2 \\
+                \vdots \\
+                c_{n-k}
+                \end{array}
+                \right\rbrack
+                =
+                \left\lbrack
+                \begin{array}{ccc}
+                a_{11} & \cdots & a_{1k} \\
+                a_{21} & \cdots & a_{2k} \\
+                \vdots & \vdots & \vdots \\
+                a_{n-k,1} & \cdots & a_{n-k,k}
+                \end{array}
+                \right\rbrack
+                \times
+                \left\lbrack
+                \begin{array}{c}
+                b_1 \\
+                b_2 \\
+                \vdots \\
+                b_{k}
+                \end{array}
+                \right\rbrack
+                \\\\
+        & \iff &
+                \left\lbrack
+                \begin{array}{c}
+                c_1 \\
+                c_2 \\
+                \vdots \\
+                c_{n-k}
+                \end{array}
+                \right\rbrack
+                =
+                \left\lbrack
+                \begin{array}{c}
+                a_{11}b_1 + \ldots + a_{1k}b_k \\
+                a_{21}b_1 + \ldots + a_{2k}b_k \\
+                \vdots \\
+                a_{n-k1}b_1 + \ldots + a_{n-k,k}b_k
+                \end{array}
+                \right\rbrack
+                \\\\
+        & \iff &
+                \left\lbrack
+                \begin{array}{c}
+                0 \\
+                0 \\
+                \vdots \\
+                0
+                \end{array}
+                \right\rbrack
+                =
+                \left\lbrack
+                \begin{array}{c}
+                a_{11}b_1 + \ldots + a_{1k}b_k - c_{1} \\
+                a_{21}b_1 + \ldots + a_{2k}b_k - c_{2} \\
+                \vdots \\
+                a_{n-k1}b_1 + \ldots + a_{n-k,k}b_k - c_{k}
+                \end{array}
+                \right\rbrack
+                \\\\
+        & \iff &
+                \left\lbrack
+                \begin{array}{c}
+                0 \\
+                0 \\
+                \vdots \\
+                0
+                \end{array}
+                \right\rbrack
+                =
+                \left\lbrack
+                \begin{array}{c}
+                a_{11}b_1 + \ldots + a_{1k}b_k + c_{1} \\
+                a_{21}b_1 + \ldots + a_{2k}b_k + c_{2} \\
+                \vdots \\
+                a_{n-k1}b_1 + \ldots + a_{n-k,k}b_k + c_{k}
+                \end{array}
+                \right\rbrack
+                \\\\
+        & \iff &
+                \left\lbrack
+                \begin{array}{c}
+                0 \\
+                0 \\
+                \vdots \\
+                0
+                \end{array}
+                \right\rbrack
+                =
+                \left\lbrack
+                \begin{array}{c}
+                a_{11}b_1 + \ldots + a_{1k}b_k + 1c_{1} + 0c_{2} + \ldots + 0c_k \\
+                a_{21}b_1 + \ldots + a_{2k}b_k + 0c_{1} + 1c_{2} + \ldots + 0c_k \\
+                \vdots \\
+                a_{n-k1}b_1 + \ldots + a_{n-k,k}b_k + c_{k} + 0c_{1} + 0c_{2} + \ldots + 1c_{k}
+                \end{array}
+                \right\rbrack
+                \\\\
+        & \iff &
+                \left\lbrack
+                \begin{array}{c}
+                0 \\
+                0 \\
+                \vdots \\
+                0
+                \end{array}
+                \right\rbrack
+                =
+                \left\lbrack
+                \begin{array}{ccccccc}
+                a_{11} & \cdots & a_{1k} & 1 & 0 & \cdots & 0 \\
+                a_{21} & \cdots & a_{2k} & 0 & 1 & \cdots & 0 \\
+                \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+                a_{n-k,1} & \cdots & a_{n-k,k} & 0 & 0 & cdots & 1
+                \end{array}
+                \right\rbrack
+                \times
+                \left\lbrack
+                \begin{array}{c}
+                b_1 \\
+                b_2 \\
+                \vdots \\
+                b_{k} \\
+                c_1 \\
+                c_2 \\
+                \vdots \\
+                c_{n-k}
+                \end{array}
+                \right\rbrack
+                \\\\
+        & \iff & Hx^t = 0
+\end{array}$
+ -->
+<IMG
+ WIDTH="656" HEIGHT="884" BORDER="0"
+ SRC="img81.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+x \in C &amp; \iff &amp;
+\left\lbrack
+\begin{...
+...rray}
+\right\rbrack
+\\ \\
+&amp; \iff &amp; Hx^t = 0
+\end{array}\end{displaymath}">
+
+
+<P>
+</DD>
+<DT><STRONG>2.4.7</STRONG></DT>
+<DD>Non. Il peut quand m&#234;me y avoir eu du bruit. Par exemple, dans
+    le code 2, si je veux envoyer l'information 01, alors j'envoie
+    <!-- MATH
+ $mG = 01101$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img82.png"
+ ALT="$ mG = 01101$">
+. Supposons que <IMG
+ WIDTH="85" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img83.png"
+ ALT="$ e=10110$">
+. Alors, <!-- MATH
+ $mG + e =
+11011$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.png"
+ ALT="$ mG + e =
+11011$">
+. On peut alors v&#233;rifier que <!-- MATH
+ $H(mG+e)^t = 0$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.png"
+ ALT="$ H(mG+e)^t = 0$">
+, mais <IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$ e
+\neq 0$">
+. C'est donc dire que si le bruit est suffisamment
+    &#171; &#233;lev&#233; &#187;, il pourrait ne pas s'en rendre compte au
+    d&#233;codage.
+
+<P>
+</DD>
+<DT><STRONG>2.4.8</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Comme il y a trois bits d'informations, il y a <IMG
+ WIDTH="56" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img87.png"
+ ALT="$ 2^3
+= 8$">
+ mots du code.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Ce sont 000, 001, 010, 011, 100, 101, 110 et 111.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Huit
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD><!-- MATH
+ $dim C = n - {\rm rg}(H) = 8 - 5 = 3$
+ -->
+<IMG
+ WIDTH="262" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$ dim C = n - {\rm rg}(H) = 8 - 5 = 3$">
+
+
+<P>
+</DD>
+<DT><STRONG>e)</STRONG></DT>
+<DD><!-- MATH
+ $H = \left\lbrack
+\begin{array}{cccccccc}
+                    1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+                    0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 \\
+                    1 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
+                    0 & 1 & 1 & 0 & 0 & 0 & 1 & 0 \\
+                    1 & 1 & 1 & 0 & 0 & 0 & 0 & 1
+                    \end{array}
+                    \right\rbrack$
+ -->
+<IMG
+ WIDTH="274" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$ H = \left\lbrack
+\begin{array}{cccccccc}
+1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+...
+... &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{array}
+\right\rbrack$">
+
+
+<P>
+et <!-- MATH
+ $G = \left\lbrack
+\begin{array}{cccccccc}
+                    1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 \\
+                    0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
+                    0 & 0 & 1 & 0 & 0 & 1 & 1 & 1
+                    \end{array}
+                    \right\rbrack$
+ -->
+<IMG
+ WIDTH="272" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$ G = \left\lbrack
+\begin{array}{cccccccc}
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+...
+... &amp; 1 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
+\end{array}
+\right\rbrack$">
+
+
+<P>
+</DD>
+<DT><STRONG>f)</STRONG></DT>
+<DD>On a que <!-- MATH
+ $H (11010111)^t = (11001)^t$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.png"
+ ALT="$ H (11010111)^t = (11001)^t$">
+ et donc
+    <!-- MATH
+ $11010111 \notin C$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.png"
+ ALT="$ 11010111 \notin C$">
+. De plus, <!-- MATH
+ $H (00100111)^t = (00000)^t$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.png"
+ ALT="$ H (00100111)^t = (00000)^t$">
+ et donc
+    <!-- MATH
+ $00100111 \in C$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.png"
+ ALT="$ 00100111 \in C$">
+.
+
+<P>
+</DD>
+<DT><STRONG>g)</STRONG></DT>
+<DD>On n'a qu'&#224; calculer <!-- MATH
+ $(111)G = 11101001$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$ (111)G = 11101001$">
+.
+
+<P>
+</DD>
+<DT><STRONG>h)</STRONG></DT>
+<DD>Ce sont   <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">00000000</TD>
+</TR>
+<TR><TD ALIGN="LEFT">00100111</TD>
+</TR>
+<TR><TD ALIGN="LEFT">01011011</TD>
+</TR>
+<TR><TD ALIGN="LEFT">01111100</TD>
+</TR>
+<TR><TD ALIGN="LEFT">10010101</TD>
+</TR>
+<TR><TD ALIGN="LEFT">10110010</TD>
+</TR>
+<TR><TD ALIGN="LEFT">11001110 et</TD>
+</TR>
+<TR><TD ALIGN="LEFT">11101001.</TD>
+</TR>
+</TABLE>
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2.4.10</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD><IMG
+ WIDTH="57" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$ d(x,0)$">
+ est le nombre de bits o&#249; <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ et le vecteur
+    <!-- MATH
+ $00\ldots 0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.png"
+ ALT="$ 00\ldots 0$">
+ diff&#232;rent. C'est donc le nombre de bits o&#249; <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+
+    prend la valeur 1, c'est-&#224;-dire <IMG
+ WIDTH="44" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$ w(x)$">
+.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Supposons <!-- MATH
+ $x=x_1x_2\ldots x_n$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$ x=x_1x_2\ldots x_n$">
+ et <!-- MATH
+ $y=y_1y_2\ldots
+y_n$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$ y=y_1y_2\ldots
+y_n$">
+. Si <IMG
+ WIDTH="60" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="$ x_i = y_i$">
+, alors <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$ x_i$">
+ et <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$ y_i$">
+ ne contribuent pas
+    &#224; <IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="$ d(x,y)$">
+. De plus, <!-- MATH
+ $x_i-y_i = 0$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$ x_i-y_i = 0$">
+ et <!-- MATH
+ $x_i+y_i = x_i+x_i =
+2x_i = 0$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$ x_i+y_i = x_i+x_i =
+2x_i = 0$">
+ car on est dans <!-- MATH
+ $\mathbb{Z}_2$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \mathbb{Z}_2$">
+. Donc, <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$ x_i$">
+ et <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$ y_i$">
+
+    ne contribuent ni &#224; <IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.png"
+ ALT="$ w(x-y)$">
+ ni &#224; <IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$ w(x+y)$">
+.
+
+<P>
+Si <!-- MATH
+ $x_i \neq y_i$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$ x_i \neq y_i$">
+, alors <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$ x_i$">
+ et <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$ y_i$">
+ contribuent &#224; <IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="$ d(x,y)$">
+.
+    De plus, <!-- MATH
+ $x_i-y_i = -1 \textrm{ ou } 1 = 1$
+ -->
+<IMG
+ WIDTH="184" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.png"
+ ALT="$ x_i-y_i = -1 \textrm{ ou } 1 = 1$">
+ et <!-- MATH
+ $x_i+y_i = 0+1 \textrm{ ou } 1+0
+= 1$
+ -->
+<IMG
+ WIDTH="234" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$ x_i+y_i = 0+1 \textrm{ ou } 1+0
+= 1$">
+ car on est dans <!-- MATH
+ $\mathbb{Z}_2$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \mathbb{Z}_2$">
+. Donc, <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$ x_i$">
+ et <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$ y_i$">
+
+    contribuent &#224; <IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.png"
+ ALT="$ w(x-y)$">
+ et &#224; <IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$ w(x+y)$">
+.
+
+<P>
+Donc, <!-- MATH
+ $d(x,y)=w(x-y)=w(x+y)$
+ -->
+<IMG
+ WIDTH="252" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$ d(x,y)=w(x-y)=w(x+y)$">
+.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Soient <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ et <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$ y$">
+ deux mots de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ tels que
+    <!-- MATH
+ $d^*=d(x,y)$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$ d^*=d(x,y)$">
+. Comme <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ est lin&#233;aire, <IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$ x-y \in C$">
+ et
+    <!-- MATH
+ $w(x-y)=d(x,y) = d^*$
+ -->
+<IMG
+ WIDTH="197" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.png"
+ ALT="$ w(x-y)=d(x,y) = d^*$">
+. Puisque <!-- MATH
+ $w^* \leqslant w(x-y)$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.png"
+ ALT="$ w^* \leqslant w(x-y)$">
+, on en
+    d&#233;duit que <!-- MATH
+ $w^* \leqslant d^*$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$ w^* \leqslant d^*$">
+.
+
+<P>
+On veut maintenant montrer que <!-- MATH
+ $w^* \geqslant d^*$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.png"
+ ALT="$ w^* \geqslant d^*$">
+. Supposons
+    au contraire que <IMG
+ WIDTH="69" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.png"
+ ALT="$ w^* &lt; d^*$">
+. Il existe alors un mot <IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.png"
+ ALT="$ z \in C_*$">
+
+    tel que <!-- MATH
+ $w(z) < d^* = d(x,y)$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$ w(z) &lt; d^* = d(x,y)$">
+. Mais alors <!-- MATH
+ $d(z,0) = w(z-0) =
+w(z) < d(x,y)$
+ -->
+<IMG
+ WIDTH="293" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$ d(z,0) = w(z-0) =
+w(z) &lt; d(x,y)$">
+, ce qui contredit le fait que <IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="$ d(x,y)$">
+ est
+    minimale. Donc, <!-- MATH
+ $w^* \not < d^*$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$ w^* \not &lt; d^*$">
+ et ainsi <!-- MATH
+ $w^* \geqslant d^*$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.png"
+ ALT="$ w^* \geqslant d^*$">
+.
+
+<P>
+Donc, <IMG
+ WIDTH="69" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img125.png"
+ ALT="$ w^*=d^*$">
+.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2.4.13</STRONG></DT>
+<DD><!-- MATH
+ $(\Rightarrow)$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$ (\Rightarrow)$">
+ Supposons que <IMG
+ WIDTH="50" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.png"
+ ALT="$ x=y$">
+. Alors, <IMG
+ WIDTH="83" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$ x-y=0$">
+
+et comme on travaille dans <!-- MATH
+ $\mathbb{Z}_2$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ \mathbb{Z}_2$">
+, on a que <IMG
+ WIDTH="83" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img128.png"
+ ALT="$ x+y=0$">
+ qui
+est une combinaison lin&#233;aire nulle &#224; coefficients non tous nuls.
+Ainsi, <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ et <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$ y$">
+ sont lin&#233;airement d&#233;pendants.
+
+<P>
+<!-- MATH
+ $(\Leftarrow)$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.png"
+ ALT="$ (\Leftarrow)$">
+ Soient <!-- MATH
+ $x=x_1x_2\ldots x_n$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$ x=x_1x_2\ldots x_n$">
+ et <!-- MATH
+ $y=y_1y_2\ldots
+y_n$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$ y=y_1y_2\ldots
+y_n$">
+. Supposons que <IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$ x \neq y$">
+. Alors, il existe un indice <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img130.png"
+ ALT="$ i$">
+
+avec <!-- MATH
+ $1 \leqslant i \leqslant n$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img131.png"
+ ALT="$ 1 \leqslant i \leqslant n$">
+ tel que <!-- MATH
+ $x_i \neq y_i$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$ x_i \neq y_i$">
+. Sans
+perte de g&#233;n&#233;ralit&#233;, supposons que <IMG
+ WIDTH="55" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.png"
+ ALT="$ x_i=1$">
+ et que <IMG
+ WIDTH="54" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.png"
+ ALT="$ y_i=0$">
+. Soient
+<!-- MATH
+ $\alpha, \beta \in \mathbb{Z}_2$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.png"
+ ALT="$ \alpha, \beta \in \mathbb{Z}_2$">
+ tels que <!-- MATH
+ $\alpha x + \beta y =
+0$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.png"
+ ALT="$ \alpha x + \beta y =
+0$">
+. On veut montrer que <!-- MATH
+ $\alpha = \beta = 0$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.png"
+ ALT="$ \alpha = \beta = 0$">
+. Comme <!-- MATH
+ $\alpha x +
+\beta y = 0$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.png"
+ ALT="$ \alpha x + \beta y =
+0$">
+, on a que <!-- MATH
+ $\alpha x = -\beta y$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.png"
+ ALT="$ \alpha x = -\beta y$">
+, d'o&#249; <!-- MATH
+ $\alpha x =
+\beta y$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.png"
+ ALT="$ \alpha x =
+\beta y$">
+. En particulier, <!-- MATH
+ $\alpha x_i = \beta y_i \Rightarrow
+\alpha \cdot 1 = \beta \cdot 0 \Rightarrow \alpha = 0$
+ -->
+<IMG
+ WIDTH="285" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.png"
+ ALT="$ \alpha x_i = \beta y_i \Rightarrow
+\alpha \cdot 1 = \beta \cdot 0 \Rightarrow \alpha = 0$">
+. Mais
+alors, <!-- MATH
+ $\beta y = 0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.png"
+ ALT="$ \beta y = 0$">
+. On en d&#233;duit que <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$ \beta = 0$">
+. Ainsi, <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$ x$">
+ et
+<IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$ y$">
+ sont lin&#233;airement ind&#233;pendants.
+
+<P>
+</DD>
+<DT><STRONG>2.4.14</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Comme les colonnes de <IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.png"
+ ALT="$ H$">
+ sont non nulles et toutes
+    distinctes, on en d&#233;duit que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ peut corriger une erreur.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Consid&#233;rons   <!-- MATH
+ $x = 10010101$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img143.png"
+ ALT="$ x = 10010101$">
+,
+                            <!-- MATH
+ $y = 00100111$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img144.png"
+ ALT="$ y = 00100111$">
+ et
+                            <!-- MATH
+ $z = 00110101$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img145.png"
+ ALT="$ z = 00110101$">
+. Alors,
+                            <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.png"
+ ALT="$ x,y \in C$">
+,
+                            <IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.png"
+ ALT="$ d(x,z)=2$">
+ et <IMG
+ WIDTH="91" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$ d(y,z)=2$">
+.
+
+<P>
+Comme <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img149.png"
+ ALT="$ z$">
+ est &#224; distance deux de deux mots du code
+            distioncts, on en d&#233;duit qye <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ ne peut corriger deux
+            erreurs.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Comme <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ C$">
+ peut corriger une erreur, mais pas deux,
+    sa capacit&#233; correctrice est de <IMG
+ WIDTH="53" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$ t^*=1$">
+.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-01-18
+</ADDRESS>
+</BODY>
+</HTML>

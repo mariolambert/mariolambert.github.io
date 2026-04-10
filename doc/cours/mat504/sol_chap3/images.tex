@@ -1,0 +1,1500 @@
+\batchmode
+\documentclass[12pt]{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{html}
+
+%
+\providecommand{\classe}[1]{\,\begin{tabular}{|l|}
+\!\!  #1  \!\!\! \\
+\hline
+\end{tabular}\:} 
+
+%
+\providecommand{\der}[1]{\overset{\textrm{\footnotesize (#1)\;\;\;}}{\Longrightarrow}} 
+
+
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Alpha}{\textrm{A}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1477}%
+$ \,\begin{tabular}{|l|}
+0  \!\!\! \\
+\hline
+\end{tabular}\: = \{ \ldots, -15, -10, -5, 0, 5, 10, 15,\ldots \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1479}%
+$ \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\: = \{ \ldots, -14, -9, -4, 0, 6, 11, 16,\ldots \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1481}%
+$ \,\begin{tabular}{|l|}
+2  \!\!\! \\
+\hline
+\end{tabular}\: = \{ \ldots, -13, -8, -3, 0, 7, 12, 17,\ldots \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1483}%
+$ \,\begin{tabular}{|l|}
+3  \!\!\! \\
+\hline
+\end{tabular}\: = \{ \ldots, -12, -7, -2, 0, 8, 13, 18,\ldots \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1485}%
+$ \,\begin{tabular}{|l|}
+4  \!\!\! \\
+\hline
+\end{tabular}\: = \{ \ldots, -11, -6, -1, 0, 9, 14, 19,\ldots \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1487}%
+$ a - (a \textrm{ MOD } m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1489}%
+$ m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1491}%
+$ q \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1493}%
+$ a = qm + (a \textrm{ MOD } m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1495}%
+$ a - (a \textrm{ MOD } m) = qm$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1499}%
+$ a \textrm{ MOD } m \equiv a ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1501}%
+$ \mathbb{Z}_m = \{ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: \mid a \in \mathbb{Z} \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1503}%
+$ \{ \,\begin{tabular}{|l|}
+0  \!\!\! \\
+\hline
+\end{tabular}\:, \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\:, \ldots, \,\begin{tabular}{|l|}
+m-1  \!\!\! \\
+\hline
+\end{tabular}\: \} \subseteq \mathbb{Z}_m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1505}%
+$ a \geqslant m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1509}%
+$ 0 \leqslant r < m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1511}%
+$ a=mq+r$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1513}%
+$ a-r$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1517}%
+$ a \equiv r ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1519}%
+$ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+r  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1521}%
+$ \mathbb{Z}_m = \{ \,\begin{tabular}{|l|}
+0  \!\!\! \\
+\hline
+\end{tabular}\:, \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\:, \ldots, \,\begin{tabular}{|l|}
+m-1  \!\!\! \\
+\hline
+\end{tabular}\: \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1523}%
+$ a \equiv b\  ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1525}%
+$ a = b + mq$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1529}%
+$ x \equiv y\  ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1531}%
+$ x = y + mq'$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1533}%
+$ q' \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1535}%
+$ ax  = (b+mq)(y+mq') = by + bmq' + ymq + mmqq' = by + m(bq' + yq + mqq')$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1537}%
+$ ax-by = m(bq'+yq+mqq')$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1539}%
+$ ax \equiv by\  {\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1541}%
+$ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+b  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1543}%
+$ \,\begin{tabular}{|l|}
+x  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+y  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1545}%
+$ \,\begin{tabular}{|l|}
+ax  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+by  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1547}%
+$ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+b  \!\!\! \\
+\hline
+\end{tabular}\:
+\Rightarrow a \equiv b\  {\rm mod}\  m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1549}%
+$ \,\begin{tabular}{|l|}
+x  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+y  \!\!\! \\
+\hline
+\end{tabular}\: \Rightarrow
+x \equiv y\  {\rm mod}\  m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1551}%
+$ ax \equiv by\  {\rm mod}\  m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1555}%
+$ a,b,c \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1557}%
+$ (\,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+b  \!\!\! \\
+\hline
+\end{tabular}\:) \odot \,\begin{tabular}{|l|}
+c  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: \odot
+(\,\begin{tabular}{|l|}
+b  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+c  \!\!\! \\
+\hline
+\end{tabular}\:)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1559}%
+\begin{displaymath}\begin{array}[t]{rcl} (\,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+\!\!  b  \!\!\! \\
+\hline
+\end{tabular}\:) \odot
+\,\begin{tabular}{|l|}
+\!\!  c  \!\!\! \\
+\hline
+\end{tabular}\: & = &
+\,\begin{tabular}{|l|}
+\!\!  a \cdot b  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+\!\!  c  \!\!\! \\
+\hline
+\end{tabular}\: \\\\
+& = & \,\begin{tabular}{|l|}
+\!\!  (a\cdot b) \cdot c  \!\!\! \\
+\hline
+\end{tabular}\: \\\\
+& = & \,\begin{tabular}{|l|}
+\!\!  a \cdot (b \cdot c)  \!\!\! \\
+\hline
+\end{tabular}\: \\\\
+& = & \,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+\!\!  b \cdot c  \!\!\! \\
+\hline
+\end{tabular}\: \\\\
+& = & \,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \odot (\,\begin{tabular}{|l|}
+\!\!  b  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+\!\!  c  \!\!\! \\
+\hline
+\end{tabular}\:).
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1561}%
+$ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+a \cdot 1  \!\!\! \\
+\hline
+\end{tabular}\: =
+\,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1563}%
+$ \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+1 \cdot a  \!\!\! \\
+\hline
+\end{tabular}\: =
+\,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1565}%
+$ \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1567}%
+$ \langle \mathbb{Z}_m, \odot \rangle$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1569}%
+\begin{displaymath}\begin{array}[t]{rcl}
+1191 & = & (1) \cdot 1050 + 141 \\
+1050 & = & (7) \cdot  141 +  63 \\
+141  & = & (2) \cdot   63 +  15 \\
+63   & = & (4) \cdot   15 +   3 \\
+15   & = & (5) \cdot    3 +   0
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1571}%
+$ (1191, 1050) = 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1573}%
+$ s,t \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1575}%
+$ 1=1191S + 1050t$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1577}%
+\begin{displaymath}\begin{array}[t]{rcl}
+3   & = & 63 - (4) \cdot 15                                          \\
+    & = & 63 - (4) \cdot [141 - (2) \cdot 63 ]                       \\
+    & = & (-4) \cdot 141 + (9) \cdot 63                              \\
+    & = & (-4) \cdot 141 + (9) \cdot [1050 - (7) \cdot 141 ]         \\
+    & = & (9) \cdot 1050 + (-67) \cdot 141                           \\
+    & = & (9) \cdot 1050 + (-67) \cdot [1191 - (1) \cdot 1050 ]      \\
+    & = & (-67) \cdot 1191 + (76) \cdot 1050
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1579}%
+$ s=-67$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1581}%
+$ t=76$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1583}%
+$ (a,b)=1 \Rightarrow (\exists
+s,t)(as+bt=1)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1585}%
+$ d=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1587}%
+$ s$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1589}%
+$ t$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1591}%
+$ 1 = as+bt$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1593}%
+$ (a,b)=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1595}%
+$ a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1597}%
+$ b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1599}%
+$ d \in
+\mathbb{N}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1601}%
+$ d \vert a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1603}%
+$ d \vert b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1605}%
+$ d \vert
+as$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1607}%
+$ s \in \mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1609}%
+$ d \vert bt$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1611}%
+$ t \in
+\mathbb{Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1613}%
+$ d \vert (as+bt)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1615}%
+$ d \vert
+1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1617}%
+$ d \leqslant 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1626}%
+$ \mathbf{(a \Rightarrow b)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1628}%
+$ (a,m)=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1632}%
+$ 1=as+mt$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1634}%
+$ 1 \equiv as+mt ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1636}%
+$ 1 \equiv as ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1638}%
+$ m \equiv 0 ({\rm
+mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1640}%
+$ \mathbf{(b \Rightarrow c)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1646}%
+$ \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+as  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+s  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1648}%
+$ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1650}%
+$ <\mathbb{Z}_m, \odot
+>$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1652}%
+$ \,\begin{tabular}{|l|}
+s  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1654}%
+$ \mathbf{(c \Rightarrow a)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1662}%
+$ \,\begin{tabular}{|l|}
+a  \!\!\! \\
+\hline
+\end{tabular}\: \odot \,\begin{tabular}{|l|}
+s  \!\!\! \\
+\hline
+\end{tabular}\: = \,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1664}%
+$ \,\begin{tabular}{|l|}
+as  \!\!\! \\
+\hline
+\end{tabular}\: =
+\,\begin{tabular}{|l|}
+1  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1666}%
+$ as \equiv 1 ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1670}%
+$ mt \equiv 0 ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1674}%
+$ as+mt \equiv 1 ({\rm mod}\  m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1680}%
+$ \mathbb{Z}_{12}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1682}%
+$ (a,12)=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1688}%
+$ \,\begin{tabular}{|l|}
+5  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1690}%
+$ \,\begin{tabular}{|l|}
+7  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1692}%
+$ \,\begin{tabular}{|l|}
+11  \!\!\! \\
+\hline
+\end{tabular}\:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1694}%
+$ p$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1696}%
+$ n \in \mathbb{N}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1698}%
+$ 0 < n < p$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1700}%
+$ (n,p)=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1702}%
+$ p-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1704}%
+$ \mathbb{Z}_{p}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1708}%
+$ p_1,p_2,\ldots,p_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1710}%
+$ m=p_1p_2 \cdots p_n +1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1714}%
+$ \frac{m}{p_i}
+= p_1p_2\cdots p_{i-1}p_{i+1}\cdots p_n + 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1716}%
+$ i=1,2,\ldots,n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1720}%
+$ p_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1728}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \varphi(12) & = & \# \{ a \mid \,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \textrm{ est inversible dans } \mathbb{Z}_{12} \} \\
+                            & = & \# \{ a \mid 0 < a < 12 \textrm{ et } (a,12) = 1 \} \\
+                            & = & \# \{ 1, 5, 7, 11 \} \\
+                            & = & 4
+                \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1730}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \varphi(p)  & = & \# \{ a \mid \,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \textrm{ est inversible dans } \mathbb{Z}_{p} \} \\
+                            & = & \# \{ a \mid 0 < a < p \textrm{ et } (a,p) = 1 \} \\
+                            & = & p-1 \textrm{ (en vertu de l'exercice 3.2.13)}
+                \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1735}%
+$ \{ 1\cdot p, 2\cdot p, 3\cdot p, \ldots, (q-2)\cdot p, (q-1)\cdot p \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1737}%
+$ \{ 1\cdot q, 2\cdot q, 3\cdot q, \ldots, (p-2)\cdot q, (p-1)\cdot q \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1739}%
+$ \# \{ 1\cdot p, 2\cdot p, 3\cdot p, \ldots, (q-2)\cdot p, (q-1)\cdot p \} +
+\# \{ 1\cdot q, 2\cdot q, 3\cdot q, \ldots, (p-2)\cdot q, (p-1)\cdot q \} = (q-1) + (p-1)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1741}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \varphi(pq)  & = & \# \{ a \mid \,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \textrm{ est inversible dans } \mathbb{Z}_{pq} \} \\
+                             & = & \# \{ a \mid 0 < a < pq \textrm{ et } (a,pq) = 1 \} \\
+                             & = & (pq-1) - \# \{ a \mid 0 < a < pq \textrm{ et } (a,pq) \neq 1 \} \\
+                             & = & (pq-1) - \# \{ a \mid 0 < a < pq \textrm{ et $a$\  est un } \\
+                             &   & \hspace{3cm} \textrm{ multiple de $p$\  ou de $q$\  } \} \\
+                             & = & (pq-1) - (q-1) - (p-1) \\
+                             & = & pq - q - p + 1 \\
+                             & = & q(p-1) - p + 1 \\
+                             & = & q(p-1) - (p-1) \\
+                             & = & (q-1)(p-1)
+                \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1743}%
+$ m=p$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1747}%
+$ \varphi(p) = p-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1753}%
+$ \varphi(m)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1757}%
+$ n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1759}%
+$ 2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1761}%
+$ \sqrt{n}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1769}%
+$ \sqrt{10^{100}} = (10^{100})^{1/2} =
+10^{100/2} = 10^{50}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1771}%
+$ 3,17 \times 10^{33}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1773}%
+$ 2,31
+\times 10^{23}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1775}%
+$ \log_{b} x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1779}%
+$ x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1781}%
+$ \log_{10} 1000 = 3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1783}%
+$ \log_{10} 10^{100} =
+100$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1785}%
+$ \log_{2} 2 = 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1787}%
+$ \log_{2} 512 = 9$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1789}%
+$ \log_{2} 1\;048\;576
+= 20$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1791}%
+$ \log_{2} 10 \approx 3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1793}%
+$ 2^3 = 8$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1795}%
+$ \log_{e} 10
+\approx 2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1797}%
+$ e^2 \approx 7,4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1799}%
+$ e^3 \approx 20$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1801}%
+$ \log_{b} x^n = n \cdot \log{b} x = nL$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1803}%
+$ \log{2} 10^{100} = 100 \log{2} 10 \approx 100 \cdot 3 = 300$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1805}%
+$ \ln 10^{100} = 100 \ln 10 \approx 100 \cdot 2 = 200$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1807}%
+$ 2 \log_{2}
+a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1809}%
+$ a=10^{100}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1811}%
+$ 2 \log_{2} a = 2 \log_{2}
+10^{100} = 2 \cdot 100 \cdot \log_{2} 10 = 200 \cdot \log_{2} 10
+\approx 200 \cdot 3 = 600$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1813}%
+$ a^ma^n=a^{m+n}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1815}%
+$ 27^{2^{j+1}} \textrm{ MOD }
+100 = 27^{2^{j}+2^{j}} \textrm{ MOD } 100 = 27^{2^j} \cdot
+27^{2^j} \textrm{ MOD } 100 = (27^{2^j} \textrm{ MOD } 100) \cdot
+(27^{2^j} \textrm{ MOD } 100)  \textrm{ MOD } 100$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1817}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\overline{(x+y) \textrm{ MOD } m}   & = & \overline{x+y} \\
+                                    & = & \overline{x} \oplus \overline{y} \\
+                                    & = & \overline{x \textrm{ MOD } m} \oplus \overline{y \textrm{ MOD } m} \\
+                                    & = & \overline{(x \textrm{ MOD } m) + (y \textrm{ MOD } m)} \\
+                                    & = & \overline{[(x \textrm{ MOD } m) + (y \textrm{ MOD } m)] \textrm{ MOD } m}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1819}%
+$ (x+y) \textrm{ MOD } m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1821}%
+$ [(x \textrm{ MOD } m) + (y
+\textrm{ MOD } m)] \textrm{ MOD } m$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1825}%
+$ \{0,1,2, \ldots, m-1 \}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1827}%
+\begin{displaymath}\begin{array}[t]{rcl}
+                \varphi(63) & = & \# \{ a \mid \,\begin{tabular}{|l|}
+\!\!  a  \!\!\! \\
+\hline
+\end{tabular}\: \textrm{ est inversible dans } \mathbb{Z}_{63} \} \\
+                            & = & \# \{ a \mid 0 < a < 63 \textrm{ et } (a,63) = 1 \} \\
+                            & = & \# \{ 1, 2, 4, 5, 8, 10, 11, 13, 16, 17, 19, 20, 22, 23, 25, 26, 29, 31, 32, 34, \\
+                            &   & \quad  37, 38, 40, 41, 43, 44, 46, 47, 50, 52, 53, 55, 58, 59, 61, 62 \} \\
+                            & = & 36
+                \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1829}%
+$ 36 = 32 + 4 = 2^5 + 2^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1831}%
+\begin{displaymath}\begin{array}[t]{c|ccccc}
+i & 44^{2^i} & & & & 44^{2^i} \textrm{ MOD } 100 \\
+\hline
+0 & 44^{1}  & \textrm{MOD} & 63 & = & 44 \\
+1 & 44^{2}  & \textrm{MOD} & 63 & = & 46 \\
+2 & 46^{2}  & \textrm{MOD} & 63 & = & 37 \\
+3 & 37^{2}  & \textrm{MOD} & 63 & = & 46 \\
+4 & 46^{2}  & \textrm{MOD} & 63 & = & 37 \\
+5 & 37^{2}  & \textrm{MOD} & 63 & = & 46
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1833}%
+\begin{displaymath}\begin{array}[t]{rcl}
+        44^{\varphi(63)} \textrm{ MOD } 63  & = & 44^{\varphi(63)} \textrm{ MOD } 63 \\
+                                            & = & 44^{36} \textrm{ MOD } 63 \\
+                                            & = & 44^{2^5 + 2^2} \textrm{ MOD } 63 \\
+                                            & = & 44^{2^5} \cdot 44^{2^2} \textrm{ MOD } 63 \\
+                                            & = & [(44^{2^5} \textrm{ MOD } 63) \cdot (44^{2^2} \textrm{ MOD } 63)] \textrm{ MOD } 63 \\
+                                            & = & [46 \cdot 37] \textrm{ MOD } 63 \\
+                                            & = & 1702 \textrm{ MOD } 63 \\
+                                            & = & 27 \cdot 63 + 1 \textrm{ MOD } 63 \\
+                                            & = & 1.
+        \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1835}%
+$ 44^{\varphi(63)} \textrm{ MOD } 63 = 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1837}%
+$ (44,63)=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1839}%
+$ 10^{100}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1841}%
+$ \log_{e} 10^{100} = 100 \cdot \log_{e} 10 \approx 100 \cdot 2 =
+200$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1843}%
+$ 10^{101}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1845}%
+$ \log_{e} 10^{101} = 101 \cdot
+\log_{e} 10 \approx 101 \cdot 2 = 202$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1851}%
+$ \pi(10^{101}) - \pi(10^{100})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1853}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\pi(10^{101}) - \pi(10^{100})
+    & \approx   & \frac{10^{101}}{\log_{e} 10^{101}} - \frac{10^{100}}{\log_{e} 10^{100}} \\\\
+    & =         & \frac{10^{101} \cdot \log_{e} 10^{100} - 10^{100} \cdot \log_{e} 10^{101}}{\log_{e}{10^{100}} \cdot \log_{e}{10^{101}}} \\\\
+    & =         & \frac{10^{101} \cdot 200 - 10^{100} \cdot 202}{200 \cdot 202} \\\\
+    & =         & \frac{10 \cdot 10^{100} \cdot 200 -  10^{100} \cdot 202}{200 \cdot 202} \\\\
+    & =         & \frac{10^{100} \cdot 2000 - 10^{100} \cdot 202}{200 \cdot 202} \\\\
+    & =         & \frac{10^{100} (2000 - 202)}{200 \cdot 202} \\\\
+    & =         & \frac{10^{100} (1798)}{200 \cdot 202} \\\\
+    & \approx   & 10^{100} \cdot 4 \times 10^{-2} \\\\
+    & \approx   & 4 \times 10^{98}
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1855}%
+$ 10^{101}-10^{100}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1863}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\frac{10^{101}-10^{100}}{4 \times 10^{98}}  & = & \frac{10 \cdot 10^{100}-10^{100}}{4 \times 10^{98}} \\\\
+                                            & = & \frac{10^{100}(10-1)}{4 \times 10^{98}} \\\\
+                                            & = & \frac{9 \times 10^{100}}{4 \times 10^{98}} \\\\
+                                            & = & \frac{9}{4} \times \frac{10^{100}}{10^{98}} \\\\
+                                            & = & 2,25 \times 10^{2} \\\\
+                                            & = & 225
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1865}%
+$ \frac{225}{2}
+\approx 110$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1869}%
+$ 20(\log_{2} p)^3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1875}%
+$ 20(\log_{2} p)^3 =
+20(\log_{2} 10^{100})^3 = 20 (100 \log_{2} 10)^3 = 20 ( 100 \cdot
+3)^3 = 20 (300)^3 = 20 \cdot 27\;000\;000 = 540\;000\;000$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1900}%
+$ 2\log_{2}a = 2 \log_2 10^{100} = 2 \cdot 100 \log_{2} 10 = 200 \log_{2} 10
+\approx 200 \cdot 3 = 600$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1906}%
+$ as+bt=d$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1912}%
+$ 8\log_{2} p$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1914}%
+$ a(s+b) + b(t-a) = as+ab+bt-ab =
+as+bt=c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1916}%
+$ a(s+2b)+b(t-2a) = as + 2ab + bt -2ab = as+bt =
+c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1918}%
+$ a(s+3b)+b(t-3a) = as + 3ab + bt -3ab = as+bt =
+c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1920}%
+$ c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1922}%
+$ k = \Big\lceil  \frac{-s}{b}
+\Big\rceil$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1924}%
+$ \lceil x \rceil$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1930}%
+$ s+\Big\lceil  \frac{-s}{b}
+\Big\rceil b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1934}%
+$ t- \Big\lceil  \frac{-s}{b}
+\Big\rceil a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

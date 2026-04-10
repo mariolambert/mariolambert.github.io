@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 6}
+\bigskip
+
+
+\begin{description}
+
+
+\item[1)] Considérons le système d'équations linéaires
+
+$$\left( \begin{array}{rrr} 2 & -1 & 0 \\ -1 & 4 & -1 \\ 0 & -1 & 2 \end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array} \right)
+=
+\left( \begin{array}{r} 3 \\ 0 \\ 3 \end{array} \right)
+$$
+
+    \begin{description}
+
+    \item[a)] Construire les équations de Gauss-Seidel et la matrice d'itération $F$.
+
+    \item[b)] Expliquer pourquoi ce système converge sans avoir recours à la matrice $F$.
+
+    \item[c)] Déterminer le nombre d'opérations à effectuer pour assurer, par la méthode
+    de Gauss-Seidel, que $\| e(x^{(k)}) \| \leqslant 10^{-7}$ à partir de $x^{(0)} = (0,0,0)^t$.
+
+    \item[d)] Appliquer la méthode de Gauss-Seidel jusqu'à obtenir une précision de $10^{-7}$ sur $\| e(x^{(k)}) \|$.
+
+    \end{description}
+
+
+\item[2)] Refaire le même exercice, mais avec le système
+d'équations linéaires
+
+$$\left( \begin{array}{rrrr}
+2  & 10  & -4 & 1 \\
+3 & 0 & 9 & -4 \\
+7  & 3  & 0 & 2 \\
+4 & -1 & 1 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \\ x_4 \end{array}
+\right) = \left( \begin{array}{r} 15 \\ 12 \\ 21 \\ -28
+\end{array} \right)
+$$
+
+
+
+\item[3)] Résoudre le système d'équations linéaires
+
+$$\left( \begin{array}{rrrr}
+2  & 3  & 7 & 4 \\
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \\ x_4 \end{array} \right)
+=
+\left( \begin{array}{r} 35  \\ 41 \\ 27 \\ -31 \end{array} \right)
+$$
+
+à l'aide de la méthode itérative de Gauss-Seidel. Comparer les
+résultats avec ceux de la question 5 du laboratoire 5.
+
+
+
+\item[4)] Considérons le système d'équations linéaires
+
+$$\left( \begin{array}{rrr}
+-2  & 5  & -1 \\
+-3 & 2 & 5 \\
+6  & -4  & -1
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array} \right) =
+\left( \begin{array}{r} 0 \\ 1 \\ 7 \end{array} \right)
+$$
+
+
+    \begin{description}
+
+    \item[a)] Écrire les équations de Gauss-Seidel associées à ce
+    système
+
+    \item[b)] Déterminer si les équations de a) convergent.
+
+    \item[c)] Déterminer comment améliorer la convergence de la
+    méthode de Gauss-Seidel.
+
+    \item[d)] Déterminer la solution, en prenant comme estimé
+    initial $x^{(0)} = (0,0,0)^t$.
+
+    \end{description}
+
+
+\item[5)] Considérons le système d'équations linéaires
+
+$$\left( \begin{array}{rrr}
+1  & -0,6  & 0,5 \\
+-0,6 & 1 & -0,5 \\
+0,5  & -0,5  & 1
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array} \right) =
+\left( \begin{array}{r} -1,1 \\ 1,1 \\ 0 \end{array} \right)
+$$
+
+    \begin{description}
+
+    \item[a)] Écrire les équations de Jacobi et de Gauss-Seidel associées à ce
+    système
+
+    \item[b)] Déterminer si le système itératif converge avec la méthode de Jacobi.
+
+    \item[c)] Sachant que $\rho(F_{G-S}) \approx
+    0,38\;729\;833\;46$, déterminer la solution de ce système.
+
+    \item[d)] Expliquer pourquoi le fait que $0 < \rho(F_{G-S}) <
+    1 < \rho(F_{Jacobi})$ ne contredit pas le théorème vu en
+    classe.
+
+    \end{description}
+
+
+
+\end{description}
+
+\end{document}

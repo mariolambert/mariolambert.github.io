@@ -1,0 +1,206 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+\centerline{\textsc{ \normalsize Été 2005}}
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 7}
+\bigskip
+
+
+\begin{description}
+
+
+\item[1)] Résoudre le système d'équations linéaires
+
+$$\left(
+\begin{array}{rrrr}
+4 & 4 & 3 & 4 \\
+3 & 3 & 4 & 3 \\
+2 & 2 & 2 & 1 \\
+1 & 0 & 1 & 2
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+371 \\
+308 \\
+165 \\
+107
+\end{array}
+\right)
+$$
+
+en utilisant la méthode de Gram-Schmidt.
+
+
+\item[2)] Considérons le système d'équations linéaires
+
+$$\left(
+\begin{array}{rrrr}
+1 & 2 & 3 & 4 \\
+2 & 1 & 2 & 3 \\
+4 & 3 & 2 & 5 \\
+2 & 3 & 1 & 1
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+50 \\
+36 \\
+58 \\
+23
+\end{array}
+\right).
+$$
+
+    \begin{description}
+
+    \item[a)] Résoudre ce système par la méthode de Gram-Schmidt.
+
+    \item[b)] On sait que la méthode de Gram-Schmidt est conçue de manière à transformer un ensemble de vecteurs
+    linéairement indépendants $\{u_1,u_2, \ldots , u_n \}$ en un ensemble de vecteurs
+    $\{v_1,v_2, \ldots , v_n \}$ qui sont deux à deux orthogonaux, mais aussi orthogonaux aux vecteurs $u_i$.
+    Déterminer si c'est bien le cas pour les vecteurs obtenus à la partie a).
+
+    \item[c)] Appliquer à nouveau l'algorithme d'orthogonalisation de Gram-Schmidt, mais cette fois aux vecteurs
+    obtenus après une première orthogonalisation à la partie a). En déduire une solution du système.
+
+    \item[d)] Vérifier si les vecteurs obtenus en c) sont orthogonaux aux vecteurs $u_i$. Comparer vos résultats
+    avec ceux de la partie b).
+
+    \end{description}
+
+
+\item[3)] Expliquer comment se servir d'une décomposition $A=QR$ pour calculer aisément l'inverse de la matrice
+$A$. Combien cela nécessite-t-il d'opérations?
+
+
+
+\item[4)] Résoudre le système d'équations linéaires
+
+$$\left(
+\begin{array}{rrrr}
+1 & 1 & 2 & 0 \\
+3 & 4 & 3 & 3 \\
+6 & 7 & 7 & 6 \\
+8 & 9 & 9 & 8
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+18 \\
+64 \\
+132 \\
+170
+\end{array}
+\right)
+$$
+
+en effectuant une décomposition $QR$.
+
+
+\item[5)] Soient $A$ une matrice non singulière, $Q=[q_{ij}]$ une matrice dont les colonnes
+sont orthonormées et $R=[r_{ij}]$ une matrice triangulaire supérieure telles que $A=QR$.
+
+S'il y a trop d'erreurs d'arrondis, il se peut que la méthode de résolution par décomposition
+$A=QR$ ne soit pas numériquement stable. Pour pallier ce problème, on peut réorthogonaliser
+les vecteurs obtenus.
+
+Soient $a_1,a_2, \ldots , a_n$ les colonnes de la matrice $A$, $q_1,q_2, \ldots, q_n$ les
+colonnes de la matrice $Q$ et $p_1,p_2, \ldots , p_n$ les vecteurs $q_i$ non normalisés.
+
+On calcule successivement
+
+\begin{center}
+$$
+\begin{array}{rcl}
+p_i^*           & = & a_i - \sum\limits_{j=1}^{i-1} r_{ji}^* q_j \\\\
+r_{ii}^*        & = & \| p_i^* \|_2 \\\\
+q_i^*           & = & \frac{p_i^*}{r_{ii}^*} \\\\
+\Delta r_{ji}   & = & q_j \cdot p_i \qquad (j=1,\ldots, i-1) \\\\
+r_{ji}^*        & = & r_{ji} + \Delta r_{ji}
+\end{array}
+$$
+\end{center}
+
+
+On obtient à la suite de ce processus une décomposition $A=Q^*R^*$.
+
+
+    \begin{description}
+
+    \item[a)] Avec les données de l'exercice 4, vérifier si les vecteurs $p_i$ sont
+    orthogonaux aux vecteurs $q_j$.
+
+    \item[b)] Réorthogonaliser la réponse obtenue à l'exercice 4 de manière à obtenir
+    une décomposition $A=Q^*R^*$ et résoudre le système à l'aide de cette nouvelle
+    décomposition.
+
+    \item[c)] Vérifier si les vecteurs $p_i^*$ sont
+    orthogonaux aux vecteurs $q_j^*$.
+
+    \end{description}
+
+
+
+\end{description}
+
+\end{document}
+
+
+Q^tQ = I
+
+Q Q^-1 = I
+Q^t Q Q^-1 = Q^t
+
+Si P est orthogonale, alors P^t = P^{-1}.
+Ainsi, PP^t =PP^{-1} = P^{-1} P = P^tP = I

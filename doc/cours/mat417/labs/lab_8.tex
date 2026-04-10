@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+\centerline{\textsc{ \normalsize Été 2005}}
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 8}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] Soient $A_{n \times n}$ une matrice à coefficients réels
+et $\lambda_1 \geqslant \lambda_2 \geqslant \ldots \geqslant
+\lambda_n$ les valeurs propres de $A$.
+
+    \begin{description}
+
+    \item[a)] Montrer que $\| A \|_2 = \sup\limits_{x \neq 0}
+    \sqrt{\frac{x^tA^tAx}{x^tx}}$. Le coefficient
+    $\frac{x^tA^tAx}{x^tx}$ est appelé \emph{coefficient de Rayleigh de
+    $A$ par rapport à $x$}.
+
+    \item[b)] Montrer que la matrice $A^tA$ n'admet que des
+    valeurs propres réelles.
+
+    \item[c)] Soit $x \in \mathbb{R}^{n}$. Montrer que
+
+    $$ \lambda_n x^tx \leqslant x^tAx \leqslant \lambda_1 x^tx$$
+
+    [Indication : Écrire $x$ comme combinaison linéaire des
+    vecteurs propres $\{ x_1, x_2, \ldots, x_n \}$ de $A$, puis calculer les quantités $x^tAx$ et $x^tx$.]
+
+    \item[d)] Montrer qu'il existe un vecteur $x$ de
+    $\mathbb{R}^n$ qui soit tel que $\frac{x^tAx}{x^tx} =
+    \lambda_1$.
+
+    \item[e)] En déduire que $\| A \|_2 = \sqrt{\lambda_{A^tA}}$
+    où $\lambda_{A^tA}$ est la valeur propre dominante de la
+    matrice $A^tA$.
+
+    \item[f)] Montrer que $\| A \|_2 = \| A^t \|_2$.
+
+    \end{description}
+
+
+\item[2)] En arithmétique à 10 chiffres significatifs, résoudre le
+système d'équations linéaires
+
+$$
+\left( \begin{array}{rrr}
+5 & 2 & 3 \\
+2 & 8 & 1 \\
+3 & 1 & 7
+\end{array} \right)
+\left( \begin{array}{r}
+x_1 \\ x_2 \\ x_3
+\end{array} \right) =
+\left( \begin{array}{r}
+0 \\ -7 \\ -5
+\end{array} \right)
+$$
+
+par la méthode des réflexions de Householder.
+
+
+\item[3)] En arithmétique à 10 chiffres significatifs, résoudre le
+système d'équations linéaires
+
+$$
+\left( \begin{array}{rrr}
+5 & 2 & 3 \\
+2 & 8 & 1 \\
+3 & 1 & 7
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\ x_2 \\ x_3
+\end{array} \right) =
+\left( \begin{array}{r} 0 \\ -7 \\ -5
+\end{array} \right)
+$$
+
+par la méthode des rotations de Givens.
+
+
+\item[4)]
+
+    \begin{description}
+
+    \item[a)] Déterminer le nombre d'opérations qu'on doit
+    effectuer pour résoudre un système $A_{n \times n} x = b$ par
+    la méthode des réflexions de Householder. Faites attention
+    d'éviter les opérations inutiles dans les calculs de produits
+    matriciels.
+
+    \item[b)] Déterminer le nombre d'opérations qu'on doit
+    effectuer pour résoudre un système $A_{n \times n} x = b$ par
+    la méthode des rotations de Givens. Faites attention
+    d'éviter les opérations inutiles dans les calculs de produits
+    matriciels.
+
+    \end{description}
+
+
+\item[5)] Expliquer ce qui se produit et comment les algorithmes
+vus en classe se comportent lorsque :
+
+    \begin{description}
+
+    \item[a)] on rencontre un zéro sur la diagonale lors des
+    calculs issus de la méthode des rotations de Givens ;
+
+    \item[b)] on rencontre un zéro sur la diagonale lors des
+    calculs issus de la méthode des réflexions de Householder.
+
+    \end{description}
+
+
+
+\end{description}
+
+\end{document}

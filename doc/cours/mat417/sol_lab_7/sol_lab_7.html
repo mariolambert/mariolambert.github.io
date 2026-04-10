@@ -1,0 +1,1103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_7</TITLE>
+<META NAME="description" CONTENT="sol_lab_7">
+<META NAME="keywords" CONTENT="sol_lab_7">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_7.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 7 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr}
+4 & 4 & 3 & 4 \\
+3 & 3 & 4 & 3 \\
+2 & 2 & 2 & 1 \\
+1 & 0 & 1 & 2
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+371 \\
+308 \\
+165 \\
+107
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="296" HEIGHT="109" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}\left(
+\begin{array}{rrrr}
+4 &amp; 4 &amp; 3 &amp; 4 \\
+3 &amp; 3 &amp; 4 &amp; 3...
+...ray}{r}
+371 \\
+308 \\
+165 \\
+107
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Posons
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+u_1 & = & [4,4,3,4,-371] \\
+    u_2 & = & [3,3,4,3,-308] \\
+    u_3 & = & [2,2,2,1,-165] \\
+    u_4 & = & [1,0,1,2,-107] \\
+    u_5 & = & [0,0,0,0,1]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="132" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+u_1 &amp; = &amp; [4,4,3,4,-371] \\
+u_2 &amp; = &amp;...
+... &amp; = &amp; [1,0,1,2,-107] \\
+u_5 &amp; = &amp; [0,0,0,0,1]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+On obtient successivement, &#224; 10 chiffres significatifs :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+d_{21} & = & 0,8301936121 \\\\
+    d_{31} & = & 0,4447486528 \\
+    d_{32} & = & 0,4302215346 \\\\
+    d_{41} & = & 0,2883992505 \\
+    d_{42} & = & 0,1357827288 \\
+    d_{43} & = & -1,509354422 \\\\
+    d_{51} & = & -0,002694302023 \\
+    d_{52} & = & 0,0007074112507 \\
+    d_{53} & = & 0,001439426467 \\
+    d_{54} & = & -0,005167056753
+    \end{array}$
+ -->
+<IMG
+ WIDTH="214" HEIGHT="317" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+d_{21} &amp; = &amp; 0,8301936121  \\
+d_{31...
+...0,001439426467 \\
+d_{54} &amp; = &amp; -0,005167056753
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+d'o&#249; les vecteurs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+v_1 & = & \left( \begin{array}{r} 4 \\4 \\3 \\4 \\-371 \end{array} \right)
+    \\\\
+    v_2 & = & \left( \begin{array}{r} -0,320774448 \\-0,320774448 \\1,509419164 \\-0,320774448 \\0,0018301  \end{array} \right)
+    \\\\
+    v_3 & = & \left( \begin{array}{r} 0,3590094643 \\0,3590094643 \\0,0163694129 \\-0,6409905357 \\0,0009628515695  \end{array} \right)
+    \\\\
+    v_4 & = & \left( \begin{array}{r} 0,4318311504 \\-0,5681688495 \\-0,04544355875 \\-0,0775232716 \\-0,002673311698 \end{array} \right)
+    \\\\
+    v_5 & = & \left( \begin{array}{r} 0,01271865588 \\0,007551599129 \\0,006756753957 \\0,01152621914 \\0,0003974557594 \end{array}
+    \right).
+    \end{array}$
+ -->
+<IMG
+ WIDTH="258" HEIGHT="686" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+v_1 &amp; = &amp; \left( \begin{array}{r} 4  4...
+...2621914  0,0003974557594 \end{array}
+\right).
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En divisant le vecteur <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ v_5$">
+ par <!-- MATH
+ $0,0003974557594$
+ -->
+<IMG
+ WIDTH="144" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ 0,0003974557594$">
+, on a la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{r}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4
+    \end{array}
+    \right) = \left(
+    \begin{array}{r}
+    32,00018009 \\18,99984828 \\17,00001521 \\29.00000532
+    \end{array}
+    \right). 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="257" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle \left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{ar...
+...2,00018009  18,99984828  17,00001521  29.00000532
+\end{array}
+\right). $">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr}
+1 & 2 & 3 & 4 \\
+2 & 1 & 2 & 3 \\
+4 & 3 & 2 & 5 \\
+2 & 3 & 1 & 1
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+50 \\
+36 \\
+58 \\
+23
+\end{array}
+\right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="300" HEIGHT="109" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{displaymath}\left(
+\begin{array}{rrrr}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+2 &amp; 1 &amp; 2 &amp; 3...
+...{array}{r}
+50 \\
+36 \\
+58 \\
+23
+\end{array}
+\right).
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Posons
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+u_1 & = & [1,2,3,4,-50] \\
+    u_2 & = & [2,1,2,3,-36] \\
+    u_3 & = & [4,3,2,5,-58] \\
+    u_4 & = & [2,3,1,1,-23] \\
+    u_5 & = & [0,0,0,0,1]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="177" HEIGHT="132" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+u_1 &amp; = &amp; [1,2,3,4,-50] \\
+u_2 &amp; = &amp; ...
+...4 &amp; = &amp; [2,3,1,1,-23] \\
+u_5 &amp; = &amp; [0,0,0,0,1]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+On obtient successivement, &#224; 10 chiffres significatifs :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+d_{21} & = & 0,7201581028 \\\\
+    d_{31} & = & 1,160474308 \\
+    d_{32} & = & 1,931587787 \\\\
+    d_{41} & = & 0,4604743083 \\
+    d_{42} & = & 0,5426520061 \\
+    d_{43} & = & 1,057499030 \\\\
+    d_{51} & = & -0,01976284585 \\
+    d_{52} & = & 0,004222973862 \\
+    d_{53} & = & 0,002186265607 \\
+    d_{54} & = & 0,003921576871
+    \end{array}$
+ -->
+<IMG
+ WIDTH="205" HEIGHT="317" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+d_{21} &amp; = &amp; 0,7201581028  \\
+d_{31...
+... 0,002186265607 \\
+d_{54} &amp; = &amp; 0,003921576871
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+d'o&#249; les vecteurs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+v_1 & = & \left( \begin{array}{r} 1 \\2 \\3 \\4 \\-50 \end{array} \right)
+    \\\\
+    v_2 & = & \left( \begin{array}{r} 1,279841897 \\-0,440316206 \\-0,160474308 \\0,119367589 \\0,00790514  \end{array} \right)
+    \\\\
+    v_3 & = & \left( \begin{array}{r} 0,367398714 \\1,529560790 \\-1,171452710 \\0,1275337909 \\0,00844592812  \end{array} \right)
+    \\\\
+    v_4 & = & \left( \begin{array}{r} 0,4564931354 \\0,700480804 \\0,9444688852 \\-1,041539155 \\0,01049411913 \end{array} \right)
+    \\\\
+    v_5 & = & \left( \begin{array}{r} 0,01176470288 \\0,03529412006 \\0,05882351579 \\0,08235295031 \\0,01176470577 \end{array}
+    \right).
+    \end{array}$
+ -->
+<IMG
+ WIDTH="240" HEIGHT="686" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+v_1 &amp; = &amp; \left( \begin{array}{r} 1  2...
+...235295031  0,01176470577 \end{array}
+\right).
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En divisant le vecteur <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ v_5$">
+ par <!-- MATH
+ $0,01176470577$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ 0,01176470577$">
+, on a la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{r}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4
+    \end{array}
+    \right) = \left(
+    \begin{array}{r}
+    0,9999997543 \\3,000000234 \\4,999998890 \\7,000000843
+    \end{array}
+    \right). 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="266" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle \left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{ar...
+...9999997543  3,000000234  4,999998890  7,000000843
+\end{array}
+\right). $">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>On a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+v_2 \cdot u_1 & = & -0,83 \times 10^{-7} \\\\
+    v_3 \cdot u_1 & = & 0,9216 \times 10^{-6} \\
+    v_3 \cdot u_2 & = & 0,7584 \times 10^{-6} \\\\
+    v_4 \cdot u_1 & = & -0,11775 \times 10^{-5} \\
+    v_4 \cdot u_2 & = & -0,9087 \times 10^{-6} \\
+    v_4 \cdot u_3 & = & -0,19605 \times 10^{-5} \\\\
+    v_5 \cdot u_1 & = & 0,31 \times 10^{-8} \\
+    v_5 \cdot u_2 & = & 0,6 \times 10^{-9} \\
+    v_5 \cdot u_3 & = & 0,202 \times 10^{-7} \\
+    v_5 \cdot u_4 & = & -0,6 \times 10^{-9}
+    \end{array}$
+ -->
+<IMG
+ WIDTH="233" HEIGHT="317" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+v_2 \cdot u_1 &amp; = &amp; -0,83 \times 10^{-7}...
+...-7} \\
+v_5 \cdot u_4 &amp; = &amp; -0,6 \times 10^{-9}
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>On obtient successivement, &#224; 10 chiffres significatifs :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+d_{21} & = & -0,3280632411 \times 10^{-10} \\\\
+    d_{31} & = & 0,3642687747 \times 10^{-9} \\
+    d_{32} & = & 0,5004462336 \times 10^{-7} \\\\
+    d_{41} & = & -0,4654150198 \times 10^{-9} \\
+    d_{42} & = & -0,3239228555 \times 10^{-7} \\
+    d_{43} & = & -0,1232760842 \times 10^{-6} \\\\
+    d_{51} & = & 0,1225296443 \times 10^{-11} \\
+    d_{52} & = & -0,8622727200 \times 10^{-9} \\
+    d_{53} & = & 0,5093969739 \times 10^{-8} \\
+    d_{54} & = & -0,8196802323 \times 10^{-8}
+    \end{array}$
+ -->
+<IMG
+ WIDTH="261" HEIGHT="317" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+d_{21} &amp; = &amp; -0,3280632411 \times 10^{-1...
+...} \\
+d_{54} &amp; = &amp; -0,8196802323 \times 10^{-8}
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+d'o&#249; les vecteurs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+v_1' & = & \left( \begin{array}{r} 1 \\2 \\3 \\4 \\-50 \end{array} \right)
+    \\\\
+    v_2' & = & \left( \begin{array}{r} 1,279841897 \\-0,4403162059 \\-0,1604743079 \\0,119367589 \\0,007905138360  \end{array} \right)
+    \\\\
+    v_3' & = & \left( \begin{array}{r} 0,3673986496 \\1,529560811 \\-1,171452703 \\0,1275337834 \\0,008445945937  \end{array} \right)
+    \\\\
+    v_4' & = & \left( \begin{array}{r} 0,4564932227 \\0,7004809792 \\0,9444687370 \\-1,041539133 \\0,01049409716 \end{array} \right)
+    \\\\
+    v_5' & = & \left( \begin{array}{r} 0,01176470585 \\0,03529411763 \\0,05882352936 \\0,08235294122 \\0,01176470589 \end{array}
+    \right).
+    \end{array}$
+ -->
+<IMG
+ WIDTH="239" HEIGHT="686" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+v_1' &amp; = &amp; \left( \begin{array}{r} 1  ...
+...235294122  0,01176470589 \end{array}
+\right).
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En divisant le vecteur <IMG
+ WIDTH="21" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ v_5'$">
+ par <!-- MATH
+ $0,01176470589$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$ 0,01176470589$">
+, on a la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{r}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4
+    \end{array}
+    \right) = \left(
+    \begin{array}{r}
+    0,9999999965 \\2,999999996 \\4,999999992 \\6,999999999
+    \end{array}
+    \right). 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="266" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{ar...
+...9999999965  2,999999996  4,999999992  6,999999999
+\end{array}
+\right). $">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>On a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+v_2' \cdot u_1 & = & -0,5 \times 10^{-9} \\\\
+    v_3' \cdot u_1 & = & -0,2 \times 10^{-9} \\
+    v_3' \cdot u_2 & = & 0,5 \times 10^{-9} \\\\
+    v_4' \cdot u_1 & = & 0,2 \times 10^{-8} \\
+    v_4' \cdot u_2 & = & 0,22 \times 10^{-8} \\
+    v_4' \cdot u_3 & = & 0,27 \times 10^{-8} \\\\
+    v_5' \cdot u_1 & = & -0,4 \times 10^{-9} \\
+    v_5' \cdot u_2 & = & -0,3 \times 10^{-9} \\
+    v_5' \cdot u_3 & = & -0,5 \times 10^{-9} \\
+    v_5' \cdot u_4 & = & -0,3 \times 10^{-9}
+    \end{array}$
+ -->
+<IMG
+ WIDTH="196" HEIGHT="317" BORDER="0"
+ SRC="img20.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+v_2' \cdot u_1 &amp; = &amp; -0,5 \times 10^{-9}...
+...9} \\
+v_5' \cdot u_4 &amp; = &amp; -0,3 \times 10^{-9}
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+ce qui est plus pr&#233;cis qu'&#224; la partie b).
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD>On a <!-- MATH
+ $A^{-1}=(QR)^{-1} = R^{-1}Q^{-1}$
+ -->
+<IMG
+ WIDTH="214" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$ A^{-1}=(QR)^{-1} = R^{-1}Q^{-1}$">
+. Or, <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ Q$">
+ &#233;tant
+orthogonale, on a <!-- MATH
+ $Q^tQ = 1\!{\rm l} \Rightarrow Q^tQQ^{-1} =
+1\!{\rm l}Q^{-1} \Rightarrow Q^t = Q^{-1}$
+ -->
+<IMG
+ WIDTH="352" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$ Q^tQ = 1\!{\rm l} \Rightarrow Q^tQQ^{-1} =
+1\!{\rm l}Q^{-1} \Rightarrow Q^t = Q^{-1}$">
+. Ainsi, <!-- MATH
+ $A^{-1} =
+R^{-1}Q^t$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$ A^{-1} =
+R^{-1}Q^t$">
+.
+
+<P>
+Pour d&#233;terminer <IMG
+ WIDTH="37" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ R^{-1}$">
+, si on tire profit de la structure
+triangulaire sup&#233;rieure, on a besoin de <!-- MATH
+ $\frac{n^3}{3} +
+\frac{n^2}{2} - \frac{5}{6}n$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \frac{n^3}{3} +
+\frac{n^2}{2} - \frac{5}{6}n$">
+ op&#233;rations. Pour effectuer le
+produit <IMG
+ WIDTH="58" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ R^{-1}Q^t$">
+, on ne transpose pas r&#233;ellement la matrice
+<IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ Q$">
+, mais on va exploiter la structure triangulaire de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ R$">
+ pour
+faire le produit <IMG
+ WIDTH="58" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ R^{-1}Q^t$">
+. Cela donne <!-- MATH
+ $\sum\limits_{k=1}^{n}
+(2n-2k+1)n = 2n^3 -2n\frac{n(n+1)}{2} + n^2 = 2n^3-n^3-n^2+n^2 = n^3$
+ -->
+<IMG
+ WIDTH="558" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \sum\limits_{k=1}^{n}
+(2n-2k+1)n = 2n^3 -2n\frac{n(n+1)}{2} + n^2 = 2n^3-n^3-n^2+n^2 = n^3$">
+ op&#233;rations.
+
+<P>
+En tout, on a donc <!-- MATH
+ $\frac{n^3}{3} + \frac{n^2}{2} - \frac{5}{6}n +
+n^3 = \frac{4}{3}n^3 + \frac{1}{2}n^2 - \frac{5}{6}n$
+ -->
+<IMG
+ WIDTH="304" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$ \frac{n^3}{3} + \frac{n^2}{2} - \frac{5}{6}n +
+n^3 = \frac{4}{3}n^3 + \frac{1}{2}n^2 - \frac{5}{6}n$">
+
+op&#233;rations.
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{rrrr}
+1 & 1 & 2 & 0 \\
+3 & 4 & 3 & 3 \\
+6 & 7 & 7 & 6 \\
+8 & 9 & 9 & 8
+\end{array}
+\right)
+\left(
+\begin{array}{r}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+18 \\
+64 \\
+132 \\
+170
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="296" HEIGHT="109" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}\left(
+\begin{array}{rrrr}
+1 &amp; 1 &amp; 2 &amp; 0 \\
+3 &amp; 4 &amp; 3 &amp; 3...
+...array}{r}
+18 \\
+64 \\
+132 \\
+170
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+On obtient, &#224; 10 chiffres significatifs, les matrices
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = \left(
+\begin{array}{llll}
+0,09534625894 & -0,2531399260 & 0,8854220155  & -0,3779642750 \\
+0,2860387768  & 0,8785444534  & 0,05902808903 & -0,3779646436 \\
+0,5720775536  & 0,1191246736  & 0,2951406605  & 0,7559289670  \\
+0,7627700715  & -0,3871551801 & -0,3541687871 & -0,3779644584
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="629" HEIGHT="99" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}
+Q = \left(
+\begin{array}{llll}
+0,09534625894 &amp; -0,2531399...
+...871551801 &amp; -0,3541687871 &amp; -0,3779644584
+\end{array}
+\right)\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+et
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R = \left(
+\begin{array}{llll}
+10,48808848 & 12,10897488  & 11,91828237  & 10,39274222  \\
+0           & 0,6105139415 & -0,521170398 & 0,253139961  \\
+0           & 0            & 0,8263938712 & -0,885422067 \\
+0           & 0            & 0            & 0,3779644748
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="577" HEIGHT="99" BORDER="0"
+ SRC="img33.png"
+ ALT="\begin{displaymath}
+R = \left(
+\begin{array}{llll}
+10,48808848 &amp; 12,10897488 ...
+...0,885422067 \\
+0 &amp; 0 &amp; 0 &amp; 0,3779644748
+\end{array}
+\right)\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+et en effectuant une phase ascendante de r&#233;solution sur le syst&#232;me <IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ Rx=Q^tb$">
+, on obtient la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x =
+\left(
+\begin{array}{l}
+-10,99998304 \\6,999996597 \\10,99999346 \\11,99999437
+\end{array}
+\right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="208" HEIGHT="109" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}
+x =
+\left(
+\begin{array}{l}
+-10,99998304  6,999996597  10,99999346  11,99999437
+\end{array}
+\right).
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>On a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+p_2 \cdot q_1 & = & 0,19 \times 10^{-8} \\\\
+    p_3 \cdot q_1 & = & -0,40 \times 10^{-8} \\
+    p_3 \cdot q_2 & = & -0,395 \times 10^{-7} \\\\
+    p_4 \cdot q_1 & = & -0,26 \times 10^{-8} \\
+    p_4 \cdot q_2 & = & -0,7678 \times 10^{-7} \\
+    p_4 \cdot q_3 & = & 0,6333 \times 10^{-7}
+    \end{array}$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="202" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+p_2 \cdot q_1 &amp; = &amp; 0,19 \times 10^{-8} ...
+...} \\
+p_4 \cdot q_3 &amp; = &amp; 0,6333 \times 10^{-7}
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Comme on travaille &#224; 10 chiffres significatifs, les vecteurs <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ p_i$">
+ et <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ q_j$">
+ sont tr&#232;s pr&#232;s
+    d'&#234;tre vraiment orthogonaux. On ne peut donc pas esp&#233;rer une
+    r&#233;elle am&#233;lioration &#224; la partie b).
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>On obtient, &#224; 10 chiffres significatifs, les matrices
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q^* = \left(
+\begin{array}{llll}
+0,09534625894 & -0,2531399264 & 0,8854220083 & -0,3779643088 \\
+0,2860387768 & 0,8785444543 & 0,05902812837 & -0,3779644834 \\
+0,5720775536 & 0,1191246709 & 0,2951406606 & 0,7559289289 \\
+0,7627700715 & -0,3871551791 & -0,3541687984 & -0,3779646612
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="637" HEIGHT="99" BORDER="0"
+ SRC="img39.png"
+ ALT="\begin{displaymath}
+Q^* = \left(
+\begin{array}{llll}
+0,09534625894 &amp; -0,25313...
+...871551791 &amp; -0,3541687984 &amp; -0,3779646612
+\end{array}
+\right)\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+et
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R^* = \left(
+\begin{array}{llll}
+10,48808848 & 12,10897488 & 11,91828237 & 10,39274222 \\
+0           & 0,6105139414 & -0,5211704375 & 0,2531398842 \\
+0           & 0            & 0,8263938911  & -0,8854220037 \\
+0           & 0            & 0             & 0,3779644781
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="603" HEIGHT="99" BORDER="0"
+ SRC="img40.png"
+ ALT="\begin{displaymath}
+R^* = \left(
+\begin{array}{llll}
+10,48808848 &amp; 12,1089748...
+...,8854220037 \\
+0 &amp; 0 &amp; 0 &amp; 0,3779644781
+\end{array}
+\right)\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+et en effectuant une phase ascendante de r&#233;solution sur le syst&#232;me
+<!-- MATH
+ $R^*x=(Q^*)^tb$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ R^*x=(Q^*)^tb$">
+, on obtient la solution
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^* = \left(
+\begin{array}{l}
+-10,99976369 \\6,999958516  \\10,99990809 \\11,99991526
+\end{array}
+\right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="216" HEIGHT="109" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}
+x^* = \left(
+\begin{array}{l}
+-10,99976369  6,999958516  10,99990809  11,99991526
+\end{array}
+\right).
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>On a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+p_2^* \cdot q_1^* & = & 0,17 \times 10^{-8} \\\\
+    p_3^* \cdot q_1^* & = & -0,23 \times 10^{-8} \\
+    p_3^* \cdot q_2^* & = & -0,71 \times 10^{-8} \\\\
+    p_4^* \cdot q_1^* & = & -0,532 \times 10^{-7} \\
+    p_4^* \cdot q_2^* & = & -0,666 \times 10^{-8} \\
+    p_4^* \cdot q_3^* & = & 0,7556 \times 10^{-7}
+    \end{array}$
+ -->
+<IMG
+ WIDTH="214" HEIGHT="202" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+p_2^* \cdot q_1^* &amp; = &amp; 0,17 \times 10^{...
+...
+p_4^* \cdot q_3^* &amp; = &amp; 0,7556 \times 10^{-7}
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Les vecteurs ne sont donc pas significativement plus
+    orthogonaux qu'&#224; la partie a), ce qui confirme notre
+    intuition.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-08-02
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,308 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\newcommand{\non}[1]{\mathcal{#1}\!\!\!\!\slash\,}
+\newcommand{\axiom}[1]{
+\begin{minipage}[t]{12.5cm}
+\vspace{-0.4cm}
+\begin{minipage}[t]{8.0cm}
+\vspace{0.02cm}
+{#1}
+\end{minipage}
+\hspace{0.3cm}
+\begin{tabular}[t]{|p{3.5cm}|}
+\hline
+\vspace*{2cm} \\
+\hline
+\end{tabular}
+\end{minipage}
+\bigskip
+}
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+\centerline{\textsc{ \normalsize Automne 2005}}
+
+\bigskip
+
+\centerline{\large\bf MAT501 -- Fondements et histoire des mathématiques}
+
+\bigskip
+\centerline{\Large\bf Géométrie de Hilbert}
+\bigskip
+
+
+{\bf Axiomes d'incidence (ou d'appartenance)}
+
+\begin{description}
+\item[I1)] \axiom{Étant données deux points $A$ et $B$ distincts,
+il existe une et une seule droite $d$ appartenant à $A$ et $B$.}
+
+\item[I2)] \axiom{Étant donnée une droite $d$, il existe au moins
+deux points distincts $A$ et $B$ sur $d$. De plus, il existe au
+moins trois points non colinéaires.}
+
+\item[I3)] \axiom{Étant données trois points non colinéaires $A$, $B$ et $C$, il existe un et un seul plan $p$ incident avec $A,B$ et $C$.}
+
+\item[I4)] \axiom{Étant donné un plan $p$, il existe au moins un point $A$ incident avec $p$.}
+
+\item[I5)] \axiom{Soient $p$ un plan et $A$ et $B$ deux points tels que $A,B \in p$. Si $C \in d=(A,B)$, alors $C \in p$, c'est-à-dire que $d$ est entièrement comprise dans $p$. On note alors $d \subseteq p$.}
+
+\item[I6)] \axiom{Étant données deux plans $p_1$ et $p_2$, si
+$p_1$ et $p_2$ contiennent un point commun $A$, alors $p_1$ et
+$p_2$ admettent un autre point commun $B \neq A$ (et alors d'après
+(I5), $\alpha = (A,B) \in p_1 \cap p_2$).}
+
+\item[I7)] \axiom{Il y a au moins quatre points qui ne sont pas coplanaires.}
+
+\end{description}
+
+\vspace*{1cm}
+
+{\bf Axiomes d'ordre (ou d'orientation)}
+
+\begin{description}
+
+\item[O1)] \axiom{Si un point $C$ est entre deux points $A$ et $B$, alors $A,B$ et $C$ sont sur une droite et $C$ est entre $A$ et $B$, ce qu'on note $C \between AB$.}
+
+\item[O2)] \axiom{Étant donnés trois points $A,B$ et $C$ sur une droite, précisément un est entre les autres.}
+
+\item[O3)] \axiom{Étant donnés deux points $A$ et $B$, il existe
+un point $C$ tel que $B$ est entre $A$ et $C$.}
+
+\item[O4)] \axiom{(Axiome de Pasch) Soit $ABC$ un triangle donné
+et $d$ une droite qui ne passe ni par $A$, ni par $B$,  ni par
+$C$. Si $d$ intersecte un des trois côtés $AB$, $BC$ ou $CA$,
+alors $d$ intersecte un autre côté du triangle.}
+
+\end{description}
+
+
+
+
+
+
+
+
+\vspace*{1cm}
+
+{\bf Axiomes de congruence (ou de déplacements rigides)}
+
+\begin{description}
+
+\item[C1)] \axiom{Étant donnés deux points $A$ et $B$ sur une
+droite $d$ et $A'$ un point sur une droite $d'$, il existe un
+unique point $B'$ sur chaque côté de la droite $d'$ tel que $AB
+\equiv A'B'$.}
+
+\item[C2)] \axiom{Soient $A, B, A', B', A''$ et $B''$ six points.
+Si $AB \equiv A'B'$ et si $A'B' \equiv A''B''$, alors $AB \equiv
+A''B''$.}
+
+\item[C3)] \axiom{Soient $A,B$ et $C$ trois points sur une droite
+$d$ et $A',B'$ et $C'$ trois points sur une droite $d'$. Si $AB
+\equiv A'B'$ et que $BC \equiv B'C'$, alors, $AC \equiv A'C'$.}
+
+\item[C4)] \axiom{Étant donné un angle $\angle (d,e)$ formé par
+deux semi-droites $d$ et $e$ et une autre semi-droite $d'$, il
+existe une autre droite dans le plan sur chaque côté de $d'$ qui
+est unique et telle que $\angle (d,e) \equiv \angle (d',e')$.}
+
+\item[C5)] \axiom{Soient $ABC$ et $A'B'C'$ deux triangles. Si $AB
+\equiv A'B'$, $AC \equiv A'C'$ et $\angle BAC \equiv \angle
+B'A'C'$, alors $\angle ABC \equiv \angle A'B'C'$.}
+
+\end{description}
+
+
+
+
+
+
+
+
+
+\newpage
+
+{\bf Axiome sur les parallèles}
+
+\begin{description}
+
+\item[P1)] \axiom{Étant donnés une droite $d$ et un point $P$ qui
+n'est pas sur la droite $d$, il existe au plus une droite $d'$
+telle que $P \in d'$ et $d \cap d' = \varnothing$. Alors, $d'$ est
+une parallèle à $d$.}
+
+\end{description}
+
+
+
+
+
+
+
+
+
+\vspace*{1cm}
+
+{\bf Axiomes de continuité}
+
+\begin{description}
+
+\item[S1)] \axiom{Axiome d'Archimède. Étant donnés deux segments quelconques $AB$ et $CD$, il existe un nombre $n \in \mathbb{N}$ tel que $nCD > AB$.}
+
+\item[S2)] \axiom{Axiome de Cantor. Si $(A_n)$ et $(B_n)$ sont
+deux suites infinies de points telles que le segment
+$]A_{i+1},B_{i+1}[$ est inclu dans le segment $]A_i,B_i[$ pour
+tout $i$. Si, pour tout segment $]C,D[$ congru à un segment de la
+droite contenant les points $A_i$ et $B_i$, il existe $i$ tel que
+le segment $]A_i,B_i[$ soit congru à un segment inclus dans
+$]C,D[$, alors il existe un point appartenant à tous les segments
+$]A_i,B_i[$. En d'autres termes : toute suite de segments emboîtés
+dont la longueur tend vers 0 admet un point commun.}
+
+\end{description}
+
+\textbf{Remarques :}
+\begin{description}
+   \item[1)] Si ces axiomes sont contradictoires, alors la théorie des nombres réels est contradictoire.
+   \item[2)] Si le système d'axiomes obtenu en supprimant l'axiome de Cantor est contradictoire, alors la théorie des nombres rationnels (c'est-à-dire l'arithmétique) est contradictoire.
+\end{description}
+
+
+
+%Axiome de complétion. Il n'est pas possible d'étendre la géométrie
+%déterminée par les axiomes précédents de telle sorte que tous ces
+%axiomes demeurent valables.
+
+
+
+
+
+
+
+\newpage
+
+{\bf Conséquences des axiomes}
+
+\begin{description}
+
+\item[G1)] \axiom{Soient $d$ et $d'$ deux droites distinctes et $t$ une droite transversale qui coupe les deux droites $d$ et $d'$ en $\alpha$ et $\alpha'$ (avec $\alpha$ et $\alpha'$ des angles correspondants). Alors, $d \parallel d' \Leftrightarrow \alpha = \alpha'$.}
+
+\item[G2)] \axiom{Les angles opposés par le sommet sont congruents.}
+
+\item[G3)] \axiom{Théorème de Thalès sur le triangle isocèle. Soit
+$ABC$ un triangle. Alors, $CA \equiv CB \Leftrightarrow \alpha =
+\beta$.}
+
+\item[G4)] \axiom{Soit $ABC$ un triangle. Alors, $CA > CB \Leftrightarrow \beta > \alpha$.}
+
+\item[G5)] \axiom{Soient $\alpha$, $\beta$ et $\gamma$ les trois
+angles d'un triangle $ABC$. Alors, $\alpha + \beta + \gamma$ est
+congruent à deux angles droits.}
+
+\item[G6)] \axiom{Soit $ABC$ un triangle ayant comme angles
+$\alpha, \beta$ et $\gamma$ et soit $\delta$ l'angle extérieur en
+$B$ (c'est-à-dire que $\delta+ \beta$ est congruent à deux angles
+droits). Alors, $\delta \equiv \alpha + \gamma$.}
+
+\item[G7)] \axiom{Soient $ABC$ et $A'B'C'$ deux triangles. Si $AB
+\equiv A'B'$, $BC \equiv B'C'$ et $CA \equiv C'A'$, alors $ABC
+\equiv A'B'C'$, c'est-à-dire $\alpha \equiv \alpha'$, $\beta
+\equiv \beta'$ et $\gamma \equiv \gamma'$.}
+
+\item[G8)] \axiom{Soient $ABC$ et $A'B'C'$ deux triangles. Si $AB
+\equiv A'B'$, $\alpha \equiv \alpha'$ et $\beta \equiv \beta'$,
+alors $ABC \equiv A'B'C'$, c'est-à-dire $\gamma \equiv \gamma'$,
+$AC \equiv A'C'$ et $BC \equiv B'C'$.}
+
+\item[G8')] \axiom{Soient $ABC$ et $A'B'C'$ deux triangles. Si $AB
+\equiv A'B'$, $\alpha \equiv \alpha'$ et $\gamma \equiv \gamma'$,
+alors $ABC \equiv A'B'C'$, c'est-à-dire $\beta \equiv \beta'$, $AC
+\equiv A'C'$ et $BC \equiv B'C'$. }
+
+\item[G9)\ ] \axiom{Soient $ABC$ et $A'B'C'$ deux triangles. Si
+$AB \equiv A'B'$, $AC \equiv A'C'$, $\gamma \equiv \gamma'$ et $AB
+> AC$,
+ alors $ABC \equiv A'B'C'$, c'est-à-dire $BC \equiv B'C'$, $\alpha
+ \equiv \alpha'$ et $\beta \equiv \beta'$.}
+
+\item[G10)] \axiom{Théorème de Pythagore. Soit $ABC$ un triangle
+avec $\gamma = \angle ACB$ congruent à un angle droit. Posons $AB
+= c$, $BC =a$ et $CA = b$. Soit $D$ le pied de $C$ sur $AB$ (d'où
+$AB \perp CD$). Posons $AD = q$, $DB = p$ et $CD = h$.
+
+Alors,
+\begin{description}
+\item[i)] $c^2 = a^2 + b^2$ ; \item[ii)] $qc=b^2$ et $pc = a^2$ ;
+\item[iii)] $pq = h^2$. \end{description}
+
+Réciproquement, si $ABC$ est un triangle, $CD$ est la hauteur sur
+$AB$, $AD = q$, $DB = p$ et si une des trois propriétés i), ii) ou
+iii) est vraie, alors les deux autres le sont aussi et le triangle
+$ABC$ est un triangle droit avec angle droit $\gamma$ en $C$.}
+
+\item[G11)] \axiom{Soit $ABCD$ un quadrangle. \begin{description}
+
+\item[i)] Si $AB \parallel CD$ et $AD \parallel BC$, alors $AB
+\equiv CD$ et $AD\equiv BC$.
+
+\item[ii)] Inversement, si $AB \equiv CD$ et $AD\equiv BC$, alors
+$AB \parallel CD$ et $AD \parallel BC$.
+
+\item[iii)] Si $AB \equiv CD$ et $AB \parallel CD$, alors
+$AD\equiv BC$ et $BC \parallel AD$.
+
+\end{description}}
+
+\item[G12)] \axiom{Soit $ABCD$ un quadrangle inscrit dans un
+cercle $\Gamma$, c'est-à-dire que $A,B,C$ et $D$ sont des points
+de $\Gamma$. Alors, $\alpha+ \gamma$ et $\beta + \delta$ sont tous
+deux congruents à deux angles droits.}
+
+\item[G13)] \axiom{Soit $ABCD$ un quadrangle. Si $\alpha + \gamma$
+est congruent à deux angles droits, alors les points $A,B,C$ et
+$D$ sont sur un même cercle.}
+
+\item[G14)] \axiom{Soit $\Gamma$ un cercle de centre $C$ et $P$ un
+point de $\Gamma$. Soit $t$ une droite qui coupe le cercle
+$\Gamma$ uniquement au point $P$ (c'est dire que $t$ est la
+tangente à $\Gamma$ au point $P$). Alors, $t \perp PC$.}
+
+\item[G15)] \axiom{Soit $\Gamma$ un cercle de centre $C$ et $P$ un
+point de $\Gamma$. Soit $d$ une droite passant par $P$ telle que
+$d \perp PC$. Alors, $d$ est la tangente à $\Gamma$ au point $P$.}
+
+\item[G16)] \axiom{Soient $\Gamma_1$ et $\Gamma_2$ deux cercles de
+centres respectifs $C_1$ et $C_2$ s'intersectant en deux points
+distincts $P_1$ et $P_2$. Alors, $P_1P_2 \perp C_1C_2$.}
+
+
+\end{description}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

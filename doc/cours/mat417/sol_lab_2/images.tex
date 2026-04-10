@@ -1,0 +1,1098 @@
+\batchmode
+\documentclass[12pt]{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{html}
+
+%
+\providecommand{\perm}[3]{{\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\#1 & #2 & #3 \end{array} \right) \cdot a_{1,#1} a_{2,#2} a_{3,#3} }%
+\providecommand{\perma}[3]{ \cdot a_{1,#1} a_{2,#2} a_{3,#3} }%
+\providecommand{\semblableun}[1]{\overset{{\tiny\textrm{$\begin{array}{c} #1 \end{array}$}}}{\sim}}%
+\providecommand{\semblabledeux}[2]{\overset{{\tiny\textrm{$\begin{array}{c} #1 \\#2 \end{array}$}}}{\sim}}%
+\providecommand{\semblabletrois}[3]{\overset{\begin{array}{c} #1 \\#2 \\#3 \end{array}}{\sim}} 
+
+
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Alpha}{\textrm{A}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1276}%
+\begin{displaymath}\begin{array}[t]{rcl}
+\det A  & = & \sum\limits_{\sigma \in \mathcal{S}_3} \left( {\rm sgn}(\sigma) \prod\limits_{i=1}^{3} a_{i, \sigma(i)} \right) \\\\
+        & = & {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\1 & 2 & 3 \end{array} \right) \cdot a_{1,1} a_{2,2} a_{3,3}  + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\1 & 3 & 2 \end{array} \right) \cdot a_{1,1} a_{2,3} a_{3,2}   \\\\
+        &   & \quad + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\2 & 1 & 3 \end{array} \right) \cdot a_{1,2} a_{2,1} a_{3,3}  + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\2 & 3 & 1 \end{array} \right) \cdot a_{1,2} a_{2,3} a_{3,1}  \\
+        &   & \quad + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\3 & 1 & 2 \end{array} \right) \cdot a_{1,3} a_{2,1} a_{3,2}  + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\3 & 2 & 1 \end{array} \right) \cdot a_{1,3} a_{2,2} a_{3,1}  \\\\
+        & = & (+1) \cdot a_{1,1} a_{2,2} a_{3,3}  + (-1) \cdot a_{1,1} a_{2,3} a_{3,2}  \\
+        &   & \quad + (-1) \cdot a_{1,2} a_{2,1} a_{3,3}  + (+1) \cdot a_{1,2} a_{2,3} a_{3,1}  \\
+        &   & \quad + (+1) \cdot a_{1,3} a_{2,1} a_{3,2}  + (-1) \cdot a_{1,3} a_{2,2} a_{3,1} 
+        \\\\
+        & = & 1 \cdot 1 \cdot 2 - 1 \cdot 2 \cdot 3 - 3 \cdot 3 \cdot 2 + 3 \cdot 2 \cdot 2 + 2 \cdot 3 \cdot 3 - 2 \cdot 1 \cdot 2
+        \\\\
+        & = & 2 - 6 - 18 + 12 + 18 - 4 \\\\
+        & = & 4
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1278}%
+$ {\rm cof} A = \left( \begin{array}{rrr} -4 & -2 & 7 \\0 &
+-2 & 3 \\4 & 4 & -8 \end{array} \right)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1280}%
+$\displaystyle A^{-1} = \frac{1}{4} \left( \begin{array}{rrr} -4 & 0 & 4
+\\-2 & -2 & 4 \\7 & 3 & -8 \end{array} \right).$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1282}%
+\begin{displaymath}
+\det A =
+\left|
+\begin{array}{ccc}
+1 & 3 & 2 \\
+3 & 1 & 2 \\
+2 & 3 & 2
+\end{array}
+\right|
+= 2 + 12 + 18 - 4 - 6 - 18 = 4
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1284}%
+\begin{displaymath}
+\Delta_1 =
+\left|
+\begin{array}{ccc}
+3 & 3 & 2 \\
+4 & 1 & 2 \\
+4 & 3 & 2
+\end{array}
+\right|
+= 6 + 24 + 24 - 8 - 18 - 24 = 4
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1286}%
+\begin{displaymath}
+\Delta_2 =
+\left|
+\begin{array}{ccc}
+1 & 3 & 2 \\
+3 & 4 & 2 \\
+2 & 4 & 2
+\end{array}
+\right|
+= 8 + 12 + 24 - 16 - 8 - 18 = 2
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1288}%
+\begin{displaymath}
+\Delta_3 =
+\left|
+\begin{array}{ccc}
+1 & 3 & 3 \\
+3 & 1 & 4 \\
+2 & 3 & 4
+\end{array}
+\right|
+= 4 + 24 + 27 - 6 - 12 - 36 = 1
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1290}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\frac{1}{4}
+\left(
+\begin{array}{r}
+4 \\
+2 \\
+1
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+1 \\
+\frac{1}{2} \\
+\frac{1}{4}
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1297}%
+\begin{displaymath}\begin{array}{rl}
+A = &   \left(
+        \begin{array}{rrr|r}
+        1 & 3 & -2 & 3 \\
+        2 & 4 & 0  & 8 \\
+        3 & 6 & 5  & 17
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_2-2L_1 \\L_3-3L_1 \end{array}$}}}{\sim} &    \left(
+                                        \begin{array}{rrr|r}
+                                        1 & 3 & -2 & 3 \\
+                                        0 & -2 & 4  & 2 \\
+                                        0 & -3 & 11  & 8
+                                        \end{array}
+                                        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_3 - \frac{3}{2}L_2 \end{array}$}}}{\sim} &    \left(
+                                        \begin{array}{rrr|r}
+                                        1 & 3 & -2 & 3 \\
+                                        0 & 1 & -2  & -1 \\
+                                        0 & 0 &  5  & 5
+                                        \end{array}
+                                        \right)
+\\\\
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1299}%
+\begin{displaymath}\begin{array}[t]{rclclcl}
+x_3 & = & 1 \\\\
+x_2 & = & -1 + 2x_3         & = & -1 + 2 \cdot 1            & = & 1 \\\\
+x_1 & = & 3 - 3x_2 + 2x_3   & = & 3 - 3 \cdot 1 + 2 \cdot 1 & = & 2.
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1301}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2 \\
+1 \\
+1
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1303}%
+$ m=4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1305}%
+\begin{displaymath}\begin{array}{rll}
+A = &   \left(
+        \begin{array}{rrr|r}
+        1 & 3 & -2 & 3 \\
+        2 & 4 & 0  & 8 \\
+        3 & 6 & 5  & 17
+        \end{array}
+        \right)
+    & {\rm Ligne} = (3,\cdot,\cdot)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1-0,333L_3 \\L_2-0,667L_3 \end{array}$}}}{\sim} &    \left(
+                                                \begin{array}{rrr|r}
+                                                0,000 & 1,000 & -3,666 & -2,666 \\
+                                                0,000 & 0,000 & -3,334 & -3,330 \\
+                                                3,000 & 6,000 & 5,000  & 17,00
+                                                \end{array}
+                                                \right)
+    & {\rm Ligne} = (3, 1, \cdot)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c}  \end{array}$}}}{\sim} &    \left(
+                    \begin{array}{rrr|r}
+                    0,000 & 1,000 & -3,666 & -2,666 \\
+                    0,000 & 0,000 & -3,334 & -3,330 \\
+                    3,000 & 6,000 & 5,000  & 17,00
+                    \end{array}
+                    \right)
+    & {\rm Ligne} = (3, 1, 2)
+\\\\
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1307}%
+\begin{displaymath}\begin{array}[t]{rclclcl}
+x_3 & = & -3,330/-3,334              & = & 0,9988 \\\\
+x_2 & = & -2,666 + 3,666x_3          & = & -2,666 + 3,662       & = & 0,996 \\\\
+x_1 & = & \frac{17,00 - 6,000x_2 - 5,000x_3}{3,000}  & = & \frac{17,00 - 5,976 - 4,994}{3,00} & = & \frac{6,026}{3} = 2,009.
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1309}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2,009 \\
+0,996 \\
+0,9988
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1313}%
+\begin{displaymath}\begin{array}{rll}
+A = &   \left(
+        \begin{array}{rrr|r}
+        1 & 3 & -2 & 3 \\
+        2 & 4 & 0  & 8 \\
+        3 & 6 & 5  & 17
+        \end{array}
+        \right)
+    & \begin{array}{l} {\rm Ligne} = (3,\cdot,\cdot) \\{\rm Colonne} = (2,\cdot,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1-0,5L_3 \\L_2-0,667L_3 \end{array}$}}}{\sim} &    \left(
+                                                \begin{array}{rrr|r}
+                                                -0,5000 & 0,000 & -4,500 & -5,500 \\
+                                                0,000   & 0,000 & -3,334 & -3,330 \\
+                                                3,000   & 6,000 & 5,000  & 17,00
+                                                \end{array}
+                                                \right)
+    & \begin{array}{l} {\rm Ligne} = (3,1,\cdot) \\{\rm Colonne} = (2,3,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_2-\frac{3,34}{4,50}L_1 \end{array}$}}}{\sim} &    \left(
+                    \begin{array}{rrr|r}
+                    -0,5000 & 0,000 & -4,500 & -5,500 \\
+                    0,3705  & 0,000 & 0,000  & 0,7450 \\
+                    3,000   & 6,000 & 5,000  & 17,00
+                    \end{array}
+                    \right)
+    & \begin{array}{l} {\rm Ligne} = (3,1,2) \\{\rm Colonne} = (2,3,1) \end{array}
+\\\\
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1315}%
+\begin{displaymath}\begin{array}[t]{rclclcl}
+x_1 & = & 0,7450/0,3705                            & = & 2,011 \\\\
+x_3 & = & \frac{-5,500 + 0,5000x_1}{-4,500}         & = & \frac{-5,500 + 1,006}{-4,500}       & = & 0,9987 \\\\
+x_2 & = & \frac{17,00 - 3,000x_1 - 5,000x_3}{6,000}  & = & \frac{17,00 - 6,033 - 4,994}{6,000} & = & \frac{5,970}{6,000} = 0,995.
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1317}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2,011 \\
+0,995 \\
+0,9987
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1319}%
+$\displaystyle \begin{array}{rcl}
+r(x_0)  & = & b-Ax_0 \\
+& = &
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right)
+-
+\left(
+\begin{array}{rrr}
+1 & 3 & -2 \\
+2 & 4 & 0  \\
+3 & 6 & 5
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+2 \\1 \\1
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right)
+-
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+0 \\0 \\0
+\end{array}
+\right).
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1321}%
+$\displaystyle \begin{array}{rcl}
+r(x_0)  & = & b-Ax_0 \\
+& = &
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right)
+-
+\left(
+\begin{array}{rrr}
+1 & 3 & -2 \\
+2 & 4 & 0  \\
+3 & 6 & 5
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+2,007 \\0,997 \\0,9988
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right)
+-
+\left(
+\begin{array}{c}
+3,000 \\8,002 \\17,00
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+0,000 \\-0,002000 \\0,000
+\end{array}
+\right).
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1323}%
+$\displaystyle \begin{array}{rcl}
+r(x_0)  & = & b-Ax_0 \\
+& = &
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right)
+-
+\left(
+\begin{array}{rrr}
+1 & 3 & -2 \\
+2 & 4 & 0  \\
+3 & 6 & 5
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+2,011 \\0,995 \\0,9987
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+3 \\8 \\17
+\end{array}
+\right)
+-
+\left(
+\begin{array}{c}
+2,999 \\8,002 \\16,99
+\end{array}
+\right) \\
+& = &
+\left(
+\begin{array}{c}
+0,001000 \\-0,002000 \\0,01000
+\end{array}
+\right).
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1325}%
+\begin{displaymath}\begin{array}{rcl}
+    \| r(x_0) \|    & = & \sqrt{(-0,000)^2 + (-0,002000)^2 + (0,000)^2} \\
+                    & = & \sqrt{0,000 + 0,000004000 + 0,000} \\
+                    & = & \sqrt{0,000004000} \\
+                    & = & 0,002000
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1327}%
+\begin{displaymath}\begin{array}{rcl}
+    \| r(x_0) \|    & = & \sqrt{(0,001000)^2 + (-0,002000)^2 + (0,01000)^2} \\
+                    & = & \sqrt{0,0000010000 + 0,000004000 + 0,0001000} \\
+                    & = & \sqrt{0,000005000 + 0,0001000} \\
+                    & = & \sqrt{0,0001050} \\
+                    & = & 0,01025
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1329}%
+$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1331}%
+$ A^{(0)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1333}%
+$ n^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1335}%
+$ n^2-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1337}%
+$ A^{(1)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1339}%
+$ (n-1)^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1341}%
+$ (n-1)^2 -1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1343}%
+$ A^{(k)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1345}%
+$ (n-k)^2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1347}%
+$ (n-k)^2 -1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1349}%
+$ A^{n-1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1351}%
+$ k$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1353}%
+$ n-2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1355}%
+\begin{displaymath}\begin{array}{rcl}
+\sum\limits_{i=0}^{n-2} [ (n-k)^2 -1 ]
+    & = & \sum\limits_{k=0}^{n-2} (n-k)^2 - \sum\limits_{i=0}^{n-2} 1 \\\\
+    & = & \sum\limits_{k=0}^{n-2} (n-k)^2 - (n-1) \\\\
+    & = & \sum\limits_{k=2}^{n} k^2 - (n-1) \\\\
+    & = & \sum\limits_{k=1}^{n} k^2 - 1 - (n-1) \\\\
+    & = & \sum\limits_{k=1}^{n} k^2 - n \\\\
+    & = & \frac{n(n+1)(2n+1)}{6} - n \\\\
+    & = & \frac{2n^3 + 3n^2 + n}{6} - n \\\\
+    & = & \frac{2n^3 + 3n^2 -5n}{6} \\\\
+    & = & \frac{1}{3}n^3 + \frac{1}{2}n^2 -\frac{5}{6}n
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1357}%
+$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n +
+\frac{1}{3}n^3 + \frac{1}{2}n^2 -\frac{5}{6}n =
+n^3 + 2n^2 -2n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1359}%
+$ t=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1361}%
+\begin{displaymath}
+\begin{array}{rcrcrcrcr}
+x(t) & = & 4Ae^{-t} & + & 14Be^{-2t} & + & Ce^{-3t} & + & e^{t} \\
+y(t) & = & -9Ae^{-t} & - & 30Be^{-2t} & - & 2Ce^{-3t} &  &  \\
+z(t) & = & 6Ae^{-t} & + & 17Be^{-2t} & + & Ce^{-3t} & - & e^{t}
+\end{array}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1363}%
+\begin{displaymath}
+\begin{array}{rcrcrcrcr}
+0 & = & 4A  & + & 14B & + & C  & + & 1  \\
+0 & = & -9A & - & 30B & - & 2C &   &    \\
+0 & = & 6A  & + & 17B & + & C  & - & 1
+\end{array}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1365}%
+\begin{displaymath}\begin{array}{rll}
+A = &   \left(
+        \begin{array}{rrr|r}
+        4  & 14  & 1  & -1 \\
+        -9 & -30 & -2 & 0  \\
+        6  & 17  & 1  & 1
+        \end{array}
+        \right)
+    & \begin{array}{l} {\rm Ligne} = (2,\cdot,\cdot) \\{\rm Colonne} = (2,\cdot,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1+\frac{14}{30}L_2 \\L_3+\frac{17}{30}L_2 \end{array}$}}}{\sim}
+    &    \left(
+         \begin{array}{rrr|r}
+         \frac{-6}{30}  &  0  & \frac{2}{30}    & -1 \\
+        -9              & -30 & -2              & 0  \\
+         \frac{27}{30}   &  0  & \frac{-4}{30}   & 1
+\par
+\end{array}
+         \right)
+    & \begin{array}{l} {\rm Ligne} = (2,3,\cdot) \\{\rm Colonne} = (2,1,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1+\frac{2}{9}L_3 \end{array}$}}}{\sim} &
+        \left(
+        \begin{array}{rrr|r}
+         0              &  0  & \frac{1}{27}   & \frac{-7}{9}  \\
+        -9              & -30 & -2              & 0             \\
+        \frac{9}{10}    &  0  & \frac{-2}{15}   & 1
+        \end{array}
+        \right)
+    & \begin{array}{l} {\rm Ligne} = (2,3,1) \\{\rm Colonne} = (2,1,3) \end{array}
+\\\\
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1367}%
+\begin{displaymath}\begin{array}[t]{rclclcl}
+x_3 & = & -21 \\\\
+x_1 & = & \frac{1 + \frac{2}{15}x_3}{\frac{9}{10}}  & = & \frac{\frac{-27}{15}}{\frac{9}{10}}    & = & -2 \\\\
+x_2 & = & \frac{9x_1 +2x_3}{-30}                    & = & \frac{-60}{-30}           & = & 2.
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1369}%
+\begin{displaymath}
+\begin{array}{rcrcrcrcr}
+x(t) & = & -8e^{-t}  & + & 28e^{-2t} & + & -21e^{-3t} & + & e^{t} \\
+y(t) & = & 18e^{-t} & - & 60e^{-2t} & + & 42e^{-3t} &   &       \\
+z(t) & = & -12e^{-t}  & + & 34e^{-2t}  & + & -21e^{-3t} & - & e^{t}.
+\end{array}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1374}%
+$ (T|b)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1376}%
+$ T^{(0)}=T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1378}%
+$ b^{(0)}=b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1380}%
+$ k=1,2,\ldots,n-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1382}%
+$ T_{k,k}^{(k-1)} = 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1386}%
+$ k+1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1388}%
+$ T^{(k-1)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1390}%
+$ b^{(k-1)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1392}%
+$ m_{k+1,k} = \frac{T_{k+1,k}^{(k-1)}}{T_{k,k}^{(k-1)}}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1394}%
+$ T_{k+1,k+1}^{(k)} = T_{k+1,k+1}^{(k-1)} - m_{k+1,k}T_{k,k+1}^{(k-1)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1396}%
+$ b_{k+1}^{(k)} = b_{k+1}^{(k-1)} - m_{k+1,k}b_{k}^{(k-1)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1415}%
+$ T'x=b'$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1417}%
+$ b'= (b_1',b_2',\ldots,b_n')^{t}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1419}%
+\begin{displaymath}
+T' =
+\left(
+\begin{array}{ccccccccccc}
+d_1'     & u_1       & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & d_2'      & u_2       & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & d_3'      & u_3       & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & d_4'      & u_4       & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & 0         & d_5'      & \ddots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & 0         & 0         & \ddots & \ddots   & 0         & 0         & 0       & 0         \\
+\vdots  & \vdots    & \vdots    & \vdots    & \vdots    & \ddots & \ddots   & \ddots    & \vdots    & \vdots  & \vdots    \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & d_{n-3}'  & u_{n-3}   & 0       & 0         \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & d_{n-2}'  & u_{n-2} & 0         \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & d_{n-1}' & u_{n-1}   \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & d_{n}'
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1421}%
+$ x_n = \frac{b_n'}{d_n'}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1423}%
+$ x_i = \frac{b_i' - u_{i}x_{i+1}}{d_i'}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1425}%
+$ i = n-1, n-2, \ldots, 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1427}%
+$ m_{k+1,k}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1429}%
+$ T_{k+1,k+1}^{(k)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1431}%
+$ b_{k+1}^{(k)}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1435}%
+$ 5(n-1)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1437}%
+$ x_n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1439}%
+$ x_{n-1}, \ldots,x_2,x_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1441}%
+$ 3(n-1) +1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1443}%
+$ 5(n-1) + 3(n-1) + 1 = 8n-7$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1445}%
+\begin{displaymath}\begin{array}{rl}
+A = &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4 & 0  & 0  & 0 \\
+        -4 & 6  & -4 & 0  & 0 \\
+        0  & -4 & 6  & -4 & 1 \\
+        0  & 0  & -4 & 5  & 0
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_2+\frac{4}{5}L_1 \end{array}$}}}{\sim}
+    &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4             & 0  & 0  & 0 \\
+        0  & \frac{14}{5}   & -4 & 0  & 0 \\
+        0  & -4             & 6  & -4 & 1 \\
+        0  & 0              & -4 & 5  & 0
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_3 + \frac{10}{7}L_2 \end{array}$}}}{\sim}
+    &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4             & 0             & 0  & 0 \\
+        0  & \frac{14}{5}   & -4            & 0  & 0 \\
+        0  & 0              & \frac{2}{7}   & -4 & 1 \\
+        0  & 0              & -4            & 5  & 0
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_4 + 14L_3 \end{array}$}}}{\sim}
+    &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4             & 0             & 0   & 0 \\
+        0  & \frac{14}{5}   & -4            & 0   & 0 \\
+        0  & 0              & \frac{2}{7}   & -4  & 1 \\
+        0  & 0              & 0             & -51 & 14
+        \end{array}
+        \right)
+\\\\
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1447}%
+\begin{displaymath}\begin{array}[t]{rclclcl}
+x_4 & = & \frac{-14}{51} \\\\
+x_3 & = & \frac{1 +4 x_4}{\frac{2}{7}}      & = & \frac{\frac{-5}{51}}{\frac{2}{7}}        & = & \frac{-35}{102} \\\\
+x_2 & = & \frac{4x_3}{\frac{14}{5}}         & = & \frac{\frac{-70}{51}}{\frac{14}{5}}      & = & \frac{-25}{51} \\\\
+x_1 & = & \frac{4x_2}{5}                    & = & \frac{\frac{-100}{51}}{5}                & = & \frac{-20}{51}.
+\end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1449}%
+\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+\frac{-20}{51} \\
+\frac{-25}{51} \\
+\frac{-35}{102} \\
+\frac{-14}{51}
+\end{array}
+\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

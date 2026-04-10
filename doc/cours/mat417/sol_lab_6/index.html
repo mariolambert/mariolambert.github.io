@@ -1,0 +1,1268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_6</TITLE>
+<META NAME="description" CONTENT="sol_lab_6">
+<META NAME="keywords" CONTENT="sol_lab_6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_6.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 6 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrr} 2 & -1 & 0 \\-1 & 4 & -1 \\0 & -1 & 2 \end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right)
+=
+\left( \begin{array}{r} 3 \\0 \\3 \end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="313" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$\displaystyle \left( \begin{array}{rrr} 2 &amp; -1 &amp; 0 \ -1 &amp; 4 &amp; -1 \ 0 &amp; -1 &amp; 2...
+...nd{array} \right)
+=
+\left( \begin{array}{r} 3 \ 0 \ 3 \end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Les &#233;quations de Gauss-Seidel sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x_1^{(k+1)} & = & \frac{3}{2}  &   &                       & + & \frac{1}{2} x_2^{(k)}         &  &          \\\\
+    x_2^{(k+1)} & = & 0  & + & \frac{1}{4} x_1^{(k+1)}         &   &                       & + & \frac{1}{4} x_3^{(k)}         \\\\
+    x_3^{(k+1)} & = & \frac{3}{2}  &  &                        & + & \frac{1}{2} x_2^{(k+1)}         &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="436" HEIGHT="144" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} &amp; = &amp; \frac{3}{2} &amp; &amp; &amp; + &amp; \f...
+...&amp; = &amp; \frac{3}{2} &amp; &amp; &amp; + &amp; \frac{1}{2} x_2^{(k+1)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et la matrice d'it&#233;ration <IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ F_{G-S}$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrr}
+    0 & \frac{1}{2} & 0 \\\\
+    0 & \frac{1}{8} & \frac{1}{4} \\\\
+    0 & \frac{1}{16} & \frac{1}{8}
+    \end{array}
+    \right)
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="123" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrr}
+0 &amp; \frac{1}{2} &amp; 0 \ \\
+0 &amp; \frac...
+...8} &amp; \frac{1}{4} \ \\
+0 &amp; \frac{1}{16} &amp; \frac{1}{8}
+\end{array}
+\right)
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Cela suit de ce que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ A$">
+ est &#224; dominance diagonale
+    stricte.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>On a que <!-- MATH
+ $\| F \|_{\infty} = \frac{1}{2}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ \Vert F \Vert _{\infty} = \frac{1}{2}$">
+. Ainsi, pour <!-- MATH
+ $\varepsilon = 10^{-7}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \varepsilon = 10^{-7}$">
+,
+    on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_{\infty} ) - \ln \| x^{(1)} - x^{(0)} \|_{\infty}}{\ln \| F \|_{\infty}} \\\\
+      & \approx   & \frac{\ln 10^{-7} (1 - 0,5) - \ln \| (3/2,0,3/2)^t \|_{\infty}}{\ln 0,5} \\\\
+      & \approx   & \frac{\ln 10^{-7}\cdot 0,5 - \ln \sqrt{3/2}}{\ln 0,5} \\\\
+      & \approx   & \frac{-17,01397538}{-0,6931471806} \\\\
+      & \approx   & 24,54597791 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="290" HEIGHT="278" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...,01397538}{-0,6931471806} \ \\
+&amp; \approx &amp; 24,54597791 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 25 it&#233;rations de Gauss-Seidel pour obtenir la pr&#233;cision souhait&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>On obtient &#224; 10 chiffres significatifs les it&#233;r&#233;s successifs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 0 & [0             &  0             & 0] \\
+         k & = & 1 & [1.500000000  &  .3750000000  &  1.687500000] \\
+         k & = & 2 & [1.687500000  &  .8437500000  &  1.921875000] \\
+         k & = & 3 & [1.921875000  &  .9609375000  &  1.980468750] \\
+         k & = & 4 & [1.980468750  &  .9902343750  &  1.995117188] \\
+         k & = & 5 & [1.995117188  &  .9975585940  &  1.998779297] \\
+         k & = & 6 & [1.998779297  &  .9993896484  &  1.999694824] \\
+         k & = & 7 & [1.999694824  &  .9998474120  &  1.999923706] \\
+         k & = & 8 & [1.999923706  &  .9999618530  &  1.999980926] \\
+         k & = & 9 & [1.999980926  &  .9999904630  &  1.999995232] \\
+        k & = & 10 & [1.999995232  &  .9999976160  &  1.999998808] \\
+        k & = & 11 & [1.999998808  &  .9999994040  &  1.999999702] \\
+        k & = & 12 & [1.999999702  &  .9999998510  &  1.999999926] \\
+        k & = & 13 & [1.999999926  &  .9999999630  &  1.999999982] \\
+        k & = & 14 & [1.999999982  &  .9999999910  &  1.999999996] \\
+        k & = & 15 & [1.999999996  &  .9999999980  &  1.999999999] \\
+        k & = & 16 & [1.999999999  &  .9999999996  &  2.000000000] \\
+        k & = & 17 & [2.000000000  &  1.000000000  &  2.000000000] \\
+        k & = & 18 & [2.000000000  &  1.000000000  &  2.000000000]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="426" HEIGHT="455" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0] \\
+k &amp; = &amp;...
+... &amp; 18 &amp; [2.000000000 &amp; 1.000000000 &amp; 2.000000000]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrrr}
+2  & 10  & -4 & 1 \\
+3 & 0 & 9 & -4 \\
+7  & 3  & 0 & 2 \\
+4 & -1 & 1 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array}
+\right) = \left( \begin{array}{r} 15 \\12 \\21 \\-28
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \left( \begin{array}{rrrr}
+2 &amp; 10 &amp; -4 &amp; 1 \\
+3 &amp; 0 &amp; 9 &amp; -4 \...
+...
+\right) = \left( \begin{array}{r} 15 \ 12 \ 21 \ -28
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+Permutons d'abord les lignes du syst&#232;me d'&#233;quation pour obtenir le
+nouveau syst&#232;me
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrrr}
+7  & 3  & 0 & 2 \\
+2  & 10  & -4 & 1 \\
+3 & 0 & 9 & -4 \\
+4 & -1 & 1 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array}
+\right) = \left( \begin{array}{r} 21 \\15 \\12 \\-28
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$\displaystyle \left( \begin{array}{rrrr}
+7 &amp; 3 &amp; 0 &amp; 2 \\
+2 &amp; 10 &amp; -4 &amp; 1 \\...
+...
+\right) = \left( \begin{array}{r} 21 \ 15 \ 12 \ -28
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Les &#233;quations de Gauss-Seidel sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrrrr}
+    x_1^{(k+1)} & = & 3            &   &                             & - & \frac{3}{7} x_2^{(k)}           &   &                          & - & \frac{2}{7} x_4^{(k)}   \\\\
+    x_2^{(k+1)} & = & \frac{3}{2}  & - & \frac{1}{5} x_1^{(k+1)}     &   &                                 & + & \frac{2}{5} x_3^{(k)}    & - & \frac{1}{10} x_4^{(k)}  \\\\
+    x_3^{(k+1)} & = & \frac{4}{3}  & - & \frac{1}{3} x_1^{(k+1)}     &   &                                 &   &                          & + & \frac{4}{9} x_4^{(k)}   \\\\
+    x_4^{(k+1)} & = & \frac{7}{2}  & + & \frac{1}{2} x_1^{(k+1)}     & - & \frac{1}{8} x_2^{(k+1)}         & + & \frac{1}{8} x_3^{(k+1)}  &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="548" HEIGHT="194" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrrrr}
+x_1^{(k+1)} &amp; = &amp; 3 &amp; &amp; &amp; - &amp; \frac{3}{7...
+...rac{1}{8} x_2^{(k+1)} &amp; + &amp; \frac{1}{8} x_3^{(k+1)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et la matrice d'it&#233;ration <IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ F_{G-S}$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrrr}
+0 & -\frac{3}{7} & 0 & -\frac{2}{7} \\\\
+0 & {\frac {3}{35}} & \frac{2}{5} & -{\frac{3}{70}} \\\\
+0 & \frac{1}{7} & 0 & {\frac{34}{63}} \\\\
+0 & -{\frac {29}{140}} & -\frac{1}{20} & -{\frac{353}{5040}}
+    \end{array}
+    \right)
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="228" HEIGHT="180" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrrr}
+0 &amp; -\frac{3}{7} &amp; 0 &amp; -\frac{2}{7} ...
+...{\frac {29}{140}} &amp; -\frac{1}{20} &amp; -{\frac{353}{5040}}
+\end{array}
+\right)
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Cela suit de ce que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ A$">
+ est &#224; dominance diagonale
+    stricte.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>On a que <!-- MATH
+ $\| F \|_{\infty} = \frac{5}{7}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \Vert F \Vert _{\infty} = \frac{5}{7}$">
+. Ainsi, pour <!-- MATH
+ $\varepsilon = 10^{-7}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \varepsilon = 10^{-7}$">
+,
+    on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_{\infty} ) - \ln \| x^{(1)} - x^{(0)} \|_{\infty}}{\ln \| F \|_{\infty}} \\\\
+      & \approx   & \frac{\ln 10^{-7} (1 - 5/7) - \ln \| (3,3/2,4/3,7/2)^t \|_{\infty}}{\ln 5/7} \\\\
+      & \approx   & \frac{\ln 10^{-7}\cdot 2/7 - \ln 7/2}{\ln 5/7} \\\\
+      & \approx   & \frac{-18,62362159}{-0,3364722366} \\\\
+      & \approx   & 55.34965315 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="317" HEIGHT="272" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...,62362159}{-0,3364722366} \ \\
+&amp; \approx &amp; 55.34965315 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 56 it&#233;rations de Gauss-Seidel pour obtenir la pr&#233;cision souhait&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>On obtient &#224; 10 chiffres significatifs les it&#233;r&#233;s successifs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{lllllll}
+k & = & 0 & [0             &  0             & 0           & 0] \\
+   k & = & 1 & [3.            &  .9000000000   & .333333333  &  4.929166667] \\
+   k & = & 2 & [1.205952381 & .8992261903 & 3.122089947 & 4.380834160] \\
+   k & = & 3 & [1.362950444 & 2.038162474 & 2.826053922 & 4.279961653] \\
+   k & = & 4 & [.903655610 & 2.021694282 & 2.934319975 & 4.065906017] \\
+   k & = & 5 & [.971872160 & 2.072762956 & 2.816445287 & 4.078896371] \\
+   k & = & 6 & [.946274056 & 2.029433667 & 2.830751479 & 4.073301754] \\
+   k & = & 7 & [.966442213 & 2.031681974 & 2.821542265 & 4.081953643] \\
+   k & = & 8 & [.963006685 & 2.027820205 & 2.826532724 & 4.081342407] \\
+   k & = & 9 & [.964836367 & 2.029511576 & 2.825651170 & 4.081935633] \\
+   k & = & 10 & [.963942001 & 2.029278504 & 2.826212947 & 4.081587806] \\
+   k & = & 11 & [.964141268 & 2.029498145 & 2.825991934 & 4.081632358] \\
+   k & = & 12 & [.964034407 & 2.029426657 & 2.826047357 & 4.081594791] \\
+   k & = & 13 & [.964075778 & 2.029444308 & 2.826016869 & 4.081609459] \\
+   k & = & 14 & [.964064023 & 2.029432998 & 2.826027308 & 4.081606300] \\
+   k & = & 15 & [.964069772 & 2.029436339 & 2.826023986 & 4.081608342] \\
+   k & = & 16 & [.964067757 & 2.029435208 & 2.826025566 & 4.081607673] \\
+   k & = & 17 & [.964068433 & 2.029435772 & 2.826025043 & 4.081607875] \\
+   k & = & 18 & [.964068133 & 2.029435603 & 2.826025233 & 4.081607770] \\
+   k & = & 19 & [.964068235 & 2.029435669 & 2.826025153 & 4.081607803] \\
+   k & = & 20 & [.964068198 & 2.029435641 & 2.826025179 & 4.081607791] \\
+   k & = & 21 & [.964068213 & 2.029435650 & 2.826025169 & 4.081607796] \\
+   k & = & 22 & [.964068208 & 2.029435647 & 2.826025173 & 4.081607795] \\
+   k & = & 23 & [.964068210 & 2.029435648 & 2.826025172 & 4.081607796] \\
+   k & = & 24 & [.964068209 & 2.029435648 & 2.826025172 & 4.081607795] \\
+   k & = & 25 & [.964068209 & 2.029435648 & 2.826025172 & 4.081607795]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="541" HEIGHT="607" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}\begin{array}{lllllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0 &amp; 0] \\
+k ...
+...068209 &amp; 2.029435648 &amp; 2.826025172 &amp; 4.081607795]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrrr}
+2  & 3  & 7 & 4 \\
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array} \right)
+=
+\left( \begin{array}{r} 35  \\41 \\27 \\-31 \end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="371" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle \left( \begin{array}{rrrr}
+2 &amp; 3 &amp; 7 &amp; 4 \\
+10 &amp; 0 &amp; 3 &amp; -1 \\...
+...right)
+=
+\left( \begin{array}{r} 35 \ 41 \ 27 \ -31 \end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+Permutons d'abord les lignes du syst&#232;me d'&#233;quation pour obtenir le
+nouveau syst&#232;me
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrrr}
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+2  & 3  & 7 & 4 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array}
+\right) = \left( \begin{array}{r} 41 \\27 \\35 \\-31
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \left( \begin{array}{rrrr}
+10 &amp; 0 &amp; 3 &amp; -1 \\
+-4 &amp; 9 &amp; 0 &amp; 1 \...
+...
+\right) = \left( \begin{array}{r} 41 \ 27 \ 35 \ -31
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+On obtient les &#233;quations de Gauss-Seidel
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrrrr}
+    x_1^{(k+1)} & = & \frac{41}{10} &   &                             &   &                                 & - & \frac{3}{10} x_3^{(k)}   & + & \frac{1}{10} x_4^{(k)} \\\\
+    x_2^{(k+1)} & = & 3             & + & \frac{4}{9} x_1^{(k+1)}     &   &                                 &   &                          & - & \frac{1}{9} x_4^{(k)} \\\\
+    x_3^{(k+1)} & = & 5             & - & \frac{2}{7} x_1^{(k+1)}     & - & \frac{3}{7} x_2^{(k+1)}         &   &                          & - & \frac{4}{7} x_4^{(k)}  \\\\
+    x_4^{(k+1)} & = & \frac{31}{8}  & + & \frac{1}{8} x_1^{(k+1)}     & - & \frac{1}{2} x_2^{(k+1)}         & + & \frac{1}{4} x_3^{(k+1)}  &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="555" HEIGHT="194" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrrrr}
+x_1^{(k+1)} &amp; = &amp; \frac{41}{10} &amp; &amp; &amp; &amp; ...
+...rac{1}{2} x_2^{(k+1)} &amp; + &amp; \frac{1}{4} x_3^{(k+1)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et la matrice d'it&#233;ration <IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ F_{G-S}$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrrr}
+0 & 0 & -\frac{3}{10}       &  \frac{1}{10}        \\\\
+0 & 0 & -\frac{2}{15}       & -\frac{1}{15}        \\\\
+0 & 0 & \frac{1}{7}         & -\frac{4}{7}         \\\\
+0 & 0 & {\frac {109}{1680}} & -{\frac {163}{1680}}
+    \end{array}
+    \right).
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="207" HEIGHT="180" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrrr}
+0 &amp; 0 &amp; -\frac{3}{10} &amp; \frac{1}{10}...
+...\
+0 &amp; 0 &amp; {\frac {109}{1680}} &amp; -{\frac {163}{1680}}
+\end{array}
+\right).
+$">
+</DIV><P>
+</P>
+
+<P>
+Comme la matrice <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ A$">
+ est &#224; dominance diagonale stricte, on est assur&#233; de la convergence.
+
+<P>
+On sait de plus que <!-- MATH
+ $\| F \|_{\infty} = \frac{5}{7}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \Vert F \Vert _{\infty} = \frac{5}{7}$">
+. Ainsi, pour <!-- MATH
+ $\varepsilon = 10^{-7}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ \varepsilon = 10^{-7}$">
+,
+    on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_{\infty} ) - \ln \| x^{(1)} - x^{(0)} \|_{\infty}}{\ln \| F \|_{\infty}} \\\\
+      & \approx   & \frac{\ln 10^{-7} (1 - 5/7) - \ln \| (3,3/2,4/3,7/2)^t \|_{\infty}}{\ln 5/7} \\\\
+      & \approx   & \frac{\ln 10^{-7}\cdot 2/7 - \ln 7/2}{\ln 5/7} \\\\
+      & \approx   & \frac{-18,62362159}{-0,3364722366} \\\\
+      & \approx   & 55.34965315 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="317" HEIGHT="272" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...,62362159}{-0,3364722366} \ \\
+&amp; \approx &amp; 55.34965315 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 56 it&#233;rations de Gauss-Seidel pour obtenir la pr&#233;cision
+    souhait&#233;e. Remarquons que si nous avions plut&#244;t utilis&#233; la
+    norme 1, on aurait eu que <!-- MATH
+ $\| F \|_{1} = \frac{1403}{1680}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$ \Vert F \Vert _{1} = \frac{1403}{1680}$">
+,
+    que <!-- MATH
+ $\| x^{(1)} - x^{(0)} \|_{1} = \frac{66\;029}{5040}$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ \Vert x^{(1)} - x^{(0)} \Vert _{1} = \frac{66\;029}{5040}$">
+, ce
+    qui aurait demand&#233; au moins <IMG
+ WIDTH="68" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$ k = 114$">
+ it&#233;rations.
+
+<P>
+On obtient &#224; 10 chiffres significatifs les it&#233;r&#233;s successifs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{lllllll}
+k & = & 0 & [0             &  0             & 0           & 0] \\
+   k & = & 1 & [4.100000000 & 4.822222222 & 1.761904762 & 2.416865080] \\
+   k & = & 2 & [3.813115079 & 4.426177249 & .632539682 & 2.296685680] \\
+   k & = & 3 & [4.139906663 & 4.584771219 & .539875757 & 2.235071662] \\
+   k & = & 4 & [4.161544439 & 4.601234011 & .561846063 & 2.235037566] \\
+   k & = & 5 & [4.154949938 & 4.598306910 & .565004162 & 2.236466328] \\
+   k & = & 6 & [4.154145384 & 4.597790579 & .564638883 & 2.236532604] \\
+   k & = & 7 & [4.154261596 & 4.597834864 & .564548828 & 2.236502475] \\
+   k & = & 8 & [4.154285599 & 4.597848881 & .564553180 & 2.236499555] \\
+   k & = & 9 & [4.154284002 & 4.597848495 & .564555471 & 2.236500120] \\
+   k & = & 10 & [4.154283371 & 4.597848151 & .564555475 & 2.236500215] \\
+   k & = & 11 & [4.154283379 & 4.597848145 & .564555420 & 2.236500205] \\
+   k & = & 12 & [4.154283394 & 4.597848153 & .564555419 & 2.236500203] \\
+   k & = & 13 & [4.154283395 & 4.597848153 & .564555420 & 2.236500203] \\
+   k & = & 14 & [4.154283394 & 4.597848153 & .564555420 & 2.236500203] \\
+   k & = & 15 & [4.154283394 & 4.597848153 & .564555420 & 2.236500203]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="541" HEIGHT="376" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{displaymath}\begin{array}{lllllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0 &amp; 0] \\
+k ...
+...4283394 &amp; 4.597848153 &amp; .564555420 &amp; 2.236500203]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Si on compare avec les r&#233;sultats de la question 5 du laboratoire 5, on remarque que la convergence avec la m&#233;thode de Gauss-Seidel
+est plus rapide qu'avec la m&#233;thode de Jacobi. Cela est d&#251; au fait que le rayon spectral de <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ F_J$">
+ est de 0,4264607133 et que celui de
+<IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ F_{G-S}$">
+ n'est que de 0,1523623501.
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrr}
+-2  & 5  & -1 \\
+-3 & 2 & 5 \\
+6  & -4  & -1
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right) =
+\left( \begin{array}{r} 0 \\1 \\7 \end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="313" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$\displaystyle \left( \begin{array}{rrr}
+-2 &amp; 5 &amp; -1 \\
+-3 &amp; 2 &amp; 5 \\
+6 &amp; -...
+...end{array} \right) =
+\left( \begin{array}{r} 0 \ 1 \ 7 \end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>On obtient les &#233;quations de Gauss-Seidel
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x_1^{(k+1)} & = & 0             &   &                             & + & \frac{5}{2} x_2^{(k)}           & - & \frac{1}{2} x_3^{(k)} \\\\
+    x_2^{(k+1)} & = & \frac{1}{2}   & + & \frac{3}{2} x_1^{(k+1)}     &   &                                 & - & \frac{5}{2} x_3^{(k)} \\\\
+    x_3^{(k+1)} & = & -7            & + & 6 x_1^{(k+1)}               & - & 4 x_2^{(k+1)}                   &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="449" HEIGHT="144" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} &amp; = &amp; 0 &amp; &amp; &amp; + &amp; \frac{5}{2} ...
+...)} &amp; = &amp; -7 &amp; + &amp; 6 x_1^{(k+1)} &amp; - &amp; 4 x_2^{(k+1)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>On a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F_{G-S} =
+    \left(
+    \begin{array}{rrr}
+0 & \frac{5}{2}       &  -\frac{1}{2}        \\\\
+0 & \frac{15}{4}       & -\frac{13}{4}        \\\\
+0 & 0 & 10
+    \end{array}
+    \right).
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="221" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$\displaystyle F_{G-S} =
+\left(
+\begin{array}{rrr}
+0 &amp; \frac{5}{2} &amp; -\frac{1...
+...
+0 &amp; \frac{15}{4} &amp; -\frac{13}{4} \ \\
+0 &amp; 0 &amp; 10
+\end{array}
+\right).
+$">
+</DIV><P>
+</P>
+
+<P>
+Il est clair que <!-- MATH
+ $\rho(F_{G-S}) = 10$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \rho(F_{G-S}) = 10$">
+ et alors le syst&#232;me ne peut converger.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Il suffit de permuter les lignes de la matrice <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ A$">
+ pour obtenir le syst&#232;me
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrr}
+6  & -4  & -1 \\
+-2  & 5  & -1 \\
+-3 & 2 & 5
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right) =
+\left( \begin{array}{r} 7 \\0 \\1  \end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="313" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\displaystyle \left( \begin{array}{rrr}
+6 &amp; -4 &amp; -1 \\
+-2 &amp; 5 &amp; -1 \\
+-3 &amp;...
+...end{array} \right) =
+\left( \begin{array}{r} 7 \ 0 \ 1 \end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+On obtient alors
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F_{G-S} =
+    \left(
+    \begin{array}{rrr}
+0 & \frac{2}{3}       &  \frac{1}{6}        \\\\
+0 & \frac{4}{15}       & -\frac{4}{15}        \\\\
+0 & \frac{22}{75} & -\frac{1}{150}
+    \end{array}
+    \right).
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="228" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$\displaystyle F_{G-S} =
+\left(
+\begin{array}{rrr}
+0 &amp; \frac{2}{3} &amp; \frac{1}...
+...frac{4}{15} \ \\
+0 &amp; \frac{22}{75} &amp; -\frac{1}{150}
+\end{array}
+\right).
+$">
+</DIV><P>
+</P>
+
+<P>
+qui a comme rayon spectral la valeur 0,3373425559. Le syst&#232;me est donc convergent.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>On obtient &#224; 10 chiffres significatifs les it&#233;r&#233;s successifs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 0 & [0             & 0           & 0] \\
+         k & = & 1 & [1.166666667  &  .4666666668  &  .7133333335] \\
+         k & = & 2 & [1.596666667  &  .7813333335  &  .8454666668] \\
+         k & = & 3 & [1.828466667  &  .9004800002  &  .9368880000] \\
+         k & = & 4 & [1.923134667  &  .9566314668  &  .9712282132] \\
+         k & = & 5 & [1.966292347  &  .9807625814  &  .9874703754] \\
+         k & = & 6 & [1.985086784  &  .9915287887  &  .9944405546] \\
+         k & = & 7 & [1.993425952  &  .9962584917  &  .9975521744] \\
+         k & = & 8 & [1.997097690  &  .9983495109  &  .9989188096] \\
+         k & = & 9 & [1.998719476  &  .9992715523  &  .9995230650] \\
+        k & = & 10 & [1.999434879  &  .9996785646  &  .9997895012] \\
+        k & = & 11 & [1.999750627  &  .9998581510  &  .9999071156] \\
+        k & = & 12 & [1.999889954  &  .9999374047  &  .9999590102] \\
+        k & = & 13 & [1.999951438  &  .9999723772  &  .9999819122] \\
+        k & = & 14 & [1.999978570  &  .9999878104  &  .9999920178] \\
+        k & = & 15 & [1.999990544  &  .9999946212  &  .9999964776] \\
+        k & = & 16 & [1.999995827  &  .9999976263  &  .9999984454] \\
+        k & = & 17 & [1.999998159  &  .9999989527  &  .9999993140] \\
+        k & = & 18 & [1.999999188  &  .9999995380  &  .9999996978] \\
+        k & = & 19 & [1.999999642  &  .9999997964  &  .9999998664] \\
+        k & = & 20 & [1.999999842  &  .9999999101  &  .9999999410] \\
+        k & = & 21 & [1.999999930  &  .9999999602  &  .9999999740] \\
+        k & = & 22 & [1.999999970  &  .9999999828  &  .9999999888] \\
+        k & = & 23 & [1.999999987  &  .9999999926  &  .9999999950] \\
+        k & = & 24 & [1.999999994  &  .9999999966  &  .9999999974] \\
+        k & = & 25 & [1.999999998  &  .9999999987  &  .9999999996] \\
+        k & = & 26 & [1.999999999  &  .9999999995  &  .9999999992] \\
+        k & = & 27 & [2.000000000  &  .9999999998  &  1.000000000] \\
+        k & = & 28 & [2.000000000  &  1.000000000  &  1.000000000] \\
+        k & = & 29 & [2.000000000  &  1.000000000  &  1.000000000]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="426" HEIGHT="709" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0] \\
+k &amp; = &amp;...
+... &amp; 29 &amp; [2.000000000 &amp; 1.000000000 &amp; 1.000000000]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD>Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrr}
+1  & -0,6  & 0,5 \\
+-0,6 & 1 & -0,5 \\
+0,5  & -0,5  & 1
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right) =
+\left( \begin{array}{r} -1,1 \\1,1 \\0 \end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="399" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\displaystyle \left( \begin{array}{rrr}
+1 &amp; -0,6 &amp; 0,5 \\
+-0,6 &amp; 1 &amp; -0,5 \\...
+...rray} \right) =
+\left( \begin{array}{r} -1,1 \ 1,1 \ 0 \end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Les &#233;quations de Jacobi sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x_1^{(k+1)} & = & -1,1  &   &                       & + & 0,6 x_2^{(k)}         & - & 0,5 x_3^{(k)}         \\\\
+    x_2^{(k+1)} & = &  1,1  & + & 0,6 x_1^{(k)}         &   &                       & + & 0,5 x_3^{(k)}         \\\\
+    x_3^{(k+1)} & = &  0    & - & 0,5 x_1^{(k)}         & + & 0,5 x_2^{(k)}         &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="483" HEIGHT="144" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} &amp; = &amp; -1,1 &amp; &amp; &amp; + &amp; 0,6 x_2^{...
+...1)} &amp; = &amp; 0 &amp; - &amp; 0,5 x_1^{(k)} &amp; + &amp; 0,5 x_2^{(k)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et les &#233;quations de Gauss-Seidel sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x_1^{(k+1)} & = & -1,1  &   &                       & + & 0,6 x_2^{(k)}         & - & 0,5 x_3^{(k)}         \\\\
+    x_2^{(k+1)} & = &  1,1  & + & 0,6 x_1^{(k+1)}         &   &                       & + & 0,5 x_3^{(k)}         \\\\
+    x_3^{(k+1)} & = &  0    & - & 0,5 x_1^{(k+1)}         & + & 0,5 x_2^{(k+1)}         &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="518" HEIGHT="144" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} &amp; = &amp; -1,1 &amp; &amp; &amp; + &amp; 0,6 x_2^{...
+...&amp; = &amp; 0 &amp; - &amp; 0,5 x_1^{(k+1)} &amp; + &amp; 0,5 x_2^{(k+1)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>La matrice d'it&#233;ration <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ F_J$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrr}
+    0 & 0,6 & -0,5 \\\\
+    0,6 & 0 &  0,5 \\\\
+    -0,5 & 0,5 & 0
+    \end{array}
+    \right)
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="197" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrr}
+0 &amp; 0,6 &amp; -0,5 \ \\
+0,6 &amp; 0 &amp; 0,5 \ \\
+-0,5 &amp; 0,5 &amp; 0
+\end{array}
+\right)
+$">
+</DIV><P>
+</P>
+
+<P>
+Comme son rayon spectral est <!-- MATH
+ $\rho(F_J) \approx -1,068114575 > 1$
+ -->
+<IMG
+ WIDTH="227" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ \rho(F_J) \approx -1,068114575 &gt; 1$">
+,
+    on en d&#233;duit que le syst&#232;me diverge.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Puisque <!-- MATH
+ $\rho(F_{G-S}) \approx
+0,38\;729\;833\;46$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ \rho(F_{G-S}) \approx
+0,38\;729\;833\;46$">
+, on sait que la m&#233;thode it&#233;rative de Gauss-Seidel
+    converge. On obtient les it&#233;r&#233;s successifs
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 0 & [0             &  0             & 0] \\
+        k & = & 1 & [-1.1          &  .44           & .770] \\
+        k & = & 2 & [-1.2210       &  .75240        & .986700] \\
+        k & = & 3 & [-1.1419100    &  .90820400     & 1.025057000] \\
+        k & = & 4 & [-1.067606100  &  .9719648400   & 1.019785470] \\
+        k & = & 5 & [-1.026713831  &  .9938644364   & 1.010289134] \\
+        k & = & 6 & [-1.008825905  &  .9998490240   & 1.004337464] \\
+        k & = & 7 & [-1.002259318  &  1.000813141   & 1.001536230] \\
+        k & = & 8 & [-1.000280230  &  1.000599977   & 1.000440104] \\
+        k & = & 9 & [-.9998600658  &  1.000304012   & 1.000082039] \\
+        k & = & 10 & [-.9998586123 &   1.000125852  &  .9999922322] \\
+        k & = & 11 & [-.9999206049 &   1.000043753  &  .9999821789] \\
+        k & = & 12 & [-.9999648376 &   1.000012187  &  .9999885123] \\
+        k & = & 13 & [-.9999869440 &   1.000002090  &  .9999945170] \\
+        k & = & 14 & [-.9999960045 &   .9999996558  &  .9999978301] \\
+        k & = & 15 & [-.9999991215 &   .9999994421  &  .9999992818] \\
+        k & = & 16 & [-.9999999756 &   .9999996555  &  .9999998156] \\
+        k & = & 17 & [-1.000000114 &   .9999998394  &  .9999999767] \\
+        k & = & 18 & [-1.000000085 &   .9999999374  &  1.000000011] \\
+        k & = & 19 & [-1.000000043 &   .9999999797  &  1.000000011] \\
+        k & = & 20 & [-1.000000018 &   .9999999947  &  1.000000006] \\
+        k & = & 21 & [-1.000000006 &   .9999999994  &  1.000000003] \\
+        k & = & 22 & [-1.000000002 &   1.000000000  &  1.000000001] \\
+        k & = & 23 & [-1.000000000 &   1.000000000  &  1.000000000] \\
+        k & = & 24 & [-1.000000000 &   1.000000000  &  1.000000000]
+    \end{array}$
+ -->
+<IMG
+ WIDTH="442" HEIGHT="594" BORDER="0"
+ SRC="img39.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0] \\
+k &amp; = &amp;...
+...&amp; 24 &amp; [-1.000000000 &amp; 1.000000000 &amp; 1.000000000]
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>Comme <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ F_J$">
+ n'est pas non n&#233;gative (puisque
+    <!-- MATH
+ $F_J[1,3] = -0,5$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ F_J[1,3] = -0,5$">
+), on ne peut appliquer le th&#233;or&#232;me.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-08-02
+</ADDRESS>
+</BODY>
+</HTML>

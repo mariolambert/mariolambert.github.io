@@ -1,0 +1,1275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_5</TITLE>
+<META NAME="description" CONTENT="sol_lab_5">
+<META NAME="keywords" CONTENT="sol_lab_5">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_5.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 5 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Comme la norme un de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ F$">
+ est <!-- MATH
+ $\| F \|_1 = \frac{15}{32} < \frac{1}{2}$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ \Vert F \Vert _1 = \frac{15}{32} &lt; \frac{1}{2}$">
+, on sait que
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\| x^{(5)}-x^{(4)} \|_1 < \varepsilon \Rightarrow \| e(x^{(5)}) \|_1 < \varepsilon.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="293" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$\displaystyle \Vert x^{(5)}-x^{(4)} \Vert _1 &lt; \varepsilon \Rightarrow \Vert e(x^{(5)}) \Vert _1 &lt; \varepsilon.$">
+</DIV><P>
+</P>
+
+<P>
+Or,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    \| x^{(5)}-x^{(4)} \|_1 & = & \| [-0.000000004,-0.000000001,-0.000000001] \|_1 \\
+                            & = & 0,6 \times 10^{-8}.
+    \end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="558" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+\Vert x^{(5)}-x^{(4)} \Vert _1 &amp; = &amp; \Vert [-...
+...-0.000000001,-0.000000001] \Vert _1 \\
+&amp; = &amp; 0,6 \times 10^{-8}.
+\end{array}$">
+</DIV><P>
+</P>
+
+<P>
+Comme <!-- MATH
+ $\| x^{(5)}-x^{(4)} \|_1 < 10^{-7}$
+ -->
+<IMG
+ WIDTH="174" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \Vert x^{(5)}-x^{(4)} \Vert _1 &lt; 10^{-7}$">
+, on en d&#233;duit que <!-- MATH
+ $\| e(x^{(5)}) \|_1 < 10^{-7}$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ \Vert e(x^{(5)}) \Vert _1 &lt; 10^{-7}$">
+.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>On sait que le nombre <IMG
+ WIDTH="15" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ k$">
+ d'it&#233;rations satisfait
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_1 ) - \ln \| x^{(1)} - x^{(0)} \|_1}{\ln \| F \|_1} \\\\
+      & \approx   & \frac{\ln 10^{-10} (1 - 0,4687500000 ) - \ln \| (\frac{67}{16},\frac{5}{4},\frac {13}{8})^t \|_1}{\ln 0,4687500000} \\\\
+      & \approx   & \frac{\ln 10^{-10}\cdot 0,5312500000 - \ln \sqrt{\frac{113}{16}}}{\ln 0,4687500000} \\\\
+      & \approx   & \frac{-24,63577304}{-0,7576857017} \\\\
+      & \approx   & 32.51450171 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="344" HEIGHT="279" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...,63577304}{-0,7576857017} \ \\
+&amp; \approx &amp; 32.51450171 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 33 it&#233;rations pour obtenir la pr&#233;cision souhait&#233;e.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Les &#233;quations de Jacobi sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x^{(k+1)} & = & \frac{3}{2}  &   &                     & + & \frac{1}{2} y^{(k)} &  &  \\\\
+    y^{(k+1)} & = & 0 & + & \frac{1}{4} x^{(k)} &   &                     & + & \frac{1}{4} z^{(k)} \\\\
+    z^{(k+1)} & = & \frac{3}{2}  &  &  & + & \frac{1}{2} y^{(k)} &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="400" HEIGHT="136" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x^{(k+1)} &amp; = &amp; \frac{3}{2} &amp; &amp; &amp; + &amp; \fra...
+...1)} &amp; = &amp; \frac{3}{2} &amp; &amp; &amp; + &amp; \frac{1}{2} y^{(k)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et la matrice d'it&#233;ration <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ F$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrr}
+    0 & \frac{1}{2} & 0 \\\\
+    \frac{1}{4} & 0 &  \frac{1}{4} \\\\
+    0 & \frac{1}{2} & 0
+    \end{array}
+    \right)
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="118" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrr}
+0 &amp; \frac{1}{2} &amp; 0 \ \\
+\frac{1}{4} &amp; 0 &amp; \frac{1}{4} \ \\
+0 &amp; \frac{1}{2} &amp; 0
+\end{array}
+\right)
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Cela suit de ce que <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ A$">
+ est &#224; dominance diagonale stricte.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>&#192; l'aide de Maple, on v&#233;rifie que <!-- MATH
+ $\| F \|_{\infty} = \frac{1}{2}$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ \Vert F \Vert _{\infty} = \frac{1}{2}$">
+. Ainsi, pour <!-- MATH
+ $\varepsilon = 10^{-7}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ \varepsilon = 10^{-7}$">
+,
+    on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_{\infty} ) - \ln \| x^{(1)} - x^{(0)} \|_{\infty}}{\ln \| F \|_{\infty}} \\\\
+      & \approx   & \frac{\ln 10^{-7} (1 - 0,5) - \ln \| (3/2,0,3/2)^t \|_{\infty}}{\ln 0,5} \\\\
+      & \approx   & \frac{\ln 10^{-7}\cdot 0,5 - \ln \sqrt{3/2}}{\ln 0,5} \\\\
+      & \approx   & \frac{-17,01397538}{-0,6931471806} \\\\
+      & \approx   & 24,54597791 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="290" HEIGHT="278" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...,01397538}{-0,6931471806} \ \\
+&amp; \approx &amp; 24,54597791 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 25 it&#233;rations de Jacobi pour obtenir la pr&#233;cision souhait&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>&#192; 10 chiffres significatifs, on obtient :
+
+<P>
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 0 & [0            &  0             & 0] \\
+         k & = & 1 & [1.500000000  &  0.            & 1.500000000] \\
+         k & = & 2 & [1.500000000  &  .7500000000   & 1.500000000] \\
+         k & = & 3 & [1.875000000  & .7500000000    & 1.875000000] \\
+         k & = & 4 & [1.875000000  &  .9375000000   & 1.875000000] \\
+         k & = & 5 & [1.968750000  &  .9375000000   & 1.968750000] \\
+         k & = & 6 & [1.968750000  &  .9843750000   & 1.968750000] \\
+         k & = & 7 & [1.992187500  &  .9843750000   & 1.992187500] \\
+         k & = & 8 & [1.992187500  &  .9960937500   & 1.992187500] \\
+         k & = & 9 & [1.998046875  &  .9960937500   & 1.998046875] \\
+         k & = & 10 & [1.998046875 &   .9990234376  &  1.998046875] \\
+         k & = & 11 & [1.999511719 &   .9990234376  &  1.999511719] \\
+         k & = & 12 & [1.999511719 &   .9997558596  &  1.999511719] \\
+         k & = & 13 & [1.999877930 &   .9997558596  &  1.999877930] \\
+         k & = & 14 & [1.999877930 &   .9999389650  &  1.999877930] \\
+         k & = & 15 & [1.999969482 &   .9999389650  &  1.999969482] \\
+         k & = & 16 & [1.999969482 &   .9999847410  &  1.999969482] \\
+         k & = & 17 & [1.999992370 &   .9999847410  &  1.999992370] \\
+         k & = & 18 & [1.999992370 &   .9999961850  &  1.999992370] \\
+         k & = & 19 & [1.999998092 &   .9999961850  &  1.999998092] \\
+         k & = & 20 & [1.999998092 &   .9999990460  &  1.999998092] \\
+         k & = & 21 & [1.999999523 &   .9999990460  &  1.999999523] \\
+         k & = & 22 & [1.999999523 &   .9999997616  &  1.999999523] \\
+         k & = & 23 & [1.999999881 &   .9999997616  &  1.999999881] \\
+         k & = & 24 & [1.999999881 &   .9999999404  &  1.999999881] \\
+         k & = & 25 & [1.999999970 &   .9999999404  &  1.999999970] \\
+         k & = & 26 & [1.999999970 &   .9999999850  &  1.999999970] \\
+         k & = & 27 & [1.999999992 &   .9999999850  &  1.999999992] \\
+         k & = & 28 & [1.999999992 &   .9999999960  &  1.999999992] \\
+         k & = & 29 & [1.999999998 &   .9999999960  &  1.999999998] \\
+         k & = & 30 & [1.999999998 &   .9999999990  &  1.999999998] \\
+         k & = & 31 & [2.000000000 &   .9999999990  &  2.000000000] \\
+         k & = & 32 & [2.000000000 &   1.000000000  &  2.000000000] \\
+         k & = & 33 & [2.000000000 &   1.000000000  &  2.000000000]
+    \end{array}
+    $
+ -->
+<IMG
+ WIDTH="426" HEIGHT="802" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0] \\
+k &amp; = &amp;...
+...33 &amp; [2.000000000 &amp; 1.000000000 &amp; 2.000000000]
+\end{array}
+\end{displaymath}">
+
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Les &#233;quations de Jacobi sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x^{(k+1)} & = & \frac{1}{4}  &   &                     & - & \frac{3}{4} y^{(k)} & - & \frac{1}{2} z^{(k)} \\\\
+    y^{(k+1)} & = & -\frac{2}{5} & + & \frac{1}{5} x^{(k)} &   &                     &  &  \\\\
+    z^{(k+1)} & = & 1  & - & \frac{2}{3} x^{(k)} & - & \frac{1}{3} y^{(k)} &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="416" HEIGHT="136" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x^{(k+1)} &amp; = &amp; \frac{1}{4} &amp; &amp; &amp; - &amp; \fra...
+...&amp; - &amp; \frac{2}{3} x^{(k)} &amp; - &amp; \frac{1}{3} y^{(k)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et la matrice d'it&#233;ration <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ F$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrr}
+    0 & - \frac{3}{4} & - \frac{1}{2} \\\\
+    - \frac{1}{5} & 0 & 0 \\\\
+    - \frac{2}{3} & - \frac{1}{3} & 0
+    \end{array}
+    \right)
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="162" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrr}
+0 &amp; - \frac{3}{4} &amp; - \frac{1}{2} \ ...
+...1}{5} &amp; 0 &amp; 0 \ \\
+- \frac{2}{3} &amp; - \frac{1}{3} &amp; 0
+\end{array}
+\right)
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Cela suit de ce que <IMG
+ WIDTH="24" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$ A^t$">
+ est &#224; dominance diagonale stricte.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>&#192; l'aide de Maple, on v&#233;rifie que <!-- MATH
+ $\| F \|_2 \approx 0,9851008258$
+ -->
+<IMG
+ WIDTH="183" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$ \Vert F \Vert _2 \approx 0,9851008258$">
+. Ainsi, pour <!-- MATH
+ $\varepsilon = 10^{-7}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ \varepsilon = 10^{-7}$">
+,
+    on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_2 ) - \ln \| x^{(1)} - x^{(0)} \|_2}{\ln \| F \|_2} \\\\
+      & \approx   & \frac{\ln 10^{-7} (1 - 0,9851008258 ) - \ln \| (0,-1/5,-2/3)^t \|_2}{\ln 0,9851008258} \\\\
+      & \approx   & \frac{\ln 10^{-7}\cdot 0,0148991742 - \ln \sqrt{\frac{109}{225}}}{\ln 0,9851008258} \\\\
+      & \approx   & \frac{-19.96216888}{-0,01501128183} \\\\
+      & \approx   & 1329,811078 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="366" HEIGHT="276" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...96216888}{-0,01501128183} \ \\
+&amp; \approx &amp; 1329,811078 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 1330 it&#233;rations de Jacobi pour obtenir la pr&#233;cision souhait&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>&#192; 10 chiffres significatifs, on obtient :
+
+<P>
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 0 & [0            &  0             & 0] \\
+        k & = & 1 & [.2500000000  &  -.4000000000  &  1.] \\
+        k & = & 2 & [.0500000000  &  -.4500000000  &  .9666666666] \\
+        k & = & 3 & [.1041666667  &  -.4100000000  &  1.116666667] \\
+        k & = & 4 & [-.0008333335 &   -.4208333333 &   1.067222222] \\
+        k & = & 5 & [.0320138890  &  -.3998333333  &  1.140833334] \\
+        k & = & 6 & [-.0205416670 &   -.4064027778 &   1.111935185] \\
+        k & = & 7 & [-.0011655091 &   -.3958916666 &   1.149162037] \\
+        k & = & 8 & [-.0276622685 &   -.3997668982 &   1.132740895] \\
+        k & = & 9 & [-.0165452739 &   -.3944675463 &   1.151697145] \\
+       k & = & 10 & [-.0299979128 &   -.3966909452 &   1.142519365] \\
+       k & = & 11 & [-.0237414736 &   -.3940004174 &   1.152228924] \\
+       k & = & 12 & [-.0306141490 &   -.3952517053 &   1.147161122] \\
+       k & = & 13 & [-.0271417820 &   -.3938771702 &   1.152160001] \\
+       k & = & 14 & [-.0306721229 &   -.3945716436 &   1.149386911] \\
+       k & = & 15 & [-.0287647228 &   -.3938655754 &   1.151971963] \\
+       k & = & 16 & [-.0305867999 &   -.3942470554 &   1.150465007] \\
+       k & = & 17 & [-.0295472119 &   -.3938826400 &   1.151806885] \\
+       k & = & 18 & [-.0304914625 &   -.3940905576 &   1.150992355] \\
+       k & = & 19 & [-.0299282593 &   -.3939017075 &   1.151691161] \\
+       k & = & 20 & [-.0304192999 &   -.3940143481 &   1.151252742] \\
+       k & = & 21 & [-.0301156099 &   -.3939161400 &   1.151617649] \\
+       k & = & 22 & [-.0303717195 &   -.3939768780 &   1.151382453] \\
+       k & = & 23 & [-.0302085680 &   -.3939256561 &   1.151573439] \\
+       k & = & 24 & [-.0303424774 &   -.3939582864 &   1.151447597] \\
+       k & = & 25 & [-.0302550837 &   -.3939315045 &   1.151547747] \\
+       k & = & 26 & [-.0303252451 &   -.3939489833 &   1.151480557] \\
+       k & = & 27 & [-.0302785410 &   -.3939349510 &   1.151533158] \\
+       k & = & 28 & [-.0303153658 &   -.3939442918 &   1.151497344] \\
+       k & = & 29 & [-.0302904532 &   -.3939369268 &   1.151525008] \\
+       k & = & 30 & [-.0303098089 &   -.3939419094 &   1.151505944] \\
+       k & = & 31 & [-.0302965400 &   -.3939380382 &   1.151520509] \\
+       k & = & 32 & [-.0303067259 &   -.3939406920 &   1.151510373]
+       \end{array}$
+ -->
+<IMG
+ WIDTH="456" HEIGHT="778" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0] \\
+k &amp; = &amp;...
+... 32 &amp; [-.0303067259 &amp; -.3939406920 &amp; 1.151510373]
+\end{array}\end{displaymath}">
+
+
+<P>
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 33 & [-.0302996675 &   -.3939386548 &   1.151518048] \\
+       k & = & 34 & [-.0303050329 &   -.3939400665 &   1.151512663] \\
+       k & = & 35 & [-.0303012816 &   -.3939389934 &   1.151516711] \\
+       k & = & 36 & [-.0303041105 &   -.3939397437 &   1.151513852] \\
+       k & = & 37 & [-.0303021182 &   -.3939391779 &   1.151515988] \\
+       k & = & 38 & [-.0303036106 &   -.3939395764 &   1.151514471] \\
+       k & = & 39 & [-.0303025532 &   -.3939392779 &   1.151515599] \\
+       k & = & 40 & [-.0303033411 &   -.3939394894 &   1.151514795] \\
+       k & = & 41 & [-.0303027805 &   -.3939393318 &   1.151515390] \\
+       k & = & 42 & [-.0303031962 &   -.3939394439 &   1.151514964] \\
+       k & = & 43 & [-.0303028991 &   -.3939393608 &   1.151515279] \\
+       k & = & 44 & [-.0303031189 &   -.3939394202 &   1.151515053] \\
+       k & = & 45 & [-.0303029613 &   -.3939393762 &   1.151515219] \\
+       k & = & 46 & [-.0303030773 &   -.3939394077 &   1.151515100] \\
+       k & = & 47 & [-.0303029942 &   -.3939393845 &   1.151515187] \\
+       k & = & 48 & [-.0303030551 &   -.3939394012 &   1.151515124] \\
+       k & = & 49 & [-.0303030111 &   -.3939393890 &   1.151515170] \\
+       k & = & 50 & [-.0303030432 &   -.3939393978 &   1.151515137] \\
+       k & = & 51 & [-.0303030201 &   -.3939393914 &   1.151515161] \\
+       k & = & 52 & [-.0303030369 &   -.3939393960 &   1.151515144] \\
+       k & = & 53 & [-.0303030250 &   -.3939393926 &   1.151515157] \\
+       k & = & 54 & [-.0303030341 &   -.3939393950 &   1.151515148] \\
+       k & = & 55 & [-.0303030278 &   -.3939393932 &   1.151515154] \\
+       k & = & 56 & [-.0303030321 &   -.3939393944 &   1.151515150] \\
+       k & = & 57 & [-.0303030292 &   -.3939393936 &   1.151515153] \\
+       k & = & 58 & [-.0303030313 &   -.3939393942 &   1.151515151] \\
+       k & = & 59 & [-.0303030299 &   -.3939393937 &   1.151515152] \\
+       k & = & 60 & [-.0303030307 &   -.3939393940 &   1.151515151] \\
+       k & = & 61 & [-.0303030300 &   -.3939393939 &   1.151515152] \\
+       k & = & 62 & [-.0303030306 &   -.3939393940 &   1.151515151]
+    \end{array}
+    $
+ -->
+<IMG
+ WIDTH="456" HEIGHT="709" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 33 &amp; [-.0302996675 &amp; -.393938...
+... &amp; [-.0303030306 &amp; -.3939393940 &amp; 1.151515151]
+\end{array}
+\end{displaymath}">
+
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Les &#233;quations de Jacobi sont
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\left\{
+    \begin{array}{rcrrrrrrrr}
+    x^{(k+1)} & = & 1  &   &                     & - & \frac{3}{4} y^{(k)} & - & \frac{1}{4} z^{(k)} \\\\
+    y^{(k+1)} & = & -1 & - & \frac{1}{5} x^{(k)} &   &                     & + & \frac{2}{5} z^{(k)} \\\\
+    z^{(k+1)} & = & 2  & - & \frac{2}{3} x^{(k)} & - & \frac{1}{3} y^{(k)} &   &
+    \end{array}
+    \right.
+    $
+ -->
+<IMG
+ WIDTH="414" HEIGHT="136" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$ \left\{
+\begin{array}{rcrrrrrrrr}
+x^{(k+1)} &amp; = &amp; 1 &amp; &amp; &amp; - &amp; \frac{3}{4} y^...
+...&amp; - &amp; \frac{2}{3} x^{(k)} &amp; - &amp; \frac{1}{3} y^{(k)} &amp; &amp;
+\end{array}
+\right.
+$">
+
+</DIV>
+
+<P>
+et la matrice d'it&#233;ration <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ F$">
+ est
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+    \begin{array}{rrr}
+    0 & - \frac{3}{4} & - \frac{1}{4} \\\\
+    - \frac{1}{5} & 0 &  \frac{2}{5} \\\\
+    - \frac{2}{3} & - \frac{1}{3} & 0
+    \end{array}
+    \right)
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="162" HEIGHT="135" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\displaystyle \left(
+\begin{array}{rrr}
+0 &amp; - \frac{3}{4} &amp; - \frac{1}{4} \ ...
+...&amp; \frac{2}{5} \ \\
+- \frac{2}{3} &amp; - \frac{1}{3} &amp; 0
+\end{array}
+\right)
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Comme <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ A$">
+ ne contient aucun &#233;l&#233;ment nul, <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ A$">
+ est irr&#233;ductible.
+    De plus, <!-- MATH
+ $\sum\limits_{\overset{j=1}{j\neq i}}^{n} |a_{ij}| \leqslant |a_{ii}|$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \sum\limits_{\overset{j=1}{j\neq i}}^{n} \vert a_{ij}\vert \leqslant \vert a_{ii}\vert$">
+ pour tout <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ i$">
+ et
+    cette in&#233;galit&#233; est stricte pour <IMG
+ WIDTH="46" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ i=2$">
+. On en conclut que la m&#233;thode de Jacobi converge pour tout estim&#233; initial <IMG
+ WIDTH="33" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ x^{(0)}$">
+.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>&#192; l'aide de Maple, on v&#233;rifie que <!-- MATH
+ $\| F \|_2 \approx 0,9181111073$
+ -->
+<IMG
+ WIDTH="183" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ \Vert F \Vert _2 \approx 0,9181111073$">
+. Ainsi, pour <!-- MATH
+ $\varepsilon = 10^{-7}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ \varepsilon = 10^{-7}$">
+,
+    on a
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_2 ) - \ln \| x^{(1)} - x^{(0)} \|_2}{\ln \| F \|_2} \\\\
+      & \approx   & \frac{\ln 10^{-7} (1 - 0,9181111073 ) - \ln \| (1,-1,2)^t \|_2}{\ln 0,9181111073} \\\\
+      & \approx   & \frac{\ln 10^{-7}\cdot 0,0818888927 - \ln \sqrt{6}}{\ln 0,9181111073} \\\\
+      & \approx   & \frac{-19,51636730}{-0,08543686377} \\\\
+      & \approx   & 228,4302869 \\\\
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="329" HEIGHT="271" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+k &amp; \geqslant &amp; \frac{\ln \varepsilon (1-\Ver...
+...51636730}{-0,08543686377} \ \\
+&amp; \approx &amp; 228,4302869 \ \\
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+On doit donc faire 229 it&#233;rations de Jacobi pour obtenir la pr&#233;cision souhait&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>&#192; 10 chiffres significatifs, on obtient :
+
+<P>
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 0 & [0            &  0              & 0] \\
+        k & = & 1 & [1.           &  -1.            & 2.] \\
+        k & = & 2 & [1.250000000  &  -.4000000000   & 1.666666667] \\
+        k & = & 3 & [.8833333332  &  -.5833333332   & 1.300000000] \\
+        k & = & 4 & [1.112500000  &  -.6566666666   & 1.605555556] \\
+        k & = & 5 & [1.091111111  &  -.5802777776   & 1.477222222] \\
+        k & = & 6 & [1.065902778  &  -.6273333334   & 1.466018518] \\
+        k & = & 7 & [1.103995370  &  -.6267731484   & 1.498509259] \\
+        k & = & 8 & [1.095452546  &  -.6213953704   & 1.472927469] \\
+        k & = & 9 & [1.097814661  &  -.6299195216   & 1.476830093] \\
+        k & = & 10 & [1.103232118 &   -.6288308950  &  1.478096733] \\
+        k & = & 11 & [1.102098988 &   -.6294077304  &  1.474122220] \\
+        k & = & 12 & [1.103525243 &   -.6307709096  &  1.475069918] \\
+        k & = & 13 & [1.104310703 &   -.6306770814  &  1.474573474] \\
+        k & = & 14 & [1.104364442 &   -.6310327510  &  1.474018558] \\
+        k & = & 15 & [1.104769924 &   -.6312654652  &  1.474101289] \\
+        k & = & 16 & [1.104923777 &   -.6313134692  &  1.473908539] \\
+        k & = & 17 & [1.105007967 &   -.6314213398  &  1.473821972] \\
+        k & = & 18 & [1.105110512 &   -.6314728046  &  1.473801802] \\
+        k & = & 19 & [1.105154153 &   -.6315013816  &  1.473750593] \\
+        k & = & 20 & [1.105188388 &   -.6315305934  &  1.473731025] \\
+        k & = & 21 & [1.105215189 &   -.6315452676  &  1.473717939] \\
+        k & = & 22 & [1.105229466 &   -.6315558622  &  1.473704963] \\
+        k & = & 23 & [1.105240656 &   -.6315639080  &  1.473698977] \\
+        k & = & 24 & [1.105248187 &   -.6315685404  &  1.473694199] \\
+        k & = & 25 & [1.105252856 &   -.6315719578  &  1.473690722] \\
+        k & = & 26 & [1.105256288 &   -.6315742824  &  1.473688748] \\
+        k & = & 27 & [1.105258525 &   -.6315757584  &  1.473687235] \\
+        k & = & 28 & [1.105260010 &   -.6315768110  &  1.473686236] \\
+        k & = & 29 & [1.105261049 &   -.6315775076  &  1.473685597] \\
+        k & = & 30 & [1.105261732 &   -.6315779710  &  1.473685136]
+        \end{array}$
+ -->
+<IMG
+ WIDTH="442" HEIGHT="732" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0] \\
+k &amp; = &amp;...
+...&amp; 30 &amp; [1.105261732 &amp; -.6315779710 &amp; 1.473685136]
+\end{array}\end{displaymath}">
+
+
+<P>
+<!-- MATH
+ $\begin{array}{llllll}
+k & = & 31 & [1.105262194 &   -.6315782920  &  1.473684836] \\
+        k & = & 32 & [1.105262510 &   -.6315785044  &  1.473684635] \\
+        k & = & 33 & [1.105262720 &   -.6315786480  &  1.473684495] \\
+        k & = & 34 & [1.105262862 &   -.6315787460  &  1.473684403] \\
+        k & = & 35 & [1.105262959 &   -.6315788112  &  1.473684341] \\
+        k & = & 36 & [1.105263023 &   -.6315788554  &  1.473684298] \\
+        k & = & 37 & [1.105263067 &   -.6315788854  &  1.473684270] \\
+        k & = & 38 & [1.105263096 &   -.6315789054  &  1.473684250] \\
+        k & = & 39 & [1.105263116 &   -.6315789192  &  1.473684238] \\
+        k & = & 40 & [1.105263130 &   -.6315789280  &  1.473684229] \\
+        k & = & 41 & [1.105263139 &   -.6315789344  &  1.473684223] \\
+        k & = & 42 & [1.105263145 &   -.6315789386  &  1.473684219] \\
+        k & = & 43 & [1.105263149 &   -.6315789414  &  1.473684216] \\
+        k & = & 44 & [1.105263152 &   -.6315789434  &  1.473684214] \\
+        k & = & 45 & [1.105263154 &   -.6315789448  &  1.473684213] \\
+        k & = & 46 & [1.105263155 &   -.6315789456  &  1.473684212] \\
+        k & = & 47 & [1.105263156 &   -.6315789462  &  1.473684212] \\
+        k & = & 48 & [1.105263157 &   -.6315789464  &  1.473684211] \\
+        k & = & 49 & [1.105263157 &   -.6315789470  &  1.473684211] \\
+        k & = & 50 & [1.105263157 &   -.6315789470  &  1.473684211]
+    \end{array}
+    $
+ -->
+<IMG
+ WIDTH="442" HEIGHT="479" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}\begin{array}{llllll}
+k &amp; = &amp; 31 &amp; [1.105262194 &amp; -.6315782...
+...0 &amp; [1.105263157 &amp; -.6315789470 &amp; 1.473684211]
+\end{array}
+\end{displaymath}">
+
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD>Permutons d'abord les lignes un et deux, puis ensuite les lignes deux et trois. On obtient
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A =
+\left( \begin{array}{rrrr}
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+2  & 3  & 7 & 4 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="223" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\displaystyle A =
+\left( \begin{array}{rrrr}
+10 &amp; 0 &amp; 3 &amp; -1 \\
+-4 &amp; 9 &amp; 0 &amp; 1 \\
+2 &amp; 3 &amp; 7 &amp; 4 \\
+1 &amp; -4 &amp; 2 &amp; -8
+\end{array} \right)
+$">
+</DIV><P>
+</P>
+
+<P>
+Comme <IMG
+ WIDTH="24" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$ A^t$">
+ est &#224; dominance diagonale stricte, on sait que le syst&#232;me it&#233;ratif converge.
+
+<P>
+Prenons
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F =
+\left( \begin{array}{rrrr}
+0 & 0 & -\frac{3}{10} & \frac{1}{10} \\\\
+\frac{4}{9}  & 0 & 0 & -\frac{1}{9} \\\\
+-\frac{2}{7} & -\frac{3}{7} & 0 & -\frac{4}{7} \\\\
+\frac{1}{8} & -\frac{1}{2} & \frac{1}{4} & 0
+\end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="258" HEIGHT="180" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$\displaystyle F =
+\left( \begin{array}{rrrr}
+0 &amp; 0 &amp; -\frac{3}{10} &amp; \frac{1}...
+...7} \ \\
+\frac{1}{8} &amp; -\frac{1}{2} &amp; \frac{1}{4} &amp; 0
+\end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+On obtient &#224; 10 chiffres significatifs les it&#233;r&#233;s
+
+<P>
+<!-- MATH
+ $\begin{array}{lllllll}
+k & = & 0 & [0           & 0           & 0           & 0] \\
+   k & = & 1 & [4.100000000 & 3.          & 5.          & 3.875000000] \\
+   k & = & 2 & [2.987500000 & 4.391666666 & .328571429 & 4.137500000] \\
+   k & = & 3 & [4.415178571 & 3.868055556 & -.100000000 & 2.134747024] \\
+   k & = & 4 & [4.343474702 & 4.725107473 & .860926870 & 2.467869543] \\
+   k & = & 5 & [4.088508893 & 4.656225474 & .323750001 & 2.270612320] \\
+   k & = & 6 & [4.229936232 & 4.564824805 & .538836645 & 2.138888375] \\
+   k & = & 7 & [4.152237844 & 4.642317394 & .612871374 & 2.256038788] \\
+   k & = & 8 & [4.141742467 & 4.594768066 & .534916710 & 2.226088878] \\
+   k & = & 9 & [4.162133875 & 4.593431221 & .575407908 & 2.229062952] \\
+   k & = & 10 & [4.150283923 & 4.602163617 & .568455254 & 2.242403101] \\
+   k & = & 11 & [4.153703734 & 4.595414732 & .560475556 & 2.234817496] \\
+   k & = & 12 & [4.155339083 & 4.597777493 & .566725479 & 2.236624490] \\
+   k & = & 13 & [4.153644805 & 4.598303538 & .564213056 & 2.237210009] \\
+   k & = & 14 & [4.154457084 & 4.597485468 & .564137106 & 2.236107096] \\
+   k & = & 15 & [4.154369578 & 4.597969026 & .564885864 & 2.236598678] \\
+   k & = & 16 & [4.154194109 & 4.597875515 & .564422722 & 2.236533150] \\
+   k & = & 17 & [4.154326498 & 4.597804810 & .564550376 & 2.236442186] \\
+   k & = & 18 & [4.154279106 & 4.597873756 & .564594833 & 2.236526001] \\
+   k & = & 19 & [4.154274150 & 4.597843380 & .564530931 & 2.236496718] \\
+   k & = & 20 & [4.154290392 & 4.597844431 & .564562098 & 2.236495312] \\
+   k & = & 21 & [4.154280902 & 4.597851806 & .564557811 & 2.236504608] \\
+   k & = & 22 & [4.154283118 & 4.597846555 & .564552049 & 2.236498663] \\
+   k & = & 23 & [4.154284252 & 4.597848201 & .564557063 & 2.236500124] \\
+   k & = & 24 & [4.154282894 & 4.597848542 & .564555199 & 2.236500698] \\
+   k & = & 25 & [4.154283510 & 4.597847876 & .564555113 & 2.236499891] \\
+   k & = & 26 & [4.154283455 & 4.597848238 & .564555683 & 2.236500279] \\
+   k & = & 27 & [4.154283323 & 4.597848171 & .564555323 & 2.236500234] \\
+   k & = & 28 & [4.154283426 & 4.597848117 & .564555415 & 2.236500160] \\
+   k & = & 29 & [4.154283392 & 4.597848171 & .564555451 & 2.236500224] \\
+   k & = & 30 & [4.154283387 & 4.597848149 & .564555401 & 2.236500201] \\
+ \end{array}$
+ -->
+<IMG
+ WIDTH="547" HEIGHT="722" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}\begin{array}{lllllll}
+k &amp; = &amp; 0 &amp; [0 &amp; 0 &amp; 0 &amp; 0] \\
+k ...
+...387 &amp; 4.597848149 &amp; .564555401 &amp; 2.236500201] \\
+\end{array}\end{displaymath}">
+
+
+<P>
+<!-- MATH
+ $\begin{array}{lllllll}
+k & = & 31 & [4.154283400 & 4.597848150 & .564555424 & 2.236500199] \\
+   k & = & 32 & [4.154283393 & 4.597848156 & .564555422 & 2.236500206] \\
+   k & = & 33 & [4.154283394 & 4.597848151 & .564555417 & 2.236500202] \\
+   k & = & 34 & [4.154283395 & 4.597848153 & .564555421 & 2.236500202] \\
+   k & = & 35 & [4.154283394 & 4.597848153 & .564555421 & 2.236500203] \\
+   k & = & 36 & [4.154283394 & 4.597848152 & .564555420 & 2.236500203] \\
+   k & = & 37 & [4.154283394 & 4.597848152 & .564555420 & 2.236500203]
+\end{array}$
+ -->
+<IMG
+ WIDTH="532" HEIGHT="168" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{displaymath}\begin{array}{lllllll}
+k &amp; = &amp; 31 &amp; [4.154283400 &amp; 4.597848...
+...54283394 &amp; 4.597848152 &amp; .564555420 &amp; 2.236500203]
+\end{array}\end{displaymath}">
+
+
+<P>
+</DD>
+<DT><STRONG>6)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Puisque <IMG
+ WIDTH="24" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$ A^t$">
+ est &#224; dominance diagonale stricte, le syst&#232;me it&#233;ratif de Jacobi converge
+    et le rayon spectral de <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ F$">
+ est donc strictement plus petit que un.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Non. Consid&#233;rons le syst&#232;me d'&#233;quations lin&#233;aires
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rr}
+4 & 1 \\
+1 & -2
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \end{array} \right)
+=
+\left( \begin{array}{r} 3 \\-15 \end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="275" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$\displaystyle \left( \begin{array}{rr}
+4 &amp; 1 \\
+1 &amp; -2
+\end{array} \right)...
+...\end{array} \right)
+=
+\left( \begin{array}{r} 3 \ -15 \end{array} \right).
+$">
+</DIV><P>
+</P>
+
+<P>
+Alors, <IMG
+ WIDTH="24" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$ A^t$">
+ est &#224; dominance diagonale stricte, mais
+<!-- MATH
+ $F =
+\left( \begin{array}{rr}
+0 & 2 \\
+-4 & 0
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ F =
+\left( \begin{array}{rr}
+0 &amp; 2 \\
+-4 &amp; 0
+\end{array} \right)$">
+ a comme norme <!-- MATH
+ $\| F \|_1 = 4 \nless 1$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ \Vert F \Vert _1 = 4 \nless 1$">
+
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>7)</STRONG></DT>
+<DD>Prenons <!-- MATH
+ $P = \left( \begin{array}{rrrr}
+0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0
+\end{array} \right). $
+ -->
+<IMG
+ WIDTH="187" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ P = \left( \begin{array}{rrrr}
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0
+\end{array} \right). $">
+
+
+<P>
+Alors, <!-- MATH
+ $PAP^t =
+\left( \begin{array}{rrrr}
+1 & -1 & 0 & 1 \\
+2 & 3 & 4 & 2 \\
+0 & 0 & 3 & 1 \\
+0 & 0 & 1 & 2 \\
+\end{array} \right)$
+ -->
+<IMG
+ WIDTH="228" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ PAP^t =
+\left( \begin{array}{rrrr}
+1 &amp; -1 &amp; 0 &amp; 1 \\
+2 &amp; 3 &amp; 4 &amp; 2 \\
+0 &amp; 0 &amp; 3 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 2 \\
+\end{array} \right)$">
+
+
+<P>
+et ainsi <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ A$">
+ est r&#233;ductible.
+
+<P>
+</DD>
+<DT><STRONG>8)</STRONG></DT>
+<DD>Soit <!-- MATH
+ $A_{n \times n}$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$ A_{n \times n}$">
+ une matrice non singuli&#232;re et <!-- MATH
+ $B_{n \times n}$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$ B_{n \times n}$">
+ une matrice quelconque.
+
+<P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>&#201;crivons <!-- MATH
+ $B=[b_1,b_2,\ldots , b_n]$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$ B=[b_1,b_2,\ldots , b_n]$">
+ o&#249; les <IMG
+ WIDTH="18" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ b_i$">
+ sont les colonnes de <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$ B$">
+. Soit <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$ x_i$">
+
+    le vecteur solution du syst&#232;me <!-- MATH
+ $Ax_i = b_i$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ Ax_i = b_i$">
+. Alors, <!-- MATH
+ $X = [x_1, x_2, \ldots , x_n]$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$ X = [x_1, x_2, \ldots , x_n]$">
+ est la matrice cherch&#233;e.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Il suffit de prendre <!-- MATH
+ $B=1\!{\rm l}_{n \times n}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ B=1\!{\rm l}_{n \times n}$">
+.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>On peut facilement v&#233;rifier avec Maple que la matrice
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \begin{array}{rrrr}
+1 & -2 & 3 & 2 \\
+5 & -9 & 7 & 2 \\
+3 & 1 & -1 & 2 \\
+1 & -9 & 0 & 1
+\end{array} \right) 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="169" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\displaystyle \left( \begin{array}{rrrr}
+1 &amp; -2 &amp; 3 &amp; 2 \\
+5 &amp; -9 &amp; 7 &amp; 2 \\
+3 &amp; 1 &amp; -1 &amp; 2 \\
+1 &amp; -9 &amp; 0 &amp; 1
+\end{array} \right) $">
+</DIV><P>
+</P>
+
+<P>
+a un rayon spectral strictement plus grand que un et qu'il en est de m&#234;me pour toute
+permutation de cette matrice. Ainsi, la m&#233;thode de Jacobi ne peut converger.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-08-02
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,687 @@
+\batchmode
+\documentclass[12pt]{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+
+
+
+
+\usepackage[dvips]{color}
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Alpha}{\textrm{A}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay789}%
+$\displaystyle \left( \begin{array}{rrr} 2 & -1 & 0 \\-1 & 4 & -1 \\0 & -1 & 2 \end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right)
+=
+\left( \begin{array}{r} 3 \\0 \\3 \end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline795}%
+$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} & = & \frac{3}{2}  &   &                       & + & \frac{1}{2} x_2^{(k)}         &  &          \\\\
+x_2^{(k+1)} & = & 0  & + & \frac{1}{4} x_1^{(k+1)}         &   &                       & + & \frac{1}{4} x_3^{(k)}         \\\\
+x_3^{(k+1)} & = & \frac{3}{2}  &  &                        & + & \frac{1}{2} x_2^{(k+1)}         &   &
+\end{array}
+\right.
+$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline797}%
+$ F_{G-S}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay799}%
+$\displaystyle \left(
+\begin{array}{rrr}
+0 & \frac{1}{2} & 0 \\\\
+0 & \frac{1}{8} & \frac{1}{4} \\\\
+0 & \frac{1}{16} & \frac{1}{8}
+\end{array}
+\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline801}%
+$ A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline803}%
+$ \| F \|_{\infty} = \frac{1}{2}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline805}%
+$ \varepsilon = 10^{-7}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay807}%
+$\displaystyle \begin{array}{rcl}
+k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_{\infty} ) - \ln \| x^{(1)} - x^{(0)} \|_{\infty}}{\ln \| F \|_{\infty}} \\\\
+& \approx   & \frac{\ln 10^{-7} (1 - 0,5) - \ln \| (3/2,0,3/2)^t \|_{\infty}}{\ln 0,5} \\\\
+& \approx   & \frac{\ln 10^{-7}\cdot 0,5 - \ln \sqrt{3/2}}{\ln 0,5} \\\\
+& \approx   & \frac{-17,01397538}{-0,6931471806} \\\\
+& \approx   & 24,54597791 \\\\
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath809}%
+\begin{displaymath}\begin{array}{llllll}
+        k & = & 0 & [0             &  0             & 0] \\
+         k & = & 1 & [1.500000000  &  .3750000000  &  1.687500000] \\
+         k & = & 2 & [1.687500000  &  .8437500000  &  1.921875000] \\
+         k & = & 3 & [1.921875000  &  .9609375000  &  1.980468750] \\
+         k & = & 4 & [1.980468750  &  .9902343750  &  1.995117188] \\
+         k & = & 5 & [1.995117188  &  .9975585940  &  1.998779297] \\
+         k & = & 6 & [1.998779297  &  .9993896484  &  1.999694824] \\
+         k & = & 7 & [1.999694824  &  .9998474120  &  1.999923706] \\
+         k & = & 8 & [1.999923706  &  .9999618530  &  1.999980926] \\
+         k & = & 9 & [1.999980926  &  .9999904630  &  1.999995232] \\
+        k & = & 10 & [1.999995232  &  .9999976160  &  1.999998808] \\
+        k & = & 11 & [1.999998808  &  .9999994040  &  1.999999702] \\
+        k & = & 12 & [1.999999702  &  .9999998510  &  1.999999926] \\
+        k & = & 13 & [1.999999926  &  .9999999630  &  1.999999982] \\
+        k & = & 14 & [1.999999982  &  .9999999910  &  1.999999996] \\
+        k & = & 15 & [1.999999996  &  .9999999980  &  1.999999999] \\
+        k & = & 16 & [1.999999999  &  .9999999996  &  2.000000000] \\
+        k & = & 17 & [2.000000000  &  1.000000000  &  2.000000000] \\
+        k & = & 18 & [2.000000000  &  1.000000000  &  2.000000000]
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay811}%
+$\displaystyle \left( \begin{array}{rrrr}
+2  & 10  & -4 & 1 \\
+3 & 0 & 9 & -4 \\
+7  & 3  & 0 & 2 \\
+4 & -1 & 1 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array}
+\right) = \left( \begin{array}{r} 15 \\12 \\21 \\-28
+\end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay813}%
+$\displaystyle \left( \begin{array}{rrrr}
+7  & 3  & 0 & 2 \\
+2  & 10  & -4 & 1 \\
+3 & 0 & 9 & -4 \\
+4 & -1 & 1 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array}
+\right) = \left( \begin{array}{r} 21 \\15 \\12 \\-28
+\end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline819}%
+$ \left\{
+\begin{array}{rcrrrrrrrrrr}
+x_1^{(k+1)} & = & 3            &   &                             & - & \frac{3}{7} x_2^{(k)}           &   &                          & - & \frac{2}{7} x_4^{(k)}   \\\\
+x_2^{(k+1)} & = & \frac{3}{2}  & - & \frac{1}{5} x_1^{(k+1)}     &   &                                 & + & \frac{2}{5} x_3^{(k)}    & - & \frac{1}{10} x_4^{(k)}  \\\\
+x_3^{(k+1)} & = & \frac{4}{3}  & - & \frac{1}{3} x_1^{(k+1)}     &   &                                 &   &                          & + & \frac{4}{9} x_4^{(k)}   \\\\
+x_4^{(k+1)} & = & \frac{7}{2}  & + & \frac{1}{2} x_1^{(k+1)}     & - & \frac{1}{8} x_2^{(k+1)}         & + & \frac{1}{8} x_3^{(k+1)}  &   &
+\end{array}
+\right.
+$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay823}%
+$\displaystyle \left(
+\begin{array}{rrrr}
+0 & -\frac{3}{7} & 0 & -\frac{2}{7} \\\\
+0 & {\frac {3}{35}} & \frac{2}{5} & -{\frac{3}{70}} \\\\
+0 & \frac{1}{7} & 0 & {\frac{34}{63}} \\\\
+0 & -{\frac {29}{140}} & -\frac{1}{20} & -{\frac{353}{5040}}
+\end{array}
+\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline827}%
+$ \| F \|_{\infty} = \frac{5}{7}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay831}%
+$\displaystyle \begin{array}{rcl}
+k & \geqslant & \frac{\ln \varepsilon (1-\| F \|_{\infty} ) - \ln \| x^{(1)} - x^{(0)} \|_{\infty}}{\ln \| F \|_{\infty}} \\\\
+& \approx   & \frac{\ln 10^{-7} (1 - 5/7) - \ln \| (3,3/2,4/3,7/2)^t \|_{\infty}}{\ln 5/7} \\\\
+& \approx   & \frac{\ln 10^{-7}\cdot 2/7 - \ln 7/2}{\ln 5/7} \\\\
+& \approx   & \frac{-18,62362159}{-0,3364722366} \\\\
+& \approx   & 55.34965315 \\\\
+\end{array}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath833}%
+\begin{displaymath}\begin{array}{lllllll}
+   k & = & 0 & [0             &  0             & 0           & 0] \\
+   k & = & 1 & [3.            &  .9000000000   & .333333333  &  4.929166667] \\
+   k & = & 2 & [1.205952381 & .8992261903 & 3.122089947 & 4.380834160] \\
+   k & = & 3 & [1.362950444 & 2.038162474 & 2.826053922 & 4.279961653] \\
+   k & = & 4 & [.903655610 & 2.021694282 & 2.934319975 & 4.065906017] \\
+   k & = & 5 & [.971872160 & 2.072762956 & 2.816445287 & 4.078896371] \\
+   k & = & 6 & [.946274056 & 2.029433667 & 2.830751479 & 4.073301754] \\
+   k & = & 7 & [.966442213 & 2.031681974 & 2.821542265 & 4.081953643] \\
+   k & = & 8 & [.963006685 & 2.027820205 & 2.826532724 & 4.081342407] \\
+   k & = & 9 & [.964836367 & 2.029511576 & 2.825651170 & 4.081935633] \\
+   k & = & 10 & [.963942001 & 2.029278504 & 2.826212947 & 4.081587806] \\
+   k & = & 11 & [.964141268 & 2.029498145 & 2.825991934 & 4.081632358] \\
+   k & = & 12 & [.964034407 & 2.029426657 & 2.826047357 & 4.081594791] \\
+   k & = & 13 & [.964075778 & 2.029444308 & 2.826016869 & 4.081609459] \\
+   k & = & 14 & [.964064023 & 2.029432998 & 2.826027308 & 4.081606300] \\
+   k & = & 15 & [.964069772 & 2.029436339 & 2.826023986 & 4.081608342] \\
+   k & = & 16 & [.964067757 & 2.029435208 & 2.826025566 & 4.081607673] \\
+   k & = & 17 & [.964068433 & 2.029435772 & 2.826025043 & 4.081607875] \\
+   k & = & 18 & [.964068133 & 2.029435603 & 2.826025233 & 4.081607770] \\
+   k & = & 19 & [.964068235 & 2.029435669 & 2.826025153 & 4.081607803] \\
+   k & = & 20 & [.964068198 & 2.029435641 & 2.826025179 & 4.081607791] \\
+   k & = & 21 & [.964068213 & 2.029435650 & 2.826025169 & 4.081607796] \\
+   k & = & 22 & [.964068208 & 2.029435647 & 2.826025173 & 4.081607795] \\
+   k & = & 23 & [.964068210 & 2.029435648 & 2.826025172 & 4.081607796] \\
+   k & = & 24 & [.964068209 & 2.029435648 & 2.826025172 & 4.081607795] \\
+   k & = & 25 & [.964068209 & 2.029435648 & 2.826025172 & 4.081607795]
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay835}%
+$\displaystyle \left( \begin{array}{rrrr}
+2  & 3  & 7 & 4 \\
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array} \right)
+=
+\left( \begin{array}{r} 35  \\41 \\27 \\-31 \end{array} \right).
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay837}%
+$\displaystyle \left( \begin{array}{rrrr}
+10 & 0 & 3 & -1 \\
+-4  & 9  & 0 & 1 \\
+2  & 3  & 7 & 4 \\
+1 & -4 & 2 & -8
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \\x_4 \end{array}
+\right) = \left( \begin{array}{r} 41 \\27 \\35 \\-31
+\end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline839}%
+$ \left\{
+\begin{array}{rcrrrrrrrrrr}
+x_1^{(k+1)} & = & \frac{41}{10} &   &                             &   &                                 & - & \frac{3}{10} x_3^{(k)}   & + & \frac{1}{10} x_4^{(k)} \\\\
+x_2^{(k+1)} & = & 3             & + & \frac{4}{9} x_1^{(k+1)}     &   &                                 &   &                          & - & \frac{1}{9} x_4^{(k)} \\\\
+x_3^{(k+1)} & = & 5             & - & \frac{2}{7} x_1^{(k+1)}     & - & \frac{3}{7} x_2^{(k+1)}         &   &                          & - & \frac{4}{7} x_4^{(k)}  \\\\
+x_4^{(k+1)} & = & \frac{31}{8}  & + & \frac{1}{8} x_1^{(k+1)}     & - & \frac{1}{2} x_2^{(k+1)}         & + & \frac{1}{4} x_3^{(k+1)}  &   &
+\end{array}
+\right.
+$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay843}%
+$\displaystyle \left(
+\begin{array}{rrrr}
+0 & 0 & -\frac{3}{10}       &  \frac{1}{10}        \\\\
+0 & 0 & -\frac{2}{15}       & -\frac{1}{15}        \\\\
+0 & 0 & \frac{1}{7}         & -\frac{4}{7}         \\\\
+0 & 0 & {\frac {109}{1680}} & -{\frac {163}{1680}}
+\end{array}
+\right).
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline853}%
+$ \| F \|_{1} = \frac{1403}{1680}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline855}%
+$ \| x^{(1)} - x^{(0)} \|_{1} = \frac{66\;029}{5040}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline857}%
+$ k = 114$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath859}%
+\begin{displaymath}\begin{array}{lllllll}
+   k & = & 0 & [0             &  0             & 0           & 0] \\
+   k & = & 1 & [4.100000000 & 4.822222222 & 1.761904762 & 2.416865080] \\
+   k & = & 2 & [3.813115079 & 4.426177249 & .632539682 & 2.296685680] \\
+   k & = & 3 & [4.139906663 & 4.584771219 & .539875757 & 2.235071662] \\
+   k & = & 4 & [4.161544439 & 4.601234011 & .561846063 & 2.235037566] \\
+   k & = & 5 & [4.154949938 & 4.598306910 & .565004162 & 2.236466328] \\
+   k & = & 6 & [4.154145384 & 4.597790579 & .564638883 & 2.236532604] \\
+   k & = & 7 & [4.154261596 & 4.597834864 & .564548828 & 2.236502475] \\
+   k & = & 8 & [4.154285599 & 4.597848881 & .564553180 & 2.236499555] \\
+   k & = & 9 & [4.154284002 & 4.597848495 & .564555471 & 2.236500120] \\
+   k & = & 10 & [4.154283371 & 4.597848151 & .564555475 & 2.236500215] \\
+   k & = & 11 & [4.154283379 & 4.597848145 & .564555420 & 2.236500205] \\
+   k & = & 12 & [4.154283394 & 4.597848153 & .564555419 & 2.236500203] \\
+   k & = & 13 & [4.154283395 & 4.597848153 & .564555420 & 2.236500203] \\
+   k & = & 14 & [4.154283394 & 4.597848153 & .564555420 & 2.236500203] \\
+   k & = & 15 & [4.154283394 & 4.597848153 & .564555420 & 2.236500203]
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline861}%
+$ F_J$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay865}%
+$\displaystyle \left( \begin{array}{rrr}
+-2  & 5  & -1 \\
+-3 & 2 & 5 \\
+6  & -4  & -1
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right) =
+\left( \begin{array}{r} 0 \\1 \\7 \end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline871}%
+$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} & = & 0             &   &                             & + & \frac{5}{2} x_2^{(k)}           & - & \frac{1}{2} x_3^{(k)} \\\\
+x_2^{(k+1)} & = & \frac{1}{2}   & + & \frac{3}{2} x_1^{(k+1)}     &   &                                 & - & \frac{5}{2} x_3^{(k)} \\\\
+x_3^{(k+1)} & = & -7            & + & 6 x_1^{(k+1)}               & - & 4 x_2^{(k+1)}                   &   &
+\end{array}
+\right.
+$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay873}%
+$\displaystyle F_{G-S} =
+\left(
+\begin{array}{rrr}
+0 & \frac{5}{2}       &  -\frac{1}{2}        \\\\
+0 & \frac{15}{4}       & -\frac{13}{4}        \\\\
+0 & 0 & 10
+\end{array}
+\right).
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline875}%
+$ \rho(F_{G-S}) = 10$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay879}%
+$\displaystyle \left( \begin{array}{rrr}
+6  & -4  & -1 \\
+-2  & 5  & -1 \\
+-3 & 2 & 5
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right) =
+\left( \begin{array}{r} 7 \\0 \\1  \end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay881}%
+$\displaystyle F_{G-S} =
+\left(
+\begin{array}{rrr}
+0 & \frac{2}{3}       &  \frac{1}{6}        \\\\
+0 & \frac{4}{15}       & -\frac{4}{15}        \\\\
+0 & \frac{22}{75} & -\frac{1}{150}
+\end{array}
+\right).
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath883}%
+\begin{displaymath}\begin{array}{llllll}
+         k & = & 0 & [0             & 0           & 0] \\
+         k & = & 1 & [1.166666667  &  .4666666668  &  .7133333335] \\
+         k & = & 2 & [1.596666667  &  .7813333335  &  .8454666668] \\
+         k & = & 3 & [1.828466667  &  .9004800002  &  .9368880000] \\
+         k & = & 4 & [1.923134667  &  .9566314668  &  .9712282132] \\
+         k & = & 5 & [1.966292347  &  .9807625814  &  .9874703754] \\
+         k & = & 6 & [1.985086784  &  .9915287887  &  .9944405546] \\
+         k & = & 7 & [1.993425952  &  .9962584917  &  .9975521744] \\
+         k & = & 8 & [1.997097690  &  .9983495109  &  .9989188096] \\
+         k & = & 9 & [1.998719476  &  .9992715523  &  .9995230650] \\
+        k & = & 10 & [1.999434879  &  .9996785646  &  .9997895012] \\
+        k & = & 11 & [1.999750627  &  .9998581510  &  .9999071156] \\
+        k & = & 12 & [1.999889954  &  .9999374047  &  .9999590102] \\
+        k & = & 13 & [1.999951438  &  .9999723772  &  .9999819122] \\
+        k & = & 14 & [1.999978570  &  .9999878104  &  .9999920178] \\
+        k & = & 15 & [1.999990544  &  .9999946212  &  .9999964776] \\
+        k & = & 16 & [1.999995827  &  .9999976263  &  .9999984454] \\
+        k & = & 17 & [1.999998159  &  .9999989527  &  .9999993140] \\
+        k & = & 18 & [1.999999188  &  .9999995380  &  .9999996978] \\
+        k & = & 19 & [1.999999642  &  .9999997964  &  .9999998664] \\
+        k & = & 20 & [1.999999842  &  .9999999101  &  .9999999410] \\
+        k & = & 21 & [1.999999930  &  .9999999602  &  .9999999740] \\
+        k & = & 22 & [1.999999970  &  .9999999828  &  .9999999888] \\
+        k & = & 23 & [1.999999987  &  .9999999926  &  .9999999950] \\
+        k & = & 24 & [1.999999994  &  .9999999966  &  .9999999974] \\
+        k & = & 25 & [1.999999998  &  .9999999987  &  .9999999996] \\
+        k & = & 26 & [1.999999999  &  .9999999995  &  .9999999992] \\
+        k & = & 27 & [2.000000000  &  .9999999998  &  1.000000000] \\
+        k & = & 28 & [2.000000000  &  1.000000000  &  1.000000000] \\
+        k & = & 29 & [2.000000000  &  1.000000000  &  1.000000000]
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay885}%
+$\displaystyle \left( \begin{array}{rrr}
+1  & -0,6  & 0,5 \\
+-0,6 & 1 & -0,5 \\
+0,5  & -0,5  & 1
+\end{array} \right)
+\left( \begin{array}{r} x_1 \\x_2 \\x_3 \end{array} \right) =
+\left( \begin{array}{r} -1,1 \\1,1 \\0 \end{array} \right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline891}%
+$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} & = & -1,1  &   &                       & + & 0,6 x_2^{(k)}         & - & 0,5 x_3^{(k)}         \\\\
+x_2^{(k+1)} & = &  1,1  & + & 0,6 x_1^{(k)}         &   &                       & + & 0,5 x_3^{(k)}         \\\\
+x_3^{(k+1)} & = &  0    & - & 0,5 x_1^{(k)}         & + & 0,5 x_2^{(k)}         &   &
+\end{array}
+\right.
+$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline893}%
+$ \left\{
+\begin{array}{rcrrrrrrrr}
+x_1^{(k+1)} & = & -1,1  &   &                       & + & 0,6 x_2^{(k)}         & - & 0,5 x_3^{(k)}         \\\\
+x_2^{(k+1)} & = &  1,1  & + & 0,6 x_1^{(k+1)}         &   &                       & + & 0,5 x_3^{(k)}         \\\\
+x_3^{(k+1)} & = &  0    & - & 0,5 x_1^{(k+1)}         & + & 0,5 x_2^{(k+1)}         &   &
+\end{array}
+\right.
+$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay897}%
+$\displaystyle \left(
+\begin{array}{rrr}
+0 & 0,6 & -0,5 \\\\
+0,6 & 0 &  0,5 \\\\
+-0,5 & 0,5 & 0
+\end{array}
+\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline899}%
+$ \rho(F_J) \approx -1,068114575 > 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline901}%
+$ \rho(F_{G-S}) \approx
+0,38\;729\;833\;46$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath903}%
+\begin{displaymath}\begin{array}{llllll}
+        k & = & 0 & [0             &  0             & 0] \\
+        k & = & 1 & [-1.1          &  .44           & .770] \\
+        k & = & 2 & [-1.2210       &  .75240        & .986700] \\
+        k & = & 3 & [-1.1419100    &  .90820400     & 1.025057000] \\
+        k & = & 4 & [-1.067606100  &  .9719648400   & 1.019785470] \\
+        k & = & 5 & [-1.026713831  &  .9938644364   & 1.010289134] \\
+        k & = & 6 & [-1.008825905  &  .9998490240   & 1.004337464] \\
+        k & = & 7 & [-1.002259318  &  1.000813141   & 1.001536230] \\
+        k & = & 8 & [-1.000280230  &  1.000599977   & 1.000440104] \\
+        k & = & 9 & [-.9998600658  &  1.000304012   & 1.000082039] \\
+        k & = & 10 & [-.9998586123 &   1.000125852  &  .9999922322] \\
+        k & = & 11 & [-.9999206049 &   1.000043753  &  .9999821789] \\
+        k & = & 12 & [-.9999648376 &   1.000012187  &  .9999885123] \\
+        k & = & 13 & [-.9999869440 &   1.000002090  &  .9999945170] \\
+        k & = & 14 & [-.9999960045 &   .9999996558  &  .9999978301] \\
+        k & = & 15 & [-.9999991215 &   .9999994421  &  .9999992818] \\
+        k & = & 16 & [-.9999999756 &   .9999996555  &  .9999998156] \\
+        k & = & 17 & [-1.000000114 &   .9999998394  &  .9999999767] \\
+        k & = & 18 & [-1.000000085 &   .9999999374  &  1.000000011] \\
+        k & = & 19 & [-1.000000043 &   .9999999797  &  1.000000011] \\
+        k & = & 20 & [-1.000000018 &   .9999999947  &  1.000000006] \\
+        k & = & 21 & [-1.000000006 &   .9999999994  &  1.000000003] \\
+        k & = & 22 & [-1.000000002 &   1.000000000  &  1.000000001] \\
+        k & = & 23 & [-1.000000000 &   1.000000000  &  1.000000000] \\
+        k & = & 24 & [-1.000000000 &   1.000000000  &  1.000000000]
+    \end{array}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline907}%
+$ F_J[1,3] = -0,5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

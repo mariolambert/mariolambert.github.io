@@ -1,0 +1,427 @@
+% $Header: /cvsroot/latex-beamer/latex-beamer/solutions/conference-talks/conference-ornate-20min.en.tex,v 1.6 2004/10/07 20:53:08 tantau Exp $
+
+\documentclass{beamer}
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice.
+
+
+\mode<presentation>
+{
+  \usetheme{Frankfurt}
+  % ou encore AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadt, default, Dresden, Frankfurt, Goettingen, Hannover, Ilmenau, JuanLesPins, Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester, Singapore, Szeged, Warsaw
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+
+  \usecolortheme{seahorse}
+  % ou encore albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+
+  \usefonttheme[onlylarge]{structuresmallcapsserif}
+  \usefonttheme[onlysmall]{structurebold}
+  % ou encore default, professionalfonts, serif, structurebold, structureitalicserif, structuresmallcapsserif
+
+  \setbeamerfont*{title}{shape=\itshape,family=\rmfamily}
+  \setbeamercolor{title}{fg=red!80!black, bg=red!20!white}
+}
+
+
+
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+
+
+
+
+\title[GoogleMath]{Un vecteur propre coté en bourse : }
+\subtitle{les maths de Google}
+
+\author[Lambert]{Mario~Lambert\inst{1}}
+
+\institute[Université de Sherbrooke]
+{
+  \inst{1}%
+  Faculté des sciences\\
+  Université de Sherbrooke
+}
+
+\date[2007-09-20]{Club mathématique -- 20 septembre 2007}
+
+\subject{mathématiques Google}
+% N'apparaît pas à l'écran, utile pour de l'information stockée dans le PDF.
+
+ \pgfdeclareimage[height=0.5cm]{logo}{logo_udes}
+ \logo{\pgfuseimage{logo}}
+
+
+
+% Il faut effacer la section qui suit si on ne veut pas voir la table des matière
+% réapparaître à chaque début de sous-section.
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Plan de la présentation}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+%\beamerdefaultoverlayspecification{<+->}
+
+
+
+
+
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Plan de la présentation}
+  \tableofcontents[pausesections]
+  % On peut enlever l'option [pausesections] si on veut voir apparaître la table des matières d'nu seul coup.
+\end{frame}
+
+
+
+
+
+
+
+
+
+\section{L'Historique}
+
+
+\begin{frame}
+  \frametitle{Qu'est-ce qu'un moteur de recherche ?}
+
+  \begin{definition}
+  Un \alert{moteur de recherche}, c'est un outil qui accomplit essentiellement trois
+  tâches :
+    \begin{itemize}
+    \item parcourir le Web à la recherche des pages publiques ;
+    \item indexer ces pages de façon à pouvoir les fouiller
+    intelligemment pour des mots-clés ou des phrases ;
+    \item ordonner les pages par ordre d'importance
+    \end{itemize}
+  \end{definition}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+  \frametitle{Le prof}
+
+  \begin{columns}[t]
+    \column{.5\textwidth}
+      \begin{block}{L'homme}
+       Jon Kleinberg (aka Rebel King) \\
+       Professeur à Cornell University \\
+       Il publie en 1999 dans le journal de l'ACM l'article \emph{Authoritative Sources in a Hyperlinked Environment}
+      \end{block}
+
+    \pause
+
+    \column{.5\textwidth}
+      \begin{block}{Son bébé}
+       C'est l'algorithme de recherche HITS, qu'il ne
+       commercialisera pas lui-même, mais qui se transformera en
+       \emph{Teoma} plus tard, qui est ce qui fait rouler
+       \emph{ask.com}.
+      \end{block}
+
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Les étudiants}
+
+  \begin{columns}[t]
+    \column{.5\textwidth}
+      \begin{block}{Les hommes}
+       Sergey Brin et Larry Page \\
+       Doctorants à Stanford University \\
+       Ils présentent en 1998 à la 7$^{\rm th}$ international WWW conf. l'article \emph{The PageRank Citation Ranking : Bringing Order to the Web}
+      \end{block}
+
+    \pause
+
+    \column{.5\textwidth}
+      \begin{block}{Leur bébé}
+       C'est l'algorithme de recherche PageRank, qu'ils
+       commercialiseront eux-même, et qui se transformera en
+       \emph{Google} plus tard.
+      \end{block}
+
+  \end{columns}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+  \frametitle{Ce qu'utilise Google}
+
+    \begin{block}
+
+    \begin{enumerate}
+     \item<1-> Indice de recherche documentaire
+     \item<2-> Le titre de la page Web
+     \item<2-> Les ancres
+     \item<2-> La section \texttt{<heading>}
+     \item<2-> Les balises \texttt{<title>, <alt>, <meta>}
+     \item<2-> Le nom du domaine
+     \item<2-> Les noms des fichiers et répertoires
+     \item<2-> La densité des mots-clés
+     \item<2-> L'importance des pages vers lesquelles on pointe
+     \item<3-> PageRank
+    \end{enumerate}
+
+    \end{block}
+
+  \uncover<4->{Vous pouvez voir une approximation du PageRank d'une page en installant la \emph{Google Toolbar}.}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{La bête}
+
+
+\begin{frame}[fragile]
+  \frametitle{La base}
+  \begin{itemize}
+  \item<1-> L'importance d'une page $P_i$ est définie par
+
+  $$I(P_i) = \sum\limits_{\overset{P_j \neq P_i}{P_j \to P_i}}
+  \frac{I(P_j)}{l_j}$$
+
+  où $l_j$ est le nombre de liens sortant de la page $P_j$.
+
+  \item<2-> La matrice de Google est $H = [H_{ij}]$ où
+
+  $$H_{ij}= \left\lbrace
+  \begin{array}{cl}
+  \frac{1}{l_j} & \textrm{si } P_i \to P_j \\\\
+  0 & \textrm{sinon.}
+  \end{array}
+  \right.$$
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Formulation en terme de vecteur propre}
+  $$\begin{array}{rcl}
+  I(P_i) & = & \sum\limits_{\overset{P_j \neq P_i}{P_j \to P_i}} \frac{I(P_j)}{l_j} \\\\
+         & = & \sum\limits_{j \neq i} I(P_j) H_{ji} \\\\
+         & = & H_{1i}I(P_1) + H_{2i}I(P_2) + \ldots + H_{ni}I(P_n) \\\\
+         & = & [H^tI]_i
+  \end{array}$$
+
+  où $I$ est le vecteur formé des importance de toutes les pages du Web.
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Premier problème}
+Est-ce que $H^t$ admet toujours 1 comme valeur propre?
+\bigskip
+
+\begin{theorem}
+Si la somme des entrées sur chaque ligne de $H$ est 1, alors $H^t$ a 1 comme valeur propre.
+\end{theorem}
+
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Deuxième problème}
+Si 1 est une valeur propre de $H^t$, est-ce que le vecteur $I$ est uniquement déterminé ?
+
+\begin{theorem}
+Si $\overline{H}$ est strictement positive et que la somme des entrées sur chaque ligne de $\overline{H}$ est 1, alors l'espace propre associé à la valeur propre 1 est de dimension 1.
+\end{theorem}
+
+\end{frame}
+
+
+
+
+
+
+\section{La bête numérique}
+\begin{frame}[fragile]
+  \frametitle{Algorithme}
+  $A$ une matrice carrée.
+
+  Les valeurs propres de $A$ sont $1=\lambda_1 > |\lambda_2| \geqslant |\lambda_3| \geqslant \ldots \geqslant |\lambda_n|$.
+
+  Les vecteurs propres de $A$ sont $x_1, x_2, \ldots x_n$.
+
+  Supposons que les vecteurs propres de $A$ forment une base de $\mathbb{R}^n$.
+
+  Soit $I^{(0)}$ un vecteur quelconque non nul.
+
+  Alors, $I^{(0)} = \alpha_1x_1 + \alpha_2x_2 + \ldots + \alpha_n x_n$.
+  Posons $I^{(k)} = AI^{(k-1)}$.
+
+  \begin{theorem}
+    $I^{(k)} \to x_1$
+  \end{theorem}
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Premier problème}
+  Est-ce que dans le cas de $\overline{\overline{H}}$, $$1=\lambda_1 > |\lambda_2| \geqslant |\lambda_3| \geqslant \ldots \geqslant |\lambda_n|$$
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Vitesse de convergence}
+    \begin{theorem}
+    $\lambda_2 = \alpha$
+    \end{theorem}
+
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Variations sur un même thème}
+  \begin{itemize}
+  \item<1-> $\alpha = 0,85$
+  \item<2-> $\alpha = 0,9999$
+  \item<3-> $\alpha = 0,0001$
+  \end{itemize}
+\end{frame}
+
+
+
+\section{La bête stochastique}
+\begin{frame}[fragile]
+  \frametitle{Les équivalences}
+  \begin{itemize}
+    \item<1-> Web = \alert{chaîne de Markov}
+    \item<2-> $H$ = \alert{matrice de transition}
+    \item<3-> $\overline{H}$ est \alert{stochastique}
+    \item<4-> Le vecteur $I$ des rangs est une \alert{distribution limite}
+    \item<5-> Les composantes de $I$ représentent la \alert{proportion du temps} où un promeneur sur le Web est dans une page donnée
+    \item<6-> connexité forte = \alert{irréductibilité} de la chaîne de Markov
+    \item<7-> Si 1 est une valeur propre multiple, il y aura une page qui va bouffer tous les rangs, et c'est un \alert{état absorbant} de la chaîne de Markov.
+  \end{itemize}
+\end{frame}
+
+
+
+\section{La bête algébrique}
+\begin{frame}[fragile]
+  \frametitle{Réécriture du problème}
+
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Est-ce que ça marche?}
+    \begin{theorem}
+    \begin{itemize}
+    \item<1-> $1\!{\rm l} - \alpha \overline{H}$ est non singulière
+    \item<2-> La somme des éléments sur une ligne de $1\!{\rm l} - \alpha \overline{H}$ est $1-\alpha$.
+    \item<3-> $\Vert 1\!{\rm l} - \alpha \overline{H} \Vert_{\infty} = 1+\alpha$
+    \item<4-> $\Vert \left( 1\!{\rm l} - \alpha \overline{H}\right)^{-1} \Vert_{\infty} = \frac{1}{1-\alpha}$
+    \item<5-> ${\rm cond}(1\!{\rm l} - \alpha \overline{H}) = \frac{1+\alpha}{1-\alpha}$
+    \end{itemize}
+    \end{theorem}
+
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Pistes de solutions}
+  \begin{itemize}
+  \item<1->Jacobi
+  \item<2->Gauss-Seidel
+  \end{itemize}
+\end{frame}
+
+
+\section{Les problèmes}
+\begin{frame}[fragile]
+  \frametitle{Quelques pistes de solutions}
+\end{frame}
+
+
+
+
+\section{Que faire?}
+\begin{frame}[fragile]
+  \frametitle{Quelques avenues intéressantes}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\section<presentation>*{Annexes}
+\subsection<presentation>*{Bibliographie}
+
+\begin{frame}[allowframebreaks]
+  \frametitle<presentation>{Pour en savoir plus}
+
+  \begin{thebibliography}{10}
+      \bibitem{Langville}
+      Amy N. Langville et Carl D. Meyer
+      \newblock {\em Deeper Inside PageRank}.
+      \newblock Internet Mathematics Journal, vol. 1, no. 3, pp. 335-380.
+
+      \bibitem{Bryan}
+      Kurt Bryan et Tanya Leise
+      \newblock {\em The \$ 25\;000\;000\;000 Eigenvector : The Linear Algebra Behind Google}.
+      \newblock Rose-Hulman Institute of Tehcnology and Amherst
+      College
+
+      \bibitem{Austin}
+      David Austin
+      \newblock {\em How Google Finds your Needle in the Web's Haystack}.
+      \newblock tiré du site de l'AMS.
+
+  \end{thebibliography}
+
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+\centerline{ \textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+
+
+\bigskip
+
+\centerline{\large\bf MAT417 -- Méthodes numériques en algèbre
+linéaire}
+
+\bigskip
+\centerline{\Large\bf Laboratoire 4}
+\bigskip
+
+
+\begin{description}
+
+\item[1)] Considérons le système d'équations linéaires
+
+$\left( \begin{array}{rrr} -2 & 1 & 1 \\ 1 & 3 & 2 \\ 1 & 2 & 1
+\end{array} \right) \left(\begin{array}{r} x_1 \\ x_2 \\ x_3
+\end{array} \right) = \left(\begin{array}{r} 2 \\ 9 \\ 6
+\end{array} \right)$
+
+    \begin{description}
+
+    \item[a)] Effectuer une décomposition de Choleski de la matrice des coefficients du système.
+
+    \item[b)] Résoudre le système obtenu.
+
+    \end{description}
+
+
+\item[2)] Soit $x \in \mathbb{R}^n$ pour un $n>0$ et $\| x \|_p =
+\left( \sum\limits_{i=1}^{n} |x_i|^p \right)^{\frac{1}{p}}$ la
+norme $p$ de $x$.
+
+    \begin{description}
+
+    \item[a)] Montrer que $\| x \|_{\infty} \leqslant \| x \|_p$
+    pour toute valeur de $p$.
+
+    \item[b)] Soit $A$ une matrice et $\| A \|_{\infty}$ la norme
+    matricielle induite de la norme vectorielle. Montrer que
+    $\| A \|_{\infty} = \max\limits_{i=1,2,\ldots,n} \left( \sum\limits_{j=1}^{n} | a_{ij} | \right)$.
+
+    \item[c)]  Soit $A$ une matrice et $\| A \|_{1}$ la norme
+    matricielle induite de la norme vectorielle. Montrer que
+    $\| A \|_{1} = \max\limits_{j=1,2,\ldots,n} \left( \sum\limits_{i=1}^{n} | a_{ij} | \right)$.
+
+    \end{description}
+
+
+\item[3)] Soit $A$ une matrice $n$ par $n$ pour un certain $n>0$
+et $x \in \mathbb{R}^{n}$. Considérons la norme de Frobenius
+définie par
+
+$$\| A \|_{F} = \sqrt{\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n} a_{ij}^2}.$$
+
+    \begin{description}
+
+    \item[a)] Montrer que $\| A \|_{F}$ est bel et bien une
+    norme, c'est-à-dire que pour toutes matrices $A$ et $B$ et
+    pour toute constante $\alpha$
+
+        \begin{description}
+
+        \item[i)] $\| A \|_{F} \geqslant 0$
+
+        \item[ii)] $\| A \|_{F} = \iff A=0 $
+
+        \item[iii)] $\| \alpha A \|_{F} = | \alpha | \cdot \| A
+        \|_{F}$
+
+        \item[iv)] $\| A + B \|_{F} \leqslant \| A \|_{F} + \| B \|_{F}$
+
+        \end{description}
+
+    \item[b)] Montrer que la norme de Frobenius est compatible
+    avec la norme vectorielle $\| \cdot \|_2$, c'-est-à-dire que
+    $\| Ax \|_2 \leqslant \| A \|_F \cdot \| x \|_2$.
+
+    \item[c)] Montrer que $\| A \|_2 \leqslant \| A \|_F$.
+
+    \item[d)] Déterminer une matrice $A$ telle que $\| A \|_2 \neq \| A \|_F$.
+
+    \item[e)] En déduire que $\| A \|_{F}$ ne peut être une norme
+    induite d'une norme vectorielle, c'est-à-dire que $\| A \|_F
+    \neq \sup\limits_{y \in \mathbb{R}^{n}_{*}} \frac{\| Ay \|}{\| y
+    \|}$
+
+    \end{description}
+
+
+\item[4)] Montrer que ${\rm cond}(A) \geqslant 1$ pour toute
+matrice $A$.
+
+
+
+\item[5)] Considérons la matrice $\left( \begin{array}{rrr} 3 & 1
+& 6 \\ 2 & 1 & 3 \\ 1 & 1 & 1 \end{array} \right).$
+
+    \begin{description}
+
+    \item[a)] Calculer ${\rm cond}(A)$.
+
+    \item[b)] Conditionner les lignes de la matrice $A$ avec la
+    norme $\| \cdot \|_{1}$, puis calculer le conditionnement de la nouvelle
+    matrice.
+
+    \item[c)] Conditionner les colonnes de la matrice résultante avec la
+    norme $\| \cdot \|_{1}$, puis calculer le conditionnement de la nouvelle
+    matrice.
+
+    \item[d)] Refaire les parties b) et c), mais en normalisant
+    cette fois avec la norme $\| \cdot \|_{\infty}$.
+
+    \item[e)] En résolvant le système d'équation
+
+$$\left( \begin{array}{rrr} 3 & 1 & 6 \\ 2 & 1 & 3 \\ 1 & 1 & 1
+\end{array} \right)
+\left(\begin{array}{r} x_1 \\ x_2 \\ x_3
+\end{array} \right) = \left(\begin{array}{r} 2 \\ 7 \\ 4
+\end{array} \right),$$
+
+on a obtenu en arithmétique à $m=3$ chiffres significatifs la
+solution approximative
+
+$$ \left(\begin{array}{r} x_1 \\ x_2 \\ x_3
+\end{array} \right) = \left(\begin{array}{r} 18,8 \\ -6,78 \\
+-8,01
+\end{array} \right).$$
+
+Déterminer des bornes pour l'erreur d'approximation relative de
+cette solution.
+
+    \end{description}
+
+
+\item[6)] Considérons le système itératif
+
+$$x^{(k+1)} = F x^{(k)} + c$$ où
+
+$$F = \left( \begin{array}{rrr} 0 & 0 & 2 \\ 1 & 1/2 & -4 \\
+6 & 3 & 1/4
+\end{array} \right).$$
+
+Montrer que ce système converge pour toute valeur de $x^{(0)}$.
+
+\end{description}
+
+\end{document}

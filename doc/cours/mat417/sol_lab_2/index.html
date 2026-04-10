@@ -1,0 +1,1656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>sol_lab_2</TITLE>
+<META NAME="description" CONTENT="sol_lab_2">
+<META NAME="keywords" CONTENT="sol_lab_2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sol_lab_2.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+pt
+cm
+
+<P>
+<DIV ALIGN="CENTER">
+ <FONT SIZE="+1">U<SMALL>NIVERSIT&#201; DE </SMALL>S<SMALL>HERBROOKE</SMALL></FONT></DIV>
+
+<DIV ALIGN="CENTER">
+ D<SMALL>&#201;PARTEMENT DE MATH&#201;MATIQUES</SMALL></DIV>
+
+<DIV ALIGN="CENTER">
+ <SMALL>&#201;T&#201; 2005</SMALL></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+1"><B>MAT417 - M&#233;thodes num&#233;riques en alg&#232;bre
+lin&#233;aire</B></FONT></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Laboratoire 2 - Solutionnaire</B></FONT></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DL>
+<DT><STRONG>1)</STRONG></DT>
+<DD>On a
+
+<P>
+<!-- MATH
+ $\begin{array}[t]{rcl}
+\det A  & = & \sum\limits_{\sigma \in \mathcal{S}_3} \left( {\rm sgn}(\sigma) \prod\limits_{i=1}^{3} a_{i, \sigma(i)} \right) \\\\
+& = & {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\1 & 2 & 3 \end{array} \right) \cdot a_{1,1} a_{2,2} a_{3,3}  + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\1 & 3 & 2 \end{array} \right) \cdot a_{1,1} a_{2,3} a_{3,2}   \\\\
+        &   & \quad + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\2 & 1 & 3 \end{array} \right) \cdot a_{1,2} a_{2,1} a_{3,3}  + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\2 & 3 & 1 \end{array} \right) \cdot a_{1,2} a_{2,3} a_{3,1}  \\
+        &   & \quad + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\3 & 1 & 2 \end{array} \right) \cdot a_{1,3} a_{2,1} a_{3,2}  + {\rm signe} \left( \begin{array}{ccc} 1 & 2 & 3 \\3 & 2 & 1 \end{array} \right) \cdot a_{1,3} a_{2,2} a_{3,1}  \\\\
+        & = & (+1) \cdot a_{1,1} a_{2,2} a_{3,3}  + (-1) \cdot a_{1,1} a_{2,3} a_{3,2}  \\
+        &   & \quad + (-1) \cdot a_{1,2} a_{2,1} a_{3,3}  + (+1) \cdot a_{1,2} a_{2,3} a_{3,1}  \\
+        &   & \quad + (+1) \cdot a_{1,3} a_{2,1} a_{3,2}  + (-1) \cdot a_{1,3} a_{2,2} a_{3,1} 
+        \\\\
+        & = & 1 \cdot 1 \cdot 2 - 1 \cdot 2 \cdot 3 - 3 \cdot 3 \cdot 2 + 3 \cdot 2 \cdot 2 + 2 \cdot 3 \cdot 3 - 2 \cdot 1 \cdot 2
+        \\\\
+        & = & 2 - 6 - 18 + 12 + 18 - 4 \\\\
+        & = & 4
+\end{array}$
+ -->
+<IMG
+ WIDTH="634" HEIGHT="471" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rcl}
+\det A &amp; = &amp; \sum\limits_{\sigma \in \...
+...
+&amp; = &amp; 2 - 6 - 18 + 12 + 18 - 4 \ \\
+&amp; = &amp; 4
+\end{array}\end{displaymath}">
+
+
+<P>
+Comme <!-- MATH
+ ${\rm cof} A = \left( \begin{array}{rrr} -4 & -2 & 7 \\0 &
+-2 & 3 \\4 & 4 & -8 \end{array} \right)$
+ -->
+<IMG
+ WIDTH="222" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ {\rm cof} A = \left( \begin{array}{rrr} -4 &amp; -2 &amp; 7 \ 0 &amp;
+-2 &amp; 3 \ 4 &amp; 4 &amp; -8 \end{array} \right)$">
+, on en d&#233;duit que
+<P><!-- MATH
+ \begin{displaymath}
+A^{-1} = \frac{1}{4} \left( \begin{array}{rrr} -4 & 0 & 4
+\\-2 & -2 & 4 \\7 & 3 & -8 \end{array} \right).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="240" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$\displaystyle A^{-1} = \frac{1}{4} \left( \begin{array}{rrr} -4 &amp; 0 &amp; 4
+\ -2 &amp; -2 &amp; 4 \ 7 &amp; 3 &amp; -8 \end{array} \right).$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>2)</STRONG></DT>
+<DD>On a
+
+<P>
+<!-- MATH
+ $\det A =
+\left|
+\begin{array}{ccc}
+1 & 3 & 2 \\
+3 & 1 & 2 \\
+2 & 3 & 2
+\end{array}
+\right|
+= 2 + 12 + 18 - 4 - 6 - 18 = 4
+$
+ -->
+<IMG
+ WIDTH="416" HEIGHT="86" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}
+\det A =
+\left\vert
+\begin{array}{ccc}
+1 &amp; 3 &amp; 2 \\
+3 ...
+...&amp; 2
+\end{array}
+\right\vert
+= 2 + 12 + 18 - 4 - 6 - 18 = 4
+\end{displaymath}">
+
+
+<P>
+<!-- MATH
+ $\Delta_1 =
+\left|
+\begin{array}{ccc}
+3 & 3 & 2 \\
+4 & 1 & 2 \\
+4 & 3 & 2
+\end{array}
+\right|
+= 6 + 24 + 24 - 8 - 18 - 24 = 4
+$
+ -->
+<IMG
+ WIDTH="405" HEIGHT="86" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}
+\Delta_1 =
+\left\vert
+\begin{array}{ccc}
+3 &amp; 3 &amp; 2 \\
+...
+... 2
+\end{array}
+\right\vert
+= 6 + 24 + 24 - 8 - 18 - 24 = 4
+\end{displaymath}">
+
+
+<P>
+<!-- MATH
+ $\Delta_2 =
+\left|
+\begin{array}{ccc}
+1 & 3 & 2 \\
+3 & 4 & 2 \\
+2 & 4 & 2
+\end{array}
+\right|
+= 8 + 12 + 24 - 16 - 8 - 18 = 2
+$
+ -->
+<IMG
+ WIDTH="404" HEIGHT="86" BORDER="0"
+ SRC="img6.png"
+ ALT="\begin{displaymath}
+\Delta_2 =
+\left\vert
+\begin{array}{ccc}
+1 &amp; 3 &amp; 2 \\
+...
+... 2
+\end{array}
+\right\vert
+= 8 + 12 + 24 - 16 - 8 - 18 = 2
+\end{displaymath}">
+
+
+<P>
+<!-- MATH
+ $\Delta_3 =
+\left|
+\begin{array}{ccc}
+1 & 3 & 3 \\
+3 & 1 & 4 \\
+2 & 3 & 4
+\end{array}
+\right|
+= 4 + 24 + 27 - 6 - 12 - 36 = 1
+$
+ -->
+<IMG
+ WIDTH="404" HEIGHT="86" BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{displaymath}
+\Delta_3 =
+\left\vert
+\begin{array}{ccc}
+1 &amp; 3 &amp; 3 \\
+...
+... 4
+\end{array}
+\right\vert
+= 4 + 24 + 27 - 6 - 12 - 36 = 1
+\end{displaymath}">
+
+
+<P>
+Ainsi,
+<!-- MATH
+ $\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\frac{1}{4}
+\left(
+\begin{array}{r}
+4 \\
+2 \\
+1
+\end{array}
+\right)
+=
+\left(
+\begin{array}{r}
+1 \\
+\frac{1}{2} \\
+\frac{1}{4}
+\end{array}
+\right)
+$
+ -->
+<IMG
+ WIDTH="242" HEIGHT="86" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array...
+...r}
+1 \\
+\frac{1}{2} \\
+\frac{1}{4}
+\end{array}
+\right)
+\end{displaymath}">
+
+
+<P><P>
+<BR>
+
+<P>
+</DD>
+<DT><STRONG>3)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD>Appliquons l'algorithme de Gauss :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rl}
+A = &   \left(
+\begin{array}{rrr|r}
+        1 & 3 & -2 & 3 \\
+        2 & 4 & 0  & 8 \\
+        3 & 6 & 5  & 17
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_2-2L_1 \\L_3-3L_1 \end{array}$}}}{\sim} &    \left(
+                                        \begin{array}{rrr|r}
+                                        1 & 3 & -2 & 3 \\
+                                        0 & -2 & 4  & 2 \\
+                                        0 & -3 & 11  & 8
+                                        \end{array}
+                                        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_3 - \frac{3}{2}L_2 \end{array}$}}}{\sim} &    \left(
+                                        \begin{array}{rrr|r}
+                                        1 & 3 & -2 & 3 \\
+                                        0 & 1 & -2  & -1 \\
+                                        0 & 0 &  5  & 5
+                                        \end{array}
+                                        \right)
+\\\\
+\end{array}$
+ -->
+<IMG
+ WIDTH="240" HEIGHT="294" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}\begin{array}{rl}
+A = &amp; \left(
+\begin{array}{rrr\vert r}
+...
+...\
+0 &amp; 0 &amp; 5 &amp; 5
+\end{array}
+\right)
+\ \\
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En appliquant une phase ascendante de r&#233;solution, on a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}[t]{rclclcl}
+x_3 & = & 1 \\\\
+x_2 & = & -1 + 2x_3         & = & -1 + 2 \cdot 1            & = & 1 \\\\
+x_1 & = & 3 - 3x_2 + 2x_3   & = & 3 - 3 \cdot 1 + 2 \cdot 1 & = & 2.
+\end{array}$
+ -->
+<IMG
+ WIDTH="401" HEIGHT="138" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rclclcl}
+x_3 &amp; = &amp; 1 \ \\
+x_2 &amp; = &amp; -1 +...
+..._2 + 2x_3 &amp; = &amp; 3 - 3 \cdot 1 + 2 \cdot 1 &amp; = &amp; 2.
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Donc,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2 \\
+1 \\
+1
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="140" HEIGHT="86" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array...
+...eft(
+\begin{array}{c}
+2 \\
+1 \\
+1
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Appliquons l'algorithme de Gauss avec choix de pivot partiel en arithm&#233;tique avec mantisse &#224; <IMG
+ WIDTH="56" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ m=4$">
+ chiffres :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rll}
+A = &   \left(
+\begin{array}{rrr|r}
+        1 & 3 & -2 & 3 \\
+        2 & 4 & 0  & 8 \\
+        3 & 6 & 5  & 17
+        \end{array}
+        \right)
+    & {\rm Ligne} = (3,\cdot,\cdot)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1-0,333L_3 \\L_2-0,667L_3 \end{array}$}}}{\sim} &    \left(
+                                                \begin{array}{rrr|r}
+                                                0,000 & 1,000 & -3,666 & -2,666 \\
+                                                0,000 & 0,000 & -3,334 & -3,330 \\
+                                                3,000 & 6,000 & 5,000  & 17,00
+                                                \end{array}
+                                                \right)
+    & {\rm Ligne} = (3, 1, \cdot)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c}  \end{array}$}}}{\sim} &    \left(
+                    \begin{array}{rrr|r}
+                    0,000 & 1,000 & -3,666 & -2,666 \\
+                    0,000 & 0,000 & -3,334 & -3,330 \\
+                    3,000 & 6,000 & 5,000  & 17,00
+                    \end{array}
+                    \right)
+    & {\rm Ligne} = (3, 1, 2)
+\\\\
+\end{array}$
+ -->
+<IMG
+ WIDTH="558" HEIGHT="284" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}\begin{array}{rll}
+A = &amp; \left(
+\begin{array}{rrr\vert r}...
+...ray}
+\right)
+&amp; {\rm Ligne} = (3, 1, 2)
+\ \\
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En appliquant une phase ascendante de r&#233;solution, en suivant le sens inverse des &#233;l&#233;ments du vecteur <TT>Ligne</TT>, on a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}[t]{rclclcl}
+x_3 & = & -3,330/-3,334              & = & 0,9988 \\\\
+x_2 & = & -2,666 + 3,666x_3          & = & -2,666 + 3,662       & = & 0,996 \\\\
+x_1 & = & \frac{17,00 - 6,000x_2 - 5,000x_3}{3,000}  & = & \frac{17,00 - 5,976 - 4,994}{3,00} & = & \frac{6,026}{3} = 2,009.
+\end{array}$
+ -->
+<IMG
+ WIDTH="543" HEIGHT="130" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rclclcl}
+x_3 &amp; = &amp; -3,330/-3,334 &amp; = &amp; 0,99...
+...,976 - 4,994}{3,00} &amp; = &amp; \frac{6,026}{3} = 2,009.
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Donc,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2,009 \\
+0,996 \\
+0,9988
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="186" HEIGHT="86" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array...
+...array}{c}
+2,009 \\
+0,996 \\
+0,9988
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>Appliquons l'algorithme de Gauss avec choix de pivot total en arithm&#233;tique avec mantisse &#224; <IMG
+ WIDTH="56" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ m=4$">
+ chiffres :
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rll}
+A = &   \left(
+\begin{array}{rrr|r}
+        1 & 3 & -2 & 3 \\
+        2 & 4 & 0  & 8 \\
+        3 & 6 & 5  & 17
+        \end{array}
+        \right)
+    & \begin{array}{l} {\rm Ligne} = (3,\cdot,\cdot) \\{\rm Colonne} = (2,\cdot,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1-0,5L_3 \\L_2-0,667L_3 \end{array}$}}}{\sim} &    \left(
+                                                \begin{array}{rrr|r}
+                                                -0,5000 & 0,000 & -4,500 & -5,500 \\
+                                                0,000   & 0,000 & -3,334 & -3,330 \\
+                                                3,000   & 6,000 & 5,000  & 17,00
+                                                \end{array}
+                                                \right)
+    & \begin{array}{l} {\rm Ligne} = (3,1,\cdot) \\{\rm Colonne} = (2,3,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_2-\frac{3,34}{4,50}L_1 \end{array}$}}}{\sim} &    \left(
+                    \begin{array}{rrr|r}
+                    -0,5000 & 0,000 & -4,500 & -5,500 \\
+                    0,3705  & 0,000 & 0,000  & 0,7450 \\
+                    3,000   & 6,000 & 5,000  & 17,00
+                    \end{array}
+                    \right)
+    & \begin{array}{l} {\rm Ligne} = (3,1,2) \\{\rm Colonne} = (2,3,1) \end{array}
+\\\\
+\end{array}$
+ -->
+<IMG
+ WIDTH="612" HEIGHT="284" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}\begin{array}{rll}
+A = &amp; \left(
+\begin{array}{rrr\vert r}...
+...,2) \ {\rm Colonne} = (2,3,1) \end{array}
+\ \\
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En appliquant une phase ascendante de r&#233;solution, en suivant le sens inverse des &#233;l&#233;ments des vecteurs <TT>Ligne</TT> et <TT>Colonne</TT>, on a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}[t]{rclclcl}
+x_1 & = & 0,7450/0,3705                            & = & 2,011 \\\\
+x_3 & = & \frac{-5,500 + 0,5000x_1}{-4,500}         & = & \frac{-5,500 + 1,006}{-4,500}       & = & 0,9987 \\\\
+x_2 & = & \frac{17,00 - 3,000x_1 - 5,000x_3}{6,000}  & = & \frac{17,00 - 6,033 - 4,994}{6,000} & = & \frac{5,970}{6,000} = 0,995.
+\end{array}$
+ -->
+<IMG
+ WIDTH="529" HEIGHT="133" BORDER="0"
+ SRC="img17.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rclclcl}
+x_1 &amp; = &amp; 0,7450/0,3705 &amp; = &amp; 2,01...
+...- 4,994}{6,000} &amp; = &amp; \frac{5,970}{6,000} = 0,995.
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Donc,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+2,011 \\
+0,995 \\
+0,9987
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="186" HEIGHT="86" BORDER="0"
+ SRC="img18.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array...
+...array}{c}
+2,011 \\
+0,995 \\
+0,9987
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>d)</STRONG></DT>
+<DD>Pour la partie a), on obtient avec une mantisse &#224; 4 chiffres
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    r(x_0)  & = & b-Ax_0 \\
+            & = &
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{rrr}
+    1 & 3 & -2 \\
+    2 & 4 & 0  \\
+    3 & 6 & 5
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{c}
+    2 \\1 \\1
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    0 \\0 \\0
+    \end{array}
+    \right).
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="386" HEIGHT="249" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+r(x_0) &amp; = &amp; b-Ax_0 \\
+&amp; = &amp;
+\left(
+\begi...
+... &amp;
+\left(
+\begin{array}{c}
+0 \ 0 \ 0
+\end{array}
+\right).
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+Pour la partie b), on obtient avec une mantisse &#224; 6 chiffres, mais stock&#233;e en mantisse &#224; 4 chiffres
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    r(x_0)  & = & b-Ax_0 \\
+            & = &
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{rrr}
+    1 & 3 & -2 \\
+    2 & 4 & 0  \\
+    3 & 6 & 5
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{c}
+    2,007 \\0,997 \\0,9988
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{c}
+    3,000 \\8,002 \\17,00
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    0,000 \\-0,002000 \\0,000
+    \end{array}
+    \right).
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="432" HEIGHT="249" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+r(x_0) &amp; = &amp; b-Ax_0 \\
+&amp; = &amp;
+\left(
+\begi...
+...in{array}{c}
+0,000 \ -0,002000 \ 0,000
+\end{array}
+\right).
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+Pour la partie c), on obtient avec une mantisse &#224; 6 chiffres, mais stock&#233;e en mantisse &#224; 4 chiffres
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcl}
+    r(x_0)  & = & b-Ax_0 \\
+            & = &
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{rrr}
+    1 & 3 & -2 \\
+    2 & 4 & 0  \\
+    3 & 6 & 5
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{c}
+    2,011 \\0,995 \\0,9987
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    3 \\8 \\17
+    \end{array}
+    \right)
+    -
+    \left(
+    \begin{array}{c}
+    2,999 \\8,002 \\16,99
+    \end{array}
+    \right) \\
+            & = &
+    \left(
+    \begin{array}{c}
+    0,001000 \\-0,002000 \\0,01000
+    \end{array}
+    \right).
+    \end{array}
+    
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="432" HEIGHT="249" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\displaystyle \begin{array}{rcl}
+r(x_0) &amp; = &amp; b-Ax_0 \\
+&amp; = &amp;
+\left(
+\begi...
+...ray}{c}
+0,001000 \ -0,002000 \ 0,01000
+\end{array}
+\right).
+\end{array}
+$">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>e)</STRONG></DT>
+<DD>La norme euclidienne du r&#233;sidu de la partie a) est 0.
+
+<P>
+La norme euclidienne du r&#233;sidu de la partie b) est
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+\| r(x_0) \|    & = & \sqrt{(-0,000)^2 + (-0,002000)^2 + (0,000)^2} \\
+                    & = & \sqrt{0,000 + 0,000004000 + 0,000} \\
+                    & = & \sqrt{0,000004000} \\
+                    & = & 0,002000
+    \end{array}$
+ -->
+<IMG
+ WIDTH="432" HEIGHT="111" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\Vert r(x_0) \Vert &amp; = &amp; \sqrt{(-0,000)^...
+...
+&amp; = &amp; \sqrt{0,000004000} \\
+&amp; = &amp; 0,002000
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+La norme euclidienne du r&#233;sidu de la partie c) est
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+\| r(x_0) \|    & = & \sqrt{(0,001000)^2 + (-0,002000)^2 + (0,01000)^2} \\
+                    & = & \sqrt{0,0000010000 + 0,000004000 + 0,0001000} \\
+                    & = & \sqrt{0,000005000 + 0,0001000} \\
+                    & = & \sqrt{0,0001050} \\
+                    & = & 0,01025
+    \end{array}$
+ -->
+<IMG
+ WIDTH="464" HEIGHT="124" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\Vert r(x_0) \Vert &amp; = &amp; \sqrt{(0,001000...
+... \\
+&amp; = &amp; \sqrt{0,0001050} \\
+&amp; = &amp; 0,01025
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Les m&#233;thodes de Gauss avec choix de pivot partiel ou de pivot total n'am&#233;liorent donc pas toujours la solution.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+<DT><STRONG>4)</STRONG></DT>
+<DD>En plus des &#233;tapes de l'algorithme de Gauss standard
+(<!-- MATH
+ $\frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n$">
+ op&#233;rations), il
+faut comparer les &#233;l&#233;ments un &#224; un pour d&#233;terminer lequel est le
+plus grand. Pour <IMG
+ WIDTH="37" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$ A^{(0)}$">
+, on compare <IMG
+ WIDTH="23" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$ n^2$">
+ &#233;l&#233;ments,
+c'est-&#224;-dire <IMG
+ WIDTH="56" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$ n^2-1$">
+ op&#233;rations. Pour <IMG
+ WIDTH="37" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ A^{(1)}$">
+, on compare
+<IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$ (n-1)^2$">
+ &#233;l&#233;ments et on a donc <!-- MATH
+ $(n-1)^2 -1$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$ (n-1)^2 -1$">
+ op&#233;rations. Pour
+<IMG
+ WIDTH="37" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$ A^{(k)}$">
+, on compare <IMG
+ WIDTH="72" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$ (n-k)^2$">
+ &#233;l&#233;ments, c'est-&#224;-dire <!-- MATH
+ $(n-k)^2 -1$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$ (n-k)^2 -1$">
+
+op&#233;rations. Puisqu'on doit obtenir jusqu'&#224; <IMG
+ WIDTH="45" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$ A^{n-1}$">
+, il faut donc
+sommer pour les valeurs de <IMG
+ WIDTH="15" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$ k$">
+ comprises entre 0 et <IMG
+ WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$ n-2$">
+. Cela
+fait donc
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rcl}
+\sum\limits_{i=0}^{n-2} [ (n-k)^2 -1 ]
+& = & \sum\limits_{k=0}^{n-2} (n-k)^2 - \sum\limits_{i=0}^{n-2} 1 \\\\
+    & = & \sum\limits_{k=0}^{n-2} (n-k)^2 - (n-1) \\\\
+    & = & \sum\limits_{k=2}^{n} k^2 - (n-1) \\\\
+    & = & \sum\limits_{k=1}^{n} k^2 - 1 - (n-1) \\\\
+    & = & \sum\limits_{k=1}^{n} k^2 - n \\\\
+    & = & \frac{n(n+1)(2n+1)}{6} - n \\\\
+    & = & \frac{2n^3 + 3n^2 + n}{6} - n \\\\
+    & = & \frac{2n^3 + 3n^2 -5n}{6} \\\\
+    & = & \frac{1}{3}n^3 + \frac{1}{2}n^2 -\frac{5}{6}n
+\end{array}$
+ -->
+<IMG
+ WIDTH="354" HEIGHT="527" BORDER="0"
+ SRC="img37.png"
+ ALT="\begin{displaymath}\begin{array}{rcl}
+\sum\limits_{i=0}^{n-2} [ (n-k)^2 -1 ]
+...
+... = &amp; \frac{1}{3}n^3 + \frac{1}{2}n^2 -\frac{5}{6}n
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Il faut donc <!-- MATH
+ $\frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n +
+\frac{1}{3}n^3 + \frac{1}{2}n^2 -\frac{5}{6}n =
+n^3 + 2n^2 -2n$
+ -->
+<IMG
+ WIDTH="420" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n +
+\frac{1}{3}n^3 + \frac{1}{2}n^2 -\frac{5}{6}n =
+n^3 + 2n^2 -2n$">
+ op&#233;rations.
+
+<P>
+
+<P><P>
+<BR>
+
+</DD>
+<DT><STRONG>5)</STRONG></DT>
+<DD>Posant <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.png"
+ ALT="$ t=0$">
+ dans
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcrcrcrcr}
+x(t) & = & 4Ae^{-t} & + & 14Be^{-2t} & + & Ce^{-3t} & + & e^{t} \\
+y(t) & = & -9Ae^{-t} & - & 30Be^{-2t} & - & 2Ce^{-3t} &  &  \\
+z(t) & = & 6Ae^{-t} & + & 17Be^{-2t} & + & Ce^{-3t} & - & e^{t}
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="416" HEIGHT="86" BORDER="0"
+ SRC="img40.png"
+ ALT="\begin{displaymath}
+\begin{array}{rcrcrcrcr}
+x(t) &amp; = &amp; 4Ae^{-t} &amp; + &amp; 14Be^{-...
+...{-t} &amp; + &amp; 17Be^{-2t} &amp; + &amp; Ce^{-3t} &amp; - &amp; e^{t}
+\end{array}
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+on obtient
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcrcrcrcr}
+0 & = & 4A  & + & 14B & + & C  & + & 1  \\
+0 & = & -9A & - & 30B & - & 2C &   &    \\
+0 & = & 6A  & + & 17B & + & C  & - & 1
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="299" HEIGHT="86" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}
+\begin{array}{rcrcrcrcr}
+0 &amp; = &amp; 4A &amp; + &amp; 14B &amp; + &amp; C &amp; + ...
+...2C &amp; &amp; \\
+0 &amp; = &amp; 6A &amp; + &amp; 17B &amp; + &amp; C &amp; - &amp; 1
+\end{array}
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+La r&#233;solution avec la m&#233;thode de Gauss avec choix de pivot total donne
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rll}
+A = &   \left(
+\begin{array}{rrr|r}
+        4  & 14  & 1  & -1 \\
+        -9 & -30 & -2 & 0  \\
+        6  & 17  & 1  & 1
+        \end{array}
+        \right)
+    & \begin{array}{l} {\rm Ligne} = (2,\cdot,\cdot) \\{\rm Colonne} = (2,\cdot,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1+\frac{14}{30}L_2 \\L_3+\frac{17}{30}L_2 \end{array}$}}}{\sim}
+    &    \left(
+         \begin{array}{rrr|r}
+         \frac{-6}{30}  &  0  & \frac{2}{30}    & -1 \\
+        -9              & -30 & -2              & 0  \\
+         \frac{27}{30}   &  0  & \frac{-4}{30}   & 1
+\par
+\end{array}
+         \right)
+    & \begin{array}{l} {\rm Ligne} = (2,3,\cdot) \\{\rm Colonne} = (2,1,\cdot) \end{array}
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_1+\frac{2}{9}L_3 \end{array}$}}}{\sim} &
+        \left(
+        \begin{array}{rrr|r}
+         0              &  0  & \frac{1}{27}   & \frac{-7}{9}  \\
+        -9              & -30 & -2              & 0             \\
+        \frac{9}{10}    &  0  & \frac{-2}{15}   & 1
+        \end{array}
+        \right)
+    & \begin{array}{l} {\rm Ligne} = (2,3,1) \\{\rm Colonne} = (2,1,3) \end{array}
+\\\\
+\end{array}$
+ -->
+<IMG
+ WIDTH="464" HEIGHT="288" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}\begin{array}{rll}
+A = &amp; \left(
+\begin{array}{rrr\vert r}...
+...,1) \ {\rm Colonne} = (2,1,3) \end{array}
+\ \\
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En appliquant une phase ascendante de r&#233;solution, en suivant le sens inverse
+des &#233;l&#233;ments des vecteurs <TT>Ligne</TT> et <TT>Colonne</TT>, on a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}[t]{rclclcl}
+x_3 & = & -21 \\\\
+x_1 & = & \frac{1 + \frac{2}{15}x_3}{\frac{9}{10}}  & = & \frac{\frac{-27}{15}}{\frac{9}{10}}    & = & -2 \\\\
+x_2 & = & \frac{9x_1 +2x_3}{-30}                    & = & \frac{-60}{-30}           & = & 2.
+\end{array}$
+ -->
+<IMG
+ WIDTH="265" HEIGHT="151" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rclclcl}
+x_3 &amp; = &amp; -21 \ \\
+x_1 &amp; = &amp; \f...
+...ac{9x_1 +2x_3}{-30} &amp; = &amp; \frac{-60}{-30} &amp; = &amp; 2.
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Donc,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rcrcrcrcr}
+x(t) & = & -8e^{-t}  & + & 28e^{-2t} & + & -21e^{-3t} & + & e^{t} \\
+y(t) & = & 18e^{-t} & - & 60e^{-2t} & + & 42e^{-3t} &   &       \\
+z(t) & = & -12e^{-t}  & + & 34e^{-2t}  & + & -21e^{-3t} & - & e^{t}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="411" HEIGHT="86" BORDER="0"
+ SRC="img44.png"
+ ALT="\begin{displaymath}
+\begin{array}{rcrcrcrcr}
+x(t) &amp; = &amp; -8e^{-t} &amp; + &amp; 28e^{-2...
+...t} &amp; + &amp; 34e^{-2t} &amp; + &amp; -21e^{-3t} &amp; - &amp; e^{t}.
+\end{array}
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+<DT><STRONG>6)</STRONG></DT>
+<DD><P>
+<DL>
+<DT><STRONG>a)</STRONG></DT>
+<DD><P>
+<TT>
+    <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">1. On forme la matrice <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ (T\vert b)$">
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;et on pose <IMG
+ WIDTH="75" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$ T^{(0)}=T$">
+ et <IMG
+ WIDTH="64" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ b^{(0)}=b$">
+.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">2. Pour <!-- MATH
+ $k=1,2,\ldots,n-1$
+ -->
+<IMG
+ WIDTH="153" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ k=1,2,\ldots,n-1$">
+, faire</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;2.1 Si <!-- MATH
+ $T_{k,k}^{(k-1)} = 0$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$ T_{k,k}^{(k-1)} = 0$">
+, permuter les lignes <IMG
+ WIDTH="15" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$ k$">
+ et <IMG
+ WIDTH="47" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ k+1$">
+.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;On note la matrice r&#233;sultante <IMG
+ WIDTH="54" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.png"
+ ALT="$ T^{(k-1)}$">
+.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;Faire de m&#234;me pour le vecteur <IMG
+ WIDTH="49" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$ b^{(k-1)}$">
+.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;2.2 Calculer</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $m_{k+1,k} = \frac{T_{k+1,k}^{(k-1)}}{T_{k,k}^{(k-1)}}$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ m_{k+1,k} = \frac{T_{k+1,k}^{(k-1)}}{T_{k,k}^{(k-1)}}$">
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $T_{k+1,k+1}^{(k)} = T_{k+1,k+1}^{(k-1)} - m_{k+1,k}T_{k,k+1}^{(k-1)}$
+ -->
+<IMG
+ WIDTH="285" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ T_{k+1,k+1}^{(k)} = T_{k+1,k+1}^{(k-1)} - m_{k+1,k}T_{k,k+1}^{(k-1)}$">
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $b_{k+1}^{(k)} = b_{k+1}^{(k-1)} - m_{k+1,k}b_{k}^{(k-1)}$
+ -->
+<IMG
+ WIDTH="227" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ b_{k+1}^{(k)} = b_{k+1}^{(k-1)} - m_{k+1,k}b_{k}^{(k-1)}$">
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">FIN</TD>
+</TR>
+</TABLE></TT>
+    
+<P><P>
+<BR>
+
+<P>
+On obtient alors un syst&#232;me triangulaire sup&#233;rieur <IMG
+ WIDTH="71" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$ T'x=b'$">
+ o&#249; <!-- MATH
+ $b'= (b_1',b_2',\ldots,b_n')^{t}$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ b'= (b_1',b_2',\ldots,b_n')^{t}$">
+ et
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+T' =
+\left(
+\begin{array}{ccccccccccc}
+d_1'     & u_1       & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & d_2'      & u_2       & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & d_3'      & u_3       & 0         & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & d_4'      & u_4       & \cdots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & 0         & d_5'      & \ddots & 0        & 0         & 0         & 0       & 0         \\
+0       & 0         & 0         & 0         & 0         & \ddots & \ddots   & 0         & 0         & 0       & 0         \\
+\vdots  & \vdots    & \vdots    & \vdots    & \vdots    & \ddots & \ddots   & \ddots    & \vdots    & \vdots  & \vdots    \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & d_{n-3}'  & u_{n-3}   & 0       & 0         \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & d_{n-2}'  & u_{n-2} & 0         \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & d_{n-1}' & u_{n-1}   \\
+0       & 0         & 0         & 0         & 0         & \cdots & 0        & 0         & 0         & 0       & d_{n}'
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="530" HEIGHT="284" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}
+T' =
+\left(
+\begin{array}{ccccccccccc}
+d_1' &amp; u_1 &amp; 0 &amp; ...
+...0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; d_{n}'
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+Pour la phase ascendante de r&#233;solution, on obtient <!-- MATH
+ $x_n = \frac{b_n'}{d_n'}$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ x_n = \frac{b_n'}{d_n'}$">
+ et
+<!-- MATH
+ $x_i = \frac{b_i' - u_{i}x_{i+1}}{d_i'}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$ x_i = \frac{b_i' - u_{i}x_{i+1}}{d_i'}$">
+ pour <!-- MATH
+ $i = n-1, n-2, \ldots, 1$
+ -->
+<IMG
+ WIDTH="183" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ i = n-1, n-2, \ldots, 1$">
+.
+
+<P>
+</DD>
+<DT><STRONG>b)</STRONG></DT>
+<DD>Pour <IMG
+ WIDTH="58" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$ m_{k+1,k}$">
+, il y a une multiplication.
+    Pour <!-- MATH
+ $T_{k+1,k+1}^{(k)}$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$ T_{k+1,k+1}^{(k)}$">
+, il y a une multiplication et une addition.
+    Pour <!-- MATH
+ $b_{k+1}^{(k)}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$ b_{k+1}^{(k)}$">
+, il y a une multiplication et une addition.
+
+<P>
+Comme on doit faire ces op&#233;rations pour <!-- MATH
+ $k=1,2,\ldots,n-1$
+ -->
+<IMG
+ WIDTH="153" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ k=1,2,\ldots,n-1$">
+, il y a en tout <IMG
+ WIDTH="72" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$ 5(n-1)$">
+
+    op&#233;rations pour la triangularisation.
+
+<P>
+Pour la phase ascendante, il y a une multiplication pour <IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$ x_n$">
+ et ensuite,
+    pour <!-- MATH
+ $x_{n-1}, \ldots,x_2,x_1$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$ x_{n-1}, \ldots,x_2,x_1$">
+, il y a &#224; chaque fois 2 multiplications et une addition.
+    En tout, pour la phase ascendante, cela fait <IMG
+ WIDTH="105" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$ 3(n-1) +1$">
+ op&#233;rations.
+
+<P>
+En tout et pour tout, on obtient <!-- MATH
+ $5(n-1) + 3(n-1) + 1 = 8n-7$
+ -->
+<IMG
+ WIDTH="274" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$ 5(n-1) + 3(n-1) + 1 = 8n-7$">
+ op&#233;rations.
+
+<P>
+</DD>
+<DT><STRONG>c)</STRONG></DT>
+<DD>En appliquant l'algorithme, on a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}{rl}
+A = &   \left(
+\begin{array}{rrrr|r}
+        5  & -4 & 0  & 0  & 0 \\
+        -4 & 6  & -4 & 0  & 0 \\
+        0  & -4 & 6  & -4 & 1 \\
+        0  & 0  & -4 & 5  & 0
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_2+\frac{4}{5}L_1 \end{array}$}}}{\sim}
+    &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4             & 0  & 0  & 0 \\
+        0  & \frac{14}{5}   & -4 & 0  & 0 \\
+        0  & -4             & 6  & -4 & 1 \\
+        0  & 0              & -4 & 5  & 0
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_3 + \frac{10}{7}L_2 \end{array}$}}}{\sim}
+    &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4             & 0             & 0  & 0 \\
+        0  & \frac{14}{5}   & -4            & 0  & 0 \\
+        0  & 0              & \frac{2}{7}   & -4 & 1 \\
+        0  & 0              & -4            & 5  & 0
+        \end{array}
+        \right)
+\\\\
+\overset{{\tiny\textrm{$\begin{array}{c} L_4 + 14L_3 \end{array}$}}}{\sim}
+    &   \left(
+        \begin{array}{rrrr|r}
+        5  & -4             & 0             & 0   & 0 \\
+        0  & \frac{14}{5}   & -4            & 0   & 0 \\
+        0  & 0              & \frac{2}{7}   & -4  & 1 \\
+        0  & 0              & 0             & -51 & 14
+        \end{array}
+        \right)
+\\\\
+\end{array}$
+ -->
+<IMG
+ WIDTH="305" HEIGHT="479" BORDER="0"
+ SRC="img70.png"
+ ALT="\begin{displaymath}\begin{array}{rl}
+A = &amp; \left(
+\begin{array}{rrrr\vert r}...
+...&amp; 0 &amp; 0 &amp; -51 &amp; 14
+\end{array}
+\right)
+\ \\
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+En appliquant une phase ascendante de r&#233;solution, on a
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\begin{array}[t]{rclclcl}
+x_4 & = & \frac{-14}{51} \\\\
+x_3 & = & \frac{1 +4 x_4}{\frac{2}{7}}      & = & \frac{\frac{-5}{51}}{\frac{2}{7}}        & = & \frac{-35}{102} \\\\
+x_2 & = & \frac{4x_3}{\frac{14}{5}}         & = & \frac{\frac{-70}{51}}{\frac{14}{5}}      & = & \frac{-25}{51} \\\\
+x_1 & = & \frac{4x_2}{5}                    & = & \frac{\frac{-100}{51}}{5}                & = & \frac{-20}{51}.
+\end{array}$
+ -->
+<IMG
+ WIDTH="265" HEIGHT="214" BORDER="0"
+ SRC="img71.png"
+ ALT="\begin{displaymath}\begin{array}[t]{rclclcl}
+x_4 &amp; = &amp; \frac{-14}{51} \ \\
+x...
+... &amp; \frac{\frac{-100}{51}}{5} &amp; = &amp; \frac{-20}{51}.
+\end{array}\end{displaymath}">
+
+</DIV>
+
+<P>
+Donc,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+\frac{-20}{51} \\
+\frac{-25}{51} \\
+\frac{-35}{102} \\
+\frac{-14}{51}
+\end{array}
+\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="158" HEIGHT="109" BORDER="0"
+ SRC="img72.png"
+ ALT="\begin{displaymath}
+\left(
+\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\...
+...\
+\frac{-35}{102} \\
+\frac{-14}{51}
+\end{array}
+\right)
+\end{displaymath}">
+</DIV><P>
+</P>
+
+<P>
+</DD>
+</DL>
+
+<P>
+</DD>
+</DL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">&#192; propos de ce document...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/csw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> suivant:</B> <A NAME="tex2html3"
+  HREF="node1.html">&#192; propos de ce</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Mario Lambert
+2010-06-07
+</ADDRESS>
+</BODY>
+</HTML>

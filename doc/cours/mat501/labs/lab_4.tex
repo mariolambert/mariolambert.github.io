@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{eucal}
+\usepackage{amssymb}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage{epsf}
+
+
+\begin{document}
+
+\hfuzz 8 pt
+\parindent = 0 cm
+
+
+\newcommand{\card}[1]{\overline{\overline{#1}}}
+\centerline{\textsc{ \large Université de Sherbrooke}}
+\centerline{\textsc{ \normalsize Département de mathématiques}}
+%\centerline{\textsc{ \normalsize Automne 2005}}
+\bigskip
+
+
+\centerline{\large\bf MAT501 -- Fondements et histoire des
+mathématiques}
+\bigskip
+
+\centerline{\Large\bf Laboratoire 4}
+\bigskip
+
+\begin{description}
+
+\item[1)] Montrer que l'axiome du bon ordre entraîne l'axiome du
+choix.
+
+\item[2)] Dans cette question, on veut montrer que l'axiome de
+Zorn entraîne celui du bon ordre. Soit $A$ un ensemble quelconque.
+On veut montrer que $A$ est bien  ordonné.
+
+Soit $\mathcal{A}$ l'ensemble des paires $W=(B,\leqslant)$ où $B
+\subset A$ et $\leqslant$ est un bon ordre sur $B$. On définit sur
+$\mathcal{A}$ un ordre de la façon suivante : pour
+$W_1=(B_1,\leqslant_1)$ et $W_2=(B_2,\leqslant_2)$ dans
+$\mathcal{A}$, on pose
+
+$$W_1 \preceq W_2 \iff
+\left\lbrace
+\begin{array}{l}
+  W_1 = W_2 \textrm{ ou} \\ \\
+  W_1 \textrm{ est une \emph{section commençante} de } W_2 \\
+  \textrm{c'est-à-dire qu'il existe } s \in B_2 \textrm { tel que} \\
+  B_1 = \{ x \in B_2 \mid x <_2 s \} \textrm{ et l'ordre } <_1 \\
+  \textrm{sur } B_1 \textrm{ est l'ordre induit par } <_2.
+\end{array}
+\right.  $$
+
+  \begin{description}
+
+  \item[a)] Montrons que $(\mathcal{A}, \preceq)$ est un ensemble inductif
+
+    \begin{description}
+
+    \item[i)] Montrer que $(\mathcal{A}, \preceq) \neq \varnothing$.
+
+    \item[ii)] Montrer que toute chaîne de $\mathcal{A}$ est majorée dans $\mathcal{A}$.
+
+    \end{description}
+
+  \item[b)] En appliquant l'axiome de Zorn à $(\mathcal{A}, \preceq)$,
+  montrer que $A$ est bien ordonné.
+
+  \end{description}
+
+\item[3)] Soit $(A, +, \cdot)$ un anneau commutatif avec unité 1.
+Une partie non vide $I$ de $A$ est dite un \emph{idéal} de $A$
+si
+
+\begin{center}
+\begin{tabular}{l}
+$x,y \in I$ entraînent que $x-y \in I$ ; \\
+$x \in I$ et $y \in A$ entraînent que $xy \in I$.
+\end{tabular}
+\end{center}
+
+Si $I$ est un idéal de $A$ et que $I \neq A$, on dit que $I$ est
+un idéal \emph{propre} de $A$. Soit $\mathcal{I}$ l'ensemble des
+idéaux propres de $A$.
+
+  \begin{description}
+
+  \item[a)] Montrer que l'ensemble $(\mathcal{I}, \subset)$ des
+  idéaux propres de $A$ ordonnés par inclusion est un ensemble
+  ordonné inductif.
+
+  \item[b)] En déduire que dans un anneau commutatif avec unité,
+  tout idéal propre est contenu dans un idéal maximal (c'est le
+  théorème de Krull).
+
+  \end{description}
+
+\item[4)] On veut montrer que l'axiome de Zorn entraîne l'axiome
+de Haussdorff-Kuratowski. Soit $(E,\leqslant)$ un ensemble ordonné
+quelconque. Soit $C_E$  l'ensemble des chaînes de $E$.
+
+  \begin{description}
+
+  \item[a)] Montrons que l'ensemble $(C_E, \subset)$ des chaînes
+  de $E$ ordonnées par inclusion est inductif.
+
+  \item[b)] En appliquant l'axiome de Zorn, en déduire l'axiome
+  de Haussdorff-Kuratowski.
+
+  \end{description}
+
+\item[5)] On suppose l'axiome de Zorn. Soient $\alpha$ et $\beta$
+deux cardinaux. Alors, il existe des ensembles $A$ et $B$ tels que
+$\alpha = \card{A}$ et $\beta = \card{B}$. Soit $\mathcal{F}$
+l'ensemble des applications injectives d'une partie quelconque de
+$A$ dans $B$. Pour $f \in \mathcal{F}$, posons $D_f = \{ x \in A
+\mid \exists y \in B \textrm{ avec } f(x) = y \}$. Enfin, si $f,g
+\in \mathcal{F}$, posons
+
+$$f \leqslant g \iff
+\left\lbrace
+\begin{array}{l}
+  D_f \subset D_g \textrm{ et} \\\\
+  f(x) = g(x) \quad (\forall x \in D_f)
+\end{array}
+\right.
+$$
+
+  \begin{description}
+
+  \item[a)] Montrer que $\leqslant$ est un ordre sur $\mathcal{F}$.
+
+  \item[b)] Montrer que $(\mathcal{F}, \leqslant)$ est un ordonné inductif.
+
+  \item[c)] Montrer que si $f$ est un élément maximal de $\mathcal{F}$,
+  alors $f$ est partout définie sur $A$ ou alors $f$ est surjective.
+
+  \item[d)] En déduire que deux cardinaux quelconques sont comparables.
+
+  \end{description}
+
+
+\item[6)] On suppose l'axiome de Zorn. Soit $H$ un ensemble muni
+d'une opération associative $*$. On dit que $A \subset H$ est une
+\emph{partie commutative} de $H$ si, quels que soient $x,y \in A$
+on a $x*y = y*x$. Soit $\mathcal{D}$ l'ensemble des parties
+commutatives de $H$.
+
+  \begin{description}
+
+  \item[a)] Montrer que $H$ contient une partie commutative maximale.
+
+  \item[b)] Montrer qu'une partie commutative $A$ est maximale
+  si et seulement si, pour tout $x \in H \setminus A$, il existe
+  $y \in A$ tel que $x*y \neq y*x$.
+
+  \item[c)] Montrer qu'une partie commutative maximale est nécessairement
+  fermée pour l'opération $*$.
+
+  \item[d)] Si $H$ est un groupe, que peut-on dire d'une partie
+  commutative maximale de $H$?
+
+  \end{description}
+
+\item[7)] Une partie $A$ du plan est dite \emph{convexe} si,
+toutes les fois que $x,y \in A$, on a que le segment joignant $x$
+à $y$ est entièrement dans $A$. Soit $D$ une partie fixe du plan
+et $\mathcal{E} = \{ A \subset D \mid A \textrm{ est convexe} \}$.
+
+  \begin{description}
+
+  \item[a)] Montrer que $\mathcal{E}$ ordonné par inclusion est
+  un ensemble ordonné inductif.
+
+  \item[b)] Déterminer si $D$ est la réunion de ses parties
+  convexes maximales.
+
+  \item[c)] À quelle condition $\mathcal{E}$ possède-t-il un
+  plus grand élément?
+
+  \end{description}
+
+\end{description}
+
+\end{document}
