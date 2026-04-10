@@ -1,0 +1,12 @@
+<html>
+<body>
+<form name="inscription" action="https://www.usherbrooke.ca/cgi-bin/formmail-f.cgi" method="post" onsubmit="return Email_Validator(this)"> 
+<input name="recipient" value="sympa@listes.usherbrooke.ca" type="hidden"> 
+<input name="subject" value="subscribe club-math" type="hidden"> 
+<label for="email">Courriel :</label><input type="text" name="email" size="40"> 
+<input type = "submit" value = "Envoyer">
+<input type = "reset" value = "Rétablir">
+</form>
+</body>
+</html>
+

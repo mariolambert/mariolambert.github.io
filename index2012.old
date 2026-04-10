@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Mario Lambert</title>  
+
+
+
+<!-- *************************************************** -->
+<SCRIPT LANGUAGE="JavaScript">
+	
+  function affiche(num) {	
+    numdev=new Array;
+    enonce=new Array;
+    dateremise=new Array;
+
+
+  //Énoncés des devoirs
+
+  numdev[1]='1';
+  enonce[1]='Lab 1 nos 1d), 2c), 8 </br> Lab 2 nos 1 et 3b)';
+  dateremise[1]='le lundi 25 mai 2009 à 15 h 30.';
+
+
+  numdev[2]='2';
+  enonce[2]='Lab  no ';
+  dateremise[2]='le lundi  2009 à 15 h 30.';
+
+
+  numdev[3]='3';
+  enonce[3]='Lab  no ';
+  dateremise[3]='le lundi  2009 à 15 h 30.';
+
+  numdev[4]='4';
+  enonce[4]='Lab  no ';
+  dateremise[4]='le lundi  2009 à 15 h 30.';
+
+  numdev[5]='5';
+  enonce[5]='Lab  no ';
+  dateremise[5]='le lundi  2009 à 15 h 30.';
+
+  numdev[6]='6';
+  enonce[6]='Lab  no ';
+  dateremise[6]='le lundi  2009 à 15 h 30.';
+
+  numdev[7]='7';
+  enonce[7]='Lab  no ';
+  dateremise[7]='le mardi  2009</i>';
+
+  numdev[8]='8';
+  enonce[8]='Lab  no ';
+  dateremise[8]='le mardi  2009</i>';
+
+  numdev[9]='9';
+  enonce[9]='Lab  no ';
+  dateremise[9]='le mardi  2009</i>';
+
+  numdev[10]='10';
+  enonce[10]='Lab  no ';
+  dateremise[10]='le mardi  2009</i>';
+
+
+// MAT297
+
+  numdev[20]='1';
+  enonce[20]='Chapitre 1 no 6 <br> Chapitre 2 no 10b) <br> Chapitre 3 no 4b) <br> Chapitre 4 no 2 <br> Chapitre 5 no 5.2c)';
+  dateremise[20]='le vendredi 27 février 2009</i>';
+
+
+  numdev[21]='2';
+  enonce[21]='Chapitre  nos';
+  dateremise[21]='le vendredi 2009</i>';
+
+
+  numdev[22]='3';
+  enonce[22]='Section 6.6.2 no 3i (montrer que la limite est -delta\') <br>'+
+              'Section 6.9.3 no 1d <br>'+
+              'Section 7.9 no 1 <br>'+
+              'Section 9.4 no A iv (distinguer les cas alpha=beta et alpha != beta) <br>'+
+              'Section 9.5.2 i';
+  dateremise[22]='le vendredi 17 avril 2009</i>';
+
+  numdev[23]='4';
+  enonce[23]='Chapitre  nos ';
+  dateremise[23]='le vendredi  2009</i>';
+
+  numdev[24]='5';
+  enonce[24]='Chapitre  nos ';
+  dateremise[24]='le vendredi  2009</i>';
+
+  ferme='<center><A HREF="javascript:window.close()"><font size=-1>Fermer la fenêtre</font></A></center>';
+	
+  //Creer la fenetre
+	
+  options = "toolbar=0,status=0,menubar=0,scrollbars=1,resizable=1,width=500,height=300";
+  newwindow=window.open("","mywindow", options);
+  newwindow.document.write('<body bgcolor="beige"><h2><p align="center">Devoir '+numdev[num]+'</p></h2>');
+  newwindow.document.write('<body bgcolor="beige"><h3>Énoncé : </h3>'+enonce[num]+'.<br><br>');
+  newwindow.document.write('<body bgcolor="beige"><b>Date de remise : </b> au plus tard '+dateremise[num]+'<!-- par <i>turnin</i>-->.<br><br><br>');
+  newwindow.document.write(ferme);        
+  newwindow.document.close();
+	
+  }
+
+</SCRIPT>
+<!-- *************************************************** -->
+
+</head>
+
+
+
+
+
+<body>
+
+<!--<h2>Commande de t-shirts</h2>
+<ul>
+  <li> <i>I <a href="http://pages.usherbrooke.ca/mlambert/tshirts/">teach</a> the brain behind the Sherbrooke machine</i></li>
+</ul>-->
+
+
+<h2>Midi-Sciences</h2>
+<ul>
+  <li> LaTeX (<a href="./doc/conf/midisciences.pdf">fichier pdf</a>)</li>
+  <li> LaTeX (<a href="./doc/conf/midisciences.zip">fichiers sources</a>)</li>
+</ul>
+
+
+<h2>Club mathématique</h2>
+<ul>
+  <li> Les mathematiques de Google (<a href="./doc/conf/googlemath.pdf">fichier pdf</a>)</li>
+  <li> Les mathematiques de Google (<a href="./doc/conf/googlemath.tex">fichier TeX</a>)</li>
+</ul>
+
+
+<h2>Maple</h2>
+<ul>
+  <li> Introduction au logiciel de calcul symbolique <a href="./doc/intro_Maple.mws">Maple</a></li>
+</ul>
+
+
+<h2>Gabarit pour les mémoires et thèses</h2>
+<ul>
+  <li> Comment <a href="./doc/LaTeX/comment_installer_LaTeX.odt">installer </a>LaTeX &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.openoffice.org"><img src="http://marketing.openoffice.org/art/galleries/marketing/web_buttons/nicu/88x31_3_get.png" width="88px" height="31px" border="0" alt="Use OpenOffice.org" title="Use OpenOffice.org"></a></li>
+  <li> Comment <a href="./doc/LaTeX/comment_ecrire_memoire_these.odt">écrire </a>son mémoire ou sa thèse avec LaTeX</li>
+  <li> <a href="./doc/LaTeX/my_memoire.zip">Gabarit </a>pour les mémoires et thèses</li>
+</ul>
+
+
+<h2>Soumission de documents par turnin</h2>
+<ul>
+  <li> <a href="./doc/LaTeX/turnin.txt">Instructions</a> pour soumettre un fichier .tex unique</li>
+  <li> <a href="./doc/LaTeX/turnin_complet.pdf">Instructions</a> pour soumettre un répertoire contenant des fichiers .tex et des images</li>
+</ul>
+
+
+<h2>Cours</h2>
+
+<ul>
+  <li>Lien vers <a href="http://www.USherbrooke.ca/moodle">Moodle</a> pour vérifier vos résultats.</li>
+
+  <li>MAT501
+    <ul>
+      <li> Laboratoire 1 (<a href="./doc/cours/mat501/labs/lab_1.pdf">.pdf</a>) (<a href="./doc/cours/mat501/labs/lab_1.dvi">.dvi</a>) (<a href="./doc/cours/mat501/labs/lab_1.tex">.TeX</a>) (<a href="./doc/cours/mat501/sol_lab_1/">Solutionnaire</a>)</li>
+      <li> Laboratoire 2 (<a href="./doc/cours/mat501/labs/lab_2.pdf">.pdf</a>) (<a href="./doc/cours/mat501/labs/lab_2.dvi">.dvi</a>) (<a href="./doc/cours/mat501/labs/lab_2.tex">.TeX</a>) (<a href="./doc/cours/mat501/sol_lab_2/">Solutionnaire</a>)</li>
+      <li> Laboratoire 3 (<a href="./doc/cours/mat501/labs/lab_3.pdf">.pdf</a>) (<a href="./doc/cours/mat501/labs/lab_3.dvi">.dvi</a>) (<a href="./doc/cours/mat501/labs/lab_3.tex">.TeX</a>) (<a href="./doc/cours/mat501/sol_lab_3/">Solutionnaire</a>)</li>
+      <li> Laboratoire 4 (<a href="./doc/cours/mat501/labs/lab_4.pdf">.pdf</a>) (<a href="./doc/cours/mat501/labs/lab_4.dvi">.dvi</a>) (<a href="./doc/cours/mat501/labs/lab_4.tex">.TeX</a>) (<a href="./doc/cours/mat501/sol_lab_4/">Solutionnaire</a>)</li>
+      <li> Axiomes d'Euclide (<a href="./doc/cours/mat501/Euclide.pdf">.pdf</a>) (<a href="./doc/cours/mat501/Euclide.dvi">.dvi</a>) (<a href="./doc/cours/mat501/Euclide.tex">.TeX</a>)</li>
+      <li> Axiomes de Hilbert (<a href="./doc/cours/mat501/Hilbert.pdf">.pdf</a>) (<a href="./doc/cours/mat501/Hilbert.dvi">.dvi</a>) (<a href="./doc/cours/mat501/Hilbert.tex">.TeX</a>)</li>
+      <li> Axiome de Zorn (<a href="./doc/cours/mat501/zorn.pdf">.pdf</a>) (<a href="./doc/cours/mat501/zorn.dvi">.dvi</a>) (<a href="./doc/cours/mat501/zorn.tex">.TeX</a>)</li>
+      <li> Figures GEONExT pour la géométrie (<a href="./doc/cours/mat501/th5.gxt">théorème 5</a>)(<a href="./doc/cours/mat501/th7.gxt">théorème 7</a>)(<a href="./doc/cours/mat501/th9.gxt">théorème 9</a>)(<a href="./doc/cours/mat501/th11.gxt">théorème 11</a>)(<a href="./doc/cours/mat501/th13.gxt">théorème 13</a>)(<a href="./doc/cours/mat501/th14.gxt">théorème 14</a>)(<a href="./doc/cours/mat501/droite_Euler.gxt">droite d'Euler</a>)(<a href="./doc/cours/mat501/trisection_angle.gxt">trisection de l'angle</a>)</li>
+      <li> <a href="./doc/cours/mat501/sujets.pdf">Suggestions</a> de sujets pour l'exposé oral</li>
+      <li> <a href="./doc/cours/mat501/criteres_correction_exposes.pdf">Critères de correction</a> pour l'exposé oral</li>
+      <li> <a href="./doc/cours/mat501/bareme_correction_travail_session.ods">Barème de correction</a> pour le travail de session</li>
+      <li> <a href="./doc/cours/mat501/horaire.html">Horaire</a> des présentations</li>
+      <li> <a href="./doc/cours/mat501/procedure_soumission_mat501.pdf">Procédure</a> de soumission des travaux de session</li>
+    </ul>
+  </li> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   
+
+  <li>MAT111
+     <ul>
+       <li>Chapitre 1 (<a href="./doc/cours/mat111/sol_chap_1/">Solutionnaire</a>)</li>
+       <li>Chapitre 2 (<a href="./doc/cours/mat111/sol_chap_2/">Solutionnaire</a>)</li>
+       <li>Chapitre 3 (<a href="./doc/cours/mat111/sol_chap_3/">Solutionnaire</a>)</li>
+       <li>Chapitre 4 (<a href="./doc/cours/mat111/sol_chap_4/">Solutionnaire</a>)</li>
+       <li>Chapitre 5 (<a href="./doc/cours/mat111/sol_chap_5/">Solutionnaire</a>)</li>
+       <li>Chapitre 6 (<a href="./doc/cours/mat111/sol_chap_6/">Solutionnaire</a>)</li>
+       <li>Chapitre 7 (<a href="./doc/cours/mat111/sol_chap_7/">Solutionnaire</a>)</li>
+
+     </ul>
+  </li>
+
+
+   <li>MAT193
+     <ul>
+       <li>Chapitre 1 (<a href="./doc/cours/mat193/sol_chap_1/">Solutionnaire</a>)</li>
+       <li>Chapitre 2 (<a href="./doc/cours/mat193/sol_chap_2/">Solutionnaire</a>)</li>
+       <li>Chapitre 3 (<a href="./doc/cours/mat193/sol_chap_3/">Solutionnaire</a>)</li>
+       <li>Chapitre 5 (<a href="./doc/cours/mat193/sol_chap_5/">Solutionnaire</a>)</li>
+       <li>Chapitre 6 (<a href="./doc/cours/mat193/sol_chap_6/">Solutionnaire</a>)(<a href="./doc/cours/mat193/sol_chap6.pdf">pdf</a>)</li>
+       <li>Chapitre 7 (<a href="./doc/cours/mat193/sol_chap_7/">Solutionnaire</a>)</li>
+       <li>Chapitre 8 (<a href="./doc/cours/mat193/sol_chap_8/">Solutionnaire</a>)</li>
+       <li>Chapitre 9 (<a href="./doc/cours/mat193/sol_chap_9/">Solutionnaire</a>)</li>
+       <li>Exercices sur le produit scalaire et les projections orthogonales (<a href="./doc/cours/mat193/prod_scal/">Solutionnaire</a>)</li>
+       <li>Exercices sur le produit vectoriel (<a href="./doc/cours/mat193/prod_vect/">Solutionnaire</a>)</li>
+
+     </ul>
+   </li>
+
+
+
+<li>MAT297
+     <ul>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_1/">chapitre 1</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_2/">chapitre 2</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_3/">chapitre 3</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_4/">chapitre 4</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_5/">chapitre 5</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_6/">chapitre 6</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_7.pdf">chapitre 7</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_8/">chapitre 8</a></li>
+       <li>Solutionnaire du <a href="./doc/cours/mat297/sol_chap_9.pdf">chapitre 9</a></li>
+     </ul>
+   </li>
+
+
+  <li>MAT324
+    <ul>
+      <li> Solutionnaire des <a href="./doc/cours/mat324/sol_exercices_A/">exercices de la série A</a></li>
+      <li> Solutionnaire des <a href="./doc/cours/mat324/sol_exercices_B/">exercices de la série B</a></li>
+      <li> Formulaire (<a href="./doc/cours/mat324/formulaire.pdf">.pdf</a>) (<a href="./doc/cours/mat324/formulaire.dvi">.dvi</a>) (<a href="./doc/cours/mat324/formulaire.tex">.TeX</a>)</li>
+    </ul>
+  </li>
+
+
+<li>MAT356
+     <ul>
+       <li>Chapitre 1 : <a href="./doc/cours/mat356/sol_1-2.pdf">Solutionnaire</a> des exercices de la section 1.2</li>
+     </ul>
+   </li>  
+
+
+
+   <li>MAT417
+     <ul>
+       <li>Laboratoire 1 (<a href="./doc/cours/mat417/labs/lab_1.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_1.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_1.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_1/">Solutionnaire</a>)</li>
+       <li>Laboratoire 2 (<a href="./doc/cours/mat417/labs/lab_2.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_2.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_2.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_2/">Solutionnaire</a>)</li>
+       <li>Laboratoire 3 (<a href="./doc/cours/mat417/labs/lab_3.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_3.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_3.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_3/">Solutionnaire</a>)</li>
+       <li>Laboratoire 4 (<a href="./doc/cours/mat417/labs/lab_4.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_4.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_4.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_4/">Solutionnaire</a>)</li>
+       <li>Laboratoire 5 (<a href="./doc/cours/mat417/labs/lab_5.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_5.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_5.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_5/">Solutionnaire</a>)</li>
+       <li>Laboratoire 6 (<a href="./doc/cours/mat417/labs/lab_6.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_6.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_6.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_6/">Solutionnaire</a>)</li>
+       <li>Laboratoire 7 (<a href="./doc/cours/mat417/labs/lab_7.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_7.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_7.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_7/">Solutionnaire</a>)</li>
+       <li>Laboratoire 8 (<a href="./doc/cours/mat417/labs/lab_8.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_8.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_8.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_8/">Solutionnaire</a>)</li>
+       <li>Laboratoire 9 (<a href="./doc/cours/mat417/labs/lab_9.pdf">.pdf</a>) (<a href="./doc/cours/mat417/labs/lab_9.dvi">.dvi</a>) (<a href="./doc/cours/mat417/labs/lab_9.tex">.TeX</a>) (<a href="./doc/cours/mat417/sol_lab_9.pdf">Solutionnaire</a>)</li>
+
+
+
+       <li>Algorithmes (<a href="./doc/cours/mat417/mat417_algos.pdf">.pdf</a>) (<a href="./doc/cours/mat417/mat417_algos.dvi">.dvi</a>) (<a href="./doc/cours/mat417/mat417_algos.tex">.TeX</a>)</li>
+       <li>Acétates et exemple en précision limitée de l'algorithme de Gauss (<a href="./doc/cours/mat417/acetates_Gauss.pdf">.pdf</a>)</li>
+       <li>Acétates sur la décomposition en valeurs singulières (<a href="./doc/cours/mat417/SVD_web.pdf">.pdf</a>)</li>
+     </ul>
+   </li>   
+
+
+
+<li>MAT504
+     <ul>
+       <li><a href="./doc/cours/mat504/horaire_presentations_orales_H11.ods">Horaire</a> des présentations orales
+       <li><a href="./doc/cours/mat504/criteres_correction.ods">Critères</a> d'évaluation des présentations orales
+       <li>Chapitre 1 : <a href="./doc/cours/mat504/sol_chap1/">Solutionnaire</a></li>
+       <li>Chapitre 2 : <a href="./doc/cours/mat504/sol_chap2/">Solutionnaire</a></li>
+       <li>Chapitre 3 : <a href="./doc/cours/mat504/sol_chap3/">Solutionnaire</a></li>
+       <li>Chapitre 4 : <a href="./doc/cours/mat504/sol_chap4/">Solutionnaire</a></li>
+       <li>Chapitre 5 : <a href="./doc/cours/mat504/sol_chap5/">Solutionnaire</a></li>
+     </ul>
+   </li>
+
+
+
+
+<li>STT289
+     <ul>
+       <li>Laboratoire 1 (<a href="./doc/cours/stt289/labs/lab_1.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_1.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_1.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_1/">Solutionnaire</a>)</li>
+       <li>Laboratoire 2 (<a href="./doc/cours/stt289/labs/lab_2.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_2.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_2.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_2/">Solutionnaire</a>)</li>
+       <li>Laboratoire 3 (<a href="./doc/cours/stt289/labs/lab_3.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_3.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_3.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_3/">Solutionnaire</a>)</li>
+       <li>Laboratoire 4 (<a href="./doc/cours/stt289/labs/lab_4.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_4.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_4.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_4/">Solutionnaire</a>)</li>
+       <li>Laboratoire 5 (<a href="./doc/cours/stt289/labs/lab_5.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_5.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_5.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_5/">Solutionnaire</a>)</li>
+       <li>Laboratoire 6 (<a href="./doc/cours/stt289/labs/lab_6.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_6.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_6.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_6/">Solutionnaire</a>)</li>
+       <li>Laboratoire 7 (<a href="./doc/cours/stt289/labs/lab_7.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_7.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_7.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_7/">Solutionnaire</a>)</li>
+       <li>Laboratoire 8 (<a href="./doc/cours/stt289/labs/lab_8.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_8.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_8.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_8/">Solutionnaire</a>)</li>
+       <li>Laboratoire 9 (<a href="./doc/cours/stt289/labs/lab_9.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_9.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_9.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_9/">Solutionnaire</a>)</li>
+       <li>Laboratoire 10 (<a href="./doc/cours/stt289/labs/lab_10.pdf">.pdf</a>) (<a href="./doc/cours/stt289/labs/lab_10.dvi">.dvi</a>) (<a href="./doc/cours/stt289/labs/lab_10.tex">.TeX</a>) (<a href="./doc/cours/stt289/sol_lab_10/">Solutionnaire</a>)</li>
+       <li>&nbsp;</li>
+       <li>Examen intra H07 (<a href="./doc/cours/stt289/intra_stt289_H07/">Énoncé</a>)(<a href="./doc/cours/stt289/sol_intra_stt289_H07/">Solutionnaire</a>)</li>
+       <li><a href="./doc/cours/stt289/lois.pdf">Résumé</a> des lois de probabilités discrètes et continues</li>
+     </ul>
+   </li>
+
+
+</ul>
+-->
+
+<br>
+
+<br>
+</body></html>
